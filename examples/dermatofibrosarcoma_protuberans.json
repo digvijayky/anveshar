@@ -1,0 +1,205 @@
+{
+  "cancer": {
+    "name": "Dermatofibrosarcoma Protuberans (DFSP)",
+    "sub": "A rare cutaneous soft tissue sarcoma of the dermis, defined in nearly all cases by the COL1A1::PDGFB gene fusion from the t(17;22) translocation, which places the platelet derived growth factor B chain under the strong COL1A1 promoter and drives autocrine PDGFRB signaling. Most tumors are cured by complete surgical excision, but unresectable, recurrent, or metastatic disease depends on a single validated molecular vulnerability, making DFSP a clean example of biology first, cross condition therapy matching.",
+    "chips": ["COL1A1::PDGFB fusion, t(17;22)", "Autocrine PDGFRB activation", "Imatinib approved for advanced disease"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, fusion status and modality stated.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Dermatofibrosarcoma protuberans, or DFSP, is a rare cancer that starts in the deep layer of the skin. It usually grows slowly as a firm lump or patch, most often on the trunk, arms, or legs. It rarely spreads to distant organs, but it tends to send out fingers of tumor into the surrounding skin, so it can come back if it is not fully removed.</p><p>Almost every DFSP is caused by the same single genetic change: two genes join together and switch on a growth signal called PDGF that tells the tumor to keep growing. The main treatment is surgery to remove the tumor completely. When the tumor cannot be removed, has come back, or has spread, a targeted pill called imatinib blocks that exact growth signal and can shrink the tumor. <strong>This report maps the biology of DFSP to the treatments that target it.</strong></p>",
+    "clinician": "<p>DFSP is a locally aggressive dermal sarcoma of intermediate malignancy with a strong tendency to local recurrence and a low but real risk of metastasis, chiefly in the fibrosarcomatous variant. It is defined in more than 90 percent of cases by the reciprocal translocation t(17;22)(q22;q13) that fuses COL1A1 to PDGFB, most often as a supernumerary ring chromosome, producing constitutive PDGFB expression and autocrine platelet derived growth factor receptor beta activation.</p><p>The clinically decisive distinction is classic DFSP versus fibrosarcomatous DFSP (FS-DFSP), the latter carrying higher metastatic potential and additional genomic alterations. Standard of care is complete surgical excision with negative margins, by wide local excision with wide margins or by Mohs micrographic surgery. For unresectable, recurrent, or metastatic disease, the PDGFR inhibitor imatinib is FDA approved and active in fusion positive tumors, including fibrosarcomatous DFSP.</p>",
+    "researcher": "<p>DFSP is a textbook fusion driven sarcoma. The COL1A1::PDGFB rearrangement deletes exon 1 of PDGFB and places the growth factor under the constitutively active COL1A1 promoter, releasing PDGFB from its normal regulation. The chimeric protein is processed to mature PDGF-BB, which activates PDGFRB in an autocrine loop that is both mitogenic and antiapoptotic, and pharmacologic PDGFR blockade induces tumor cell apoptosis in DFSP derived models.</p><p>This makes DFSP a single dependency disease: one fusion, one downstream receptor tyrosine kinase, one validated drug class. The report treats that dependency as the transferable asset, indexing DFSP to a PDGFR inhibitor validated here and to next generation and multitargeted kinase inhibitors validated in adjacent sarcomas, and then extends the logic to computationally generated hypotheses for imatinib resistance and fibrosarcomatous progression.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological handles that DFSP treatments use. Almost everything comes back to one thing: a joined gene that switches on a growth signal called PDGF, which drugs can block.",
+    "clinician": "Actionable biology in DFSP reduces to the COL1A1::PDGFB fusion and the resulting autocrine PDGFRB activation. Fibrosarcomatous transformation adds secondary genomic alterations that modify prognosis and may modify treatment response.",
+    "researcher": "The dominant dependency is a single fusion driven receptor tyrosine kinase axis (PDGFB to PDGFRB). Secondary axes emerge in the fibrosarcomatous variant, where additional alterations accompany metastatic competence and potential resistance."
+  },
+  "targets": [
+    {
+      "name": "COL1A1::PDGFB fusion (t(17;22))",
+      "present_in": "More than 90 percent of DFSP (classic and fibrosarcomatous)",
+      "evidence": "The t(17;22) translocation fuses COL1A1 to PDGFB, deleting PDGFB exon 1 and deregulating the growth factor under the COL1A1 promoter; this is the defining and near universal driver of DFSP (Simon et al., Nat Genet 1997, PMID 8988177, DOI 10.1038/ng0197-95)."
+    },
+    {
+      "name": "Autocrine PDGFRB activation",
+      "present_in": "Fusion positive DFSP (the downstream drug target)",
+      "evidence": "The fusion protein is processed to mature PDGF-BB, which activates PDGFRB in an autocrine loop; PDGFR tyrosine kinase inhibition induces apoptosis in DFSP derived tumor cells, validating PDGFRB as the actionable node (Sjoblom et al., Cancer Res 2001, PMID 11479215; Simon et al., Oncogene 2001, PMID 11420709, DOI 10.1038/sj.onc.1204426)."
+    },
+    {
+      "name": "Fibrosarcomatous transformation (secondary alterations)",
+      "present_in": "Fibrosarcomatous DFSP subset (higher metastatic risk)",
+      "evidence": "Genomic profiling shows FS-DFSP carries additional alterations beyond the PDGFB fusion (including TERT promoter and NF1 variants) and higher tumor mutational burden than classic DFSP, marking the variant with metastatic potential (Smith et al., Mod Pathol 2025, PMID 39956270, DOI 10.1016/j.modpat.2025.100737)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Surgery to fully remove the tumor cures most DFSP. When that is not possible, each card below is a treatment matched to the tumor's biology, colored by how strong the evidence is. Green means it is FDA approved for DFSP. Amber means it is approved in related sarcomas and shares the same target. Gray means the idea is promising but still experimental.",
+    "clinician": "Cards are graded Tier 1 (FDA approved for advanced DFSP on pivotal trial data), Tier 2 (approved in adjacent soft tissue sarcoma with a shared or overlapping multitargeted kinase target), or Tier 3 (mechanistic rationale). Surgery with negative margins remains first line for resectable disease; systemic therapy is for unresectable, recurrent, or metastatic tumors and for neoadjuvant downstaging.",
+    "researcher": "Translations are ranked by transferability of evidence over the shared PDGFB to PDGFRB dependency. The Tier 1 anchor is imatinib; adjacent multitargeted PDGFR active agents validated in non adipocytic soft tissue sarcoma provide a Tier 2 borrow for imatinib failure, and neoadjuvant use is supported by a dedicated phase II study."
+  },
+  "therapies": [
+    {
+      "drug": "Wide local excision or Mohs micrographic surgery",
+      "target": "Complete resection with negative margins",
+      "tier": 1,
+      "modality": "other",
+      "approved_in": "Standard of care for resectable DFSP",
+      "dev_stage": "Established standard of care",
+      "rationale": {
+        "patient": "For most people with DFSP, surgery that removes the whole tumor with a rim of normal tissue is the treatment that cures it. Two accepted ways to do this are wide local excision, which takes a generous margin around the tumor, and Mohs surgery, which checks the edges under the microscope during the operation to make sure no tumor is left behind.",
+        "clinician": "Complete surgical excision with histologically negative margins is the primary curative treatment. Wide local excision with wide margins (commonly 2 to 3 cm with deep fascial clearance) and Mohs micrographic surgery are both accepted; Mohs offers exhaustive margin control with tissue conservation, which matters given the infiltrative subclinical extension of DFSP. Achieving local control is the central management challenge.",
+        "researcher": "Surgery is included as the Tier 1 baseline because it defines the standard against which every systemic option is positioned. The infiltrative, fusion driven growth pattern of DFSP explains why margin negative resection, not tumor debulking, is curative, and why systemic therapy is reserved for disease that cannot be resected without unacceptable morbidity."
+      },
+      "citation": {
+        "label": "Mullen, Surg Oncol Clin N Am 2016 (wide local excision versus Mohs micrographic surgery for DFSP)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27591501/"
+      }
+    },
+    {
+      "drug": "Imatinib",
+      "target": "COL1A1::PDGFB fusion / autocrine PDGFRB",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Unresectable, recurrent, or metastatic DFSP (FDA approved)",
+      "dev_stage": "FDA approved (oral PDGFR tyrosine kinase inhibitor)",
+      "rationale": {
+        "patient": "Imatinib is a daily pill that blocks the exact growth signal switched on by the DFSP gene fusion. It is FDA approved for DFSP that cannot be removed by surgery, has come back, or has spread. In studies, tumors carrying the typical DFSP gene change shrank on imatinib, including some of the more aggressive fibrosarcomatous tumors.",
+        "clinician": "Imatinib inhibits PDGFRB and is FDA approved for unresectable, recurrent, or metastatic DFSP. In the Imatinib Target Exploration Consortium study B2225, all eight patients with locally advanced t(17;22) positive DFSP responded, four with complete clinical responses. A pooled analysis of the EORTC and SWOG phase II trials showed an objective response rate approaching 50 percent and a median time to progression of 1.7 years in advanced DFSP, with activity in fibrosarcomatous DFSP harboring t(17;22). Response depends on the fusion; tumors lacking t(17;22) may not respond.",
+        "researcher": "Imatinib is the archetypal single dependency match: the COL1A1::PDGFB fusion produces mature PDGF-BB that drives an autocrine PDGFRB loop, and blocking that receptor induces apoptosis in DFSP models, which translated directly into clinical response. Preclinical PDGFR blockade (Sjoblom 2001) anticipated the clinical results (McArthur 2005; Rutkowski 2010), a clean bench to bedside chain over one target."
+      },
+      "citation": {
+        "label": "McArthur et al., J Clin Oncol 2005 (imatinib in locally advanced DFSP, study B2225)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15681532/"
+      }
+    },
+    {
+      "drug": "Imatinib (neoadjuvant)",
+      "target": "COL1A1::PDGFB fusion / autocrine PDGFRB",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Preoperative downstaging of DFSP (phase II evidence)",
+      "dev_stage": "FDA approved drug, neoadjuvant use supported by phase II",
+      "rationale": {
+        "patient": "The same imatinib pill can be given before surgery to shrink a large or awkwardly placed DFSP first. A smaller tumor can then be removed with a less extensive operation, which can spare healthy tissue and reduce disfigurement, especially for tumors on the face or in areas where wide surgery would be difficult.",
+        "clinician": "A multicenter phase II study of 2 months of preoperative imatinib (600 mg daily) before wide local excision reported a clinical response in 36 percent of patients and supported neoadjuvant use in nonresectable DFSP or where surgery would be difficult or mutilating. Neoadjuvant imatinib is a function sparing strategy that leverages the same fusion dependency to reduce the extent of resection.",
+        "researcher": "Neoadjuvant imatinib operationalizes the driver dependency for surgical benefit rather than palliation: tumor regression before excision converts a mutilating resection into a conservative one. The Kerob phase II design also frames the setting in which primary and secondary resistance to imatinib can be characterized on sequential tissue specimens."
+      },
+      "citation": {
+        "label": "Kerob et al., Clin Cancer Res 2010 (imatinib as preoperative therapy in DFSP, phase II)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20439456/"
+      }
+    },
+    {
+      "drug": "Pazopanib",
+      "target": "PDGFR / VEGFR multitargeted kinase inhibition",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Metastatic non adipocytic soft tissue sarcoma (FDA approved)",
+      "dev_stage": "FDA approved in soft tissue sarcoma; not DFSP specific",
+      "rationale": {
+        "patient": "Pazopanib is another daily pill that blocks several growth signals, including the PDGF signal that drives DFSP. It is FDA approved for certain soft tissue sarcomas that have spread and did not respond to chemotherapy. It is not specifically approved for DFSP, but because it hits an overlapping target it is a reasonable option to consider when imatinib stops working, within specialist care.",
+        "clinician": "Pazopanib is a multitargeted tyrosine kinase inhibitor with activity against PDGFR and VEGFR. In the randomized phase III PALETTE trial it improved progression free survival versus placebo (4.6 versus 1.6 months) in metastatic non adipocytic soft tissue sarcoma after chemotherapy failure. It is not DFSP specific, but its PDGFR activity makes it a rational Tier 2 option to consider for imatinib refractory advanced DFSP within a sarcoma expert setting.",
+        "researcher": "Pazopanib is a same axis, adjacent condition borrow: its approval rests on the broad soft tissue sarcoma population, not DFSP, but its PDGFR inhibition overlaps the validated DFSP dependency. This is the transferability edge of Tier 2, a shared target validated in a neighboring disease rather than a tumor agnostic biomarker approval, so it is a hypothesis generating option rather than a labeled DFSP therapy."
+      },
+      "citation": {
+        "label": "van der Graaf et al., Lancet 2012 (PALETTE, pazopanib in metastatic soft tissue sarcoma)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22595799/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark results that make treating DFSP by its molecular defect a real, proven approach rather than guesswork. They show that finding the exact growth signal a tumor depends on, then blocking it with a matched drug, can work.",
+    "clinician": "The precedents below establish the mechanistic and clinical chain for DFSP: identification of the defining fusion, demonstration that PDGFR blockade kills DFSP cells, and the pivotal trials that made imatinib standard for advanced disease. Together they validate a single dependency, biomarker gated treatment model.",
+    "researcher": "Each landmark validates one link in the DFSP dependency chain: discovery of COL1A1::PDGFB, proof that autocrine PDGFRB is druggable and proapoptotic when blocked, and clinical confirmation of imatinib activity, including in the fibrosarcomatous variant. This chain, not any single agent, is the transferable template the discovery layer extends."
+  },
+  "precedents": [
+    {
+      "biomarker": "COL1A1::PDGFB fusion (t(17;22)) as the defining DFSP driver",
+      "drug": "molecular definition of the target (fusion discovery)",
+      "year": "1997",
+      "citation": {
+        "label": "Simon et al., Nat Genet 1997 (COL1A1 fusion deregulates PDGFB in DFSP and giant cell fibroblastoma)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/8988177/"
+      }
+    },
+    {
+      "biomarker": "Autocrine PDGFRB activation in DFSP",
+      "drug": "PDGFR tyrosine kinase inhibition (preclinical proof of concept)",
+      "year": "2001",
+      "citation": {
+        "label": "Sjoblom et al., Cancer Res 2001 (PDGFR antagonist inhibits DFSP growth by inducing apoptosis)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11479215/"
+      }
+    },
+    {
+      "biomarker": "t(17;22) positive locally advanced DFSP",
+      "drug": "imatinib (pivotal clinical activity)",
+      "year": "2005",
+      "citation": {
+        "label": "McArthur et al., J Clin Oncol 2005 (imatinib in locally advanced DFSP, study B2225)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15681532/"
+      }
+    },
+    {
+      "biomarker": "Advanced DFSP including fibrosarcomatous variant with t(17;22)",
+      "drug": "imatinib (pooled phase II confirmation)",
+      "year": "2010",
+      "citation": {
+        "label": "Rutkowski et al., J Clin Oncol 2010 (pooled EORTC and SWOG phase II trials of imatinib in advanced DFSP)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20194851/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because DFSP proved that blocking one growth signal can control the disease, related ideas are worth testing: newer drugs for when imatinib stops working, using imatinib before surgery to allow smaller operations, and a plan for the more aggressive fibrosarcomatous form. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality or strategy validated in DFSP or an adjacent sarcoma to an unmet DFSP need, with graded transferability and a primary citation. None is a clinical recommendation. They target imatinib resistance, function sparing neoadjuvant therapy, and the fibrosarcomatous variant.",
+    "researcher": "The discovery layer proposes novel cross condition hypotheses by analogy over the shared PDGFB to PDGFRB dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated interventions in the target setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): evaluate next generation or more potent PDGFR selective kinase inhibitors in imatinib resistant DFSP, testing whether a distinct inhibitor chemotype restores control of the same PDGFRB dependency.",
+      "shared": "The COL1A1::PDGFB driven autocrine PDGFRB loop is retained in DFSP that progresses on imatinib, so the validated dependency persists even when the specific inhibitor fails, mirroring how kinase driven cancers respond to next generation inhibitors after first generation resistance.",
+      "source": "DFSP (imatinib validated PDGFRB dependency) and adjacent soft tissue sarcoma (multitargeted PDGFR active kinase inhibition)",
+      "modality": "small molecule",
+      "rationale": "Imatinib activity in DFSP is often partial or time limited, with progression in a subset. Because the underlying PDGFRB dependency is retained, a more potent or structurally distinct PDGFR inhibitor could re engage the same node. Multitargeted PDGFR active agents such as pazopanib already show activity across soft tissue sarcoma, providing an adjacent condition precedent for PDGFR directed salvage.",
+      "transferability": "medium, PDGFR inhibition is a validated modality in DFSP, but a next generation agent must be shown to overcome the specific resistance mechanism (for example a secondary kinase domain alteration or fusion independent bypass) and to spare normal PDGFR function at tolerated doses.",
+      "prediction": "In patient derived DFSP models selected for imatinib resistance, a candidate next generation PDGFR inhibitor suppresses PDGFRB phosphorylation, reduces viability, and induces apoptosis at clinically achievable concentrations, with a resistance mechanism that predicts response or nonresponse.",
+      "citation": {
+        "label": "van der Graaf et al., Lancet 2012 (PALETTE, PDGFR active multitargeted inhibition in soft tissue sarcoma, adjacent condition precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22595799/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): extend neoadjuvant PDGFR inhibition to enable function sparing surgery in DFSP at anatomically challenging sites, testing whether preoperative tumor regression reliably converts a mutilating resection into a conservative one.",
+      "shared": "The same fusion driven PDGFRB dependency that makes advanced DFSP imatinib sensitive also makes primary tumors regress before surgery, so the driver can be exploited for surgical downstaging rather than only for palliation.",
+      "source": "DFSP (neoadjuvant imatinib phase II)",
+      "modality": "small molecule",
+      "rationale": "A phase II study of 2 months of preoperative imatinib produced clinical responses in about a third of patients and supported neoadjuvant use where surgery would be difficult or mutilating. Prospectively defining which tumors, sites, and durations yield the greatest margin sparing benefit could formalize function preserving surgery for DFSP of the head, neck, and other cosmetically or functionally sensitive regions.",
+      "transferability": "medium, neoadjuvant imatinib is already evidenced in DFSP, so the open question is optimization, which patients, what duration, and what response threshold reliably reduces resection extent without compromising oncologic margins, rather than whether the modality works at all.",
+      "prediction": "In a prospective neoadjuvant DFSP cohort at high morbidity sites, imatinib driven radiologic and pathologic response predicts a measurable reduction in resection area and reconstructive burden compared with matched upfront surgery, without an increase in positive margins or local recurrence.",
+      "citation": {
+        "label": "Kerob et al., Clin Cancer Res 2010 (imatinib as preoperative therapy in DFSP, phase II)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20439456/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): develop a combination or sequencing strategy for fibrosarcomatous DFSP that pairs PDGFR inhibition with an agent directed at a secondary alteration of the transformed clone, testing whether co targeting the fusion axis and a progression driver improves control of the metastatic prone variant.",
+      "shared": "Fibrosarcomatous DFSP retains the COL1A1::PDGFB fusion but acquires additional genomic alterations (for example TERT promoter and NF1 variants) and higher tumor mutational burden, so the fusion dependency coexists with a second, transformation associated dependency that single agent PDGFR inhibition does not address.",
+      "source": "DFSP fibrosarcomatous variant genomics and imatinib validated PDGFRB dependency",
+      "modality": "small molecule",
+      "rationale": "Imatinib retains activity in fibrosarcomatous DFSP with t(17;22), but this variant carries the metastatic risk and accumulates secondary alterations. Genomic profiling identifies candidate progression drivers (TERT reactivation, NF1 loss) that could be co targeted or used to select an added agent, so that PDGFR blockade controls the fusion clone while a second agent addresses the transformed biology.",
+      "transferability": "speculative, the fusion axis is validated but the secondary targets are candidate progression markers rather than proven vulnerabilities in DFSP, so each proposed partner drug requires demonstration that the secondary alteration is a genuine dependency and that combination is tolerable.",
+      "prediction": "In fibrosarcomatous DFSP models stratified by secondary alterations, adding an agent directed at the identified progression driver to PDGFR inhibition produces deeper and more durable growth suppression than PDGFR inhibition alone, and the benefit tracks with the presence of the targeted secondary alteration.",
+      "citation": {
+        "label": "Smith et al., Mod Pathol 2025 (genomic profiling of DFSP identifies fibrosarcomatous specific alterations including TERT reactivation)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39956270/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory information. It is not medical advice and must not be used to guide individual patient care. Dermatofibrosarcoma protuberans is a rare cutaneous sarcoma defined in nearly all cases by the COL1A1::PDGFB fusion, and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework applies to a single dependency solid tumor. Complete surgical excision with negative margins is the primary curative treatment for resectable disease; imatinib is FDA approved for unresectable, recurrent, or metastatic disease and is active in fusion positive tumors including the fibrosarcomatous variant, whose transformation to a more aggressive, metastasis prone form carries additional genomic alterations. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the shared PDGFB to PDGFRB dependency with graded transferability. Treatment decisions belong to a qualified oncology and surgical team, ideally at a sarcoma center and, where relevant, within a clinical trial and a molecular tumor board.</p>"
+}

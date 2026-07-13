@@ -1,0 +1,17 @@
+MSK-IMPACT exploration for rare cancer knowledge (real public data).
+Source: Memorial Sloan Kettering MSK-IMPACT Clinical Sequencing Cohort (Zehir et al., Nat Med 2017;
+study msk_impact_2017), 10,945 prospectively sequenced tumors, accessed live via the cBioPortal REST API. No
+simulation or subsampling.
+
+COVERAGE. MSK-IMPACT records 359 detailed cancer types. Mapping these onto
+Anveshar's rare cancer catalog identifies 140 rare cancer types comprising
+2,570 sequenced tumors, a large real world evidence base for cancers that are
+individually rare. The coverage figure shows the best represented rare cancers.
+
+DRIVER FREQUENCIES. For flagship rare cancers, per type mutation frequencies were computed from the
+MSK-IMPACT targeted panel and compared with the driver biology Anveshar curates (for example the GNAQ
+and GNA11 Galpha events plus BAP1 in uveal melanoma). This grounds Anveshar's driver claims in a real
+clinical cohort in addition to TCGA.
+
+This is a research and educational analysis of public data, not medical advice; clinical decisions must
+be made by a qualified health care provider.

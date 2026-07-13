@@ -1,0 +1,271 @@
+{
+  "cancer": {
+    "name": "Adenoid Cystic Carcinoma (ACC)",
+    "sub": "A rare salivary gland cancer defined by the recurrent MYB-NFIB fusion, indolent yet relentless, with a distinct aggressive subset carrying activating NOTCH1 mutations. Standard of care is surgery plus radiation, conventional chemotherapy is poorly effective, and no drug is FDA approved, so this board maps biology first therapies and generates testable cross condition hypotheses.",
+    "chips": ["MYB-NFIB fusion t(6;9), MYB overexpression hallmark", "NOTCH1 activating mutations in about 15 to 20 percent, aggressive subset", "No FDA approved drug, surgery plus radiation standard of care"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, subtype, driver, and modality stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Adenoid cystic carcinoma (ACC) is a rare cancer that usually starts in the salivary glands of the head and neck, though it can also arise in other glands. It tends to grow slowly, but it has a habit of creeping along nerves and coming back years later, and it can eventually spread to the lungs, liver, or bones. Most patients are treated first with surgery to remove the tumor, followed by radiation. Ordinary chemotherapy does not work well for this cancer.</p><p>Because ACC is uncommon, it rarely gets its own large clinical trials, and no drug is yet approved specifically for it. Doctors and researchers increasingly focus on the two biological features that define this cancer, a gene fusion called MYB-NFIB and, in a more aggressive group of patients, changes in a gene called NOTCH1. <strong>This report maps the treatments and research ideas that follow from that biology.</strong></p>",
+    "clinician": "<p>ACC is a malignant epithelial neoplasm most common in the major and minor salivary glands, marked by biphasic ductal and myoepithelial differentiation, a strong propensity for perineural invasion, and late distant relapse (lung, liver, bone). The disease course is often protracted but ultimately incurable once metastatic. Standard of care for localized disease is surgical resection with adjuvant radiotherapy, since conventional cytotoxic chemotherapy produces low response rates and no FDA approved systemic agent exists (Wagner et al., Crit Rev Oncol Hematol 2022, PMID 36427771, DOI 10.1016/j.critrevonc.2022.103886).</p><p>The molecular hallmark is a recurrent t(6;9) translocation generating the MYB-NFIB fusion with MYB overexpression, present in the large majority of tumors (Persson et al., Genes Chromosomes Cancer 2012, PMID 22505352, DOI 10.1002/gcc.21965). A prognostically critical branch point is the ACC-I subtype, defined by activating NOTCH1 mutations and MYC amplification, which is more aggressive than the TP63 driven, more indolent ACC-II subtype (Ferrarotto et al., J Clin Oncol 2017, PMID 27870570; Hanna et al., Clin Cancer Res 2024, PMID 38416410, DOI 10.1158/1078-0432.CCR-23-3182).</p>",
+    "researcher": "<p>ACC is a transcription factor driven cancer. The defining lesion, the t(6;9) MYB-NFIB fusion, juxtaposes the MYB oncogene to the NFIB locus and drives MYB overexpression, a change detectable in most tumors and considered a hallmark of the disease, with MYB also deregulated by alternative mechanisms in fusion negative cases (Persson et al., Genes Chromosomes Cancer 2012, PMID 22505352, DOI 10.1002/gcc.21965). MYB is a classic undruggable transcription factor, in the same difficult to drug class as MYC and RAS, which is why direct MYB targeting has historically been aspirational rather than clinical (Dang et al., Nat Rev Cancer 2017, PMID 28643779, DOI 10.1038/nrc.2017.36).</p><p>Superimposed on the MYB axis, activating NOTCH1 mutations occur in roughly 15 to 20 percent of ACC, clustering in the negative regulatory region and PEST domain hotspots also seen in T cell acute lymphoblastic leukemia, and they define a distinct subgroup with solid histology, liver and bone metastasis, and markedly shorter relapse free and overall survival (Ferrarotto et al., J Clin Oncol 2017, PMID 27870570, DOI 10.1200/JCO.2016.67.5264). This NOTCH activated subset is the clearest actionable dependency in ACC and anchors the therapies and hypotheses below.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological features found in adenoid cystic carcinoma that treatments or trials aim at. Which ones apply to you depends on your own tumor's testing, especially whether it carries a NOTCH1 change.",
+    "clinician": "Actionable biology in ACC centers on three axes, the near universal MYB-NFIB fusion, activating NOTCH1 mutations that define the aggressive ACC-I subtype, and angiogenic (VEGFR) dependence that underlies the tyrosine kinase inhibitor signal.",
+    "researcher": "Targets are indexed to their primary series and mapped to the therapies and hypotheses that follow. MYB is the near universal but historically undruggable driver, NOTCH1 is the actionable aggressive subset dependency, and VEGFR is the empirically active angiogenic axis."
+  },
+  "targets": [
+    {
+      "name": "MYB-NFIB fusion / MYB overexpression",
+      "present_in": "Majority of ACC (hallmark), t(6;9) driven",
+      "evidence": "The t(6;9) MYB-NFIB fusion and MYB mRNA overexpression are present in most tumors and are considered the molecular hallmark of ACC (Persson et al., Genes Chromosomes Cancer 2012, PMID 22505352, DOI 10.1002/gcc.21965)."
+    },
+    {
+      "name": "NOTCH1 activating mutation (ACC-I subtype)",
+      "present_in": "About 15 to 20 percent of ACC, aggressive subset",
+      "evidence": "Activating NOTCH1 mutations in the negative regulatory region and PEST domain define a distinct aggressive subgroup with solid histology, bone and liver metastasis, and poor prognosis, and confer potential responsiveness to Notch1 inhibitors (Ferrarotto et al., J Clin Oncol 2017, PMID 27870570, DOI 10.1200/JCO.2016.67.5264)."
+    },
+    {
+      "name": "VEGFR / angiogenesis",
+      "present_in": "ACC broadly (empirical target of active TKIs)",
+      "evidence": "Multitargeted VEGFR tyrosine kinase inhibitors produce the strongest single agent disease control signals reported in ACC to date (Tchekmedyian et al., J Clin Oncol 2019, PMID 30939095, DOI 10.1200/JCO.18.01859; Kang et al., Clin Cancer Res 2021, PMID 34315722, DOI 10.1158/1078-0432.CCR-21-1061)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment relevant to adenoid cystic carcinoma, colored by how strong the evidence is. Because no drug is FDA approved specifically for ACC, none are green, amber means there is real trial evidence of benefit in ACC or in a NOTCH driven setting, and gray means the idea is mechanistically promising but still experimental. Which one fits you depends on your tumor's testing.",
+    "clinician": "Candidates are graded Tier 2 (approved elsewhere with a positive prospective ACC or NOTCH driven signal, or a shared validated target with ACC trial data) or Tier 3 (mechanistic or early phase rationale). No agent carries a Tier 1 tissue agnostic approval that is biomarker matched to ACC, so nothing is graded Tier 1. NOTCH1 genotyping segregates candidates for the aggressive ACC-I subset.",
+    "researcher": "Translations are ranked by transferability of evidence, not target novelty. The angiogenic axis carries the strongest prospective ACC data, the NOTCH axis carries a genotype matched preclinical and early clinical signal borrowed from T cell leukemia and Notch biology, and the MYB axis remains the central but hardest dependency."
+  },
+  "therapies": [
+    {
+      "drug": "Axitinib",
+      "target": "VEGFR / angiogenesis",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Renal cell carcinoma (not approved for ACC)",
+      "dev_stage": "Positive randomized phase II in ACC",
+      "rationale": {
+        "patient": "Axitinib is a pill approved for kidney cancer that blocks the blood vessels tumors need to grow. In the first randomized trial ever done in ACC, patients on axitinib were far more likely to have their disease held in check at six months than patients who were only observed.",
+        "clinician": "Selective VEGFR1 to 3 inhibitor approved in RCC. In a randomized phase II trial in recurrent or metastatic ACC, axitinib improved the 6 month progression free survival rate to 73.0 percent versus 23.0 percent with observation, with median PFS 10.8 versus 2.8 months, although the objective response rate was 0 percent (disease stabilization, not shrinkage).",
+        "researcher": "The first randomized trial in ACC, establishing that VEGFR blockade delays progression in a disease whose natural history is slow but relentless. The benefit is cytostatic (disease control) rather than cytoreductive, consistent with an angiogenic dependence rather than a direct oncogenic driver hit."
+      },
+      "citation": {
+        "label": "Kang et al., Clin Cancer Res 2021 (randomized phase II axitinib vs observation in ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34315722/"
+      },
+      "trial": {
+        "nct": "NCT02859012",
+        "url": "https://clinicaltrials.gov/study/NCT02859012"
+      }
+    },
+    {
+      "drug": "Lenvatinib",
+      "target": "VEGFR / angiogenesis",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Thyroid cancer, HCC, RCC and others (not approved for ACC)",
+      "dev_stage": "Positive single arm phase II in ACC",
+      "rationale": {
+        "patient": "Lenvatinib is another pill that blocks tumor blood vessels, already approved for several other cancers. In an ACC trial, a minority of patients had their tumors shrink and most had disease that stayed stable, with progression held off for well over a year in many cases.",
+        "clinician": "Multitargeted VEGFR TKI. In a single arm phase II trial in progressive recurrent or metastatic ACC, lenvatinib produced a confirmed partial response rate of 15.6 percent with 75 percent stable disease and a median PFS of 17.5 months, meeting its primary endpoint. A separate phase II reported an 11.5 percent response rate with median PFS 9.1 months, confirming modest but real activity. Toxicity (hypertension, oral pain, fatigue) requires active management.",
+        "researcher": "Reinforces the angiogenic dependence of ACC across independent phase II cohorts, with a genuine minor response fraction on top of durable disease control. VEGFR blockade is currently the best supported systemic strategy in unselected ACC and is now being combined with NOTCH inhibition in genotype selected trials."
+      },
+      "citation": {
+        "label": "Tchekmedyian et al., J Clin Oncol 2019 (phase II lenvatinib in recurrent or metastatic ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30939095/"
+      },
+      "trial": {
+        "nct": "NCT02780310",
+        "url": "https://clinicaltrials.gov/study/NCT02780310"
+      }
+    },
+    {
+      "drug": "Axitinib plus avelumab",
+      "target": "VEGFR plus PD-L1",
+      "tier": 2,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Components approved in other cancers (combination not approved for ACC)",
+      "dev_stage": "Phase II, NCCN listed option for ACC",
+      "rationale": {
+        "patient": "This pairs the blood vessel blocker axitinib with an immunotherapy called avelumab. In an ACC trial the combination showed encouraging tumor control, and it is now listed in national cancer guidelines as the first immunotherapy based option for this disease. Benefit differed sharply by tumor subtype, favoring the less aggressive form.",
+        "clinician": "Axitinib plus the anti PD-L1 antibody avelumab showed favorable response and PFS in phase II, leading to NCCN inclusion as the first immunotherapy based option for ACC. Updated analysis showed strongly subtype dependent benefit, with median PFS 1.8 months for aggressive NOTCH1 activated ACC-I versus 11.4 months for ACC-II (HR 0.14), and a 167 gene immune signature predictive of benefit. Benefit was not associated with PD-L1 expression or TMB.",
+        "researcher": "Demonstrates that combining angiogenic blockade with checkpoint inhibition yields the first subtype stratified clinical outcomes in ACC. The ACC-I versus ACC-II divergence maps directly onto the NOTCH1 driven biology and argues that the aggressive subset needs NOTCH directed rather than immune based strategies, sharpening the discovery hypotheses below."
+      },
+      "citation": {
+        "label": "Hoff et al., Clin Cancer Res 2026 (axitinib plus avelumab phase II biomarker analysis in ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41973043/"
+      }
+    },
+    {
+      "drug": "Brontictuzumab (anti NOTCH1)",
+      "target": "NOTCH1 activating mutation",
+      "tier": 3,
+      "modality": "antibody",
+      "approved_in": "Investigational (not approved)",
+      "dev_stage": "Phase I signal in NOTCH1 mutant ACC",
+      "rationale": {
+        "patient": "This is an antibody designed to block the NOTCH1 protein, which is switched on in the aggressive form of ACC. In laboratory tumor models it worked only in tumors carrying a NOTCH1 change, and one patient with a NOTCH1 mutation in an early trial had their tumor shrink. It is still experimental.",
+        "clinician": "Brontictuzumab is a NOTCH1 targeting monoclonal antibody. In genotype defined ACC, significant tumor growth inhibition was seen exclusively in a patient derived xenograft harboring an activating NOTCH1 mutation, and an index patient with NOTCH1 mutant ACC treated on a phase I study had a partial response. This established the rationale for genotype selected NOTCH1 blockade in the ACC-I subset.",
+        "researcher": "Direct proof of concept that the NOTCH1 dependency of ACC-I is druggable and genotype selective, borrowing NOTCH biology validated in T cell leukemia. The activating hotspots (negative regulatory region, PEST domain) mirror T-ALL, licensing transfer of NOTCH directed logic across conditions."
+      },
+      "citation": {
+        "label": "Ferrarotto et al., J Clin Oncol 2017 (activating NOTCH1 mutations define an ACC subgroup responsive to Notch1 inhibitors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27870570/"
+      }
+    },
+    {
+      "drug": "AL101 (osugacestat, gamma secretase inhibitor)",
+      "target": "NOTCH pathway (activated NOTCH signaling)",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "Investigational (not approved)",
+      "dev_stage": "Preclinical efficacy in NOTCH activated ACC, evaluated in phase II",
+      "rationale": {
+        "patient": "AL101 is an experimental pill that blocks an enzyme the NOTCH proteins need to switch on. In ACC laboratory models with active NOTCH signaling it had strong antitumor effects, which is why it was moved into trials for patients whose ACC is driven by NOTCH.",
+        "clinician": "AL101 (osugacestat) is a potent gamma secretase inhibitor that prevents activation of all four NOTCH receptors. It showed potent antitumor activity in ACC cell lines, organoids, and patient derived xenografts with activating NOTCH1 mutations and constitutively upregulated NOTCH signaling, supporting evaluation in NOTCH driven relapsed or refractory ACC. It has been tested in a phase 2 ACC study of Notch mutant tumors; the mature efficacy readout is not summarized here and dedicated results should be consulted.",
+        "researcher": "Pan NOTCH pathway blockade via gamma secretase inhibition offers a small molecule route to the same ACC-I dependency addressed by anti NOTCH1 antibodies. Preclinical selectivity for NOTCH activated models supports a genotype matched design, and this axis is now advancing in combination with CDK4/6 and VEGFR inhibition in recruiting trials."
+      },
+      "citation": {
+        "label": "Ferrarotto et al., Cell Death Dis 2022 (AL101 gamma secretase inhibitor in NOTCH activated ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35931701/"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT05774899",
+      "title": "CB-103 (oral pan NOTCH inhibitor) with abemaciclib or lenvatinib in NOTCH activated ACC (CALCulus)",
+      "phase": "Phase 1/2",
+      "intervention": "CB-103 pan NOTCH inhibitor plus abemaciclib (CDK4/6) or lenvatinib (VEGFR)",
+      "eligibility": "NOTCH activated adenoid cystic carcinoma, recurrent or metastatic",
+      "url": "https://clinicaltrials.gov/study/NCT05774899"
+    },
+    {
+      "nct": "NCT06118086",
+      "title": "REM-422, a MYB mRNA degrader, in recurrent, metastatic, or unresectable ACC",
+      "phase": "Phase 1/2",
+      "intervention": "REM-422, oral small molecule mRNA inhibitor that reduces MYB expression",
+      "eligibility": "Recurrent, metastatic, or unresectable adenoid cystic carcinoma",
+      "url": "https://clinicaltrials.gov/study/NCT06118086"
+    },
+    {
+      "nct": "NCT06462183",
+      "title": "RGT-61159, an oral MYB inhibitor, in relapsed or refractory ACC or colorectal cancer",
+      "phase": "Phase 1a/1b",
+      "intervention": "RGT-61159, oral MYB inhibitor (dose escalation and expansion)",
+      "eligibility": "Relapsed or refractory adenoid cystic carcinoma or colorectal cancer",
+      "url": "https://clinicaltrials.gov/study/NCT06462183"
+    },
+    {
+      "nct": "NCT07162480",
+      "title": "Puxitatug samrotecan (AZD8205) in advanced, recurrent, or metastatic aggressive ACC subtype I",
+      "phase": "Phase 2",
+      "intervention": "Puxitatug samrotecan (AZD8205) antibody drug conjugate, intravenous",
+      "eligibility": "Advanced, recurrent, or metastatic aggressive ACC-I subtype",
+      "url": "https://clinicaltrials.gov/study/NCT07162480"
+    },
+    {
+      "nct": "NCT06891560",
+      "title": "Enfortumab vedotin in recurrent and/or metastatic ACC",
+      "phase": "Phase 2",
+      "intervention": "Enfortumab vedotin (Nectin-4 directed antibody drug conjugate), intravenous",
+      "eligibility": "Recurrent and/or metastatic adenoid cystic carcinoma",
+      "url": "https://clinicaltrials.gov/study/NCT06891560"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "These are landmark findings that made treating adenoid cystic carcinoma by its underlying biology, rather than by trial and error, a real approach. They are why matching a treatment idea to this cancer's specific drivers is legitimate rather than guesswork.",
+    "clinician": "The findings below establish the molecular framework of ACC and the first genotype matched and randomized therapeutic signals, the backbone of the therapies and hypotheses above.",
+    "researcher": "Each landmark validates a component of the ACC dependency map, the MYB-NFIB hallmark, the NOTCH1 aggressive subset and its druggability, the angiogenic vulnerability, and the general tractability of once undruggable transcription factors."
+  },
+  "precedents": [
+    {
+      "biomarker": "MYB-NFIB fusion t(6;9) and MYB overexpression as the ACC hallmark",
+      "drug": "molecular hallmark (basis of MYB directed drug development)",
+      "year": 2012,
+      "citation": {
+        "label": "Persson et al., Genes Chromosomes Cancer 2012 (MYB-NFIB fusion and MYB overexpression in ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22505352/"
+      }
+    },
+    {
+      "biomarker": "Activating NOTCH1 mutation defining aggressive ACC responsive to Notch1 inhibition",
+      "drug": "brontictuzumab (anti NOTCH1)",
+      "year": 2017,
+      "citation": {
+        "label": "Ferrarotto et al., J Clin Oncol 2017 (NOTCH1 mutant ACC subgroup, brontictuzumab response)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27870570/"
+      }
+    },
+    {
+      "biomarker": "VEGFR dependence in ACC (first randomized therapeutic benefit)",
+      "drug": "axitinib",
+      "year": 2021,
+      "citation": {
+        "label": "Kang et al., Clin Cancer Res 2021 (randomized phase II axitinib in ACC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34315722/"
+      }
+    },
+    {
+      "biomarker": "MYB and MYC as historically undruggable transcription factor oncogenes now being drugged",
+      "drug": "emerging transcription factor directed agents (concept precedent)",
+      "year": 2017,
+      "citation": {
+        "label": "Dang et al., Nat Rev Cancer 2017 (drugging the undruggable, MYB and MYC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28643779/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because ACC has two well defined biological drivers, NOTCH1 in the aggressive form and MYB in nearly all cases, researchers can propose treatments that target them directly. These are starting points for scientists and for trial design, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a validated modality or target to ACC through a shared molecular dependency. Transferability is graded, each analogy carries a primary citation, and none is a clinical recommendation. Several hypotheses already have matching early phase trials open, listed in the trials section.",
+    "researcher": "The discovery layer proposes cross condition, biology first hypotheses over ACC's dependency map (NOTCH1, MYB, and an honest advanced modality angle), each with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are research directions, not validated recommendations."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): treat the NOTCH1 mutant ACC-I subset with genotype selected NOTCH directed therapy (gamma secretase inhibition or anti NOTCH1 antibody), transferring NOTCH pathway targeting validated in T cell leukemia and supported by ACC preclinical and early clinical signals.",
+      "shared": "Activating NOTCH1 mutations in the negative regulatory region and PEST domain, the same hotspots seen in T cell acute lymphoblastic leukemia, driving constitutive NOTCH signaling in the aggressive ACC-I subset.",
+      "source": "T cell acute lymphoblastic leukemia and NOTCH activated ACC (brontictuzumab, AL101)",
+      "modality": "small molecule",
+      "rationale": "NOTCH1 activating mutations define a distinct aggressive ACC subgroup with a genotype matched response to a NOTCH1 antibody in a patient derived xenograft and an index patient partial response, and a gamma secretase inhibitor shows potent activity selectively in NOTCH activated ACC models. This licenses prospective, genotype selected NOTCH directed trials in ACC-I, now advancing in combination with CDK4/6 or VEGFR inhibition.",
+      "transferability": "medium, NOTCH pathway targeting is mechanistically validated in ACC-I preclinically and in early clinical signals, but single agent gamma secretase inhibition has historically shown on target toxicity and modest durability, so combination and biomarker selection are likely required.",
+      "prediction": "In NOTCH1 mutant ACC models and patients, a genotype selected NOTCH directed agent suppresses NOTCH target gene output and produces greater tumor control than in NOTCH1 wild type ACC, with benefit concentrated in the ACC-I subtype and absent in ACC-II.",
+      "citation": {
+        "label": "Ferrarotto et al., J Clin Oncol 2017 (NOTCH1 mutant ACC subgroup responsive to Notch1 inhibitors, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27870570/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): target the near universal MYB dependency of ACC directly, by MYB transcript degradation or transcriptional disruption, transferring the emerging ability to drug once undruggable transcription factor oncogenes.",
+      "shared": "The MYB-NFIB fusion and MYB overexpression present in the large majority of ACC, a central lineage defining driver that, like MYC, sits in the historically undruggable transcription factor class.",
+      "source": "Undruggable transcription factor oncogenes (MYB and MYC drug development)",
+      "modality": "small molecule",
+      "rationale": "MYB overexpression is the ACC hallmark, so lowering MYB output is the most direct conceivable therapy, yet MYB is a nuclear transcription factor long considered undruggable. Advances in drugging difficult targets (MYC, RAS) and mRNA directed degradation now make MYB knockdown or transcriptional disruption testable, and first in class oral MYB inhibitors and a MYB mRNA degrader have entered ACC trials.",
+      "transferability": "speculative to medium, MYB is the ideal target biologically but the hardest pharmacologically, so success depends on achieving durable, selective MYB suppression without intolerable normal tissue toxicity (MYB is essential in hematopoiesis and colonic crypts), and on demonstrating that ACC remains MYB dependent after fusion establishment.",
+      "prediction": "In MYB-NFIB positive ACC models, an agent that selectively lowers MYB transcript or activity reduces MYB target gene expression and impairs tumor growth in a MYB dependent manner, with a therapeutic window over MYB dependent normal progenitors, and MYB suppression correlates with response.",
+      "citation": {
+        "label": "Dang et al., Nat Rev Cancer 2017 (drugging the undruggable transcription factors MYB and MYC, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28643779/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply a surface antigen directed antibody drug conjugate to the aggressive, chemorefractory ACC-I subset, transferring the ADC modality from solid tumors where a cytotoxic payload delivered on an antibody outperforms free chemotherapy.",
+      "shared": "An aggressive, conventionally chemorefractory epithelial cancer that expresses a targetable cell surface antigen, where a tumor directed antibody drug conjugate can deliver a potent payload with a bystander effect that unselected chemotherapy cannot match.",
+      "source": "Solid tumor antibody drug conjugates (surface antigen directed payload delivery)",
+      "modality": "antibody drug conjugate",
+      "rationale": "Conventional chemotherapy is poorly effective in ACC and no drug is FDA approved, so an antibody drug conjugate offers a route to deliver cytotoxic payloads selectively to tumor cells expressing a surface antigen, sparing the low response and toxicity of free chemotherapy. This advanced modality angle is being tested honestly in ACC, including in the aggressive ACC-I subtype, rather than assumed to work.",
+      "transferability": "speculative, the ADC modality is validated across many solid tumors but requires an ACC expressed target antigen with adequate prevalence and a favorable therapeutic index, and ACC specific efficacy remains unproven pending the ongoing trials.",
+      "prediction": "In ACC tumors expressing the target surface antigen, a matched antibody drug conjugate produces objective responses exceeding those of conventional chemotherapy, with activity and antigen expression concentrated in the chemorefractory aggressive ACC-I subset.",
+      "citation": {
+        "label": "Wagner et al., Crit Rev Oncol Hematol 2022 (no FDA approved drug for ACC, poor chemotherapy efficacy, rationale for new modalities)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36427771/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public clinical trial registries. It is not medical advice and must not be used to guide individual patient care. Adenoid cystic carcinoma is a rare cancer with no FDA approved systemic therapy, and standard of care for localized disease is surgery with adjuvant radiation. Eligibility for any therapy depends on the individual tumor's molecular testing, in particular NOTCH1 status, which distinguishes the aggressive ACC-I subtype from the more indolent ACC-II subtype. The therapies shown are graded by strength of evidence and each links to its primary source. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified oncology team and a molecular tumor board, ideally at a center experienced with salivary gland cancer and, where relevant, within a clinical trial.</p>"
+}

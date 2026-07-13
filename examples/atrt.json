@@ -1,0 +1,244 @@
+{
+  "cancer": {
+    "name": "Atypical Teratoid Rhabdoid Tumor (ATRT)",
+    "sub": "A rare, aggressive embryonal tumor of the central nervous system in young children, defined by biallelic SMARCB1 (INI1) loss and, rarely, SMARCA4 loss, part of the SWI/SNF deficient rhabdoid tumor family. Because dedicated ATRT drugs are scarce, this board maps therapies borrowed from other SMARCB1 deficient cancers and from pediatric CNS tumor immunotherapy.",
+    "chips": ["SMARCB1/INI1 loss (rarely SMARCA4)", "SWI/SNF deficient rhabdoid family", "Pediatric CNS embryonal tumor, poor prognosis"]
+  },
+  "voiceNote": {
+    "patient": "A rare, fast growing brain tumor of early childhood caused by loss of a single protein called SMARCB1. It is serious, but researchers have found specific weaknesses in these tumors that are guiding new treatments borrowed from related cancers.",
+    "clinician": "Rare, aggressive CNS embryonal tumor of infancy and early childhood, defined by biallelic SMARCB1/INI1 loss (rarely SMARCA4); treated with surgery, intensive multimodal chemotherapy, and age adapted radiotherapy; median overall survival historically around 17 months, with molecular groups (TYR, SHH, MYC) refining prognosis.",
+    "researcher": "SMARCB1 loss (a core SWI/SNF/BAF subunit) is the near sole driver on an otherwise quiet genome, creating an EZH2/PRC2 dependency shared across the rhabdoid family and a B7-H3/CD276 surface phenotype tied to the tumor's embryonal origin; these are the repurposing anchors from epithelioid sarcoma, renal medullary carcinoma, chordoma, and pediatric CNS CAR T cell programs."
+  },
+  "overview": {
+    "patient": "<p>Atypical teratoid rhabdoid tumor (ATRT) is a rare and aggressive brain tumor that occurs mostly in babies and children under 3 years of age. It happens because a single protein called SMARCB1 (also known as INI1) is lost from the tumor cells. Treatment combines surgery, strong chemotherapy, and, when a child is old enough, radiation. Even with intensive treatment the outlook has been poor, which is why new approaches are urgently needed.</p><p>The encouraging news is that scientists have discovered exactly what goes wrong inside these tumor cells, a missing SMARCB1 protein, and that same defect appears in a handful of other rare cancers. That shared defect is now pointing doctors toward treatments already tested in those other cancers, and toward newer immune therapies designed for children with brain tumors. This report maps out that borrowing.</p>",
+    "clinician": "<p>ATRT is a rare, highly aggressive World Health Organization grade 4 CNS embryonal tumor, most common in infants and children under 3 years, defined by biallelic inactivation of SMARCB1 (INI1/BAF47) and, in a small subset, of SMARCA4 (BRG1). Diagnosis requires loss of nuclear INI1 (or BRG1) by immunohistochemistry with confirmatory molecular testing, and germline SMARCB1 testing is warranted given rhabdoid tumor predisposition syndrome.</p><p>Standard management is maximal safe surgical resection followed by intensive multiagent chemotherapy, often with high dose chemotherapy and autologous stem cell rescue, and age and risk adapted radiotherapy (focal in infants, craniospinal in older children). The Children's Oncology Group ACNS0333 regimen significantly improved survival over historical cohorts (4 year event free survival 37%, overall survival 43%). Prospective St. Jude data show DNA methylation groups (ATRT-TYR, ATRT-SHH, ATRT-MYC) carry prognostic value, with ATRT-SHH associated with metastasis; historical median overall survival is around 17 months.</p>",
+    "researcher": "<p>Comprehensive genomic and epigenomic profiling shows ATRT is driven by biallelic SMARCB1 loss on an otherwise remarkably quiet, low mutational burden genome, with essentially no recurrent coding mutations beyond SMARCB1 (or SMARCA4). Integrated DNA methylation and H3K27ac profiling of 192 tumors resolved three epigenetic subgroups (TYR, SHH, MYC) with distinct enhancer landscapes, demographics, and tumor location, indicating that inter tumor heterogeneity in ATRT is epigenetic rather than mutational.</p><p>Loss of this SWI/SNF (BAF) core subunit tips the chromatin balance toward the EZH2 containing PRC2 complex, generating an oncogenic EZH2 dependency shared across the rhabdoid tumor family (malignant rhabdoid tumor, epithelioid sarcoma, renal medullary carcinoma, and by SWI/SNF loss more broadly, chordoma). Separately, the embryonal origin of ATRT drives strong surface expression of B7-H3/CD276, an immunotherapy target retained through residual SMARCA4 dependent SWI/SNF activity. These two hallmarks (EZH2 dependence and a B7-H3 surface phenotype) are the mechanistic basis for repurposing tazemetostat and for CNS directed CAR T cell therapy.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological weak points found inside ATRT tumor cells. Each one is a possible way to attack the cancer. Which apply depends on a child's own tumor testing.",
+    "clinician": "Actionable biology in ATRT centers on the SMARCB1 loss driven EZH2 dependency and on the B7-H3/CD276 surface antigen, rather than on a hypermutation phenotype or a targetable kinase fusion; ATRT is microsatellite stable with low tumor mutational burden.",
+    "researcher": "The defining lesion (SMARCB1 loss) creates a PRC2/EZH2 chromatin dependency shared across the rhabdoid family, while the tumor's embryonal lineage produces a B7-H3 surface phenotype; both are directly druggable and both are borrowed from adjacent SWI/SNF deficient cancers and from pediatric CNS CAR T cell programs."
+  },
+  "targets": [
+    {
+      "name": "SMARCB1 (INI1) loss to EZH2/PRC2 dependency",
+      "present_in": "Universal in ATRT (the defining lesion; rare SMARCA4 deficient variant)",
+      "evidence": "Biallelic SMARCB1 loss removes a core SWI/SNF subunit and shifts chromatin control to the EZH2 containing PRC2 complex, creating an oncogenic EZH2 dependency exploited across the rhabdoid family (Chan-Penebre et al., Mol Cancer Ther 2017, PMID 28292935, DOI 10.1158/1535-7163.MCT-16-0678; Lanzi et al., Biochem Pharmacol 2023, PMID 37541451, DOI 10.1016/j.bcp.2023.115727)."
+    },
+    {
+      "name": "B7-H3 (CD276) surface antigen",
+      "present_in": "ATRT broadly (embryonal lineage surface phenotype)",
+      "evidence": "ATRT robustly expresses B7-H3/CD276, retained through residual SMARCA4 dependent SWI/SNF activity and mirroring prenatal brain expression; locoregional B7-H3 CAR T cells eradicated ATRT xenografts, nominating B7-H3 as a therapeutic surface target (Theruvath et al., Nat Med 2020, PMID 32341579, DOI 10.1038/s41591-020-0821-8)."
+    },
+    {
+      "name": "Epigenetic subgroup identity (TYR, SHH, MYC)",
+      "present_in": "All ATRT (three DNA methylation groups)",
+      "evidence": "Integrated methylation and H3K27ac profiling of 192 ATRTs resolved three epigenetic subgroups with distinct enhancer landscapes and prognosis, with ATRT-SHH linked to metastasis; subgrouping refines risk and points to subgroup specific regulatory networks (Johann et al., Cancer Cell 2016, PMID 26923874, DOI 10.1016/j.ccell.2016.02.001; Upadhyaya et al., Clin Cancer Res 2021, PMID 33737307, DOI 10.1158/1078-0432.CCR-20-4731)."
+    },
+    {
+      "name": "Microsatellite stable, low tumor mutational burden genome",
+      "present_in": "ATRT broadly (quiet coding genome)",
+      "evidence": "Whole genome and RNA sequencing found no recurrent coding mutations beyond SMARCB1, indicating a low mutational burden genome; consequently the tissue agnostic MSI-H and TMB-high checkpoint labels do not apply to ATRT (Johann et al., Cancer Cell 2016, PMID 26923874, DOI 10.1016/j.ccell.2016.02.001)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment approach linked by biology to ATRT, colored by how strong the evidence is. Green means it is FDA approved for a cancer with the same molecular defect. Amber means it is approved or clinically tested in a related setting with a shared target. Gray means the idea is promising but still experimental in ATRT.",
+    "clinician": "Cross condition translations are graded by strength of ATRT specific evidence. Note that ATRT being microsatellite stable with low tumor mutational burden means the tissue agnostic MSI-H and TMB-high checkpoint labels do not apply. Standard of care (surgery, intensive chemotherapy, age adapted radiotherapy) remains the backbone; the cards below are targeted and immunotherapeutic additions under active study.",
+    "researcher": "The repurposing logic runs from the SMARCB1 loss to EZH2 axis (tazemetostat, proven in epithelioid sarcoma and tested in ATRT within Pediatric MATCH) and from the B7-H3 surface phenotype (CNS directed CAR T cells), tempered by honest reporting that single agent tazemetostat produced disease stabilization but not objective responses in ATRT and that CAR T cell efficacy in CNS tumors remains investigational."
+  },
+  "therapies": [
+    {
+      "drug": "Intensive multimodal therapy (surgery, chemotherapy, radiotherapy)",
+      "target": "ATRT standard of care backbone",
+      "tier": 1,
+      "modality": "cytotoxic chemotherapy",
+      "approved_in": "Standard of care for ATRT (cooperative group regimens)",
+      "dev_stage": "Established standard of care; ACNS0333 improved survival over historical cohorts",
+      "rationale": {
+        "patient": "The proven backbone of ATRT treatment combines surgery to remove as much tumor as safely possible, strong chemotherapy, and radiation when a child is old enough. A cooperative group trial called ACNS0333 improved survival compared with older treatments.",
+        "clinician": "Maximal safe resection followed by intensive multiagent chemotherapy (often with high dose chemotherapy and autologous stem cell rescue) and age and risk adapted radiotherapy. The Children's Oncology Group ACNS0333 regimen achieved 4 year event free survival of 37% and overall survival of 43%, a significant improvement over historical cohorts.",
+        "researcher": "The current curative backbone is dose intensive cytotoxic therapy plus radiation, not a molecularly targeted agent; ACNS0333 established a foundation on which to layer targeted and immunotherapeutic agents, and molecular subgrouping (TYR, SHH, MYC) is being used to risk stratify future intensification and de escalation."
+      },
+      "citation": {
+        "label": "Reddy et al., J Clin Oncol 2020 (ACNS0333, high dose chemotherapy and conformal radiation for ATRT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32105509/"
+      },
+      "trial": {
+        "nct": "NCT00653068",
+        "url": "https://clinicaltrials.gov/study/NCT00653068"
+      }
+    },
+    {
+      "drug": "Tazemetostat",
+      "target": "EZH2 (SMARCB1 loss dependency)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "INI1/SMARCB1 negative epithelioid sarcoma; EZH2 mutant follicular lymphoma",
+      "dev_stage": "FDA approved 2020 (epithelioid sarcoma); tested in ATRT within Pediatric MATCH APEC1621C (stable disease, no objective responses in the ATRT subset)",
+      "rationale": {
+        "patient": "This pill blocks a protein called EZH2 that rhabdoid tumors rely on when they lose SMARCB1. It is FDA approved for a related cancer, epithelioid sarcoma, which shares the same defect. In a pediatric trial that included ATRT, it did not shrink tumors on its own but held some tumors stable, so it is now being studied in combinations.",
+        "clinician": "Oral selective EZH2 inhibitor, FDA approved for INI1/SMARCB1 negative epithelioid sarcoma (objective response rate 15%). In NCI-COG Pediatric MATCH APEC1621C (SMARCB1/SMARCA4/EZH2 altered pediatric tumors, including 8 ATRT), single agent tazemetostat produced a 5% overall response rate but prolonged stable disease of 6 months or more in 25% of patients, including an ATRT patient; graded Tier 2 (approved elsewhere in the same SMARCB1 loss context, ATRT specific single agent activity limited).",
+        "researcher": "SMARCB1 loss shifts chromatin control to PRC2/EZH2, the same dependency validated in epithelioid sarcoma and modeled preclinically across rhabdoid tumors. In ATRT the single agent signal is disease stabilization rather than tumor regression, motivating combinations (for example with checkpoint blockade in the TAZNI concept) and biomarker refinement rather than monotherapy."
+      },
+      "citation": {
+        "label": "Chi et al., J Natl Cancer Inst 2023 (Pediatric MATCH APEC1621C, tazemetostat in SMARCB1/SMARCA4/EZH2 altered pediatric tumors including ATRT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37228094/"
+      },
+      "trial": {
+        "nct": "NCT03213665",
+        "url": "https://clinicaltrials.gov/study/NCT03213665"
+      }
+    },
+    {
+      "drug": "B7-H3 (CD276) directed CAR T cells (locoregional)",
+      "target": "B7-H3 (CD276) surface antigen",
+      "tier": 2,
+      "modality": "cell therapy",
+      "approved_in": "Investigational (pediatric CNS tumors); no approved ATRT indication",
+      "dev_stage": "Preclinical eradication of ATRT xenografts; clinical B7-H3 CAR T cell delivery in pediatric CNS tumors is tolerable and under active study",
+      "rationale": {
+        "patient": "This is an experimental immune therapy that reprograms a child's own T cells to recognize a protein called B7-H3 on the tumor surface. In laboratory models it cleared ATRT tumors, and delivering these cells directly into the fluid spaces of the brain has been tolerable in children with other brain tumors. It is not yet proven to cure ATRT and is available only in clinical trials.",
+        "clinician": "ATRT robustly expresses B7-H3/CD276. Locoregionally administered B7-H3 CAR T cells eradicated cerebral ATRT xenografts with antigen specific protection from rechallenge. Clinically, repetitive intracerebroventricular B7-H3 CAR T cell dosing in pediatric CNS tumors (BrainChild-03) was feasible and tolerable, and locoregional B7-H3 CAR T cell trials now enroll ATRT; graded Tier 2 (validated surface target with a tolerable clinical delivery platform, efficacy in ATRT still investigational).",
+        "researcher": "B7-H3 is an embryonal lineage surface antigen retained via residual SMARCA4 dependent SWI/SNF activity, expressed on prenatal but not postnatal brain, giving a therapeutic window. Locoregional (intracerebroventricular or intratumoral) delivery outperformed systemic delivery preclinically with reduced systemic cytokine exposure, and the platform has moved into ATRT inclusive pediatric CNS CAR T cell trials."
+      },
+      "citation": {
+        "label": "Theruvath et al., Nat Med 2020 (locoregional B7-H3 CAR T cells for ATRT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32341579/"
+      },
+      "trial": {
+        "nct": "NCT05835687",
+        "url": "https://clinicaltrials.gov/study/NCT05835687"
+      }
+    },
+    {
+      "drug": "Tazemetostat plus checkpoint blockade (nivolumab and ipilimumab)",
+      "target": "EZH2 plus PD-1/CTLA-4",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "Investigational combination (INI1 negative or SMARCA4 deficient tumors); components approved separately",
+      "dev_stage": "Phase 1/2 combination trial (TAZNI) in progress in SMARCB1/SMARCA4 deficient pediatric tumors including ATRT; not currently recruiting",
+      "rationale": {
+        "patient": "This research combination pairs the EZH2 blocking pill with two immunotherapy drugs. The idea is that blocking EZH2 may make the tumor more visible to the immune system, so the immunotherapy can work better. It is being tested in children with rhabdoid tumors including ATRT.",
+        "clinician": "EZH2 inhibition can increase antigen presentation and immune signaling, providing a rationale to combine tazemetostat with dual PD-1/CTLA-4 blockade in SMARCB1/SMARCA4 deficient tumors. The TAZNI phase 1/2 trial (INI1 negative or SMARCA4 deficient pediatric tumors, including ATRT) is testing this combination; graded Tier 3 (mechanistic and early clinical rationale, ATRT efficacy not yet established).",
+        "researcher": "Combining PRC2/EZH2 blockade with checkpoint inhibition aims to convert the disease stabilization seen with single agent tazemetostat into deeper responses by relieving EZH2 mediated immune evasion; ATRT being microsatellite stable and low mutational burden makes the checkpoint contribution uncertain and dependent on EZH2 driven immunomodulation rather than on a high neoantigen load."
+      },
+      "citation": {
+        "label": "Chi et al., J Natl Cancer Inst 2023 (Pediatric MATCH APEC1621C, EZH2 inhibition in SMARCB1 deficient pediatric tumors; combination rationale)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37228094/"
+      },
+      "trial": {
+        "nct": "NCT05407441",
+        "url": "https://clinicaltrials.gov/study/NCT05407441"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT05835687",
+      "title": "Loc3CAR: Locoregional Delivery of B7-H3-CAR T Cells for Pediatric Patients With Primary CNS Tumors",
+      "phase": "Phase 1",
+      "intervention": "Autologous B7-H3 (CD276) directed CAR T cells delivered locoregionally via a CNS reservoir catheter",
+      "eligibility": "Patients 21 years and younger with B7-H3 positive relapsed or refractory primary CNS tumors, including atypical teratoid rhabdoid tumor (Cohort A), or brainstem high grade neoplasms (Cohort B)",
+      "url": "https://clinicaltrials.gov/study/NCT05835687"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "Some cancer drugs are now chosen based on a tumor's molecular defect rather than where it started in the body. A few of these fit ATRT because they target the same SMARCB1 loss defect, while others are landmark approvals that show why treating cancer by biology is now standard practice.",
+    "clinician": "The nearest precedent for ATRT is the SMARCB1 loss to EZH2 axis, validated by tazemetostat in INI1 negative epithelioid sarcoma. Most tissue agnostic checkpoint approvals (MSI-H, TMB-high, dMMR) do not apply given the microsatellite stable, low mutational burden ATRT genome; fusion directed approvals apply only if a fusion is documented, which is not characteristic of ATRT.",
+    "researcher": "The paradigm shift is from histology to biomarker. ATRT's actionable biomarker is SMARCB1 loss itself (an EZH2 dependency) plus a B7-H3 surface phenotype, making the epithelioid sarcoma tazemetostat approval and the pediatric CNS CAR T cell programs the nearest conceptual precedents, even though ATRT specific efficacy remains under study."
+  },
+  "precedents": [
+    {
+      "biomarker": "INI1/SMARCB1 loss (EZH2 dependency)",
+      "drug": "tazemetostat",
+      "year": 2020,
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1 negative epithelioid sarcoma; nearest ATRT precedent, first in class EZH2 inhibitor)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33035459/"
+      }
+    },
+    {
+      "biomarker": "SMARCB1/SMARCA4 loss in pediatric tumors (EZH2 inhibition)",
+      "drug": "tazemetostat (Pediatric MATCH)",
+      "year": 2023,
+      "citation": {
+        "label": "Chi et al., J Natl Cancer Inst 2023 (Pediatric MATCH APEC1621C; EZH2 inhibition in SMARCB1 deficient pediatric tumors including ATRT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37228094/"
+      }
+    },
+    {
+      "biomarker": "B7-H3 (CD276) surface expression on pediatric CNS tumors (CAR T cell target)",
+      "drug": "B7-H3 directed CAR T cells",
+      "year": 2025,
+      "citation": {
+        "label": "Vitanza et al., Nat Med 2025 (BrainChild-03, intracerebroventricular B7-H3 CAR T cells for pediatric CNS tumors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39775044/"
+      }
+    },
+    {
+      "biomarker": "MSI-H / dMMR (does NOT apply to microsatellite stable ATRT)",
+      "drug": "pembrolizumab",
+      "year": "2017, first tissue agnostic approval",
+      "citation": {
+        "label": "Le et al., Science 2017 (mismatch repair deficiency predicts checkpoint response; basis of the tissue agnostic label, not applicable to MSS ATRT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28596308/"
+      }
+    },
+    {
+      "biomarker": "TMB-high 10 or more mut per Mb (does NOT apply to low TMB ATRT)",
+      "drug": "pembrolizumab",
+      "year": 2020,
+      "citation": {
+        "label": "Johann et al., Cancer Cell 2016 (ATRT is driven by SMARCB1 loss on a quiet, low mutational burden genome)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26923874/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because ATRT shares its core defect (loss of SMARCB1 in the SWI/SNF machinery) with a small group of other rare cancers, treatments that help those cancers might be worth testing in ATRT, and treatments proven for other childhood brain tumors might transfer here. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a therapy or modality validated in an adjacent SMARCB1 deficient cancer or in another pediatric CNS tumor to ATRT, over a shared molecular dependency. Transferability is graded and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses by analogy over a shared molecular dependency (SWI/SNF loss to EZH2, embryonal surface antigens, CNS delivery of engineered cells), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in ATRT."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): treat ATRT with EZH2 inhibition (or dual EZH1/EZH2 blockade) as the shared SWI/SNF loss dependency, and combine it rationally rather than as monotherapy, drawing on the same family relationship that links renal medullary carcinoma and chordoma.",
+      "shared": "Biallelic loss of the SWI/SNF core subunit SMARCB1 (or partial loss of SWI/SNF function) shifts chromatin balance to the EZH2 containing PRC2 complex, an oncogenic EZH2 dependency common to ATRT, malignant rhabdoid tumor, epithelioid sarcoma, renal medullary carcinoma, and SWI/SNF deficient chordoma.",
+      "source": "Epithelioid sarcoma and the SWI/SNF deficient rhabdoid family (tazemetostat EZH2 inhibition)",
+      "modality": "small molecule",
+      "rationale": "Tazemetostat is FDA approved in INI1 negative epithelioid sarcoma and stabilized (but did not shrink) SMARCB1 deficient pediatric tumors including ATRT in Pediatric MATCH. The gap between disease stabilization and objective response in ATRT suggests that combination strategies (with cytotoxic backbones, checkpoint blockade, or agents relieving PRC2 independent or EZH1 mediated resistance) are the logical next step within this shared family.",
+      "transferability": "medium, EZH2 inhibition is a validated modality in the SWI/SNF deficient family and clinically tested in ATRT, but single agent ATRT activity has been limited to stabilization, so the open question is which combination or which epigenetic subgroup (TYR, SHH, MYC) yields regression.",
+      "prediction": "In ATRT models across the three methylation subgroups, an EZH2 inhibitor combined with a rationally chosen partner (a DNA damaging backbone, checkpoint blockade, or an EZH1/EZH2 dual inhibitor) produces greater and more durable tumor regression than tazemetostat alone, with the strongest effect in a definable subgroup.",
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1 negative epithelioid sarcoma; shared SWI/SNF loss to EZH2 dependency)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33035459/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): treat ATRT with locoregional B7-H3 (CD276) directed cell therapy, transferring a surface antigen approach validated across pediatric CNS embryonal and midline tumors to the ATRT surface phenotype.",
+      "shared": "A pediatric CNS tumor with strong, lineage restricted surface expression of an embryonal antigen (B7-H3/CD276) that engineered T cells can target, mirroring the B7-H3 phenotype demonstrated on ATRT and on other pediatric CNS tumors.",
+      "source": "Pediatric CNS tumor CAR T cell programs (B7-H3 CAR T cells; GD2 CAR T cells in diffuse midline glioma)",
+      "modality": "cell therapy",
+      "rationale": "ATRT robustly expresses B7-H3, and locoregional B7-H3 CAR T cells eradicated ATRT xenografts preclinically. Clinically, repetitive intracerebroventricular B7-H3 CAR T cell delivery in pediatric CNS tumors was tolerable, and GD2 CAR T cells produced radiographic responses in H3K27M diffuse midline glioma, establishing that CNS directed cell therapy against an embryonal surface antigen is feasible and can be active.",
+      "transferability": "medium, the surface target is validated on ATRT and the intracerebroventricular delivery platform is clinically tolerable, but objective ATRT efficacy is still investigational and depends on antigen density, on target off tumor safety at the blood brain barrier, and durability against antigen escape.",
+      "prediction": "In children with relapsed or refractory B7-H3 positive ATRT, locoregional B7-H3 CAR T cells achieve measurable intracranial antitumor activity with acceptable neurotoxicity, and antigen loss or heterogeneity emerges as the dominant resistance mechanism, motivating multi antigen or combination designs.",
+      "citation": {
+        "label": "Theruvath et al., Nat Med 2020 (locoregional B7-H3 CAR T cells for ATRT); Majzner et al., Nature 2022 (GD2 CAR T cells in H3K27M diffuse midline glioma, CNS cell therapy precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32341579/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): because ATRT is defined by a single epigenetic lesion on an otherwise quiet genome, prioritize advanced epigenetic and immunologic modalities over conventional cytotoxic intensification, and be explicit that the tissue agnostic hypermutation checkpoint labels do not transfer to ATRT.",
+      "shared": "A near monogenic, low mutational burden cancer where the driver is a chromatin defect (SWI/SNF loss) rather than a hypermutated genome, so the actionable dependency is epigenetic and lineage surface based, not neoantigen driven.",
+      "source": "Cross condition contrast with hypermutation gated tissue agnostic approvals (MSI-H, TMB-high) that do not apply to ATRT",
+      "modality": "small molecule",
+      "rationale": "ATRT carries essentially no recurrent coding mutations beyond SMARCB1 and is microsatellite stable with low tumor mutational burden, so the mismatch repair and TMB-high checkpoint labels that unlock therapy in many tumors are not applicable. The honest advanced modality angle is therefore to concentrate on the epigenetic dependency (PRC2/EZH2, and other chromatin regulators de repressed by SWI/SNF loss) and on lineage surface immunotherapy, while flagging that broad checkpoint monotherapy is unlikely to help without an EZH2 driven immunomodulatory step.",
+      "transferability": "speculative, this reframing is well grounded in ATRT genomics but the specific next generation epigenetic targets beyond EZH2 (for example other de repressed chromatin regulators or synthetic lethal partners of SWI/SNF loss) are preclinical, and any immunotherapy benefit will hinge on converting a cold, low mutational burden tumor into an immunogenic one.",
+      "prediction": "Functional and epigenomic screens in SMARCB1 deficient ATRT models nominate chromatin directed dependencies beyond EZH2 whose inhibition is selectively lethal, and combining such an epigenetic agent with lineage surface immunotherapy outperforms either alone, whereas single agent checkpoint blockade shows minimal activity consistent with the low mutational burden genotype.",
+      "citation": {
+        "label": "Johann et al., Cancer Cell 2016 (ATRT comprises three epigenetic subgroups on a quiet, low mutational burden genome)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26923874/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed, ClinicalTrials.gov, and FDA announcements. It is not medical advice and must not be used to guide individual patient care. Atypical teratoid rhabdoid tumor is a rare, aggressive pediatric CNS tumor with limited prospective data; many targeted and immunotherapeutic statements rest on early phase trials, small series, or preclinical models, and cross condition translations are graded by evidence strength (Tier 1 to 3). The curative backbone remains surgery, intensive chemotherapy, and age and risk adapted radiotherapy. Single agent tazemetostat produced disease stabilization but not objective responses in the ATRT subset of Pediatric MATCH, B7-H3 directed cell therapy in ATRT is investigational, and ATRT being microsatellite stable with low tumor mutational burden means the tissue agnostic MSI-H and TMB-high approvals do not apply. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified pediatric neuro oncology team, ideally at a center experienced with SMARCB1 deficient malignancies and, where relevant, within a clinical trial.</p>"
+}

@@ -1,0 +1,360 @@
+msk_cancer_type,n_samples,matched_rare_cancer
+Lung Adenocarcinoma,1357,
+Breast Invasive Ductal Carcinoma,927,
+Colon Adenocarcinoma,724,
+Prostate Adenocarcinoma,698,
+Pancreatic Adenocarcinoma,384,
+Bladder Urothelial Carcinoma,312,
+Glioblastoma Multiforme,286,
+Renal Clear Cell Carcinoma,202,
+Cutaneous Melanoma,195,
+Breast Invasive Lobular Carcinoma,190,
+Lung Squamous Cell Carcinoma,170,
+Stomach Adenocarcinoma,151,
+Rectal Adenocarcinoma,151,
+Cancer of Unknown Primary,146,Carcinoma of unknown primary
+Mixed Germ Cell Tumor,141,
+Gastrointestinal Stromal Tumor,137,Gastrointestinal stromal tumor
+High-Grade Serous Ovarian Cancer,133,
+Intrahepatic Cholangiocarcinoma,115,Cholangiocarcinoma
+Esophageal Adenocarcinoma,112,
+Uterine Endometrioid Carcinoma,95,
+Papillary Thyroid Cancer,93,
+Colorectal Adenocarcinoma,90,
+Anaplastic Astrocytoma,86,
+Hepatocellular Carcinoma,85,
+Upper Tract Urothelial Carcinoma,82,
+Small Cell Lung Cancer,82,Small cell lung cancer
+Neuroblastoma,80,Neuroblastoma
+Seminoma,76,Seminoma
+Pancreatic Neuroendocrine Tumor,75,Pancreatic neuroendocrine tumor
+"Diffuse Large B-Cell Lymphoma, NOS",74,
+Adenoid Cystic Carcinoma,73,Adenoid cystic carcinoma
+Merkel Cell Carcinoma,63,Merkel cell carcinoma
+Poorly Differentiated Thyroid Cancer,60,Poorly differentiated thyroid carcinoma
+Undifferentiated Pleomorphic Sarcoma/Malignant Fibrous Histiocytoma/High-Grade Spindle Cell Sarcoma,59,
+Uterine Leiomyosarcoma,57,Uterine leiomyosarcoma
+Cholangiocarcinoma,57,Cholangiocarcinoma
+Breast Mixed Ductal and Lobular Carcinoma,56,
+Cutaneous Squamous Cell Carcinoma,55,Cutaneous squamous cell carcinoma
+Unclassified Renal Cell Carcinoma,54,
+Invasive Breast Carcinoma,50,
+"Breast Invasive Cancer, NOS",49,
+Mucinous Adenocarcinoma of the Appendix,48,Appendiceal mucinous adenocarcinoma
+Uterine Serous Carcinoma/Uterine Papillary Serous Carcinoma,47,
+Gallbladder Cancer,46,Gallbladder carcinoma
+Dedifferentiated Liposarcoma,45,Dedifferentiated liposarcoma
+Uveal Melanoma,44,Uveal melanoma
+Anaplastic Oligodendroglioma,43,"Oligodendroglioma, isocitrate dehydrogenase-mutant and 1p/19q-codeleted"
+Melanoma of Unknown Primary,43,
+Head and Neck Squamous Cell Carcinoma,43,
+Oral Cavity Squamous Cell Carcinoma,42,
+Oropharynx Squamous Cell Carcinoma,42,
+"Pleural Mesothelioma, Epithelioid Type",41,
+Leiomyosarcoma,41,Leiomyosarcoma
+"Breast Invasive Carcinoma, NOS",40,
+Mucinous Adenocarcinoma of the Colon and Rectum,39,Colorectal mucinous adenocarcinoma
+Pleural Mesothelioma,39,Malignant mesothelioma
+Uterine Carcinosarcoma/Uterine Malignant Mixed Mullerian Tumor,38,
+Ewing Sarcoma,38,Ewing sarcoma
+Large Cell Neuroendocrine Carcinoma,37,Large cell neuroendocrine carcinoma
+Osteosarcoma,37,Osteosarcoma
+Angiosarcoma,36,Angiosarcoma
+Oligodendroglioma,36,Oligodendroglioma
+Astrocytoma,35,
+Synovial Sarcoma,34,Synovial sarcoma
+Anaplastic Thyroid Cancer,33,Anaplastic thyroid carcinoma
+Chromophobe Renal Cell Carcinoma,33,Chromophobe renal cell carcinoma
+Small Bowel Cancer,33,
+Papillary Renal Cell Carcinoma,33,Papillary renal cell carcinoma
+Anal Squamous Cell Carcinoma,32,Anal cancer
+"Sarcoma, NOS",32,
+Adenocarcinoma of the Gastroesophageal Junction,28,
+Extrahepatic Cholangiocarcinoma,27,Distal cholangiocarcinoma
+Follicular Lymphoma,27,
+Adrenocortical Carcinoma,25,Adrenocortical carcinoma
+Clear Cell Ovarian Cancer,24,Ovarian clear cell carcinoma
+Solitary Fibrous Tumor/Hemangiopericytoma,24,
+Poorly Differentiated Non-Small Cell Lung Cancer,24,
+Yolk Sac Tumor,23,Yolk sac tumor
+Low-Grade Serous Ovarian Cancer,23,Low grade serous ovarian carcinoma
+Hurthle Cell Thyroid Cancer,23,Hurthle cell thyroid carcinoma
+Anorectal Mucosal Melanoma,23,
+Acral Melanoma,23,Acral lentiginous melanoma
+Desmoplastic Small-Round-Cell Tumor,22,Desmoplastic small round cell tumor
+Meningioma,21,Meningioma
+"High-Grade Glioma, NOS",20,
+Uterine Mixed Endometrial Carcinoma,19,
+Chondrosarcoma,19,Chondrosarcoma
+Embryonal Carcinoma,19,
+Peritoneal Mesothelioma,18,Peritoneal mesothelioma
+Salivary Duct Carcinoma,18,Salivary duct carcinoma
+Well-Differentiated Liposarcoma,18,Well-differentiated liposarcoma
+Myxoid/Round-Cell Liposarcoma,18,Myxoid liposarcoma
+Appendiceal Adenocarcinoma,18,Appendiceal cancer
+Endocervical Adenocarcinoma,17,
+Medullary Thyroid Cancer,17,Medullary thyroid carcinoma
+Mucosal Melanoma of the Vulva/Vagina,17,
+Fibrolamellar Carcinoma,17,Fibrolamellar hepatocellular carcinoma
+Esophagogastric Adenocarcinoma,17,
+Non-Small Cell Lung Cancer,17,
+Anaplastic Oligoastrocytoma,16,
+Small Bowel Well-Differentiated Neuroendocrine Tumor,16,
+Ampullary Carcinoma,16,Ampullary carcinoma
+Uterine Clear Cell Carcinoma,14,Uterine clear cell carcinoma
+Granulosa Cell Tumor,14,
+Larynx Squamous Cell Carcinoma,14,
+Erdheim-Chester Disease,14,Erdheim-Chester disease
+Chordoma,14,Chordoma
+Acinar Cell Carcinoma of the Pancreas,14,Acinar cell carcinoma of the pancreas
+Angioimmunoblastic T-Cell Lymphoma,14,Angioimmunoblastic T cell lymphoma
+Atypical Lung Carcinoid,13,Pulmonary atypical carcinoid
+Nasopharyngeal Carcinoma,13,Nasopharyngeal carcinoma
+Translocation-Associated Renal Cell Carcinoma,13,
+Sarcomatoid Carcinoma of the Lung,13,
+Head and Neck Mucosal Melanoma,13,
+Mantle Cell Lymphoma,13,Mantle cell lymphoma
+"Peripheral T-Cell lymphoma, NOS",13,
+Prostate Neuroendocrine Carcinoma,12,Small cell neuroendocrine carcinoma of the prostate
+Basal Cell Carcinoma,12,
+Ovarian Carcinosarcoma/Malignant Mixed Mesodermal Tumor,12,
+Signet Ring Cell Carcinoma of the Stomach,12,
+Cervical Squamous Cell Carcinoma,11,
+Choriocarcinoma,11,Gestational trophoblastic disease
+Rhabdomyosarcoma,11,Rhabdomyosarcoma
+Malignant Peripheral Nerve Sheath Tumor,11,Malignant peripheral nerve sheath tumor
+High-Grade Neuroendocrine Carcinoma of the Colon and Rectum,11,
+Lung Adenosquamous Carcinoma,11,
+Uterine Perivascular Epithelioid Cell Tumor,10,
+Gliosarcoma,10,Gliosarcoma
+Thymic Carcinoma,10,Thymic carcinoma
+"Neuroendocrine Carcinoma, NOS",10,
+Malignant Phyllodes Tumor of the Breast,10,
+Mucinous Ovarian Cancer,9,
+Embryonal Rhabdomyosarcoma,9,Embryonal rhabdomyosarcoma
+Intimal Sarcoma,9,Intimal sarcoma
+Gastrointestinal Neuroendocrine Tumors,9,
+Ependymoma,9,Ependymoma
+Lung Carcinoid,9,
+Pancreatobiliary Ampullary Carcinoma,9,
+Esophageal Squamous Cell Carcinoma,9,
+Lung Neuroendocrine Tumor,9,
+Mature B-Cell Neoplasms,9,
+"Poorly Differentiated Carcinoma, NOS",9,
+Metaplastic Breast Cancer,8,
+Epithelioid Sarcoma,8,Epithelioid sarcoma
+Renal Angiomyolipoma,8,
+Pleomorphic Liposarcoma,8,Pleomorphic liposarcoma
+Thymoma,8,Thymoma
+"Neuroendocrine Tumor, NOS",8,
+"Low-Grade Glioma, NOS",8,
+Goblet Cell Carcinoid of the Appendix,8,
+Non-Seminomatous Germ Cell Tumor,8,
+Adenosquamous Carcinoma of the Pancreas,8,
+Intraductal Papillary Mucinous Neoplasm,8,
+Myxofibrosarcoma,7,Myxofibrosarcoma
+Bladder Adenocarcinoma,7,
+Endometrioid Ovarian Cancer,7,
+Prostate Small Cell Carcinoma,7,Small cell neuroendocrine carcinoma of the prostate
+Head and Neck Squamous Cell Carcinoma of Unknown Primary,7,
+Gastric Type Mucinous Carcinoma,6,
+Skin Adnexal Carcinoma,6,
+Plasmacytoid/Signet Ring Cell Bladder Carcinoma,6,
+Alveolar Soft Part Sarcoma,6,Alveolar soft part sarcoma
+Penile Squamous Cell Carcinoma,6,Penile squamous cell carcinoma
+Soft Tissue Myoepithelial Carcinoma,6,Malignant myoepithelioma of soft tissue
+Mammary Analogue Secretory Carcinoma of Salivary Gland Origin,6,
+Alveolar Rhabdomyosarcoma,5,Alveolar rhabdomyosarcoma
+Myxoid Chondrosarcoma,5,
+Anaplastic Ependymoma,5,
+"Pleural Mesothelioma, Biphasic Type",5,
+Teratoma,5,
+Perivascular Epithelioid Cell Tumor,5,PEComa
+Extraskeletal Myxoid Chondrosarcoma,5,Extraskeletal myxoid chondrosarcoma
+Cervical Adenosquamous Carcinoma,5,
+Renal Mucinous Tubular Spindle Cell Carcinoma,5,
+Uterine Epithelioid Leiomyosarcoma,5,
+Follicular Thyroid Cancer,5,
+Fibrosarcoma,5,Fibrosarcoma
+Mixed Ovarian Carcinoma,5,
+Signet Ring Cell Type of the Appendix,5,
+Epithelioid Hemangioendothelioma,5,Epithelioid hemangioendothelioma
+Non-Hodgkin Lymphoma,5,
+Atypical Meningioma,5,Atypical meningioma
+"Adenocarcinoma, NOS",5,
+Poorly Differentiated Carcinoma of the Stomach,5,
+Solid Pseudopapillary Neoplasm of the Pancreas,5,Solid pseudopapillary neoplasm of the pancreas
+Urethral Adenocarcinoma,4,
+Follicular Dendritic Cell Sarcoma,4,Follicular dendritic cell sarcoma
+Chondroblastic Osteosarcoma,4,
+Hepatocellular Carcinoma plus Intrahepatic Cholangiocarcinoma,4,
+Myoepithelial Carcinoma,4,Myoepithelial carcinoma
+High-Grade Endometrial Stromal Sarcoma,4,High-grade endometrial stromal sarcoma
+Squamous Cell Carcinoma of the Vulva/Vagina,4,
+Sinonasal Squamous Cell Carcinoma,4,
+Pheochromocytoma,4,Pheochromocytoma
+Hypopharynx Squamous Cell Carcinoma,4,
+Mixed Cervical Carcinoma,4,
+Oligoastrocytoma,4,
+Pleomorphic Rhabdomyosarcoma,4,Pleomorphic rhabdomyosarcoma
+"Uterine Sarcoma, Other",4,
+Head and Neck Neuroendocrine Carcinoma,4,
+Well-Differentiated Neuroendocrine Tumor of the Rectum,4,
+Renal Medullary Carcinoma,4,Renal medullary carcinoma
+Salivary Adenocarcinoma,4,
+Paraganglioma,4,Paraganglioma
+Langerhans Cell Histiocytosis,4,Langerhans cell histiocytosis
+Well-Differentiated Neuroendocrine Tumor of the Appendix,4,
+Teratoma with Malignant Transformation,4,
+Histiocytic and Dendritic Cell Neoplasms,4,
+Retinoblastoma,4,Retinoblastoma
+Marginal Zone Lymphoma,4,
+Mucosal Melanoma of the Esophagus,4,
+Undifferentiated Carcinoma of the Pancreas,4,
+Sinonasal Adenocarcinoma,4,
+Mixed Cancer Types,4,
+Uterine Undifferentiated Carcinoma,3,
+Esophageal Poorly Differentiated Carcinoma,3,
+Breast Angiosarcoma,3,
+Clear Cell Sarcoma,3,Clear cell sarcoma
+Mucoepidermoid Carcinoma,3,Mucoepidermoid carcinoma
+Spindle Cell Rhabdomyosarcoma,3,Spindle cell/sclerosing rhabdomyosarcoma
+Osteoblastic Osteosarcoma,3,
+"Serous Borderline Ovarian Tumor, Micropapillary",3,
+Dermatofibrosarcoma Protuberans,3,Dermatofibrosarcoma protuberans
+Pineal Parenchymal Tumor of Intermediate Differentiation,3,Pineal parenchymal tumor of intermediate differentiation
+Schwannoma,3,
+Hemangioblastoma,3,Hemangioblastoma
+Epithelial-Myoepithelial Carcinoma,3,Epithelial-myoepithelial carcinoma
+Inflammatory Myofibroblastic Tumor,3,Inflammatory myofibroblastic tumor
+Mucosal Melanoma of the Urethra,3,
+"Squamous Cell Carcinoma, NOS",3,
+Hepatoblastoma,3,Hepatoblastoma
+Endometrial Stromal Sarcoma,3,Endometrial stromal sarcoma
+Uterine Adenosarcoma,3,Uterine adenosarcoma
+Mesenchymal Chondrosarcoma,3,Mesenchymal chondrosarcoma
+Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma,3,
+Spindle Cell Carcinoma of the Lung,3,Pulmonary sarcomatoid carcinoma
+Malignant Lymphoma,3,
+Renal Oncocytoma,3,
+Dedifferentiated Chondrosarcoma,3,Dedifferentiated chondrosarcoma
+Classical Hodgkin Lymphoma,3,
+Testicular Mesothelioma,2,Mesothelioma of the tunica vaginalis
+Urethral Squamous Cell Carcinoma,2,
+Acinic Cell Carcinoma,2,Acinic cell carcinoma
+"Pleural Mesothelioma, Sarcomatoid Type",2,
+Ossifying Fibromyxoid Tumor,2,
+Sweat Gland Carcinoma/Apocrine Eccrine Carcinoma,2,
+Sex Cord Stromal Tumor,2,
+Well-Differentiated Neuroendocrine Tumors of the Stomach,2,
+Uterine Smooth Muscle Tumor of Uncertain Malignant Potential,2,
+Hemangiopericytoma of the Central Nervous System,2,
+Sertoli-Leydig Cell Tumor,2,
+Anaplastic Meningioma,2,Anaplastic meningioma
+Wilms' Tumor,2,Wilms tumor
+Uterine Myxoid Leiomyosarcoma,2,
+Sclerosing Epithelioid Fibrosarcoma,2,Sclerosing epithelioid fibrosarcoma
+Undifferentiated Uterine Sarcoma,2,
+Pilocytic Astrocytoma,2,Pilocytic astrocytoma
+Sweat Gland Adenocarcinoma,2,
+Signet Ring Cell Adenocarcinoma of the Colon and Rectum,2,
+Rosette-forming Glioneuronal Tumor of the Fourth Ventricle,2,
+Mature Teratoma,2,
+Olfactory Neuroblastoma,2,Esthesioneuroblastoma
+Granular Cell Tumor,2,
+Serous Borderline Ovarian Tumor,2,
+Urachal Adenocarcinoma,2,Urachal adenocarcinoma
+Sarcomatoid Carcinoma of the Urinary Bladder,2,
+Solitary Fibrous Tumor of the Central Nervous System,2,Solitary fibrous tumor of the central nervous system
+Sebaceous Carcinoma,2,Sebaceous carcinoma
+Bladder Squamous Cell Carcinoma,2,
+Small Cell Carcinoma of the Cervix,2,
+Sinonasal Undifferentiated Carcinoma,2,Sinonasal undifferentiated carcinoma
+Immature Teratoma,2,Central nervous system teratoma
+Extramammary Paget Disease,2,Extramammary Paget disease
+"Head and Neck Carcinoma, Other",2,
+Urethral Urothelial Carcinoma,2,
+Adenoid Cystic Breast Cancer,2,
+Myofibroma,2,
+Hodgkin Lymphoma,2,
+Mucinous Cystic Neoplasm,2,
+Anaplastic Pleomorphic Xanthoastrocytoma,2,Pleomorphic xanthoastrocytoma
+Diffuse Intrinsic Pontine Glioma,2,Diffuse intrinsic pontine glioma
+Small Cell Bladder Cancer,2,Small cell neuroendocrine carcinoma of the urinary bladder
+"Salivary Carcinoma, Other",2,
+Clear Cell Papillary Renal Cell Carcinoma,2,
+Medulloblastoma,2,Medulloblastoma
+Salivary Carcinoma,2,
+Primitive Neuroectodermal Tumor,2,
+Duodenal Adenocarcinoma,2,Small intestinal adenocarcinoma
+Renal Cell Carcinoma,2,
+Breast Invasive Mixed Mucinous Carcinoma,1,
+Clear Cell Odontogenic Carcinoma,1,
+Chondroblastoma,1,
+Uterine Neuroendocrine Carcinoma,1,
+Small Cell Osteosarcoma,1,Small cell osteosarcoma
+Low-Grade Fibromyxoid Sarcoma,1,Low-grade fibromyxoid sarcoma
+Ovarian Seromucinous Carcinoma,1,
+"Ovarian Cancer, Other",1,
+Melanotic Schwannoma,1,
+Uterine Dedifferentiated Carcinoma,1,
+Dermatofibroma,1,
+Mucinous Stomach Adenocarcinoma,1,
+Ovarian Epithelial Tumor,1,
+Large Cell Lung Carcinoma,1,
+Lymphoepithelioma-like Carcinoma of the Lung,1,Pulmonary lymphoepithelial carcinoma
+Systemic Mastocytosis,1,Systemic mastocytosis
+Odontogenic Carcinoma,1,
+Waldenstrom Macroglobulinemia,1,Waldenstrom macroglobulinemia
+Ganglioglioma,1,Ganglioglioma
+Pituicytoma,1,
+Anaplastic Ganglioglioma,1,Ganglioglioma
+Collecting Duct Renal Cell Carcinoma,1,
+Astroblastoma,1,
+"Steroid Cell Tumor, NOS",1,
+Diffuse Type Stomach Adenocarcinoma,1,
+Extraventricular Neurocytoma,1,Extraventricular neurocytoma
+Low-Grade Endometrial Stromal Sarcoma,1,Low-grade endometrial stromal sarcoma
+Mature T and NK Neoplasms,1,
+Adrenocortical Adenoma,1,
+Small Cell Carcinoma of the Ovary,1,
+Secondary Osteosarcoma,1,Secondary osteosarcoma
+T-Lymphoblastic Leukemia/Lymphoma,1,T-lymphoblastic leukemia/lymphoma
+Desmoid/Aggressive Fibromatosis,1,
+Histiocytic Dendritic Cell Sarcoma,1,
+Serous Ovarian Cancer,1,
+Pleomorphic Xanthoastrocytoma,1,Pleomorphic xanthoastrocytoma
+Pleomorphic Carcinoma of the Lung,1,Pulmonary sarcomatoid carcinoma
+Acute Myeloid Leukemia,1,
+Cellular Schwannoma,1,
+Cervical Clear Cell Carcinoma,1,Clear cell adenocarcinoma of the cervix
+Mesonephric Carcinoma,1,
+High-Grade Neuroendocrine Carcinoma of the Ovary,1,
+Intestinal Type Mucinous Carcinoma,1,
+Intestinal Type Stomach Adenocarcinoma,1,
+Small Cell Carcinoma of Unknown Primary,1,
+Basaloid Penile Squamous Cell Carcinoma,1,
+Primary Mediastinal (Thymic) Large B-Cell Lymphoma,1,
+Basaloid Large Cell Carcinoma of the Lung,1,
+"Craniopharyngioma, Adamantinomatous Type",1,Adamantinomatous craniopharyngioma
+Anaplastic Large Cell Lymphoma,1,Anaplastic large cell lymphoma
+Myxopapillary Ependymoma,1,Myxopapillary ependymoma
+Mucinous Carcinoma,1,
+Glomangiosarcoma,1,Malignant glomus tumor
+Proximal-Type Epithelioid Sarcoma,1,Epithelioid sarcoma
+Serous Cystadenoma of the Pancreas,1,
+Pancreatoblastoma,1,Pancreatoblastoma
+Cervical Endometrioid Carcinoma,1,
+Breast Ductal Carcinoma In Situ,1,
+Myxoma,1,
+Medullary Carcinoma of the Colon,1,Medullary carcinoma of the colon
+Ciliated Muconodular Papillary Tumor of the Lung,1,
+Tubular Stomach Adenocarcinoma,1,
+Perihilar Cholangiocarcinoma,1,Perihilar cholangiocarcinoma
+Plasma Cell Myeloma,1,
+Ependymomal Tumor,1,
+Renal Clear Cell Carcinoma with Sarcomatoid Features,1,
+Pituitary Adenoma,1,
+Extranodal Marginal Zone Lymphoma of Mucosa-Associated Lymphoid Tissue (MALT lymphoma),1,
+Central Neurocytoma,1,Central neurocytoma
+Liposarcoma,1,Liposarcoma

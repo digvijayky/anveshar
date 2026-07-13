@@ -1,0 +1,256 @@
+{
+  "cancer": {
+    "name": "Alveolar Soft Part Sarcoma (ASPS)",
+    "sub": "A rare, slow growing soft tissue sarcoma of young adults defined by a single recurrent chromosomal event, the ASPSCR1-TFE3 fusion arising from der(17)t(X;17)(p11;q25). The fusion transcription factor drives MET receptor tyrosine kinase overexpression and a striking angiogenic program, and most patients present with or develop lung, bone, or brain metastases. Because dedicated trials are scarce, this board maps therapies validated against the same MET, angiogenic, and immune biology in other conditions.",
+    "chips": ["ASPSCR1-TFE3 fusion, der(17)t(X;17)", "MET overexpression and strong angiogenesis", "Atezolizumab, first FDA approval for ASPS (2022)"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, fusion biology and biomarkers stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Alveolar soft part sarcoma (ASPS) is a rare cancer that usually starts in the muscle or deep soft tissue of the leg, arm, or the head and neck region, most often in teenagers and young adults. It tends to grow slowly, but it often spreads to the lungs, bones, or brain, sometimes years after the first tumor is found. Almost every ASPS is caused by the same single genetic accident, where two chromosomes swap pieces and join two genes together into one abnormal gene.</p><p>That abnormal gene switches on signals that make the tumor build many blood vessels and grow. Standard chemotherapy usually does not work well here. The important news is that in 2022 an immunotherapy called atezolizumab became the first treatment ever approved by the FDA specifically for ASPS, and several other drugs that target blood vessel growth or the tumor's growth signal have shown activity. <strong>This report maps out those options and the biology behind them.</strong></p>",
+    "clinician": "<p>ASPS is an orphan soft tissue sarcoma, roughly 0.5 percent of sarcomas, presenting in adolescents and young adults with a painless deep soft tissue mass, typically of the extremity or the head and neck. The clinical course is indolent but metastasizing, with lung, bone, and central nervous system metastases common at diagnosis or late in follow up. Complete resection is the mainstay in localized disease, and conventional cytotoxic chemotherapy is largely inactive.</p><p>The defining lesion is the ASPSCR1-TFE3 fusion (also written ASPL-TFE3) from a non reciprocal der(17)t(X;17)(p11;q25), diagnosable by TFE3 immunohistochemistry and confirmatory fusion testing. The fusion drives MET overexpression and an angiogenic, immunologically active microenvironment. Atezolizumab, an anti PD-L1 antibody, received FDA approval in December 2022 for unresectable or metastatic ASPS in patients 2 years and older, the first agent approved specifically for this disease. Antiangiogenic tyrosine kinase inhibitors (cediranib, sunitinib, pazopanib) and the MET inhibitor crizotinib have documented activity, so this cross condition analysis indexes each dependency to therapies validated elsewhere.</p>",
+    "researcher": "<p>ASPS is a fusion driven sarcoma in which a single balanced dependency, the ASPSCR1-TFE3 (ASPL-TFE3) chimeric transcription factor, reprograms transcription. The der(17)t(X;17)(p11;q25) fuses the amino terminus of ASPSCR1 on 17q25 in frame to the DNA binding portion of the MiT family transcription factor TFE3 on Xp11, retaining the TFE3 DNA binding domain and deregulating its target program (Ladanyi et al., Oncogene 2001). A central downstream consequence is transcriptional induction and autophosphorylation of the MET receptor tyrosine kinase, coupled with a potent VEGF driven angiogenic phenotype and an immune microenvironment that renders the tumor unusually responsive to PD-1 and PD-L1 blockade (Brahmi et al., Curr Opin Oncol 2020).</p><p>These three axes, the fusion transcription factor itself, MET signaling, and VEGF angiogenesis, plus the checkpoint sensitive immune contexture, define the actionable biology. The therapeutic opportunity therefore lies almost entirely in borrowing agents validated against MET, VEGFR, or PD-1 and PD-L1 in commoner tumors, grading the transferability of each analogy, and in fusion directed strategies that remain investigational.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological features of ASPS that drugs can target. Nearly all of them trace back to the one abnormal fusion gene that defines this cancer, which switches on a growth signal and drives new blood vessel formation.",
+    "clinician": "Actionable biology in ASPS derives from the ASPSCR1-TFE3 fusion and its consequences, MET overexpression, VEGF driven angiogenesis, and a checkpoint sensitive immune microenvironment. TFE3 immunohistochemistry and fusion confirmation anchor the diagnosis and gate fusion directed strategies.",
+    "researcher": "The single molecular dependency, the ASPSCR1-TFE3 chimeric transcription factor, supports three drugged downstream axes (MET, VEGFR angiogenesis, and PD-1 or PD-L1 immune sensitivity) and one still investigational upstream axis (the fusion transcription factor itself). Each target below anchors one or more translations in the next section."
+  },
+  "targets": [
+    {
+      "name": "ASPSCR1-TFE3 fusion (der(17)t(X;17))",
+      "present_in": "Near universal in ASPS (the defining lesion)",
+      "evidence": "The non reciprocal der(17)t(X;17)(p11;q25) fuses ASPSCR1 (ASPL) in frame to the TFE3 DNA binding domain, retaining TFE3 transcriptional activity and deregulating its target program, the diagnostic and pathogenic hallmark of ASPS (Ladanyi et al., Oncogene 2001, PMID 11244503, DOI 10.1038/sj.onc.1204074)."
+    },
+    {
+      "name": "MET receptor tyrosine kinase (overexpression)",
+      "present_in": "ASPS with TFE3 rearrangement (fusion induced MET expression)",
+      "evidence": "The ASPSCR1-TFE3 fusion transcriptionally induces MET overexpression and autophosphorylation, providing the rationale for MET inhibition; the EORTC CREATE trial prospectively confirmed TFE3 rearrangement and MET positivity and showed crizotinib activity in MET positive ASPS (Schoffski et al., Ann Oncol 2018, PMID 29216400, DOI 10.1093/annonc/mdx774)."
+    },
+    {
+      "name": "VEGF and angiogenesis (VEGFR1, VEGFR2, VEGFR3)",
+      "present_in": "ASPS broadly (distinctive hypervascular phenotype)",
+      "evidence": "ASPS displays a distinctive angiogenic phenotype with abundant VEGF driven vasculature, the basis for antiangiogenic tyrosine kinase inhibition; cediranib downregulated vasculogenesis genes and produced responses in metastatic ASPS (Kummar et al., J Clin Oncol 2013, PMID 23630200, DOI 10.1200/JCO.2012.47.4288)."
+    },
+    {
+      "name": "PD-1 and PD-L1 (immune checkpoint sensitivity)",
+      "present_in": "Advanced ASPS (checkpoint sensitive microenvironment)",
+      "evidence": "ASPS is unusually responsive to PD-L1 blockade despite variable baseline PD-1 and PD-L1 expression; the pivotal phase 2 atezolizumab study yielded durable objective responses and supported the first FDA approval for the disease (Chen et al., N Engl J Med 2023, PMID 37672694, DOI 10.1056/NEJMoa2303383)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment that targets one of the biological features of ASPS, colored by how strong the evidence is. Green means it is already FDA approved for this disease or for any cancer carrying the right marker. Amber means it is approved elsewhere with encouraging activity reported in ASPS. Gray means the idea is mechanistically reasonable but still experimental for ASPS.",
+    "clinician": "Candidates are graded Tier 1 (FDA approval that applies to ASPS, biomarker or histology gated), Tier 2 (approved elsewhere with documented ASPS activity or a shared validated target), or Tier 3 (mechanistic rationale only). Selection is guided by fusion and MET status, the antiangiogenic phenotype, and checkpoint sensitivity.",
+    "researcher": "Translations are ranked by transferability of evidence rather than target novelty. Note the concentration on three shared axes, the checkpoint sensitive immune contexture, VEGFR angiogenesis, and fusion induced MET signaling, which license borrowing from immune oncology, antiangiogenic sarcoma trials, and MET directed programs."
+  },
+  "therapies": [
+    {
+      "drug": "Atezolizumab",
+      "target": "PD-1 and PD-L1 (immune checkpoint)",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Unresectable or metastatic ASPS, patients 2 years and older (FDA approved December 2022)",
+      "dev_stage": "FDA approved, first agent approved specifically for ASPS",
+      "rationale": {
+        "patient": "This immunotherapy takes the brakes off your immune system so it can attack the tumor. In 2022 it became the first drug ever approved by the FDA specifically for ASPS, for adults and children 2 years and older. In the key trial about one third of patients had their tumors shrink, and many of those responses lasted for years.",
+        "clinician": "Anti PD-L1 monoclonal antibody. In the pivotal investigator initiated, multicenter, single group phase 2 study (NCT03141684) in advanced ASPS, an objective response occurred in 19 of 52 patients (37 percent, 1 complete and 18 partial), median duration of response 24.7 months and median progression free survival 20.8 months, with responses despite variable baseline PD-1 and PD-L1 expression. The FDA approved atezolizumab in December 2022 for unresectable or metastatic ASPS in patients 2 years and older, the first systemic therapy approved specifically for this disease.",
+        "researcher": "ASPS is intrinsically checkpoint sensitive, a lineage specific immune contexture rather than a high mutational burden phenotype, so response is uncoupled from baseline PD-L1 staining. The pivotal single arm phase 2 result converting a historically untreatable sarcoma into an approved indication is the strongest cross condition immunotherapy signal in this dossier and establishes checkpoint blockade as the reference standard for advanced ASPS."
+      },
+      "citation": {
+        "label": "Chen et al., N Engl J Med 2023 (pivotal phase 2 atezolizumab in advanced ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37672694/"
+      },
+      "trial": {
+        "nct": "NCT03141684",
+        "url": "https://clinicaltrials.gov/study/NCT03141684"
+      }
+    },
+    {
+      "drug": "Pazopanib",
+      "target": "VEGFR angiogenesis (multitargeted TKI)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Advanced non adipocytic soft tissue sarcoma after chemotherapy (FDA approved 2012)",
+      "dev_stage": "FDA approved for soft tissue sarcoma, activity reported in ASPS",
+      "rationale": {
+        "patient": "This once daily pill blocks the signals that let tumors grow new blood vessels. It is FDA approved for soft tissue sarcoma after chemotherapy, a group that includes ASPS, and ASPS is a very blood vessel rich tumor, which is why this class of drug is used here.",
+        "clinician": "Oral multitargeted VEGFR, PDGFR, and KIT tyrosine kinase inhibitor. The randomized phase 3 PALETTE trial (NCT00753688) in metastatic non adipocytic soft tissue sarcoma after chemotherapy showed improved progression free survival with pazopanib versus placebo (4.6 versus 1.6 months, HR 0.31), supporting the 2012 FDA approval that covers ASPS as a non adipocytic subtype. The strong angiogenic phenotype of ASPS provides the mechanistic match.",
+        "researcher": "Pazopanib is the histology agnostic antiangiogenic backbone approved across non adipocytic soft tissue sarcoma. Its use in ASPS rests on the VEGFR angiogenic dependency shared with the broader sarcoma population, a same target borrow rather than an ASPS specific registration."
+      },
+      "citation": {
+        "label": "van der Graaf et al., Lancet 2012 (PALETTE, pazopanib in metastatic soft tissue sarcoma)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22595799/"
+      },
+      "trial": {
+        "nct": "NCT00753688",
+        "url": "https://clinicaltrials.gov/study/NCT00753688"
+      }
+    },
+    {
+      "drug": "Cediranib",
+      "target": "VEGFR1, VEGFR2, VEGFR3 angiogenesis",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Investigational, prospective single agent activity in metastatic ASPS",
+      "dev_stage": "Phase 2 activity in ASPS, not FDA approved",
+      "rationale": {
+        "patient": "This experimental pill blocks all three of the main receptors that drive blood vessel growth. In a dedicated ASPS trial it shrank tumors in about a third of patients and kept the disease under control in most, which is unusual for a sarcoma.",
+        "clinician": "Potent oral inhibitor of all three VEGF receptors. In the largest prospective trial of systemic therapy for metastatic ASPS at the time, cediranib produced an objective response rate of 35 percent (15 of 43 partial responses) and a 24 week disease control rate of 84 percent, with paired biopsies showing downregulation of vasculogenesis genes. Not FDA approved, but a strong ASPS specific antiangiogenic signal.",
+        "researcher": "Cediranib provides direct, ASPS specific validation of the VEGFR angiogenic dependency, with on treatment transcriptional evidence of vasculogenesis suppression. It anchors the angiogenesis axis and motivated randomized comparison against sunitinib."
+      },
+      "citation": {
+        "label": "Kummar et al., J Clin Oncol 2013 (cediranib for metastatic ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23630200/"
+      }
+    },
+    {
+      "drug": "Sunitinib",
+      "target": "VEGFR and PDGFR angiogenesis (multitargeted TKI)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Approved for renal cell carcinoma, GIST, and pancreatic NET, activity reported in ASPS",
+      "dev_stage": "Reported ASPS activity, not FDA approved for ASPS",
+      "rationale": {
+        "patient": "This pill blocks several growth signals at once, including those for blood vessels. It is approved for other cancers, and in a small ASPS series some patients had their tumors shrink, which is why it is considered here.",
+        "clinician": "Oral multitargeted VEGFR and PDGFR inhibitor approved for renal cell carcinoma, gastrointestinal stromal tumor, and pancreatic neuroendocrine tumor. In a reported series of advanced ASPS treated on a named patient basis, partial responses were observed, with biochemical profiling implicating PDGFR family and RET activation alongside downstream PI3K, AKT, and mTOR signaling. Not FDA approved for ASPS.",
+        "researcher": "Sunitinib extends the antiangiogenic axis and additionally implicates PDGFR and RET signaling in ASPS, suggesting the angiogenic dependency is multireceptor. A cross condition borrow from renal cell carcinoma and GIST resting on shared VEGFR and PDGFR biology."
+      },
+      "citation": {
+        "label": "Stacchiotti et al., Clin Cancer Res 2009 (response to sunitinib in advanced ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19188185/"
+      }
+    },
+    {
+      "drug": "Crizotinib",
+      "target": "MET receptor tyrosine kinase",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Approved for ALK and ROS1 positive lung cancer, prospectively tested against MET in ASPS",
+      "dev_stage": "Phase 2 EORTC CREATE, limited single agent activity in ASPS",
+      "rationale": {
+        "patient": "The ASPS fusion gene switches on a growth signal called MET. This pill blocks MET and was tested in a dedicated ASPS trial. It kept the disease stable in most patients but shrank the tumor in only a few, so it is a partial success rather than a strong treatment.",
+        "clinician": "Oral MET and ALK and ROS1 inhibitor. The EORTC 90101 CREATE phase 2 trial (NCT01524926) prospectively enrolled TFE3 rearranged ASPS and confirmed MET expression. Among 40 MET positive patients the objective response rate was low (1 partial response, 35 with stable disease) but the disease control rate was 90 percent with a 1 year progression free rate of 37.5 percent, demonstrating activity per EORTC criteria without meeting a high response bar.",
+        "researcher": "CREATE is the prospective test of the fusion induced MET dependency. The dissociation between a low response rate and a high disease control rate suggests MET blockade is cytostatic in ASPS and likely needs combination or more potent or selective MET inhibition, a same target borrow from the MET and ALK inhibitor class."
+      },
+      "citation": {
+        "label": "Schoffski et al., Ann Oncol 2018 (EORTC 90101 CREATE, crizotinib in TFE3 rearranged ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29216400/"
+      },
+      "trial": {
+        "nct": "NCT01524926",
+        "url": "https://clinicaltrials.gov/study/NCT01524926"
+      }
+    },
+    {
+      "drug": "Cabozantinib",
+      "target": "MET and VEGFR (dual TKI)",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "Approved for renal cell carcinoma, hepatocellular carcinoma, and thyroid cancer, ASPS responses in a phase 2 sarcoma basket",
+      "dev_stage": "Phase 2 signal in ASPS, not FDA approved for ASPS",
+      "rationale": {
+        "patient": "This pill blocks both the MET growth signal and the blood vessel signal at the same time, hitting two ASPS weak points together. In a sarcoma trial that included ASPS, some ASPS tumors responded, so it is a promising but still unproven option for this disease.",
+        "clinician": "Oral inhibitor with dual MET and VEGFR activity, approved for renal cell carcinoma, hepatocellular carcinoma, and medullary and radioiodine refractory thyroid cancer. In a phase 2 trial of refractory soft tissue sarcoma, cabozantinib produced objective responses, with ASPS named among the responsive histologies, aligning with the fusion induced MET and angiogenic biology. Not FDA approved for ASPS.",
+        "researcher": "Cabozantinib is the mechanistically ideal single agent for ASPS because it co targets the two validated downstream axes, MET and VEGFR, in one molecule. Its ASPS signal in a sarcoma basket is hypothesis generating and motivates a dedicated ASPS trial, a mechanistic borrow from renal and hepatocellular carcinoma."
+      },
+      "citation": {
+        "label": "O'Sullivan Coyne et al., Clin Cancer Res 2021 (cabozantinib in refractory soft tissue sarcoma including ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34716194/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark moments that made treating this cancer by its specific biology, rather than by trial and error, a real approach. They are why borrowing a treatment idea proven in another cancer with the same biology is legitimate rather than speculative.",
+    "clinician": "The approvals and pivotal trials below establish the regulatory and mechanistic precedent for biology driven therapy in ASPS, the immune checkpoint approval specific to this disease and the antiangiogenic and MET directed activity that support each recommendation above.",
+    "researcher": "Each landmark validates one axis of ASPS biology, the checkpoint sensitive immune contexture, the VEGFR angiogenic dependency, and the fusion induced MET dependency. Together they convert an orphan sarcoma into a set of biomarker and mechanism defined, trial eligible states."
+  },
+  "precedents": [
+    {
+      "biomarker": "ASPSCR1-TFE3 fusion identification in ASPS (fusion biology)",
+      "drug": "molecular diagnosis of ASPS (der(17)t(X;17), ASPL-TFE3)",
+      "year": 2001,
+      "citation": {
+        "label": "Ladanyi et al., Oncogene 2001 (ASPL-TFE3 fusion defines ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11244503/"
+      }
+    },
+    {
+      "biomarker": "VEGFR angiogenic dependency in ASPS (antiangiogenic therapy)",
+      "drug": "cediranib (VEGFR1, VEGFR2, VEGFR3 inhibitor)",
+      "year": 2013,
+      "citation": {
+        "label": "Kummar et al., J Clin Oncol 2013 (cediranib for metastatic ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23630200/"
+      }
+    },
+    {
+      "biomarker": "MET overexpression from TFE3 rearrangement in ASPS (MET directed therapy)",
+      "drug": "crizotinib (MET inhibitor)",
+      "year": 2018,
+      "citation": {
+        "label": "Schoffski et al., Ann Oncol 2018 (EORTC CREATE, crizotinib in MET positive ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29216400/"
+      }
+    },
+    {
+      "biomarker": "PD-1 and PD-L1 checkpoint sensitivity in ASPS (immune checkpoint inhibition)",
+      "drug": "atezolizumab (anti PD-L1 antibody), first FDA approval specific to ASPS",
+      "year": 2022,
+      "citation": {
+        "label": "Chen et al., N Engl J Med 2023 (pivotal atezolizumab, basis of the 2022 FDA approval)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37672694/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because ASPS is driven by one clear fusion gene and its downstream signals, scientists can reason about new kinds of treatment that might be worth testing. These are starting points for research, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a strategy validated against a shared dependency, the fusion transcription factor, MET signaling, or fusion neoantigen presentation, into ASPS. Transferability is graded and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel cross condition hypotheses by analogy over the ASPSCR1-TFE3 dependency and its downstream axes, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated in ASPS."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): develop a strategy that directly disables the ASPSCR1-TFE3 fusion transcription factor or its chromatin dependencies, rather than only inhibiting downstream MET or VEGFR, testing whether targeting the driver itself is more durable than targeting its effectors.",
+      "shared": "A single fusion transcription factor that is the initiating and sustaining driver of the disease, analogous to other fusion transcription factor sarcomas where the chimeric protein reprograms transcription and chromatin.",
+      "source": "Fusion transcription factor sarcomas (ASPSCR1-TFE3 as the defining driver)",
+      "modality": "small molecule",
+      "rationale": "MET and VEGFR blockade target downstream effectors of ASPSCR1-TFE3 and have proven largely cytostatic in ASPS. Because the fusion transcription factor is the apex dependency, strategies that degrade the fusion, block its essential coactivators or chromatin remodeling partners, or interrupt the specific transcriptional program it drives could be more durable, mirroring efforts against other oncogenic fusion transcription factors.",
+      "transferability": "speculative, transcription factors are historically hard to drug directly, so success likely depends on identifying a druggable coactivator, chromatin, or synthetic lethal dependency of the fusion rather than the fusion protein surface itself.",
+      "prediction": "In ASPS cells and patient derived models, selective suppression of ASPSCR1-TFE3 or a validated fusion specific chromatin or coactivator dependency collapses the fusion transcriptional program, downregulates MET, and impairs viability more durably than MET or VEGFR inhibition alone.",
+      "citation": {
+        "label": "Ladanyi et al., Oncogene 2001 (ASPSCR1-TFE3 fusion is the defining driver of ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11244503/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): pair more potent or selective MET inhibition with antiangiogenic and checkpoint blockade in ASPS, testing whether combination against the fusion induced MET axis overcomes the cytostatic ceiling seen with single agent crizotinib.",
+      "shared": "Fusion induced MET overexpression and autophosphorylation as a validated but incompletely exploited dependency, where single agent MET inhibition controls but rarely shrinks ASPS.",
+      "source": "MET dependent cancers (MET directed inhibition in TFE3 rearranged ASPS)",
+      "modality": "small molecule",
+      "rationale": "The CREATE trial showed crizotinib produces high disease control but a low response rate in MET positive ASPS, implying MET blockade is cytostatic. Combining a more potent or selective MET inhibitor with the validated antiangiogenic and checkpoint axes, or using a dual MET and VEGFR agent such as cabozantinib as a backbone, could convert stability into response, transferring combination logic from other MET driven tumors.",
+      "transferability": "medium, MET is a validated ASPS dependency and multiple MET directed agents exist, but the correct partner, sequence, and tolerability of combining MET, VEGFR, and checkpoint blockade must be established prospectively.",
+      "prediction": "In ASPS models and a biomarker stratified trial, a potent MET inhibitor combined with antiangiogenic or checkpoint blockade yields a higher objective response rate and longer progression free survival than single agent MET inhibition, with pharmacodynamic evidence of sustained MET pathway suppression.",
+      "citation": {
+        "label": "Schoffski et al., Ann Oncol 2018 (EORTC CREATE, cytostatic single agent MET inhibition in ASPS)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29216400/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): develop cell therapy directed against an ASPS lineage antigen or an ASPSCR1-TFE3 fusion derived neoantigen, testing whether adoptive T cell or engineered cell approaches can extend the checkpoint sensitivity of ASPS into a driver specific attack.",
+      "shared": "A checkpoint responsive immune microenvironment plus a clonal, tumor specific fusion breakpoint that in principle yields a shared public neoantigen, a combination well suited to antigen directed cell therapy.",
+      "source": "Adoptive and engineered cell therapy in immunoresponsive and fusion or lineage defined tumors",
+      "modality": "cell therapy",
+      "rationale": "ASPS is already unusually responsive to PD-L1 blockade, indicating an inflamed, T cell accessible tumor. Because every ASPS shares the ASPSCR1-TFE3 breakpoint and a defined lineage program, an engineered T cell or TCR based therapy against a fusion junction neoantigen or a selectively expressed lineage antigen could provide a driver specific attack that builds on this intrinsic immunogenicity, extending adoptive cell therapy from other antigen defined tumors.",
+      "transferability": "speculative, cell therapy against solid tumors remains early, and this approach requires identifying a truly tumor restricted and immunogenic fusion or lineage antigen, confirming HLA presentation, and solving solid tumor trafficking and persistence.",
+      "prediction": "An ASPSCR1-TFE3 junction peptide or an ASPS restricted lineage antigen is presented on patient HLA and recognized by engineered or expanded T cells that kill ASPS cells ex vivo and control ASPS in preclinical models without cross reactivity against essential normal tissues.",
+      "citation": {
+        "label": "Chen et al., N Engl J Med 2023 (durable checkpoint responsiveness establishing ASPS as an immunoresponsive tumor)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37672694/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Alveolar soft part sarcoma is a rare disease, and this report is included to demonstrate that Anveshar's biology first, cross condition matching framework applies to an orphan fusion driven sarcoma. Atezolizumab is described from its pivotal phase 2 trial and is the first systemic therapy approved by the FDA specifically for ASPS (2022, patients 2 years and older). The antiangiogenic and MET directed agents shown carry documented ASPS or soft tissue sarcoma activity but, except where stated, are not FDA approved specifically for ASPS, so eligibility depends on molecular testing, disease stage, and access, often within a clinical trial. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified sarcoma oncology team and a molecular tumor board, ideally at a sarcoma specialized center.</p>"
+}

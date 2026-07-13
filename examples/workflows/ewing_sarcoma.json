@@ -1,0 +1,122 @@
+{
+  "aim": "Build an end to end, resource grounded discovery workflow for Ewing sarcoma that starts from the defining EWSR1-FLI1 fusion oncoprotein and its aberrant GGAA microsatellite regulome, maps the fusion driven transcriptional and epigenetic dependency network, mines genome scale CRISPR screens for Ewing selective vulnerabilities, and converges on two nominated therapeutic entry points: a transcriptional or epigenetic cofactor amenable to small molecule inhibition and a cell surface antigen amenable to antibody or CAR based cell therapy. The workflow is designed to be executable in Claude Science by chaining public data portals (GEO, cBioPortal, DepMap, GTEx, UniProt, PDB, Reactome, ChEMBL, Ensembl) with sequence, structure, and functional genomics compute (scRNA-seq, bulk RNA-seq, CRISPR screen analysis, Evo 2, AlphaFold).",
+  "hypothesis": "Because Ewing sarcoma carries a quiet, near diploid genome and is almost entirely addicted to a single aberrant transcription factor, EWSR1-FLI1, that reprograms the epigenome by converting polymorphic GGAA microsatellites into de novo enhancers and super enhancers, the cell state it creates should expose a small set of non oncogene, Ewing selective dependencies. We predict that (1) genes activated by EWSR1-FLI1 at GGAA microsatellite enhancers and the chromatin cofactors it recruits (LSD1/KDM1A, the BAF/SMARCA4 complex, and repressive ETS factors such as ETV6) will score as differential dependencies in Ewing lines relative to the pan cancer background, that (2) the same fusion program drives a druggable surface antigen (for example STEAP1 or IL1RAP) with tumor restricted expression, and that (3) fusion imposed replication stress with high SLFN11 expression predicts sensitivity to PARP inhibition combined with a DNA damaging agent. These predictions can be tested computationally before any wet lab validation and then confirmed in Ewing cell lines and xenografts.",
+  "steps": [
+    {
+      "title": "Step 1. Assemble Ewing sarcoma transcriptomes and confirm the EWSR1-FLI1 fusion context",
+      "what": "Curate a reference cohort of Ewing sarcoma expression data spanning cell lines, patient tumors, and normal reference tissues. Pull bulk RNA-seq for Ewing cell lines from the Cancer Cell Line Encyclopedia via DepMap and the Broad expression portal, patient tumor RNA-seq from GEO series and the published Ewing cohorts, and a single cell Ewing atlas (for example the intratumoral heterogeneity single cell studies deposited in GEO) to resolve the EWSR1-FLI1 high versus low cell states within tumors. Use GTEx as the normal tissue baseline. Confirm fusion identity and breakpoint type (type 1 EWSR1 exon 7 to FLI1 exon 6 versus other junctions, plus the EWSR1-ERG variant) from RNA-seq junction reads and annotate each sample by fusion status and breakpoint using Ensembl transcript coordinates. Define an EWSR1-FLI1 activity signature from fusion high versus fusion low or knockdown samples to score every sample.",
+      "tools": ["GEO", "DepMap", "GTEx", "Ensembl", "bulk RNA-seq compute", "scRNA-seq compute"],
+      "outputs": ["Harmonized Ewing expression matrix (cell lines, tumors, GTEx normals) with fusion status and breakpoint annotation", "EWSR1-FLI1 activity signature and per sample activity scores", "Single cell UMAP resolving EWSR1-FLI1 high versus low cell states with per state marker tables"]
+    },
+    {
+      "title": "Step 2. Map the EWSR1-FLI1 regulome and GGAA microsatellite enhancers from ChIP-seq and chromatin data",
+      "what": "Reprocess published EWSR1-FLI1 and FLI1 ChIP-seq together with H3K27ac, H3K4me1, and BAF/SMARCA4 chromatin data in Ewing lines and in EWSR1-FLI1 expressing or knockdown backgrounds (for example the Riggi and Boulay series such as GEO GSE61944 and related deposits) to build the fusion binding landscape. Classify EWSR1-FLI1 peaks into the two canonical modes: activating peaks at GGAA microsatellite repeats that gain H3K27ac and form de novo enhancers and super enhancers, versus peaks at high affinity single ETS GGAA motifs where the fusion can repress. Quantify GGAA microsatellite repeat number at each activated locus using the reference genome via Ensembl and relate repeat length to enhancer strength. Intersect the fusion binding and enhancer atlas with the Step 1 activity signature to define the direct, fusion activated target gene set (the core Ewing regulome), separating microsatellite driven direct targets from indirect ones. Use Reactome to place the direct targets into pathway context.",
+      "tools": ["GEO", "Ensembl", "Reactome", "bulk RNA-seq compute", "CRISPR screen compute"],
+      "outputs": ["EWSR1-FLI1 binding atlas classified into GGAA microsatellite activating peaks versus single ETS site repressive peaks", "De novo enhancer and super enhancer catalog with GGAA repeat length linked to H3K27ac signal", "Direct fusion activated target gene set (core regulome) with Reactome pathway enrichment"]
+    },
+    {
+      "title": "Step 3. Mine DepMap for Ewing selective genetic dependencies",
+      "what": "Query DepMap genome scale CRISPR-Cas9 (Chronos or CERES) and RNAi dependency data to rank genes that are selectively essential in Ewing lines relative to the pan cancer background. Compute a Ewing selectivity score (mean Ewing dependency minus mean non Ewing dependency, with a significance test) for every gene, then filter to differential dependencies. Cross reference the top selective dependencies against (a) the Step 2 direct fusion regulome, (b) known EWSR1-FLI1 cofactors and chromatin regulators (LSD1/KDM1A, the BAF subunits SMARCA4 and SMARCA2 and ARID1A, the repressive ETS factor ETV6, RING1B/PRC1, and the KDM6 demethylases), and (c) DNA replication stress and DNA damage response genes (for example SLFN11 co-dependencies, ATR, CHK1/CHEK1, PARP1, RRM2). Use cBioPortal to confirm that these dependencies are wild type and not recurrently mutated in Ewing tumors, consistent with non oncogene addiction in a quiet genome, and to check copy number and expression of each candidate across Ewing patient cohorts.",
+      "tools": ["DepMap", "cBioPortal", "CRISPR screen compute"],
+      "outputs": ["Ranked Ewing selectivity dependency table with statistics for all genes", "Annotated shortlist of fusion regulome, chromatin cofactor, and DNA damage response dependencies", "cBioPortal mutation, copy number, and expression profile confirming each candidate is a non oncogene dependency in patient tumors"]
+    },
+    {
+      "title": "Step 4. Prioritize a transcriptional or epigenetic target from the intersection",
+      "what": "Integrate Steps 1 to 3 to nominate the single strongest transcriptional or epigenetic vulnerability. Rank candidates by a composite of: DepMap Ewing selectivity, direct membership in or physical support of the EWSR1-FLI1 regulome from ChIP-seq, magnitude of the fusion activity correlation in the expression cohort, and druggability. Emphasize the fusion cofactors that the FET domain of EWSR1-FLI1 recruits, in particular LSD1/KDM1A and the BAF/SMARCA4 remodeler, and the repressive ETS dependency ETV6, contrasting them with the fusion itself, which is currently considered undruggable by direct small molecule binding. For the nominated target, use ChEMBL to enumerate existing chemical matter, mechanism, and any clinical stage inhibitors (for example LSD1 inhibitors), and score tractability. Produce a mechanistic model of how inhibiting the target collapses the EWSR1-FLI1 enhancer program.",
+      "tools": ["DepMap", "ChEMBL", "Reactome", "UniProt"],
+      "outputs": ["Composite prioritization ranking of transcriptional and epigenetic targets", "Single nominated target with mechanistic rationale tied to the GGAA enhancer program", "ChEMBL landscape of existing inhibitors and tractability assessment for the nominated target"]
+    },
+    {
+      "title": "Step 5. Nominate and validate a Ewing restricted surface antigen for cell therapy",
+      "what": "Filter the Step 2 direct fusion activated regulome and the Step 1 expression cohort for genes encoding cell surface proteins (using UniProt subcellular localization and topology annotation) that are high in Ewing tumors and low across the GTEx normal tissue panel, prioritizing on tumor and off tumor safety by scanning expression in vital normal tissues. Evaluate the leading Ewing surface antigens that are direct EWSR1-FLI1 targets, in particular STEAP1 and IL1RAP, along with additional fusion driven surface candidates such as LINGO1 and ADGRG2, and rank them by tumor to normal contrast, prevalence across the patient cohort, and membrane topology suitability for antibody or CAR recognition. Use UniProt to define the extracellular domain and epitope regions and confirm surface accessibility.",
+      "tools": ["UniProt", "GTEx", "GEO", "bulk RNA-seq compute", "scRNA-seq compute"],
+      "outputs": ["Ranked cell surface antigen table with tumor to normal expression contrast and cohort prevalence", "Nominated surface antigen with defined extracellular epitope region and on tumor off tumor safety assessment", "Single cell confirmation that the antigen marks EWSR1-FLI1 high tumor cells rather than stroma or immune cells"]
+    },
+    {
+      "title": "Step 6. Structural and druggability analysis of the nominated targets",
+      "what": "For the transcriptional or epigenetic target from Step 4 and the surface antigen from Step 5, assemble structural models. Retrieve experimental structures from PDB where available (for example LSD1/KDM1A catalytic and CoREST bound structures) and generate AlphaFold predicted structures for targets or domains lacking experimental coverage, including the relevant EWSR1-FLI1 interaction interfaces and the extracellular domain of the surface antigen. Use Evo 2 to assess the functional consequence and constraint of the fusion breakpoint sequence and of GGAA microsatellite variants, and to score variants in the nominated targets for likely loss or gain of function, giving an orthogonal genomic language model readout of which residues and regulatory elements are functionally critical. Define druggable pockets on the epigenetic target and accessible, tumor specific epitopes on the surface antigen for binder design.",
+      "tools": ["PDB", "AlphaFold", "Evo 2", "UniProt"],
+      "outputs": ["Curated experimental and AlphaFold structures for the epigenetic target and the surface antigen extracellular domain", "Druggable pocket and epitope map with predicted binding sites", "Evo 2 functional scores for the fusion breakpoint, GGAA microsatellite variants, and target residue variants"]
+    },
+    {
+      "title": "Step 7. Model the replication stress and PARP sensitivity axis as an orthogonal vulnerability",
+      "what": "Test the prediction that EWSR1-FLI1 imposed replication stress and high SLFN11 expression create a PARP inhibitor sensitive state. Correlate SLFN11 expression (a direct fusion linked gene) across the DepMap and expression cohort with modeled PARP inhibitor and DNA damaging agent sensitivity from the DepMap drug response and the Step 3 DNA damage response dependencies (PARP1, ATR, CHK1). Use Reactome to frame the base excision repair, ATR-CHK1 checkpoint, and PARP trapping mechanisms, and use ChEMBL to enumerate clinical PARP inhibitors, ATR inhibitors, and CHK1 inhibitors for combination hypotheses (for example a PARP inhibitor plus a DNA alkylating agent, contingent on SLFN11 status). Produce a biomarker rule that stratifies Ewing models by predicted PARP inhibitor combination response.",
+      "tools": ["DepMap", "Reactome", "ChEMBL", "GEO", "bulk RNA-seq compute"],
+      "outputs": ["SLFN11 versus modeled PARP inhibitor and DNA damaging agent sensitivity relationship across Ewing models", "Reactome framed mechanism of replication stress, PARP trapping, and ATR-CHK1 checkpoint in the fusion driven state", "SLFN11 based biomarker rule and prioritized combination hypotheses with ChEMBL matched compounds"]
+    },
+    {
+      "title": "Step 8. Design a validation plan in Ewing cell lines and xenografts",
+      "what": "Convert the computational nominations into a falsifiable wet lab plan. For the epigenetic or transcriptional target, plan CRISPR knockout and degron or inhibitor experiments in fusion positive Ewing lines (for example A673, SK-N-MC, TC-71, EW8) with fusion negative and non Ewing lines as specificity controls, reading out EWSR1-FLI1 target gene collapse by RNA-seq, loss of GGAA microsatellite enhancer H3K27ac by ChIP-seq or CUT and RUN, and viability. For the surface antigen, plan flow cytometry and immunohistochemistry to confirm surface expression and tumor restriction, then antibody or CAR based killing assays against antigen high and antigen low or knockout lines. Test the PARP combination on SLFN11 high versus SLFN11 knockout isogenic pairs. Advance the strongest hits to cell line derived and patient derived xenografts with the corresponding rescue and dose response controls, using the fusion knockdown as the positive control for on target Ewing dependency.",
+      "tools": ["DepMap", "GEO", "CRISPR screen compute", "bulk RNA-seq compute"],
+      "outputs": ["Prioritized cell line panel and isogenic control design for each nominated target", "In vitro validation protocols (CRISPR, degron, inhibitor, flow cytometry, CAR killing, PARP combination) with defined readouts", "In vivo xenograft validation plan with rescue, dose response, and on target specificity controls"]
+    }
+  ],
+  "datasets": [
+    {
+      "name": "DepMap CRISPR and RNAi dependencies plus CCLE expression (Ewing sarcoma cell lines)",
+      "source": "Broad Institute DepMap portal",
+      "url": "https://depmap.org/portal/"
+    },
+    {
+      "name": "Riggi and Boulay EWSR1-FLI1 and FLI1 ChIP-seq with H3K27ac in Ewing lines and MSC models",
+      "source": "NCBI Gene Expression Omnibus (GEO), series GSE61944 and related Ewing epigenome deposits",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE61944"
+    },
+    {
+      "name": "Single cell RNA-seq atlas of Ewing sarcoma tumors resolving EWSR1-FLI1 high and low states",
+      "source": "NCBI Gene Expression Omnibus (GEO) Ewing single cell series",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/"
+    },
+    {
+      "name": "cBioPortal Ewing sarcoma patient cohorts (mutation, copy number, expression)",
+      "source": "cBioPortal for Cancer Genomics",
+      "url": "https://www.cbioportal.org/"
+    },
+    {
+      "name": "GTEx normal tissue expression reference for on tumor off tumor safety",
+      "source": "GTEx Portal",
+      "url": "https://gtexportal.org/home/"
+    },
+    {
+      "name": "Ensembl human reference genome and transcript annotation for fusion breakpoints and GGAA microsatellite coordinates",
+      "source": "Ensembl",
+      "url": "https://www.ensembl.org/"
+    },
+    {
+      "name": "UniProt protein annotation (surface topology, domains, epitope regions) for STEAP1, IL1RAP, LSD1/KDM1A, ETV6, SLFN11",
+      "source": "UniProt",
+      "url": "https://www.uniprot.org/"
+    },
+    {
+      "name": "Protein Data Bank experimental structures (for example LSD1/KDM1A-CoREST, FLI1 ETS domain)",
+      "source": "RCSB Protein Data Bank",
+      "url": "https://www.rcsb.org/"
+    },
+    {
+      "name": "Reactome pathway knowledgebase for enhancer, chromatin remodeling, and DNA damage response context",
+      "source": "Reactome",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "ChEMBL bioactivity database for LSD1, PARP, ATR, and CHK1 inhibitor chemical matter",
+      "source": "ChEMBL (EMBL-EBI)",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    {
+      "name": "AlphaFold predicted structures for targets and domains lacking experimental coverage",
+      "source": "AlphaFold Protein Structure Database (EMBL-EBI and DeepMind)",
+      "url": "https://alphafold.ebi.ac.uk/"
+    }
+  ],
+  "validation": "Validation proceeds in three tiers. Computational internal consistency: a genuine Ewing dependency must co-satisfy DepMap Ewing selectivity, direct membership in or physical support of the EWSR1-FLI1 GGAA microsatellite regulome from ChIP-seq, and positive correlation with the fusion activity signature across independent expression cohorts, with cBioPortal confirming it is not recurrently mutated (non oncogene addiction). Orthogonal computation: Evo 2 functional scoring of the fusion breakpoint, GGAA microsatellite variants, and candidate residues, plus AlphaFold and PDB structural feasibility of a druggable pocket or accessible epitope, must agree with the genomics before any target advances. Experimental confirmation in Ewing models: in fusion positive lines (A673, SK-N-MC, TC-71, EW8), CRISPR knockout, degron, or inhibition of the nominated epigenetic or transcriptional target must reduce viability, collapse EWSR1-FLI1 target gene expression by RNA-seq, and reduce GGAA microsatellite enhancer H3K27ac by ChIP-seq or CUT and RUN, while fusion negative and non Ewing lines are spared, establishing Ewing selectivity. The surface antigen must show tumor restricted surface expression by flow cytometry and immunohistochemistry and mediate antigen dependent killing in antibody or CAR assays that is lost on antigen knockout. The PARP combination must show SLFN11 dependent sensitivity in isogenic SLFN11 high versus knockout pairs. EWSR1-FLI1 knockdown serves as the on target positive control throughout. The strongest hits are confirmed in cell line derived and patient derived xenografts with rescue, dose response, and specificity controls.",
+  "figures": [
+    "Figure 1. Ewing cohort overview: fusion status and breakpoint annotation across cell lines, tumors, and GTEx normals, the EWSR1-FLI1 activity signature, and a single cell UMAP resolving fusion high versus low cell states.",
+    "Figure 2. EWSR1-FLI1 regulome map: binding atlas classified into GGAA microsatellite activating enhancers versus single ETS site repressive peaks, GGAA repeat length versus H3K27ac enhancer strength, and the direct fusion activated target gene set with Reactome pathways.",
+    "Figure 3. DepMap Ewing selectivity landscape: volcano of Ewing selective dependencies with fusion regulome, chromatin cofactor (LSD1, BAF/SMARCA4, ETV6), and DNA damage response genes highlighted, plus cBioPortal confirmation of wild type non oncogene status.",
+    "Figure 4. Target prioritization: composite ranking of transcriptional and epigenetic candidates and the ChEMBL inhibitor landscape for the nominated target, with a mechanistic schematic of enhancer program collapse.",
+    "Figure 5. Surface antigen nomination: tumor versus GTEx normal expression contrast and cohort prevalence for STEAP1, IL1RAP, and other fusion driven surface candidates, with single cell confirmation of tumor cell restriction.",
+    "Figure 6. Structure and druggability: PDB and AlphaFold structures with druggable pocket and epitope maps, plus Evo 2 functional scores for the fusion breakpoint, GGAA microsatellite variants, and target residues.",
+    "Figure 7. Replication stress axis: SLFN11 versus modeled PARP inhibitor and DNA damaging agent sensitivity across Ewing models with the ATR-CHK1 checkpoint mechanism and the SLFN11 biomarker rule.",
+    "Figure 8. Validation roadmap: cell line and isogenic control panel, in vitro assay readouts, and the xenograft plan linking each computational nomination to a falsifiable experiment."
+  ]
+}

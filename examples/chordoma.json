@@ -1,0 +1,254 @@
+{
+  "cancer": {
+    "name": "Chordoma",
+    "sub": "A rare, slow growing malignant bone tumor of the axial skeleton (skull base, mobile spine, and sacrum) that arises from notochordal remnants. It is defined by the developmental transcription factor brachyury (TBXT), has no approved systemic therapy, and is treated by surgery plus radiation, so this board maps candidate therapies borrowed from conditions that share its biology.",
+    "chips": ["Driver: brachyury (TBXT/T)", "Poorly differentiated subset: SMARCB1/INI1 loss", "No approved systemic therapy (surgery plus radiation)"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, drivers and biomarkers stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Chordoma is a rare bone cancer that grows along the spine and at the base of the skull, from leftover cells of an early developmental structure called the notochord. It usually grows slowly, but it sits next to the brainstem, spinal cord, and nerves, which makes it hard to remove completely. The main treatments are surgery to take out as much of the tumor as possible, followed by high dose radiation.</p><p>There is currently no drug approved specifically to treat chordoma. Because it is so uncommon, it rarely gets its own large clinical trials, so doctors and researchers look to treatments proven in other cancers that share the same biology. <strong>That borrowing is what this report maps out for you.</strong></p>",
+    "clinician": "<p>Chordoma is a malignant bone tumor showing notochordal differentiation, arising in the clivus and skull base, the mobile spine, and the sacrum. It is characterized by nuclear expression of brachyury (encoded by TBXT), which distinguishes it from chondrosarcoma and other mimics. Management is maximal safe surgical resection followed by high dose radiotherapy (often proton or particle therapy); no systemic agent is approved, and conventional cytotoxic chemotherapy is largely inactive in the common (conventional) subtype.</p><p>The key pathologic branch point is <strong>conventional chordoma</strong> (brachyury positive, INI1 retained) versus <strong>poorly differentiated chordoma</strong>, an aggressive variant of the skull base and cervical spine in children and young adults defined by loss of SMARCB1 (INI1) while retaining brachyury. Recurrent molecular events include PI3K pathway activation and homozygous loss of CDKN2A/CDKN2B, the latter enriched in recurrent and spinal tumors and associated with worse outcome.</p>",
+    "researcher": "<p>Chordoma is a genomically quiet cancer whose central dependency is a developmental transcription factor rather than a classically druggable kinase. Somatic tandem duplications of TBXT (brachyury) occur in a substantial fraction of sporadic cases and recapitulate the germline TBXT duplication that underlies familial chordoma, and genome scale CRISPR screening nominates TBXT as the top selectively essential gene, sustained by a large super enhancer region. Beyond TBXT, roughly one in six tumors carry activating PI3K pathway (for example PIK3CA) mutations, and homozygous CDKN2A/2B deletion is a recurrent, prognostically adverse event; the SWI/SNF genes PBRM1 and ARID1A are also altered.</p><p>The therapeutic opportunity therefore concentrates in two places: the shared PI3K/mTOR and receptor tyrosine kinase (PDGFRB, EGFR) biology that licenses borrowing from commoner tumors, and the SMARCB1 deficient poorly differentiated subset, whose SWI/SNF loss creates an EZH2 dependency directly analogous to INI1 negative epithelioid sarcoma. The discovery layer extends these into brachyury directed and gene directed hypotheses.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological features found in chordoma that existing drugs might target. Which apply to a given tumor depends on its own testing, especially whether it is the common form or the poorly differentiated form.",
+    "clinician": "Actionable biology segregates by subtype. Conventional chordoma centers on brachyury (TBXT), activated receptor tyrosine kinases (PDGFRB, EGFR), and PI3K/mTOR signaling; the poorly differentiated subset adds SMARCB1/INI1 loss (an EZH2 dependency). CDKN2A/2B loss and PIK3CA mutation carry prognostic weight.",
+    "researcher": "Targets are indexed to their supporting series (driver prevalences from the sporadic chordoma landscape, Tarpey 2017, n=104; prognostic PI3K and CDKN2A data from Passeri 2023, n=64). Each target anchors one or more translations in the therapies and discovery sections."
+  },
+  "targets": [
+    {
+      "name": "Brachyury (TBXT/T)",
+      "present_in": "Near universal (defining lineage marker); somatic TBXT duplication in up to ~27% of sporadic cases",
+      "evidence": "Top selectively essential gene by genome scale CRISPR screening; sustained by a super enhancer and suppressed by transcriptional CDK7/9 inhibitors (Sharifnia et al., Nat Med 2019, PMID 30664779, DOI 10.1038/s41591-018-0312-3; Tarpey et al., Nat Commun 2017, PMID 29026114, DOI 10.1038/s41467-017-01026-0)."
+    },
+    {
+      "name": "SMARCB1 / INI1 loss (poorly differentiated subset)",
+      "present_in": "Poorly differentiated chordoma (skull base and cervical spine, children and young adults); conventional chordoma retains INI1",
+      "evidence": "Loss of SMARCB1 (INI1) with retained nuclear brachyury defines the aggressive poorly differentiated variant and, by analogy to other INI1 negative tumors, creates an oncogenic EZH2 dependency (Feng et al., Chin J Pathol 2017, PMID 29050071, DOI 10.3760/cma.j.issn.0529-5807.2017.10.007)."
+    },
+    {
+      "name": "PI3K / mTOR pathway",
+      "present_in": "Activating PI3K pathway mutations in ~16% of sporadic cases; pathway phosphorylation (S6, 4E-BP1) common; PTEN loss in a subset",
+      "evidence": "PIK3CA mutation is an independent adverse prognostic marker; mTOR effectors are phosphorylated in tumor cells and correlate with response to mTOR directed therapy (Tarpey et al., Nat Commun 2017, PMID 29026114, DOI 10.1038/s41467-017-01026-0; Passeri et al., J Neurosurg 2023, PMID 37029667, DOI 10.3171/2023.1.JNS222180)."
+    },
+    {
+      "name": "PDGFRB",
+      "present_in": "Activated PDGF receptor beta expressed in the majority of chordomas",
+      "evidence": "Activated PDGFRB (with PDGFB) is the rationale for imatinib, which produced clinical benefit in advanced PDGFRB positive chordoma (Stacchiotti et al., J Clin Oncol 2012, PMID 22331945, DOI 10.1200/JCO.2011.35.3656)."
+    },
+    {
+      "name": "EGFR",
+      "present_in": "Phosphorylated (activated) EGFR family receptors expressed in a large proportion of chordomas",
+      "evidence": "Activated EGFR (and HER2) with high ligand levels supports EGFR directed therapy; lapatinib produced tumor responses by Choi criteria in EGFR positive chordoma (Tamborini et al., Neuro Oncol 2010, PMID 20164240, DOI 10.1093/neuonc/noq003; Stacchiotti et al., Ann Oncol 2013, PMID 23559153, DOI 10.1093/annonc/mdt117)."
+    },
+    {
+      "name": "CDKN2A / CDKN2B loss (p16)",
+      "present_in": "Homozygous deletion recurrent, enriched in spinal and recurrent tumors; adverse prognosis",
+      "evidence": "CDKN2A/2B homozygous deletion is a recurrent, prognostically poor event; combined PTEN and p16 loss sensitizes chordoma cells to CDK4/6 plus mTOR inhibition preclinically (Passeri et al., J Neurosurg 2023, PMID 37029667, DOI 10.3171/2023.1.JNS222180; Seeling et al., Cancers 2023, PMID 37046638, DOI 10.3390/cancers15071977)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment idea for chordoma, colored by how strong the evidence is. Green means it is FDA approved (for another condition here, because nothing is approved specifically for chordoma). Amber means it has been tested in chordoma with encouraging but limited signals. Gray means the idea is promising but still experimental. None of these is a standard, approved chordoma treatment today.",
+    "clinician": "Candidates are graded Tier 1 (FDA approved in another condition on the shared dependency, biomarker gated), Tier 2 (tested prospectively in chordoma with a partial response or clinical benefit signal), or Tier 3 (preclinical or mechanistic rationale only). Standard of care remains surgery plus radiotherapy; every option below is investigational in chordoma and biomarker testing governs eligibility.",
+    "researcher": "Translations are ranked by transferability of evidence. Note the split between the receptor tyrosine kinase and PI3K/mTOR options (borrowed from broader solid tumor biology and tested directly in chordoma) and the SMARCB1 deficient subset, whose SWI/SNF loss licenses a same target borrow of the EZH2 inhibitor validated in INI1 negative epithelioid sarcoma."
+  },
+  "therapies": [
+    {
+      "drug": "Tazemetostat",
+      "target": "EZH2 (SMARCB1/INI1 loss)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "INI1 negative epithelioid sarcoma (FDA approved 2020)",
+      "dev_stage": "FDA approved in a different INI1 negative tumor; mechanistic candidate for SMARCB1 deficient poorly differentiated chordoma",
+      "rationale": {
+        "patient": "The poorly differentiated form of chordoma loses a protein called INI1 (SMARCB1). A pill called tazemetostat is already FDA approved for another rare cancer, epithelioid sarcoma, that loses the same protein, because that loss makes the tumor depend on a target called EZH2. The same logic makes it a candidate to test in INI1 losing chordoma, though it has not yet been proven there.",
+        "clinician": "Oral selective EZH2 inhibitor. Loss of SMARCB1/INI1 disables the SWI/SNF complex and creates oncogenic dependence on the EZH2 transcriptional repressor. Tazemetostat is FDA approved for advanced INI1 negative epithelioid sarcoma on the basis of the phase 2 basket study (objective response 15%, durable responses, favorable tolerability). Poorly differentiated chordoma shares SMARCB1 loss, making this a same target borrow to test in that subset; it is not established in chordoma.",
+        "researcher": "Same dependency, same modality translation. The epithelioid sarcoma cohort of the tazemetostat basket enrolled INI1/SMARCB1 negative tumors specifically because SWI/SNF loss shifts the balance toward EZH2 mediated repression. Poorly differentiated chordoma is defined by the identical lesion, so this is the strongest biology first cross condition match in the report, awaiting a chordoma specific readout."
+      },
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1/SMARCB1 negative epithelioid sarcoma, PMID 33035459)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33035459/"
+      }
+    },
+    {
+      "drug": "Imatinib",
+      "target": "PDGFRB",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Chronic myeloid leukemia, gastrointestinal stromal tumor, and other PDGFR/KIT driven diseases",
+      "dev_stage": "Prospective phase 2 clinical benefit signal in advanced chordoma",
+      "rationale": {
+        "patient": "Chordomas often switch on a growth signal called PDGFRB. Imatinib, a well known targeted pill approved for other cancers, blocks that signal. In the largest chordoma drug trial to date, it rarely shrank tumors dramatically but frequently held the disease stable and reduced pain.",
+        "clinician": "Oral PDGFR/KIT tyrosine kinase inhibitor. In the phase 2 study of advanced PDGFB/PDGFRB positive chordoma (n=56), the RECIST response rate was low (one partial response, 2%) but 70% had stable disease with a 64% clinical benefit rate and a median progression free survival of about 9 months, plus metabolic (PET) and pain responses. Used off label; activity is cytostatic rather than cytoreductive.",
+        "researcher": "Chordomas express activated PDGFRB (with autocrine PDGFB), the rationale for imatinib. The trial established that a receptor tyrosine kinase borrowed from GIST and CML biology yields disease stabilization in chordoma, and framed the subsequent combination with mTOR blockade below."
+      },
+      "citation": {
+        "label": "Stacchiotti et al., J Clin Oncol 2012 (phase 2 imatinib in advanced chordoma, PMID 22331945)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22331945/"
+      }
+    },
+    {
+      "drug": "Imatinib plus everolimus",
+      "target": "PDGFRB and mTOR (PI3K/mTOR pathway)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Components approved individually (imatinib and everolimus) in other cancers; combination investigational in chordoma",
+      "dev_stage": "Prospective phase 2 clinical benefit signal in progressing advanced chordoma",
+      "rationale": {
+        "patient": "Adding an mTOR blocking drug (everolimus) to imatinib was tested in chordomas that were already growing. Some tumors shrank and many were stabilized, and tumors with a more active mTOR signal responded better. The benefit was real but modest, and side effects were a limitation.",
+        "clinician": "Combines PDGFR inhibition with mTOR inhibition to co target the activated PI3K/mTOR axis. In the phase 2 study of progressing advanced chordoma (n=43), the Choi partial response rate was ~21% with ~56% stable disease and a median progression free survival of ~11.5 months; the extent of S6/4E-BP1 phosphorylation correlated with response. Toxicity caused discontinuation in a substantial fraction, so the combination is a rationally targeted but limited option.",
+        "researcher": "Chordomas phosphorylate mTOR effectors (S6, 4E-BP1) downstream of activated PDGFRB and EGFR, and roughly one in six carry PI3K pathway mutations. This combination is the clinical test of co targeting the receptor tyrosine kinase and PI3K/mTOR nodes; the pharmacodynamic correlation supports mTOR pathway activation as a predictive biomarker."
+      },
+      "citation": {
+        "label": "Stacchiotti et al., Cancer 2018 (phase 2 imatinib plus everolimus in progressing advanced chordoma, PMID 30216418)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30216418/"
+      }
+    },
+    {
+      "drug": "Lapatinib",
+      "target": "EGFR",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "HER2 positive breast cancer",
+      "dev_stage": "Prospective phase 2 antitumor signal in EGFR positive chordoma",
+      "rationale": {
+        "patient": "Chordomas frequently switch on the EGFR growth signal. Lapatinib, an EGFR and HER2 blocking pill approved for breast cancer, was tested in chordomas that had this signal. About a third of patients had tumor responses by one measurement method, though the overall effect was modest.",
+        "clinician": "Oral EGFR/HER2 tyrosine kinase inhibitor. In the phase 2 study of EGFR positive advanced chordoma (n=18), the best responses were 6 partial responses (33%) and 7 stable disease by Choi criteria (RECIST stable in all), with a median progression free survival of ~6 to 8 months. Modest single agent activity; EGFR expression and activation are the eligibility rationale.",
+        "researcher": "Phospho-array and immunohistochemistry data show activated EGFR (and HER2) with high EGF/TGF alpha in chordoma. Lapatinib is the clinical borrow from EGFR/HER2 breast cancer biology; the modest Choi responses nominate EGFR as a real but partial dependency and motivate more potent or combination EGFR strategies."
+      },
+      "citation": {
+        "label": "Stacchiotti et al., Ann Oncol 2013 (phase 2 lapatinib in EGFR positive chordoma, PMID 23559153)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23559153/"
+      }
+    },
+    {
+      "drug": "Erlotinib",
+      "target": "EGFR",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "EGFR driven non small cell lung cancer and pancreatic cancer",
+      "dev_stage": "Preclinical and anecdotal rationale in chordoma (EGFR activation)",
+      "rationale": {
+        "patient": "Erlotinib is another EGFR blocking pill, approved for lung and pancreatic cancer. Because chordomas often have an active EGFR signal, it has been considered as a candidate, but the evidence in chordoma is limited to laboratory and case level observations rather than a formal trial.",
+        "clinician": "Oral EGFR tyrosine kinase inhibitor. Supported by the same EGFR activation biology that underpins lapatinib, but in chordoma the evidence is preclinical and anecdotal rather than from a dedicated prospective trial, so it is graded Tier 3. Considered off label only, ideally within a trial or molecular tumor board.",
+        "researcher": "EGFR is activated in chordoma (Tamborini 2010), providing a mechanistic rationale for erlotinib, but unlike lapatinib it lacks a chordoma specific prospective efficacy dataset. It is included as a mechanistic EGFR option to be tested, not as validated activity."
+      },
+      "citation": {
+        "label": "Tamborini et al., Neuro Oncol 2010 (activated EGFR and downstream mTOR signaling in chordoma, PMID 20164240)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20164240/"
+      }
+    },
+    {
+      "drug": "Palbociclib plus an mTOR inhibitor",
+      "target": "CDK4/6 and mTOR (CDKN2A/p16 and PTEN loss)",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "Palbociclib approved in hormone receptor positive breast cancer; combination investigational in chordoma",
+      "dev_stage": "Preclinical rationale in PTEN and p16 deficient chordoma",
+      "rationale": {
+        "patient": "Some chordomas lose two brakes on cell growth (p16 and PTEN) at the same time and behave more aggressively. In laboratory studies, combining a CDK4/6 blocking drug (palbociclib) with an mTOR blocker reduced the growth of these tumor cells, suggesting a treatment idea worth testing.",
+        "clinician": "CDK4/6 inhibition (palbociclib) rationally pairs with mTOR inhibition in the PTEN and p16 (CDKN2A) deficient subset. In chordoma cell lines negative for both markers, palbociclib and rapamycin each reduced viability and were synergistic in combination; combined PTEN/p16 loss marks poorer prognosis. Preclinical only, so Tier 3.",
+        "researcher": "CDKN2A/2B homozygous deletion (loss of p16 mediated CDK4/6 restraint) plus PTEN loss (PI3K/mTOR activation) defines an aggressive chordoma subset. The synergy between CDK4/6 and mTOR blockade is a biomarker matched, dual node hypothesis awaiting clinical testing."
+      },
+      "citation": {
+        "label": "Seeling et al., Cancers 2023 (PTEN and p16 deficiency and palbociclib plus rapamycin in chordoma, PMID 37046638)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37046638/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark efforts that show why treating chordoma by its biology, and borrowing from other conditions, is a legitimate strategy. They include the studies that mapped chordoma's driver, showed its brachyury addiction can be attacked, and proved that a drug can be matched to a shared molecular defect (INI1 loss) across different cancers.",
+    "clinician": "The entries below establish the biological precedents this board builds on: the driver landscape of chordoma, the brachyury (TBXT) dependency and its druggability, and the INI1/SMARCB1 to EZH2 dependency validated in epithelioid sarcoma that licenses the tazemetostat borrow.",
+    "researcher": "Each precedent validates a transferable principle rather than a single approval: a developmental transcription factor as a therapeutic dependency (TBXT), a chemical strategy to suppress it (transcriptional CDK inhibition), and a same lesion cross condition match (SMARCB1 loss to EZH2 inhibition). These underwrite the therapies and discovery hypotheses."
+  },
+  "precedents": [
+    {
+      "biomarker": "Brachyury (TBXT) driver duplication and PI3K pathway alterations in sporadic chordoma",
+      "drug": "Molecular characterization (driver landscape, not a drug)",
+      "year": "2017",
+      "citation": {
+        "label": "Tarpey et al., Nat Commun 2017 (driver landscape of sporadic chordoma, PMID 29026114)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29026114/"
+      }
+    },
+    {
+      "biomarker": "Brachyury (TBXT) transcription factor addiction in chordoma",
+      "drug": "Transcriptional CDK7/9 inhibitors (preclinical brachyury suppression)",
+      "year": "2019",
+      "citation": {
+        "label": "Sharifnia et al., Nat Med 2019 (small molecule targeting of brachyury addiction in chordoma, PMID 30664779)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30664779/"
+      }
+    },
+    {
+      "biomarker": "SMARCB1/INI1 loss (EZH2 dependency) in epithelioid sarcoma",
+      "drug": "Tazemetostat (EZH2 inhibitor)",
+      "year": "2020",
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1 negative epithelioid sarcoma, PMID 33035459)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33035459/"
+      }
+    },
+    {
+      "biomarker": "PDGFRB activation in chordoma",
+      "drug": "Imatinib (PDGFR tyrosine kinase inhibitor)",
+      "year": "2012",
+      "citation": {
+        "label": "Stacchiotti et al., J Clin Oncol 2012 (phase 2 imatinib in chordoma, PMID 22331945)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22331945/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because chordoma depends on brachyury and, in one subset, on the same defect as another cancer that already has a matched drug, the same kinds of strategies might be worth testing here. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a strategy validated in an adjacent condition or in chordoma preclinical work to a chordoma context sharing the mechanism. Transferability is graded and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition and advanced modality hypotheses by analogy over a shared molecular dependency (brachyury addiction, SMARCB1 loss to EZH2, super enhancer transcriptional dependency), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in the target setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): directly target the brachyury (TBXT) protein for degradation, for example with a targeted protein degrader, to exploit the chordoma brachyury addiction that transcription factors have historically been considered undruggable but degraders are now reaching.",
+      "shared": "Chordoma is addicted to the developmental transcription factor brachyury (TBXT), the top selectively essential gene, so removing the protein itself (rather than a downstream kinase) should be selectively lethal.",
+      "source": "Chordoma (brachyury dependency established by CRISPR and transcriptional CDK inhibition)",
+      "modality": "small molecule",
+      "rationale": "Genome scale screening shows TBXT is the dominant chordoma dependency, and transcriptional CDK7/9 inhibitors already lower brachyury protein and suppress growth. A degrader that eliminates brachyury protein directly would test the dependency more cleanly and could spare the broad effects of pan transcriptional inhibition.",
+      "transferability": "medium, brachyury is a validated genetic dependency and its protein levels are pharmacologically reducible, but transcription factor degradation requires a suitable ligandable pocket or induced proximity handle on brachyury, which is not yet established.",
+      "prediction": "In brachyury positive chordoma cells and xenografts, an agent that selectively lowers brachyury protein reduces viability and tumor growth in a manner that tracks with the degree of brachyury loss, and cells engineered to be brachyury independent are resistant.",
+      "citation": {
+        "label": "Sharifnia et al., Nat Med 2019 (brachyury addiction and its pharmacologic suppression in chordoma, modality precedent, PMID 30664779)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30664779/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply the EZH2 inhibitor tazemetostat to SMARCB1 deficient poorly differentiated chordoma, transferring the INI1 negative to EZH2 dependency match validated in epithelioid sarcoma.",
+      "shared": "Poorly differentiated chordoma loses SMARCB1 (INI1), the same SWI/SNF lesion that in epithelioid sarcoma and other INI1 negative tumors creates oncogenic dependence on EZH2, the target of tazemetostat.",
+      "source": "Epithelioid sarcoma (tazemetostat, EZH2 inhibition on INI1/SMARCB1 loss)",
+      "modality": "small molecule",
+      "rationale": "SMARCB1 loss disables SWI/SNF and shifts chromatin toward EZH2 mediated repression, an oncogenic dependency that tazemetostat exploits with FDA approval in epithelioid sarcoma. Poorly differentiated chordoma carries the identical lesion while retaining brachyury, so the same drug is a mechanistically direct candidate in that subset.",
+      "transferability": "medium to high for the dependency logic (same lesion, approved drug), but medium overall because it must be demonstrated in chordoma tissue, poorly differentiated chordoma is rare and pediatric enriched, and response in one INI1 negative tumor does not guarantee response in another.",
+      "prediction": "SMARCB1/INI1 negative poorly differentiated chordoma models are more sensitive to EZH2 inhibition than INI1 retained conventional chordoma, and a biomarker selected (INI1 loss) chordoma cohort shows objective responses or durable disease control on tazemetostat.",
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1/SMARCB1 negative epithelioid sarcoma, modality precedent, PMID 33035459)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33035459/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): exploit the brachyury super enhancer by combining transcriptional CDK7/9 inhibition with the receptor tyrosine kinase and PI3K/mTOR blockade already tested in chordoma, to attack the driver and its survival pathways together.",
+      "shared": "Brachyury is sustained by a super enhancer and is preferentially downregulated by transcriptional CDK inhibitors, while chordoma cells simultaneously depend on activated PDGFRB, EGFR, and PI3K/mTOR signaling, suggesting a driver plus survival pathway combination.",
+      "source": "Chordoma (transcriptional CDK dependency plus prospectively tested PDGFRB, EGFR, and mTOR agents)",
+      "modality": "small molecule",
+      "rationale": "Single agent receptor tyrosine kinase and mTOR inhibitors give mostly stabilization, not regression, in chordoma, and brachyury suppression by transcriptional CDK inhibition is potent preclinically. Combining super enhancer directed transcriptional inhibition (lowering brachyury) with the shared pathway blockade could convert cytostatic responses into deeper ones.",
+      "transferability": "speculative, each component is individually supported, but transcriptional CDK inhibitors carry on target toxicity, the optimal partner and schedule are unknown, and no chordoma combination of this design has been tested clinically.",
+      "prediction": "In chordoma models, a transcriptional CDK7 or CDK9 inhibitor combined with a PI3K/mTOR or PDGFR inhibitor produces greater and more durable growth suppression than either agent alone, accompanied by deeper reduction of brachyury protein and its target gene program.",
+      "citation": {
+        "label": "Sharifnia et al., Nat Med 2019 (brachyury super enhancer and transcriptional CDK inhibition in chordoma, PMID 30664779)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30664779/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public sources. It is not medical advice and must not be used to guide individual patient care. Chordoma is a rare bone cancer whose standard of care is maximal safe surgical resection followed by high dose radiotherapy; no systemic therapy is approved, so every drug described here is investigational or borrowed off label from another condition, and eligibility depends on the tumor's own pathology and molecular testing, in particular the conventional versus poorly differentiated (SMARCB1/INI1 deficient) distinction. Reported activities are drawn from the cited prospective trials or preclinical studies and, for the borrowed agents, from their original indications rather than approved chordoma use. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified oncology team at a center experienced with chordoma or sarcoma, ideally within a clinical trial and a molecular tumor board (per ESMO-EURACAN-GENTURIS-ERN PaedCan bone sarcoma guidance, Strauss et al., Ann Oncol 2021, PMID 34500044).</p>"
+}

@@ -1,0 +1,280 @@
+{
+  "cancer": {
+    "name": "Duchenne Muscular Dystrophy (DMD)",
+    "sub": "A rare X linked recessive neuromuscular disease caused by loss of function mutations in the DMD gene, which encodes dystrophin. Included to show that Anveshar's biology first, cross condition matching works on a precision by mutation class Mendelian disease, where eligibility for the newest treatments is decided by the specific mutation and by which exon it affects.",
+    "chips": ["DMD loss of function (dystrophin absent)", "Eligibility set by exon and mutation class", "Exon skipping ASOs plus AAV micro dystrophin gene therapy"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, mutation class and modality stated.",
+    "researcher": "Mechanism and mutation matched, cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Duchenne muscular dystrophy (DMD) is a rare inherited disease that mostly affects boys and slowly weakens the muscles used for walking, breathing, and the heart. It happens because a gene called DMD is broken, so the body cannot make a working copy of a protein called dystrophin that keeps muscle cells strong. Without dystrophin, muscle is damaged a little more with every movement and is gradually replaced by scar and fat.</p><p>Which treatment can help depends a lot on the exact spelling mistake in the gene. Some new medicines only work for boys whose mutation sits next to a specific part of the gene (a specific exon), so genetic testing is the first step in choosing a treatment. There is now a group of approved medicines, from injections that patch over the faulty part of the gene to a one time gene therapy, plus steroids that have helped for decades.</p>",
+    "clinician": "<p>DMD is an X linked recessive dystrophinopathy caused by loss of function variants in DMD (Xp21.2), the largest human gene, leading to absent functional dystrophin at the sarcolemma and progressive myofiber degeneration. Boys typically present in early childhood with proximal weakness, calf pseudohypertrophy, Gowers sign, and markedly elevated creatine kinase; untreated, most lose ambulation around age 10 to 12 years, with later respiratory and cardiac failure. The allelic milder form, Becker muscular dystrophy, generally arises from in frame variants that preserve a partly functional protein, the classic reading frame rule (Aartsma-Rus et al., Muscle Nerve 2006, PMID 16770791, DOI 10.1002/mus.20586).</p><p>The therapeutic branch point is the mutation class. Roughly two thirds of patients carry large deletions, and a subset are amenable to skipping a specific exon (for example exon 51, 53, or 45), which governs which antisense oligonucleotide, if any, applies. A separate branch is AAV micro dystrophin gene transfer, which is mutation agnostic in principle but gated by anti AAV antibody status. Corticosteroids remain the disease modifying backbone across genotypes.</p>",
+    "researcher": "<p>DMD is a canonical precision by mutation class Mendelian disease. Because Duchenne versus Becker severity tracks with whether a variant disrupts the dystrophin reading frame, the dominant therapeutic idea is to convert an out of frame Duchenne lesion into an in frame Becker like transcript. Antisense oligonucleotides do this at the RNA level by forcing skipping of a targeted exon so that splicing restores frame, which is why each drug is matched to a defined amenable mutation rather than to the disease as a whole.</p><p>The approved agents span two advanced modalities used on the same dependency, absent dystrophin. Four phosphorodiamidate morpholino antisense oligonucleotides restore an internally truncated dystrophin in exon specific subsets, and one AAVrh74 vector delivers an engineered micro dystrophin transgene. This makes DMD a strong anchor for Anveshar's thesis that a validated molecular dependency licenses borrowing an entire modality, and that within one disease the same dependency can be drugged by mutation matched RNA therapeutics and by gene replacement.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological handles that DMD treatments use. Almost all of them come back to one goal, getting some working dystrophin back into muscle, either by patching the faulty gene message or by delivering a shortened backup gene. Which one fits you depends on your exact mutation.",
+    "clinician": "Actionable biology in DMD reduces to restoring dystrophin, achieved either by reading frame correction of the endogenous transcript through exon skipping (mutation matched) or by AAV delivery of a micro dystrophin transgene (mutation agnostic). Steroid responsive inflammation is a parallel, genotype independent target.",
+    "researcher": "One dependency (absent dystrophin) supports three target axes: exon specific splice redirection to restore frame, AAV micro dystrophin gene replacement, and the mutation independent surrogate axis of upregulating the paralog utrophin. The exon skipping axis is uniquely mutation gated, which is what makes DMD a precision by mutation class exemplar."
+  },
+  "targets": [
+    {
+      "name": "Dystrophin reading frame correction (exon skipping)",
+      "present_in": "Deletion mutations amenable to a specific exon skip (for example exon 51 ~13 percent, exon 53 ~8 to 10 percent, exon 45 ~8 percent of DMD)",
+      "evidence": "The reading frame rule predicts that converting an out of frame Duchenne deletion to an in frame transcript yields a Becker like, partly functional dystrophin; exon skipping antisense oligonucleotides exploit this and are matched to the patient's specific amenable mutation (Aartsma-Rus et al., Muscle Nerve 2006, PMID 16770791, DOI 10.1002/mus.20586)."
+    },
+    {
+      "name": "Dystrophin gene replacement (AAV micro dystrophin)",
+      "present_in": "Broad DMD population (mutation agnostic in principle; gated by anti AAV antibody status)",
+      "evidence": "The full dystrophin coding sequence exceeds AAV cargo capacity, so an engineered micro dystrophin retaining key functional domains is delivered by an AAVrh74 vector, restoring a shortened dystrophin at the sarcolemma independent of the underlying mutation (Mendell et al., Nat Med 2024, EMBARK, PMID 39385046, DOI 10.1038/s41591-024-03304-z)."
+    },
+    {
+      "name": "Utrophin upregulation (mutation independent surrogate)",
+      "present_in": "All DMD genotypes (utrophin is naturally re expressed in dystrophin deficient fibers)",
+      "evidence": "Utrophin is an autosomal paralog of dystrophin that can partly substitute at the sarcolemma; pharmacologic upregulation is a mutation independent strategy under investigation, not yet approved (Soblechero-Martin et al., Neuropathol Appl Neurobiol 2021, PMID 33999469, DOI 10.1111/nan.12735)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a DMD treatment, colored by how strong the evidence is. Green means it is FDA approved for DMD. The exon skipping medicines are matched to a specific mutation, so they only apply if your genetic test shows that exact match. The gene therapy delivers a shortened backup gene, and steroids help across genotypes.",
+    "clinician": "Green cards are FDA approved for DMD. The four antisense oligonucleotides are strictly mutation gated (exon 51 eteplirsen; exon 53 golodirsen and viltolarsen; exon 45 casimersen) and were approved on the accelerated pathway using dystrophin production as a surrogate endpoint. Delandistrogene moxeparvovec is an AAV micro dystrophin gene therapy. Corticosteroids and vamorolone are the genotype independent backbone.",
+    "researcher": "The approvals map one dependency (absent dystrophin) onto two advanced modalities, with the ASO axis further partitioned by amenable exon. This within disease pattern, one dependency drugged by mutation matched RNA therapeutics and by gene replacement, is the operational template Anveshar's discovery layer extends to other reading frame and loss of function diseases."
+  },
+  "therapies": [
+    {
+      "drug": "Eteplirsen",
+      "target": "Exon 51 skipping (reading frame correction)",
+      "tier": 1,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "DMD amenable to exon 51 skipping (FDA accelerated approval 2016)",
+      "dev_stage": "FDA approved (intravenous, weekly, chronic dosing)",
+      "rationale": {
+        "patient": "This is a designed piece of genetic material given by weekly infusion. It patches over a faulty part of the gene message so muscle can make a shortened but working form of dystrophin. It only helps boys whose mutation is fixable by skipping exon 51, about 1 in 8 patients with DMD.",
+        "clinician": "Phosphorodiamidate morpholino antisense oligonucleotide that induces skipping of DMD exon 51 to restore the reading frame in amenable deletions, producing an internally truncated dystrophin. Over 3 years, eteplirsen treated boys showed a slower decline on the 6 minute walk test and a lower incidence of loss of ambulation versus matched historical controls. Granted accelerated approval on the dystrophin surrogate.",
+        "researcher": "The first approved exon skipping ASO for DMD and the archetype of mutation matched RNA therapy, redirecting endogenous splicing to convert an out of frame Duchenne lesion into a Becker like in frame transcript. Establishes the exon specific splice correction modality the discovery layer proposes to extend to additional amenable mutations."
+      },
+      "citation": {
+        "label": "Mendell et al., Ann Neurol 2016 (eteplirsen, 3 year ambulation vs historical control, exon 51)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26573217/"
+      }
+    },
+    {
+      "drug": "Golodirsen",
+      "target": "Exon 53 skipping (reading frame correction)",
+      "tier": 1,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "DMD amenable to exon 53 skipping (FDA accelerated approval 2019)",
+      "dev_stage": "FDA approved (intravenous, weekly, chronic dosing)",
+      "rationale": {
+        "patient": "Another weekly infusion of designed genetic material, but this one is for boys whose mutation is fixable by skipping exon 53. In the trial it raised the amount of working dystrophin in muscle and reached it to the right place in the muscle fiber.",
+        "clinician": "Phosphorodiamidate morpholino ASO targeting DMD exon 53. In the pivotal study, muscle biopsies at week 48 showed significantly increased exon 53 skipping and an approximately 16 fold rise over baseline in dystrophin, with correct sarcolemmal localization confirmed on immunohistochemistry. Well tolerated; approved on the dystrophin surrogate for exon 53 amenable patients.",
+        "researcher": "A second exon specific ASO extending mutation matched splice correction to the exon 53 amenable subset, one of two approved agents for the same exon but via distinct oligonucleotide chemistry. Reinforces that the skipping strategy generalizes across exons when an accessible splice element and a frame restoring outcome exist."
+      },
+      "citation": {
+        "label": "Frank et al., Neurology 2020 (golodirsen, increased dystrophin, exon 53)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32139505/"
+      },
+      "trial": {
+        "nct": "NCT02310906",
+        "url": "https://clinicaltrials.gov/study/NCT02310906"
+      }
+    },
+    {
+      "drug": "Viltolarsen",
+      "target": "Exon 53 skipping (reading frame correction)",
+      "tier": 1,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "DMD amenable to exon 53 skipping (FDA accelerated approval 2020)",
+      "dev_stage": "FDA approved (intravenous, weekly, chronic dosing)",
+      "rationale": {
+        "patient": "A weekly infusion for the same group of boys as golodirsen, those whose mutation can be fixed by skipping exon 53. In a trial of young boys it increased dystrophin in muscle, and treated boys did better on timed movement tests than untreated boys with the same disease.",
+        "clinician": "Morpholino ASO targeting DMD exon 53. In a phase 2 randomized trial, viltolarsen induced significant de novo dystrophin production (mean around 5.7 to 5.9 percent of normal across dose cohorts) and, versus age and treatment matched natural history controls, improved timed function tests including time to stand, 10 meter run or walk, and 6 minute walk. Well tolerated; approved on the dystrophin surrogate.",
+        "researcher": "The second approved exon 53 ASO, demonstrating that two independently developed oligonucleotides can drug the identical mutation matched splice event. Illustrates modality robustness for the discovery layer, since the exon skip target, not a single molecule, is the transferable asset."
+      },
+      "citation": {
+        "label": "Clemens et al., JAMA Neurol 2020 (viltolarsen phase 2, dystrophin and timed function, exon 53)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32453377/"
+      },
+      "trial": {
+        "nct": "NCT02740972",
+        "url": "https://clinicaltrials.gov/study/NCT02740972"
+      }
+    },
+    {
+      "drug": "Casimersen",
+      "target": "Exon 45 skipping (reading frame correction)",
+      "tier": 1,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "DMD amenable to exon 45 skipping (FDA accelerated approval 2021)",
+      "dev_stage": "FDA approved (intravenous, weekly, chronic dosing)",
+      "rationale": {
+        "patient": "A weekly infusion for boys whose mutation can be fixed by skipping exon 45, about 8 in 100 patients with DMD. It works the same way as the others, patching the gene message so muscle can make a shortened form of dystrophin.",
+        "clinician": "Morpholino ASO targeting DMD exon 45. In the phase 1 or 2 dose titration trial it was well tolerated with dose proportional plasma exposure and no drug related serious adverse events; FDA accelerated approval was granted in 2021 based on a significant increase in dystrophin production in exon 45 amenable patients from the ongoing pivotal program.",
+        "researcher": "A fourth exon specific ASO, matched to the exon 45 amenable subset, completing the currently approved set of mutation matched skipping agents. Each new exon target validates the same reading frame correction logic, and the still unaddressed amenable exons are exactly the gap the discovery layer targets."
+      },
+      "citation": {
+        "label": "Wagner et al., Muscle Nerve 2021 (casimersen phase 1 or 2 safety and pharmacokinetics, exon 45; FDA accelerated approval 2021 on dystrophin surrogate)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34105177/"
+      },
+      "trial": {
+        "nct": "NCT02500381",
+        "url": "https://clinicaltrials.gov/study/NCT02500381"
+      }
+    },
+    {
+      "drug": "Delandistrogene moxeparvovec (Elevidys)",
+      "target": "AAV micro dystrophin gene replacement",
+      "tier": 1,
+      "modality": "gene therapy",
+      "approved_in": "DMD with a confirmed pathogenic DMD variant (FDA approved 2023)",
+      "dev_stage": "FDA approved (one time intravenous AAVrh74 micro dystrophin gene transfer)",
+      "rationale": {
+        "patient": "This is a one time infusion that uses a harmless virus to deliver a shortened backup copy of the dystrophin gene into muscle. Because the full gene is too big to fit in the virus, the delivered version is a compact working part. Unlike the exon skipping medicines, it does not depend on one specific mutation.",
+        "clinician": "One time intravenous AAVrh74 vector delivering an engineered micro dystrophin transgene, addressing absent functional dystrophin largely independent of the specific mutation. In the phase 3 EMBARK trial the primary endpoint, change in North Star Ambulatory Assessment at week 52, was not met, although micro dystrophin expression was confirmed (about 34 percent at week 12) and several secondary timed function endpoints numerically favored treatment. Approved 2023; use is gated by anti AAV antibody status.",
+        "researcher": "The first AAV micro dystrophin gene therapy, a durable one time gene replacement rather than chronic RNA level correction, drugging the same dependency by a different modality. Demonstrates in disease multi modality and provides the AAV gene transfer precedent the discovery layer extends to other loss of function muscle and neuromuscular disorders."
+      },
+      "citation": {
+        "label": "Mendell et al., Nat Med 2024 (EMBARK phase 3, delandistrogene moxeparvovec AAV micro dystrophin)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39385046/"
+      },
+      "trial": {
+        "nct": "NCT05096221",
+        "url": "https://clinicaltrials.gov/study/NCT05096221"
+      }
+    },
+    {
+      "drug": "Corticosteroids (prednisone or deflazacort)",
+      "target": "Steroid responsive muscle inflammation (genotype independent)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "DMD backbone therapy across genotypes (deflazacort FDA approved for DMD 2017; long standing standard of care)",
+      "dev_stage": "FDA approved or established standard of care (daily oral)",
+      "rationale": {
+        "patient": "Daily steroid tablets have been the backbone of DMD care for years and help across all mutation types. They slow muscle weakening and help boys stay walking longer, but long term use has side effects that need monitoring.",
+        "clinician": "Daily glucocorticoids are the disease modifying backbone of DMD, independent of mutation. In the FOR-DMD randomized trial, daily prednisone and daily deflazacort were superior to an intermittent 10 days on and 10 days off prednisone regimen on a composite of motor function, pulmonary function, and treatment satisfaction over 3 years, with no significant difference between the two daily regimens.",
+        "researcher": "A genotype independent, non gene directed modality that anchors DMD care and provides the comparator against which newer mutation matched and gene replacement therapies are added. Its cross genotype benefit motivates the mutation independent utrophin surrogate hypothesis in the discovery layer."
+      },
+      "citation": {
+        "label": "Guglieri et al., JAMA 2022 (FOR-DMD, corticosteroid dosing regimens in DMD)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35381069/"
+      },
+      "trial": {
+        "nct": "NCT01603407",
+        "url": "https://clinicaltrials.gov/study/NCT01603407"
+      }
+    },
+    {
+      "drug": "Vamorolone",
+      "target": "Dissociative steroid anti inflammatory (genotype independent)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "DMD (FDA approved 2023)",
+      "dev_stage": "FDA approved (daily oral dissociative corticosteroid)",
+      "rationale": {
+        "patient": "A daily liquid medicine that works like a steroid to slow muscle weakening but is designed to cause fewer of the usual steroid side effects, such as slowed growth and bone loss. Like steroids, it helps across mutation types.",
+        "clinician": "Dissociative steroidal anti inflammatory drug that retains efficacy while dissociating some corticosteroid toxicities. In a randomized, placebo and prednisone controlled trial, vamorolone 6 mg/kg/d met the primary endpoint (time to stand velocity vs placebo) and key secondary motor endpoints, while sparing height percentile decline and bone turnover marker suppression seen with prednisone. Genotype independent.",
+        "researcher": "A mutation independent modality refining the steroid backbone by uncoupling anti inflammatory benefit from classic corticosteroid liabilities, including mineralocorticoid receptor antagonism. Part of the genotype independent axis alongside corticosteroids and the investigational utrophin surrogate strategy."
+      },
+      "citation": {
+        "label": "Guglieri et al., JAMA Neurol 2022 (vamorolone vs placebo and prednisone, VISION-DMD)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36036925/"
+      },
+      "trial": {
+        "nct": "NCT03439670",
+        "url": "https://clinicaltrials.gov/study/NCT03439670"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals across different rare diseases that made treating disease at the level of the gene, using advanced treatments like exon skipping, gene therapy, RNA interference, and gene editing, a real and proven approach. They are why borrowing a treatment idea from one rare disease to another is legitimate rather than speculative.",
+    "clinician": "The approvals below establish that mutation matched exon skipping antisense oligonucleotides, AAV micro dystrophin gene replacement, RNA interference, and CRISPR gene editing are all real, regulator approved or clinically validated modalities. Each validates a modality that can, in principle, transfer to another disease with a matching molecular dependency.",
+    "researcher": "Each landmark validates one advanced modality on a defined molecular mechanism (frame restoring splice correction, gene replacement, transcript knockdown, gene editing). This modality catalog, not any single gene, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "Exon 51 amenable deletion in DMD (reading frame correction by exon skipping)",
+      "drug": "eteplirsen (antisense oligonucleotide)",
+      "year": 2016,
+      "citation": {
+        "label": "Mendell et al., Ann Neurol 2016 (first approved exon skipping ASO for DMD)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26573217/"
+      }
+    },
+    {
+      "biomarker": "Absent dystrophin in DMD (AAV micro dystrophin gene replacement)",
+      "drug": "delandistrogene moxeparvovec (AAV micro dystrophin gene therapy)",
+      "year": 2023,
+      "citation": {
+        "label": "Mendell et al., Nat Med 2024 (EMBARK, AAV micro dystrophin gene transfer; approved 2023)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39385046/"
+      }
+    },
+    {
+      "biomarker": "TTR gene expression in hereditary transthyretin amyloidosis (RNAi knockdown)",
+      "drug": "patisiran (RNA interference)",
+      "year": 2018,
+      "citation": {
+        "label": "Adams et al., N Engl J Med 2018 (patisiran RNAi for hereditary transthyretin amyloidosis)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29972753/"
+      }
+    },
+    {
+      "biomarker": "BCL11A erythroid enhancer editing to reactivate fetal hemoglobin in sickle cell disease and beta thalassemia (gene editing)",
+      "drug": "exagamglogene autotemcel (CRISPR-Cas9 gene editing)",
+      "year": 2023,
+      "citation": {
+        "label": "Frangoul et al., N Engl J Med 2020 (CRISPR-Cas9 editing for sickle cell disease and beta thalassemia; approved 2023 as exagamglogene autotemcel)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33283989/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because DMD proved that gene directed treatments matched to a mutation can work, related ideas might be worth testing, such as permanently editing the gene to restore its frame, designing skipping medicines for mutations that have no option yet, or boosting a backup protein that could help regardless of mutation. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that extends a modality validated in DMD or an adjacent rare disease. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel hypotheses by analogy over the shared dependency (absent dystrophin, corrected by frame restoration or replacement), with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated in the target application."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): use CRISPR gene editing to permanently correct or reframe DMD at the DNA level, restoring dystrophin by the same reading frame logic that exon skipping achieves transiently at the RNA level.",
+      "shared": "The reading frame dependency, an out of frame Duchenne lesion can be converted to an in frame Becker like transcript; exon skipping does this reversibly on mRNA, while a single genomic edit could do it permanently.",
+      "source": "Duchenne muscular dystrophy (eteplirsen and related exon skipping ASOs)",
+      "modality": "gene therapy",
+      "rationale": "In a DMD mouse model, a single genomic cut delivered by AAV CRISPR restored the dystrophin reading frame (by reframing or by enabling skipping of the adjacent exon) and recovered up to about 90 percent of dystrophin expression across skeletal muscle and heart, in principle a durable one time version of the transient skipping achieved by approved ASOs.",
+      "transferability": "speculative, genome editing of DMD is validated preclinically but human translation must resolve durable editing in postmitotic muscle, off target and immunogenicity risk (Cas9 and AAV), and delivery to heart and diaphragm; it remains investigational.",
+      "prediction": "In patient derived myogenic cells and in a humanized DMD model carrying the target deletion, a single frame restoring edit yields sarcolemmal dystrophin and improves muscle function durably, with off target editing below a predefined safety threshold.",
+      "citation": {
+        "label": "Amoasii et al., Sci Transl Med 2017 (single cut CRISPR restores dystrophin reading frame in a DMD mouse model)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29187645/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): design additional exon skipping antisense oligonucleotides for DMD mutations that currently have no approved skipping option, extending the mutation matched strategy to unaddressed amenable exons.",
+      "shared": "The same reading frame dependency and splice redirection mechanism proven for exons 51, 53, and 45; other amenable deletions could in principle be reframed by skipping their flanking exon.",
+      "source": "Duchenne muscular dystrophy (approved exon 51, 53, and 45 skipping ASOs)",
+      "modality": "antisense oligonucleotide",
+      "rationale": "The four approved agents cover only a subset of amenable mutations (roughly exon 51, 53, and 45 amenable patients), leaving many boys without a matched skip. The reading frame rule predicts which additional exons, when skipped, would restore frame, defining a rational target list for new ASOs.",
+      "transferability": "medium, ASO exon skipping is a proven and approved modality in DMD, but each new exon needs an accessible target sequence, demonstration that the skipped transcript yields functional dystrophin, sufficient muscle delivery, and acceptance that dystrophin remains a surrogate endpoint.",
+      "prediction": "In patient derived myotubes carrying an unaddressed amenable deletion, a rationally designed ASO increases skipping of the target exon, restores the reading frame, and produces internally truncated dystrophin at the sarcolemma in a dose dependent manner, without off target splicing changes.",
+      "citation": {
+        "label": "Aartsma-Rus et al., Muscle Nerve 2006 (reading frame rule, basis for selecting new skippable exons)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16770791/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): pharmacologically upregulate utrophin, the dystrophin paralog, as a mutation independent therapy that could benefit any DMD genotype, including patients ineligible for exon specific skipping.",
+      "shared": "Utrophin is a structural and functional paralog of dystrophin naturally re expressed in dystrophin deficient fibers; raising it could substitute at the sarcolemma regardless of the underlying DMD mutation.",
+      "source": "Duchenne muscular dystrophy (corticosteroid and vamorolone genotype independent backbone; utrophin surrogate biology)",
+      "modality": "small molecule",
+      "rationale": "Because exon skipping only reaches mutation matched subsets and gene therapy is gated by anti AAV immunity, a mutation independent option is valuable. Utrophin overexpression rescues dystrophic phenotype in animal models and, being genotype agnostic, could complement dystrophin restoration therapies across the whole population.",
+      "transferability": "speculative, utrophin modulation is mechanistically supported and mutation independent, but no utrophin upregulator is approved, prior clinical candidates have had mixed results, and durable, sufficient sarcolemmal utrophin in humans remains to be demonstrated.",
+      "prediction": "In dystrophin deficient models, a utrophin upregulating agent raises sarcolemmal utrophin to functionally meaningful levels, improves muscle membrane integrity and force, and does so independent of the specific DMD mutation, with an acceptable safety profile.",
+      "citation": {
+        "label": "Soblechero-Martin et al., Neuropathol Appl Neurobiol 2021 (utrophin modulator drugs as potential mutation independent DMD therapies)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33999469/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Duchenne muscular dystrophy is a rare disease and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework generalizes to a precision by mutation class Mendelian disease. The approved therapies are described from their pivotal or registrational studies; eligibility for the exon skipping antisense oligonucleotides depends on the patient's specific mutation and which exon is amenable to skipping, and the accelerated approvals rest on dystrophin production as a surrogate endpoint whose translation to long term clinical benefit continues to be evaluated. The gene therapy is gated by anti AAV antibody status, and its phase 3 primary functional endpoint was not met. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the shared molecular dependency with graded transferability. Treatment decisions belong to a qualified neuromuscular specialist, ideally at a center experienced with DMD and, where relevant, within a clinical trial.</p>"
+}

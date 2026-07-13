@@ -1,0 +1,156 @@
+{
+  "aim": "Build a publication-grade, computationally driven research program for cholangiocarcinoma (biliary tract cancer) that is specific to its actionable biology rather than generic pan-cancer analysis. The workflow assembles biliary tract cancer genomic cohorts and molecularly subtypes them by anatomic site (intrahepatic versus perihilar versus distal extrahepatic) and by driver (IDH1 R132 hotspot, FGFR2 fusions and rearrangements, BRAF V600E, HER2/ERBB2 amplification, NTRK fusions, and the MSI-high or mismatch repair deficient subset), then characterizes the FGFR2 fusion oncogene and its acquired kinase domain resistance mutation landscape (N550 molecular brake, V565 gatekeeper, and compound mutations) with structural modeling, nominates a next generation FGFR2 selective inhibitor strategy, dissects the immune microenvironment to rationalize chemoimmunotherapy in biomarker defined subsets, and closes with a wet-lab validation plan in patient derived cholangiocarcinoma organoids including CRISPR engineered FGFR2 resistance alleles.",
+  "hypothesis": "Actionable oncogenic dependencies in cholangiocarcinoma are anatomically and molecularly stratified: IDH1 R132 mutations and FGFR2 fusions are enriched in intrahepatic disease and are targetable, whereas HER2 amplification is enriched in gallbladder and extrahepatic disease. Within the FGFR2 fusion subset, clinical resistance to reversible pan-FGFR inhibitors (pemigatinib, futibatinib) is driven predominantly by secondary FGFR2 kinase domain mutations that remap the ATP pocket, and a covalent FGFR2 selective inhibitor engineered for isoform selectivity over FGFR1 and FGFR4 will retain activity across a broader single and compound mutation spectrum at exposures that spare pan-FGFR toxicity. These predictions are testable end to end using public multi-omic cohorts, structural modeling, and cholangiocarcinoma organoids carrying engineered resistance alleles.",
+  "steps": [
+    {
+      "title": "Step 1. Assemble biliary tract cancer genomic and transcriptomic cohorts and stratify by anatomic site",
+      "what": "Assemble a multi-cohort cholangiocarcinoma resource. Pull the TCGA-CHOL cohort (predominantly intrahepatic) somatic mutation, copy number, and RNA-seq data from the GDC and cBioPortal, add the larger MSK-IMPACT and AACR Project GENIE biliary tract cancer cohorts from cBioPortal for statistical power on rare drivers, and harvest matched or independent expression series from GEO. Harmonize clinical annotation so every sample carries anatomic site (intrahepatic iCCA, perihilar, distal extrahepatic eCCA, gallbladder), which is the primary stratifier because actionable drivers partition by site. Normalize gene symbols and coordinates to a single Ensembl release. Establish GTEx normal bile duct and liver as the non-tumor expression baseline for later differential and tumor specificity analysis.",
+      "tools": ["cBioPortal", "TCGA-CHOL", "GEO", "GTEx", "Ensembl", "bulk RNA-seq compute"],
+      "outputs": ["Harmonized multi-cohort sample table with anatomic site, stage, and sequencing platform per patient", "Merged somatic mutation and copy number matrices across TCGA-CHOL, MSK, and GENIE biliary cohorts", "RNA-seq expression matrix normalized to a fixed Ensembl release with GTEx bile duct and liver baseline", "Cohort QC report (coverage, tumor purity, batch structure by source)"]
+    },
+    {
+      "title": "Step 2. Molecularly subtype the cohort into actionable classes (IDH1, FGFR2 fusion, BRAF V600E, HER2, NTRK, MSI-high)",
+      "what": "Classify every tumor into the clinically actionable subsets and quantify their prevalence and mutual exclusivity, stratified by anatomic site. Call IDH1 R132 hotspot mutations, BRAF V600E, and KRAS status from the mutation matrices. Detect FGFR2 fusions and rearrangements from RNA-seq split-read and discordant-pair evidence plus DNA structural variant calls, cataloging fusion partners and breakpoints. Score HER2/ERBB2 amplification from copy number and overexpression from RNA-seq. Detect NTRK1/2/3 fusions from RNA-seq. Flag the MSI-high or mismatch repair deficient subset from a microsatellite instability signal and MMR gene status, and estimate tumor mutational burden. Confirm each variant classification against ClinVar and cBioPortal oncogenicity annotation. Test the expected enrichment of IDH1 and FGFR2 fusions in intrahepatic disease and HER2 in extrahepatic and gallbladder disease, and quantify driver co-occurrence and mutual exclusivity.",
+      "tools": ["cBioPortal", "TCGA-CHOL", "bulk RNA-seq compute", "ClinVar", "Ensembl"],
+      "outputs": ["Per-patient molecular subtype label (IDH1 mut, FGFR2 fusion, BRAF V600E, HER2 amp, NTRK fusion, MSI-high, driver-negative)", "FGFR2 fusion partner and breakpoint catalog with supporting read evidence", "Prevalence table of each actionable alteration stratified by anatomic site with confidence intervals", "Driver co-occurrence and mutual-exclusivity matrix", "ClinVar and oncogenicity annotation for every called variant"]
+    },
+    {
+      "title": "Step 3. Characterize FGFR2 biology and the acquired resistance mutation landscape structurally",
+      "what": "Focus on the FGFR2 fusion subset. Retrieve the canonical FGFR2 protein sequence, domain architecture, and annotated functional residues from UniProt and map the fusion breakpoints onto the kinase domain to confirm retention of an intact kinase and loss of the autoinhibitory C-terminus. Curate the acquired resistance mutation landscape reported clinically after pemigatinib and futibatinib from the literature and from variant annotation resources, focusing on the recurrent FGFR2 kinase domain substitutions (the N550 molecular brake cluster, the V565 gatekeeper, and activation loop and compound mutations). Obtain the experimental FGFR2 kinase domain structure from the PDB and, where no experimental structure covers a given fusion or mutant, generate an AlphaFold model of the FGFR2 kinase domain and of the specific resistance mutants. Analyze how each substitution reshapes the ATP binding pocket, the gatekeeper channel, and the molecular brake to explain resistance to reversible ATP competitive inhibitors. Map FGFR2 pathway context (FGFR signaling, MAPK and PI3K effectors) using Reactome.",
+      "tools": ["UniProt", "PDB", "AlphaFold", "Reactome", "Ensembl"],
+      "outputs": ["FGFR2 domain map with fusion breakpoints and retained kinase domain annotated", "Curated FGFR2 acquired resistance mutation table (residue, mechanism class, drug context, structural location)", "Experimental and AlphaFold structural models of wild-type and mutant FGFR2 kinase domain", "Pocket, gatekeeper, and molecular-brake analysis linking each mutation to loss of reversible inhibitor binding", "FGFR2 signaling pathway diagram from Reactome"]
+    },
+    {
+      "title": "Step 4. Predict variant effects and evolutionary constraint on FGFR2 and IDH1 with a genomic language model",
+      "what": "Use the Evo 2 genomic language model to score the functional consequence of FGFR2 kinase domain resistance variants and IDH1 R132 hotspot variants, and to sanity-check FGFR2 fusion breakpoints. Compute variant effect and likelihood scores for each observed and plausible-but-unobserved FGFR2 substitution to rank which residues are most constrained (and therefore least likely to tolerate escape mutations) and to prioritize which resistance alleles a next generation inhibitor must cover. Cross-check the model's constraint predictions against the empirical frequency of each mutation in the clinical resistance catalog from Step 3 and against ClinVar and cBioPortal pathogenicity calls, so the in silico ranking is anchored to observed biology rather than taken at face value.",
+      "tools": ["Evo 2", "ClinVar", "cBioPortal", "Ensembl"],
+      "outputs": ["Evo 2 variant effect and constraint scores for FGFR2 kinase domain and IDH1 R132 variants", "Ranked list of FGFR2 escape residues by predicted constraint and observed clinical frequency", "Anvesharance analysis between model predictions, ClinVar, and clinical resistance frequency", "Prioritized resistance-allele panel for downstream inhibitor evaluation and engineering"]
+    },
+    {
+      "title": "Step 5. Nominate a next generation FGFR2 selective inhibitor strategy",
+      "what": "Define the target product profile for an FGFR2 selective inhibitor that overcomes the resistance landscape from Steps 3 and 4 while sparing the FGFR1 and FGFR4 mediated toxicity (hyperphosphatemia, diarrhea) that caps dosing of pan-FGFR drugs. Query ChEMBL for FGFR2 directed chemical matter and its measured potency and isoform selectivity, and assemble the mechanistic classes in play (reversible ATP competitive pan-FGFR inhibitors such as pemigatinib, covalent irreversible pan-FGFR inhibitors such as futibatinib, and covalent FGFR2 selective agents). Use the structural models from Step 3 to reason about which chemotypes can still engage the mutant pocket, the gatekeeper channel, and the covalent cysteine, and specify a covalent FGFR2 selective binding hypothesis that trades pan-FGFR breadth for isoform selectivity and coverage of the molecular-brake and gatekeeper mutants. Confirm the FGFR2 target and its selectivity liabilities against UniProt and the paralog structures.",
+      "tools": ["ChEMBL", "PDB", "AlphaFold", "UniProt"],
+      "outputs": ["Target product profile for an FGFR2 selective inhibitor (potency, isoform selectivity window, required resistance-mutation coverage)", "ChEMBL-derived table of FGFR2 chemical matter with potency and FGFR1/FGFR4 selectivity", "Structure-based binding hypothesis for covalent FGFR2 selective engagement of mutant pockets", "Ranked inhibitor strategy shortlist with predicted coverage across the Step 4 resistance-allele panel"]
+    },
+    {
+      "title": "Step 6. Dissect the cholangiocarcinoma immune microenvironment to rationalize chemoimmunotherapy in biomarker subsets",
+      "what": "Characterize the tumor immune microenvironment to explain why adding a checkpoint inhibitor to gemcitabine and cisplatin improves survival, and to identify which molecular subsets are most likely to benefit. Integrate cholangiocarcinoma single-cell RNA-seq datasets from GEO to define the myeloid, T cell, fibroblast (including the immunosuppressive desmoplastic stroma), and malignant cholangiocyte compartments. Deconvolve the bulk cohort from Steps 1 and 2 with these single-cell references to estimate immune infiltration, exhaustion, and antigen presentation per tumor, then relate immune state to molecular subtype (FGFR2 fusion, IDH1 mutant, MSI-high, driver-negative) and anatomic site. Test whether the MSI-high and high TMB subsets show the expected inflamed, neoantigen-rich phenotype and whether IDH1 mutant or FGFR2 fusion tumors show distinct, potentially immune-excluded microenvironments that would motivate driver inhibitor plus checkpoint combinations. Map immune signaling and antigen presentation pathways with Reactome.",
+      "tools": ["GEO", "scRNA-seq compute", "bulk RNA-seq compute", "Reactome", "cBioPortal"],
+      "outputs": ["Annotated single-cell atlas of the cholangiocarcinoma tumor and immune microenvironment", "Per-tumor immune infiltration, exhaustion, and antigen-presentation scores from deconvolution", "Immune phenotype mapped to molecular subtype and anatomic site", "Ranked biomarker-defined subsets for driver inhibitor plus checkpoint combination hypotheses"]
+    },
+    {
+      "title": "Step 7. Establish cholangiocarcinoma-specific cellular dependencies and off-target risk with functional genomics",
+      "what": "Ground the target and combination hypotheses in orthogonal functional evidence. Query DepMap (CRISPR and RNAi loss-of-function screens with paired expression and mutation profiles) for the available biliary tract and cholangiocarcinoma cell models to confirm FGFR2 dependency in FGFR2 altered lines, to test whether IDH1 mutant lines depend on mutant IDH1, and to screen for co-dependencies and synthetic-lethal partners (for example MAPK pathway effectors, SHP2, or feedback nodes) that could anchor combinations that delay adaptive resistance. Use DepMap paralog dependency and expression data to estimate the on-target normal-tissue liability of FGFR1 and FGFR4 inhibition, reinforcing the selectivity rationale from Step 5. Cross-reference expression of candidate targets in GTEx normal tissues to flag tumor specificity and off-target risk before committing to the organoid validation.",
+      "tools": ["DepMap", "GTEx", "cBioPortal", "Ensembl"],
+      "outputs": ["FGFR2 and mutant IDH1 dependency scores across available biliary cell models", "Ranked co-dependency and candidate synthetic-lethal partner list for combination design", "FGFR1 and FGFR4 paralog dependency and normal-tissue expression risk assessment", "Target specificity summary integrating DepMap dependency with GTEx normal expression"]
+    },
+    {
+      "title": "Step 8. Validation plan in patient derived cholangiocarcinoma organoids with engineered FGFR2 resistance",
+      "what": "Specify the wet-lab validation that tests the central hypothesis. Use patient derived cholangiocarcinoma organoids spanning the actionable subsets defined in Step 2 (at minimum FGFR2 fusion positive, IDH1 R132 mutant, and driver-negative intrahepatic organoids, plus a HER2 amplified extrahepatic or gallbladder organoid). Confirm each organoid's genotype against the cohort calls, then run dose response to pemigatinib, futibatinib, and the nominated FGFR2 selective inhibitor from Step 5 to establish baseline sensitivity. Engineer the prioritized FGFR2 kinase domain resistance alleles from Step 4 (the N550 molecular brake, the V565 gatekeeper, and a defined compound mutant) into FGFR2 fusion positive organoids by CRISPR base or prime editing, and test whether the FGFR2 selective inhibitor retains growth suppression across the engineered allele panel where the reversible inhibitors fail. Add a chemoimmunotherapy-relevant readout for the immune hypothesis from Step 6 where an organoid-immune coculture is feasible. Confirm on-target pharmacodynamics (loss of FGFR2 pathway signaling) and read out with viability, apoptosis, and pathway phosphorylation. Define success as the FGFR2 selective inhibitor covering a broader engineered resistance spectrum than pemigatinib or futibatinib at exposures predicted to spare FGFR1 and FGFR4.",
+      "tools": ["scRNA-seq compute", "bulk RNA-seq compute", "cBioPortal", "Reactome"],
+      "outputs": ["Genotype-confirmed patient derived cholangiocarcinoma organoid panel across actionable subsets", "Dose response and IC50 table for pemigatinib, futibatinib, and the nominated FGFR2 selective inhibitor", "CRISPR engineered FGFR2 resistance-allele organoid lines (N550 brake, V565 gatekeeper, compound mutant)", "Resistance-coverage comparison showing FGFR2 selective inhibitor activity across engineered alleles", "Pharmacodynamic confirmation of FGFR2 pathway suppression and go/no-go decision against the success criterion"]
+    }
+  ],
+  "datasets": [
+    {
+      "name": "TCGA-CHOL (Cholangiocarcinoma) somatic mutations, copy number, and RNA-seq",
+      "source": "NCI Genomic Data Commons / The Cancer Genome Atlas",
+      "url": "https://portal.gdc.cancer.gov/projects/TCGA-CHOL"
+    },
+    {
+      "name": "cBioPortal cholangiocarcinoma and biliary tract cancer studies (TCGA-CHOL, MSK, AACR Project GENIE)",
+      "source": "cBioPortal for Cancer Genomics",
+      "url": "https://www.cbioportal.org/"
+    },
+    {
+      "name": "GEO cholangiocarcinoma bulk and single-cell RNA-seq series",
+      "source": "NCBI Gene Expression Omnibus",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/"
+    },
+    {
+      "name": "GTEx normal bile duct and liver expression baseline",
+      "source": "GTEx Portal",
+      "url": "https://gtexportal.org/"
+    },
+    {
+      "name": "DepMap CRISPR and RNAi dependency, expression, and mutation profiles for biliary tract cell models",
+      "source": "Broad Institute Cancer Dependency Map",
+      "url": "https://depmap.org/portal/"
+    },
+    {
+      "name": "UniProt FGFR2 and IDH1 protein sequences, domain architecture, and functional residues",
+      "source": "UniProt Knowledgebase",
+      "url": "https://www.uniprot.org/uniprotkb/P21802/entry"
+    },
+    {
+      "name": "PDB experimental FGFR2 kinase domain structures",
+      "source": "RCSB Protein Data Bank",
+      "url": "https://www.rcsb.org/"
+    },
+    {
+      "name": "AlphaFold FGFR2 structural model",
+      "source": "AlphaFold Protein Structure Database",
+      "url": "https://alphafold.ebi.ac.uk/entry/P21802"
+    },
+    {
+      "name": "Reactome FGFR signaling, MAPK, PI3K, and antigen presentation pathways",
+      "source": "Reactome Pathway Knowledgebase",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "ChEMBL FGFR2 directed chemical matter with potency and isoform selectivity",
+      "source": "EMBL-EBI ChEMBL",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    {
+      "name": "ClinVar clinical significance annotation for FGFR2 and IDH1 variants",
+      "source": "NCBI ClinVar",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/"
+    },
+    {
+      "name": "Ensembl gene models, transcripts, and coordinate reference for harmonization",
+      "source": "Ensembl / EMBL-EBI",
+      "url": "https://www.ensembl.org/"
+    },
+    {
+      "name": "Evo 2 genomic language model for variant effect and constraint scoring",
+      "source": "Arc Institute Evo 2",
+      "url": "https://github.com/ArcInstitute/evo2"
+    }
+  ],
+  "validation": "The workflow is validated on three axes. Computational reproducibility: driver subtype prevalences (IDH1 R132 in roughly one fifth of intrahepatic tumors, FGFR2 fusions in roughly ten to fifteen percent of intrahepatic tumors, HER2 enrichment in extrahepatic and gallbladder disease) must reproduce across TCGA-CHOL, MSK, and GENIE cohorts and match published biliary tract cancer molecular epidemiology, and every called variant must carry concordant ClinVar and cBioPortal oncogenicity annotation. In silico consistency: Evo 2 constraint scores, structural pocket analysis, and the empirical clinical frequency of each FGFR2 resistance mutation must converge on the same prioritized escape residues, and DepMap must confirm FGFR2 dependency in FGFR2 altered models and mutant IDH1 dependency in IDH1 mutant models before those targets advance. Experimental validation: the decisive test is in the organoid panel, where success requires the nominated FGFR2 selective inhibitor to suppress growth across a broader panel of CRISPR engineered FGFR2 kinase domain resistance alleles (N550 molecular brake, V565 gatekeeper, and a compound mutant) than pemigatinib or futibatinib, with confirmed loss of FGFR2 pathway phosphorylation as an on-target pharmacodynamic readout, at exposures predicted from the DepMap paralog and GTEx normal expression analysis to spare FGFR1 and FGFR4 dependent toxicity. A negative result (the selective inhibitor failing to broaden resistance coverage, or FGFR2 dependency not confirmed) falsifies the central hypothesis and redirects the program.",
+  "figures": [
+    {
+      "title": "Figure 1. Anatomically stratified molecular landscape of cholangiocarcinoma",
+      "what": "Oncoprint and stacked prevalence plot of the actionable alterations (IDH1 R132, FGFR2 fusion, BRAF V600E, HER2 amplification, NTRK fusion, MSI-high, KRAS) across the merged cohort, split by anatomic site (intrahepatic, perihilar, distal extrahepatic, gallbladder), showing the enrichment of IDH1 and FGFR2 fusions in intrahepatic disease and HER2 in extrahepatic and gallbladder disease, with driver co-occurrence and mutual exclusivity."
+    },
+    {
+      "title": "Figure 2. FGFR2 fusion architecture and acquired resistance mutation map",
+      "what": "FGFR2 domain diagram with fusion breakpoints and retained kinase domain, overlaid with the acquired kinase domain resistance mutations (N550 molecular brake cluster, V565 gatekeeper, activation loop, and compound mutations) annotated by mechanism class and by the FGFR inhibitor context in which they emerge."
+    },
+    {
+      "title": "Figure 3. Structural basis of FGFR2 inhibitor resistance and the selective inhibitor rationale",
+      "what": "Structural panels of the wild-type versus mutant FGFR2 kinase domain (experimental PDB and AlphaFold models) showing how the gatekeeper and molecular-brake substitutions reshape the ATP pocket, alongside the covalent FGFR2 selective binding hypothesis and its predicted coverage across the resistance-allele panel."
+    },
+    {
+      "title": "Figure 4. Evo 2 constraint versus observed resistance frequency for FGFR2 and IDH1",
+      "what": "Scatter of Evo 2 predicted variant constraint against empirical clinical resistance frequency for FGFR2 kinase domain residues (and IDH1 R132 variants), with ClinVar and cBioPortal annotations, identifying the most constrained escape residues a next generation inhibitor must cover."
+    },
+    {
+      "title": "Figure 5. FGFR2 selective inhibitor target product profile and ChEMBL selectivity landscape",
+      "what": "Potency versus FGFR1 and FGFR4 selectivity plot of FGFR2 directed chemical matter from ChEMBL across mechanistic classes (reversible pan-FGFR, covalent pan-FGFR, covalent FGFR2 selective), annotated with predicted resistance-mutation coverage and the target product profile window that spares pan-FGFR toxicity."
+    },
+    {
+      "title": "Figure 6. Immune microenvironment by molecular subtype and chemoimmunotherapy rationale",
+      "what": "Single-cell derived immune atlas with deconvolved per-tumor immune infiltration, exhaustion, and antigen-presentation scores mapped onto molecular subtype and anatomic site, highlighting the inflamed MSI-high and high TMB subsets versus immune-excluded driver subsets that motivate driver inhibitor plus checkpoint combinations."
+    },
+    {
+      "title": "Figure 7. Functional genomic dependencies and paralog off-target risk",
+      "what": "DepMap dependency scores for FGFR2 and mutant IDH1 across biliary cell models with candidate co-dependencies for combination design, paired with FGFR1 and FGFR4 paralog dependency and GTEx normal-tissue expression to visualize the selectivity and off-target risk landscape."
+    },
+    {
+      "title": "Figure 8. Organoid resistance-coverage validation",
+      "what": "Dose response curves and a resistance-coverage heatmap for pemigatinib, futibatinib, and the nominated FGFR2 selective inhibitor across FGFR2 fusion positive organoids carrying wild-type and CRISPR engineered FGFR2 resistance alleles (N550 brake, V565 gatekeeper, compound mutant), with pharmacodynamic FGFR2 pathway phosphorylation readout and the go/no-go decision against the success criterion."
+    }
+  ]
+}

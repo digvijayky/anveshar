@@ -1,0 +1,228 @@
+{
+  "cancer": {
+    "name": "Medullary Thyroid Carcinoma (MTC)",
+    "sub": "A rare neuroendocrine cancer of the calcitonin producing parafollicular C cells of the thyroid, distinct from the common follicular derived thyroid cancers. Roughly one in four cases is hereditary (multiple endocrine neoplasia type 2), and the disease is defined by activation of the RET receptor tyrosine kinase, which makes it a model of a single driver rare cancer now treated with selective targeted therapy.",
+    "chips": ["RET driven (germline in MEN2, somatic M918T in sporadic)", "Calcitonin and CEA biomarkers", "Two selective RET inhibitors approved"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, driver mutation and line of therapy stated.",
+    "researcher": "Mechanism, selectivity, and resistance biology foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Medullary thyroid carcinoma is a rare cancer that starts in special hormone producing cells of the thyroid called C cells, which make a hormone named calcitonin. It is different from the far more common thyroid cancers, and it does not respond to radioactive iodine. About one in four people who have it inherited a faulty gene called RET, as part of a syndrome called multiple endocrine neoplasia type 2, and most of the rest have the same gene switched on inside the tumor by a mutation that was not inherited.</p><p>The important news is that because almost every case comes back to one gene, RET, this cancer has become a strong example of matching a treatment to the tumor's biology. Blood tests for calcitonin and CEA track the disease, and there are now targeted pills designed to switch off the faulty RET protein.</p>",
+    "clinician": "<p>Medullary thyroid carcinoma (MTC) is a neuroendocrine malignancy arising from the calcitonin secreting parafollicular C cells, accounting for a small minority of thyroid cancers and biologically unrelated to follicular epithelial derived papillary and follicular thyroid cancers. Approximately 25% of cases are hereditary, occurring within multiple endocrine neoplasia type 2 (MEN2) as germline RET mutations, and roughly half of sporadic cases carry a somatic RET mutation, most commonly M918T, which is associated with more aggressive disease.</p><p>Serum calcitonin and carcinoembryonic antigen are the key tumor markers for diagnosis, monitoring, and doubling time based prognosis. Surgery is the only curative modality; radioactive iodine is ineffective because C cells do not concentrate iodine. For advanced progressive disease, systemic therapy is defined by RET status: the multikinase inhibitors vandetanib and cabozantinib were the first approvals, and the highly selective RET inhibitors selpercatinib and pralsetinib are now preferred where a RET alteration is present.</p>",
+    "researcher": "<p>MTC is a paradigm single driver rare cancer. Oncogenic RET, a receptor tyrosine kinase, is activated either by germline mutation in MEN2 (for example the MEN2A cysteine codon mutations and the MEN2B M918T mutation) or by somatic mutation in sporadic disease, where M918T is the dominant and prognostically adverse event. This near universal RET dependence licensed a shift from broad multikinase inhibitors, whose activity is partly antiangiogenic and burdened by off target toxicity, to potent selective RET inhibitors engineered for on target potency and central nervous system penetration.</p><p>The same RET dependence extends beyond the thyroid: RET fusions drive small subsets of lung and other cancers, and selpercatinib carries a tissue agnostic approval for RET fusion positive solid tumors. MTC therefore anchors both a within disease line of therapy story and a cross condition, biomarker first matching story, and its principal emerging challenge, on target solvent front resistance at RET G810, defines the discovery layer below.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological features of medullary thyroid carcinoma that existing drugs can target. Nearly all of them come back to a single gene, RET.",
+    "clinician": "The dominant actionable target is RET, whether from a germline MEN2 mutation, a sporadic somatic mutation (most often M918T), or, rarely, a RET fusion. Selective RET inhibition is the biomarker matched strategy; the multikinase inhibitors add antiangiogenic (VEGFR) and MET activity.",
+    "researcher": "MTC is organized around one dependency, oncogenic RET. Selectivity for RET over VEGFR2 is what separates the newer agents from the multikinase inhibitors, and the emerging solvent front RET G810 mutation is the resistance axis that motivates next generation inhibitors."
+  },
+  "targets": [
+    {
+      "name": "RET (germline, MEN2)",
+      "present_in": "Hereditary MTC (about 25% of cases), within MEN2",
+      "evidence": "Germline RET mutations cause MEN2 and drive hereditary MTC; RET is the validated target of selective RET inhibitors (Wells et al., J Clin Oncol 2012, PMID 22025146, DOI 10.1200/JCO.2011.35.5040; Wirth et al., N Engl J Med 2020, PMID 32846061, DOI 10.1056/NEJMoa2005651)."
+    },
+    {
+      "name": "RET M918T (somatic, sporadic)",
+      "present_in": "Roughly half of sporadic MTC; the dominant somatic RET mutation",
+      "evidence": "Somatic RET M918T is the most common driver in sporadic MTC and marks aggressive disease; selective RET inhibitors are active regardless of mutation origin (Wirth et al., N Engl J Med 2020, PMID 32846061, DOI 10.1056/NEJMoa2005651; Subbiah et al., Lancet Diabetes Endocrinol 2021, PMID 34118198, DOI 10.1016/S2213-8587(21)00120-0)."
+    },
+    {
+      "name": "RET fusion (tissue agnostic)",
+      "present_in": "Rare in MTC; recurrent in subsets of lung and other solid tumors",
+      "evidence": "RET fusions are a lineage independent driver; selpercatinib has tissue agnostic activity in RET fusion positive solid tumors (Subbiah et al., Lancet Oncol 2022, PMID 36108661, DOI 10.1016/S1470-2045(22)00541-1)."
+    },
+    {
+      "name": "VEGFR and MET (multikinase axis)",
+      "present_in": "Targeted broadly across MTC by multikinase inhibitors",
+      "evidence": "Vandetanib inhibits RET, VEGFR, and EGFR signaling; cabozantinib inhibits MET, VEGFR2, and RET; both prolonged progression free survival in randomized trials before selective RET inhibitors existed (Wells et al., J Clin Oncol 2012, PMID 22025146, DOI 10.1200/JCO.2011.35.5040; Elisei et al., J Clin Oncol 2013, PMID 24002501, DOI 10.1200/JCO.2012.48.4659)."
+    },
+    {
+      "name": "RET G810 solvent front (resistance)",
+      "present_in": "Acquired on selpercatinib or pralsetinib in RET driven cancers",
+      "evidence": "RET G810 solvent front mutations are the major on target mechanism of acquired resistance to both selpercatinib and pralsetinib, motivating next generation inhibitors (Rosen et al., Nat Commun 2022, PMID 35304457, DOI 10.1038/s41467-022-28848-x; Khatri et al., Mol Cancer Ther 2023, PMID 37070927, DOI 10.1158/1535-7163.MCT-22-0629)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment for medullary thyroid carcinoma or for the same molecular target in another cancer, colored by how strong the evidence is. Green means it is FDA approved for this disease or for any cancer with the matching marker. Amber means it is approved with a supporting signal. Whether a given drug fits you depends on your tumor's RET testing.",
+    "clinician": "Candidates are graded Tier 1 (FDA approval in MTC, or tissue agnostic approval that applies when the biomarker is present), Tier 2 (approved with a supporting cross indication signal), or Tier 3 (mechanistic rationale only). RET testing governs selection between selective RET inhibitors and the multikinase inhibitors.",
+    "researcher": "Therapies are ordered by selectivity and evidence strength. The two selective RET inhibitors are biomarker matched and now preferred where RET is altered; the multikinase inhibitors remain relevant as the randomized comparators and as options when a selective inhibitor is unavailable or exhausted."
+  },
+  "therapies": [
+    {
+      "drug": "Selpercatinib",
+      "target": "RET",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "RET altered thyroid cancer including RET mutant MTC (FDA approved)",
+      "dev_stage": "FDA approved (oral selective RET inhibitor)",
+      "rationale": {
+        "patient": "This is a targeted pill designed to switch off the faulty RET protein that drives most medullary thyroid cancers. In its main trial, most patients had their tumors shrink, and in a later head to head trial it worked better and was easier to tolerate than the older multikinase pills.",
+        "clinician": "Highly selective RET inhibitor. In LIBRETTO-001, objective responses reached 69% in RET mutant MTC patients previously treated with vandetanib or cabozantinib and 73% in treatment naive patients, with mainly low grade toxicity. In the randomized phase 3 LIBRETTO-531, first line selpercatinib was superior to physician's choice of cabozantinib or vandetanib for progression free survival (hazard ratio 0.28) with a higher overall response rate (69.4% versus 38.8%).",
+        "researcher": "Selective RET inhibition demonstrates the therapeutic value of matching drug to the single MTC driver rather than blocking RET as part of a broad multikinase profile. The phase 3 superiority over the multikinase comparators, with fewer dose reductions and discontinuations, quantifies the selectivity advantage and reframes first line therapy around RET status."
+      },
+      "citation": {
+        "label": "Hadoux et al., N Engl J Med 2023 (LIBRETTO-531, phase 3 selpercatinib versus multikinase inhibitor in RET mutant MTC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37870969/"
+      }
+    },
+    {
+      "drug": "Selpercatinib",
+      "target": "RET fusion (tissue agnostic)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Any RET fusion positive solid tumor (tissue agnostic, biomarker gated)",
+      "dev_stage": "FDA approved, tissue agnostic",
+      "rationale": {
+        "patient": "The same targeted pill is also FDA approved for any solid cancer that carries a RET gene fusion, no matter where the cancer started. RET fusions are rare in medullary thyroid carcinoma, so this applies only if testing finds one, but it shows how a treatment can follow the biology rather than the organ.",
+        "clinician": "Tissue agnostic RET fusion approval. In the LIBRETTO-001 tumor agnostic cohort of RET fusion positive solid tumors other than lung or thyroid, the objective response rate was 43.9%, supporting a lineage independent indication. RET fusions are rare in MTC, so this option is strictly biomarker gated.",
+        "researcher": "This entry demonstrates the biology first, cross condition logic at the heart of Anveshar: RET fusion is a lineage independent driver, and the same selective inhibitor is approved by biomarker across tumor types. It links MTC's within disease RET story to the broader tissue agnostic precedent set."
+      },
+      "citation": {
+        "label": "Subbiah et al., Lancet Oncol 2022 (LIBRETTO-001 tumor agnostic RET fusion positive solid tumors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36108661/"
+      }
+    },
+    {
+      "drug": "Pralsetinib",
+      "target": "RET",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "RET altered thyroid cancer including RET mutant MTC (FDA approved)",
+      "dev_stage": "FDA approved (oral selective RET inhibitor)",
+      "rationale": {
+        "patient": "A second targeted pill that also switches off faulty RET. In its trial, most patients with medullary thyroid cancer had their tumors shrink, whether or not they had already tried the older pills, and responses lasted a long time.",
+        "clinician": "Highly selective RET inhibitor. In the registrational ARROW study, objective response rates in RET mutant MTC were 71% in treatment naive patients and 60% in patients previously treated with cabozantinib or vandetanib, with responses that were deep and durable and a manageable safety profile. It provides a second selective RET inhibitor asset for MTC.",
+        "researcher": "Pralsetinib confirms that potent selective RET inhibition, and not the antiangiogenic activity of multikinase inhibitors, drives the antitumor effect in RET mutant MTC. Two independently developed selective inhibitors reaching similar high response rates strengthens RET as the validated dependency."
+      },
+      "citation": {
+        "label": "Subbiah et al., Lancet Diabetes Endocrinol 2021 (ARROW, registrational pralsetinib in RET altered thyroid cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34118198/"
+      }
+    },
+    {
+      "drug": "Cabozantinib",
+      "target": "RET, MET, VEGFR2",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Progressive metastatic MTC (FDA approved)",
+      "dev_stage": "FDA approved (oral multikinase inhibitor)",
+      "rationale": {
+        "patient": "An older targeted pill that blocks RET along with other growth signals. In its trial it delayed tumor growth compared with placebo, in patients whose disease was getting worse, though side effects were more common than with the newer selective pills.",
+        "clinician": "Multikinase inhibitor of MET, VEGFR2, and RET. In the randomized phase 3 EXAM trial in progressive metastatic MTC, cabozantinib improved median progression free survival to 11.2 months versus 4.0 months for placebo (hazard ratio 0.28), with a 28% response rate; benefit occurred regardless of RET mutation status but at the cost of substantial dose reductions and holds.",
+        "researcher": "EXAM established multikinase RET plus antiangiogenic blockade as an early standard. Its activity irrespective of RET mutation status, together with a heavier toxicity burden than the selective inhibitors, frames why selectivity became the design goal and why cabozantinib now serves mainly as comparator and later line option."
+      },
+      "citation": {
+        "label": "Elisei et al., J Clin Oncol 2013 (EXAM, phase 3 cabozantinib in progressive MTC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24002501/"
+      }
+    },
+    {
+      "drug": "Vandetanib",
+      "target": "RET, VEGFR, EGFR",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Advanced or metastatic MTC (FDA approved)",
+      "dev_stage": "FDA approved (oral multikinase inhibitor)",
+      "rationale": {
+        "patient": "The first targeted pill approved for advanced medullary thyroid cancer. It blocks RET plus other growth signals and, in its trial, delayed tumor growth compared with a placebo, though it also caused more side effects.",
+        "clinician": "Once daily oral inhibitor of RET, VEGFR, and EGFR signaling. In the randomized double blind phase 3 ZETA trial in advanced MTC, vandetanib prolonged progression free survival versus placebo (hazard ratio 0.46) and improved objective response and biochemical response rates, with common toxicities including diarrhea, rash, and hypertension.",
+        "researcher": "ZETA was the first positive randomized trial in advanced MTC and validated RET as a druggable dependency, albeit through a multikinase agent whose off target activity limits tolerability. It is the historical anchor from which selective RET inhibition later diverged."
+      },
+      "citation": {
+        "label": "Wells et al., J Clin Oncol 2012 (ZETA, phase 3 vandetanib in advanced MTC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22025146/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals that made treating cancer by its molecular marker, rather than only by where it started, a standard and proven approach. They are why matching a rare cancer to a treatment through its biology is legitimate.",
+    "clinician": "The approvals below establish RET as both a within disease target in MTC and a tissue agnostic target across tumor types, and situate MTC within the broader biomarker driven, site independent therapy paradigm.",
+    "researcher": "Each landmark validates a lineage relevant dependency. For MTC the pivotal precedents are the randomized multikinase approvals, the selective RET inhibitor approvals, and the tissue agnostic RET fusion approval, which together convert a single driver rare cancer into a biomarker matched, cross condition treatable disease."
+  },
+  "precedents": [
+    {
+      "biomarker": "RET (multikinase inhibition) in advanced MTC",
+      "drug": "vandetanib",
+      "year": "2011",
+      "citation": {
+        "label": "Wells et al., J Clin Oncol 2012 (ZETA, first positive randomized trial in advanced MTC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22025146/"
+      }
+    },
+    {
+      "biomarker": "RET, MET, VEGFR2 (multikinase inhibition) in progressive MTC",
+      "drug": "cabozantinib",
+      "year": "2012",
+      "citation": {
+        "label": "Elisei et al., J Clin Oncol 2013 (EXAM, phase 3 cabozantinib in progressive MTC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24002501/"
+      }
+    },
+    {
+      "biomarker": "RET mutation (selective inhibition) in RET altered thyroid cancer",
+      "drug": "selpercatinib",
+      "year": "2020",
+      "citation": {
+        "label": "Wirth et al., N Engl J Med 2020 (LIBRETTO-001, selective RET inhibition in RET altered thyroid cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32846061/"
+      }
+    },
+    {
+      "biomarker": "RET mutation (selective inhibition) in RET altered thyroid cancer",
+      "drug": "pralsetinib",
+      "year": "2021",
+      "citation": {
+        "label": "Subbiah et al., Lancet Diabetes Endocrinol 2021 (ARROW, selective RET inhibition in RET altered thyroid cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34118198/"
+      }
+    },
+    {
+      "biomarker": "RET fusion (tissue agnostic selective inhibition)",
+      "drug": "selpercatinib",
+      "year": "2022",
+      "citation": {
+        "label": "Subbiah et al., Lancet Oncol 2022 (LIBRETTO-001 tumor agnostic RET fusion positive solid tumors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36108661/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because medullary thyroid carcinoma is so cleanly driven by one gene, RET, it is a natural test case for ideas about beating drug resistance and extending targeted therapy. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis addressing RET directed therapy in MTC, principally the on target solvent front resistance problem, with graded transferability and a primary citation for the analogy. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel, computationally generated hypotheses by analogy over the shared RET dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are research directions built on the documented resistance biology of selective RET inhibitors, not validated clinical strategies."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): deploy a next generation RET inhibitor engineered to retain potency against RET solvent front mutations (for example G810C or G810R) in patients whose MTC has progressed on selpercatinib or pralsetinib through an on target G810 mutation.",
+      "shared": "The same oncogenic RET dependency persists at progression, but the solvent front G810 substitution sterically blocks the current selective inhibitors while the tumor remains RET addicted.",
+      "source": "RET driven cancers with acquired solvent front resistance to selective RET inhibitors",
+      "modality": "small molecule",
+      "rationale": "RET G810 mutations are the major on target mechanism of acquired resistance to both selpercatinib and pralsetinib, and preclinical next generation RET inhibitors have been designed to inhibit G810 mutants while sparing wild type kinases. Because the tumor stays RET dependent, a compound that restores potency at the mutated solvent front residue is a mechanistically direct salvage strategy.",
+      "transferability": "medium, the RET dependency and the resistance mechanism are well documented and selective RET chemistry is a proven modality, but each candidate must show clinical potency against the specific G810 variants, adequate selectivity and central nervous system coverage, and durable benefit in MTC patients rather than only in cell and xenograft models.",
+      "prediction": "In patient derived models and cells expressing RET G810C or G810R, a next generation RET inhibitor suppresses RET phosphorylation and proliferation at concentrations achievable in patients, and in MTC patients who progressed on a first selective RET inhibitor through a G810 mutation it produces objective responses, whereas tumors that escaped by a RET independent route (such as MET amplification) do not respond.",
+      "citation": {
+        "label": "Khatri et al., Mol Cancer Ther 2023 (next generation RET inhibitors against solvent front G810 mutants; see also Xu et al., Eur J Med Chem 2025, PMID 39879936)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37070927/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): guide RET inhibitor resistance management in MTC by the molecular route of escape, pairing continued RET inhibition with an inhibitor of the reactivated bypass pathway (for example a MET inhibitor when MET amplification emerges, or a MAPK effector inhibitor when the pathway is reactivated off target).",
+      "shared": "Acquired resistance to selective RET inhibitors reactivates MAPK signaling either on target (secondary RET solvent front mutations) or off target (MET amplification or selection of RET wild type clones driven by an alternative mitogenic driver), so the correct next therapy depends on which route the tumor took.",
+      "source": "RET driven lung and thyroid cancers profiled at progression on selpercatinib",
+      "modality": "small molecule",
+      "rationale": "Longitudinal profiling of selpercatinib treated RET driven cancers shows that acquired resistance is driven by MAPK reactivation through distinct routes, that multiple mechanisms often coexist in one patient (polyclonal resistance), and that sequential RET directed therapy may therefore require combination treatment with inhibitors of alternative MAPK effectors. This licenses a resistance mechanism directed, biopsy or circulating tumor DNA informed combination strategy rather than a single fixed next line.",
+      "transferability": "medium to speculative, the resistance biology is well characterized and each proposed partner drug is individually validated, but combination tolerability, the timing and sensitivity of molecular re profiling at progression, and clinical benefit of the matched combinations in MTC specifically remain to be established, and polyclonal resistance may limit any single combination.",
+      "prediction": "In MTC progressing on a selective RET inhibitor, molecular re profiling at progression identifies the dominant resistance route, and adding the mechanism matched partner (for example a MET inhibitor for MET amplification) alongside continued RET inhibition re establishes disease control in the matched subset but not where an unaddressed parallel driver is present.",
+      "citation": {
+        "label": "Rosen et al., Nat Commun 2022 (evolution of RET inhibitor resistance in RET driven lung and thyroid cancers)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35304457/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory information. It is not medical advice and must not be used to guide individual patient care. Medullary thyroid carcinoma is a rare cancer, and this report is included to show that Anveshar's biology first, cross condition matching framework applies to a single driver rare cancer defined by RET. The approved therapies are described from their pivotal trials, and selection depends on RET status, prior treatment, disease pace, and tolerability. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the shared RET dependency with graded transferability. Because currently recruiting trial status could not be independently verified from the sources used here, the trials list is intentionally left empty rather than populated with unverified entries. Treatment decisions belong to a qualified oncology and endocrine team, ideally at a center experienced with medullary thyroid carcinoma and, where relevant, within a clinical trial and a molecular tumor board.</p>"
+}

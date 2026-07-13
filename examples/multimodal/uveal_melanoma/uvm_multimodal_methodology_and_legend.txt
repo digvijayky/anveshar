@@ -1,0 +1,32 @@
+Multi-modal analysis of uveal melanoma (a rare cancer) on real public data
+
+DATA SOURCES (real, public, no simulation or subsampling)
+  Genomics and transcriptomics: TCGA Uveal Melanoma, PanCancer Atlas (study uvm_tcga_pan_can_atlas_2018),
+    accessed live via the cBioPortal REST API, n=80 tumors. Mutation profile uvm_tcga_pan_can_atlas_2018_mutations;
+    mRNA z-score profile uvm_tcga_pan_can_atlas_2018_rna_seq_v2_mrna_median_Zscores.
+  Imaging: hematoxylin and eosin melanoma histopathology, Creative Commons Attribution 4.0
+    (Weiss et al., BMC Cancer 2015, doi:10.1186/s12885-015-1926-1), used as an openly licensed
+    melanocytic tumor exemplar because uveal specific open histopathology is not available; the
+    pipeline applies identically to a uveal melanoma slide.
+
+GENOMICS. Driver mutation frequency across the panel GNAQ, GNA11, BAP1, SF3B1, EIF1AX, CYSLTR2,
+  PLCB4. GNAQ and GNA11 are the mutually exclusive Galpha initiating events; combined GNAQ or
+  GNA11 mutation = 92.5 percent with 2 overlap,
+  consistent with mutual exclusivity. BAP1 loss marks high metastatic risk.
+
+TRANSCRIPTOMICS. Driver gene mRNA z-scores across 80 tumors, hierarchically clustered.
+  Samples split by BAP1 expression (low versus high, at the median) and projected by PCA; BAP1 low
+  tumors correspond to the class 2, high metastatic risk molecular subtype.
+
+IMAGING. Color deconvolution (hematoxylin and eosin separation), Otsu nuclei segmentation, and a
+  pigment (dark pixel) proxy for melanin. Nuclei detected: 0; pigment area
+  1.99 percent. Pixel measurements are not calibrated to microns.
+
+CONCORD INTEGRATION. The observed drivers match Anveshar's uveal melanoma report: the GNAQ and GNA11
+  driven PKC to MAPK axis (targetable with darovasertib plus a MEK inhibitor, research grade) and the
+  HLA-A*02:01 restricted gp100 antigen targeted by tebentafusp, the first therapy to improve survival
+  in metastatic uveal melanoma (Nathan et al., N Engl J Med 2021, PMID 34551229). Confidence for the
+  tebentafusp precedent is High (a tissue specific regulatory approval with a randomized survival benefit).
+
+DISCLAIMER. This is a research and educational analysis of public data, not medical advice. Any
+  clinical decision must be made by a qualified health care provider, ideally within a clinical trial.

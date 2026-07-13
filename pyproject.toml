@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anveshar"
+version = "0.1.0"
+description = "A method that enables rare cancer and rare disease research by integrating molecular databases, AI agents, and multimodal data to map shared molecular dependencies and surface cited, confidence scored, cross condition research hypotheses. Research use, not medical advice."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "digvijayky"}]
+keywords = ["rare cancer", "rare disease", "tissue agnostic", "drug repurposing",
+            "molecular tumor board", "variant interpretation", "gene therapy", "precision oncology"]
+dependencies = ["requests>=2.28"]
+
+[project.optional-dependencies]
+scrna = ["scanpy>=1.9", "anndata>=0.9", "numpy", "pandas"]
+live = ["anthropic>=0.40"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+anveshar = "anveshar.cli:main"
+
+[tool.setuptools]
+packages = ["anveshar", "anveshar.evidence", "anveshar.variants",
+            "anveshar.translation", "anveshar.expression", "anveshar.report"]
+
+[tool.setuptools.package-data]
+"anveshar.report" = ["template.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,220 @@
+{
+  "cancer": {
+    "name": "Huntington's Disease",
+    "sub": "A rare inherited neurodegenerative disorder caused by a CAG trinucleotide repeat expansion in HTT that produces a toxic mutant huntingtin protein. Included as the disciplined honesty case, a monogenic disease with a fully understood cause but, as of this writing, no approved disease modifying therapy, where the responsible report is one that says so plainly and grades the failures alongside the hopes.",
+    "chips": ["HTT CAG repeat expansion (autosomal dominant)", "Toxic gain of function mutant huntingtin", "No approved disease modifying therapy; approved options treat chorea only"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon, honest about what is and is not proven.",
+    "clinician": "Precise terms, mechanism and modality stated, evidence graded without overstatement.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded, failures reported as failures."
+  },
+  "overview": {
+    "patient": "<p>Huntington's disease is a rare inherited brain disease. It is caused by a change in a single gene called HTT, where a short piece of DNA code (the letters C, A, and G) is repeated too many times. That change makes the body produce a harmful version of a protein called huntingtin, which slowly damages nerve cells in the brain. Over time this causes involuntary movements (called chorea), changes in thinking and mood, and difficulty with walking, speaking, and swallowing. A parent with the gene change has a 50 percent chance of passing it to each child.</p><p>It is important to be honest here. Scientists understand the exact cause of Huntington's disease better than almost any other brain disease, yet there is still no treatment that slows it down or stops it. The medicines that are approved help with one symptom, the involuntary movements, but they do not change the course of the disease. Several experimental treatments have been tried, and one of the most promising, an injection meant to lower the harmful protein, did not help patients in a large trial and that trial was stopped in 2021. Research continues, but no one should be told that a disease modifying cure exists today, because it does not.</p>",
+    "clinician": "<p>Huntington's disease is an autosomal dominant neurodegenerative disorder caused by an expanded CAG trinucleotide repeat in exon 1 of HTT on chromosome 4p16.3, encoding an elongated polyglutamine tract in the huntingtin protein. Repeat lengths of 40 or more are fully penetrant; length correlates inversely with age at onset. The clinical triad is progressive chorea and other motor disturbance, cognitive decline, and psychiatric features, with striatal (medium spiny neuron) degeneration as the pathological hallmark. Diagnosis is molecular, by measurement of the CAG repeat length.</p><p>As of this writing there is no approved disease modifying therapy. Approved pharmacotherapy is symptomatic and targets chorea, principally the vesicular monoamine transporter 2 (VMAT2) inhibitors tetrabenazine and deutetrabenazine, with valbenazine subsequently approved on the same target. Disease modifying strategies center on lowering mutant huntingtin, but the huntingtin lowering antisense oligonucleotide tominersen did not improve clinical outcomes and its phase 3 program was halted in 2021; it is therefore presented in this report as a failed or inconclusive investigational approach, not a recommendation (Saade and Mestre, Curr Neurol Neurosci Rep 2024, PMID 38861215, DOI 10.1007/s11910-024-01345-y).</p>",
+    "researcher": "<p>Huntington's disease is the canonical dominant, toxic gain of function repeat expansion disorder. The 1993 identification of HTT (then IT15) and its unstable CAG repeat established the molecular cause (The Huntington's Disease Collaborative Research Group, Cell 1993, PMID 8458085, DOI 10.1016/0092-8674(93)90585-e). The dominant, toxic nature of the mutant allele makes lowering mutant huntingtin the central therapeutic hypothesis, mechanistically the mirror image of the loss of function diseases where gene replacement or splice correction restores a missing protein.</p><p>That hypothesis remains unproven in the clinic. The nonselective antisense oligonucleotide tominersen achieved dose dependent reduction of cerebrospinal fluid mutant huntingtin in a phase 1 to 2a study yet failed to improve outcomes in phase 3, which was halted in 2021. This report treats huntingtin lowering as a scientifically motivated but clinically unvalidated strategy, and its discovery layer proposes refinements (allele selective lowering that spares wild type HTT, transcriptional repression of the mutant allele, and small molecule splice modulation) explicitly as research hypotheses, not as recommendations, precisely because the parent strategy has so far failed to demonstrate benefit.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological handles that Huntington's disease treatments aim at. Today's approved medicines target only the involuntary movements. The experimental approaches aim at the root cause, the harmful protein, but none of those has yet been proven to help patients.",
+    "clinician": "Actionable biology in Huntington's disease divides into the symptomatic target that is drugged and approved today (VMAT2, for chorea) and the causal target that remains investigational (mutant huntingtin and its transcript). Lowering mutant huntingtin is biologically rational but clinically unvalidated.",
+    "researcher": "One causal dependency (a dominant, toxic mutant huntingtin) underlies the disease, but it is not yet a validated drug target. The only validated target to date is downstream and symptomatic (VMAT2), which modulates chorea without touching disease progression."
+  },
+  "targets": [
+    {
+      "name": "Mutant huntingtin (mutant HTT protein and transcript)",
+      "present_in": "Universal in Huntington's disease (the defining, causal defect)",
+      "evidence": "The expanded CAG repeat in HTT produces a toxic mutant huntingtin that drives striatal neurodegeneration; lowering mutant huntingtin is the central disease modifying hypothesis but remains clinically unproven, since the nonselective lowering agent tominersen reduced cerebrospinal fluid mutant huntingtin yet did not improve outcomes and its phase 3 was halted (Tabrizi et al., N Engl J Med 2019, PMID 31059641, DOI 10.1056/NEJMoa1900907; Saade and Mestre, Curr Neurol Neurosci Rep 2024, PMID 38861215, DOI 10.1007/s11910-024-01345-y)."
+    },
+    {
+      "name": "VMAT2 (vesicular monoamine transporter 2)",
+      "present_in": "Symptomatic target for chorea (not disease modifying)",
+      "evidence": "Inhibition of VMAT2 depletes presynaptic monoamines and reduces chorea; this is the only pharmacological target with approved agents in Huntington's disease, and it treats a symptom rather than the disease course (Huntington Study Group, Neurology 2006, PMID 16476934, DOI 10.1212/01.wnl.0000198586.85250.13)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment, colored by how strong the evidence is. Green means it is approved for Huntington's disease, but read carefully, the approved medicines treat only the involuntary movements and do not slow the disease. The gray card is an experimental treatment that was tested to lower the harmful protein and did not help patients; it is shown so you can see honestly what has been tried and what happened.",
+    "clinician": "The green cards are Tier 1 approvals, and every one of them is symptomatic (VMAT2 inhibition for chorea), not disease modifying. The gray card (tominersen) is Tier 3, an investigational huntingtin lowering antisense oligonucleotide whose phase 3 was halted in 2021 after failing to improve outcomes; it is included to represent that failure honestly, not to recommend it.",
+    "researcher": "The therapy list separates a validated symptomatic axis (VMAT2, three approved agents) from an unvalidated causal axis (huntingtin lowering, represented by the failed tominersen program). No approved therapy addresses disease progression. This is the deliberate honesty of the report, the causal target is understood but undrugged in any proven sense."
+  },
+  "therapies": [
+    {
+      "drug": "Tetrabenazine",
+      "target": "VMAT2 (chorea, symptomatic only)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Chorea associated with Huntington's disease (FDA approved 2008)",
+      "dev_stage": "FDA approved (oral, symptomatic; not disease modifying)",
+      "rationale": {
+        "patient": "This is a pill that reduces the involuntary movements of Huntington's disease by lowering certain brain chemicals. In a controlled trial it clearly reduced these movements compared with a dummy pill. It is important to understand that it treats a symptom and does not slow the disease, and it can cause side effects such as sleepiness, depression, or worsening mood, so it must be monitored carefully.",
+        "clinician": "A VMAT2 inhibitor that reversibly depletes central monoamines and reduces chorea. In the TETRA-HD randomized controlled trial, tetrabenazine reduced the Unified Huntington's Disease Rating Scale chorea score by an adjusted mean of 3.5 units versus placebo (p less than 0.0001), with adverse effects including sedation, depression, and akathisia, and a black box warning for depression and suicidality. Symptomatic only, with no effect on disease progression.",
+        "researcher": "The first approved therapy for Huntington's disease and the archetype of symptomatic VMAT2 inhibition. It validates the target for chorea but does not touch the causal mutant huntingtin, and thus illustrates the gap this disease still faces, an approved drug that improves a sign without altering the underlying neurodegeneration."
+      },
+      "citation": {
+        "label": "Huntington Study Group, Neurology 2006 (TETRA-HD, tetrabenazine for chorea in Huntington's disease)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16476934/"
+      }
+    },
+    {
+      "drug": "Deutetrabenazine",
+      "target": "VMAT2 (chorea, symptomatic only)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Chorea associated with Huntington's disease (FDA approved 2017)",
+      "dev_stage": "FDA approved (oral, symptomatic; not disease modifying)",
+      "rationale": {
+        "patient": "This is a newer pill that works the same way as tetrabenazine to reduce involuntary movements, but its chemistry is adjusted so blood levels are steadier, which can mean fewer swings in side effects. In a controlled trial it reduced the involuntary movements compared with a dummy pill. Like tetrabenazine, it treats a symptom and does not slow the disease.",
+        "clinician": "A deuterated form of tetrabenazine that attenuates CYP2D6 metabolism, prolongs active metabolite half life, and yields more stable exposure. In the First-HD randomized clinical trial, deutetrabenazine improved the total maximal chorea score by a mean of 2.5 units versus placebo (p less than 0.001), with treatment success on patient and clinical global impression measures and a tolerability profile similar to placebo in that study. Symptomatic only.",
+        "researcher": "A pharmacokinetically optimized VMAT2 inhibitor on the same symptomatic axis as tetrabenazine. It shows that a validated symptomatic target can be re engineered for smoother exposure, but like tetrabenazine it does not engage mutant huntingtin and does not modify disease course."
+      },
+      "citation": {
+        "label": "Huntington Study Group, JAMA 2016 (First-HD, deutetrabenazine for chorea in Huntington's disease)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27380342/"
+      }
+    },
+    {
+      "drug": "Valbenazine",
+      "target": "VMAT2 (chorea, symptomatic only)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Chorea associated with Huntington's disease (FDA approved 2023)",
+      "dev_stage": "FDA approved (oral once daily, symptomatic; not disease modifying)",
+      "rationale": {
+        "patient": "This is another once daily pill on the same target as the other two approved medicines, used to reduce the involuntary movements of Huntington's disease. In a controlled trial it reduced these movements compared with a dummy pill and was generally well tolerated. Again, it eases a symptom and does not slow the disease.",
+        "clinician": "A highly selective VMAT2 inhibitor originally approved for tardive dyskinesia. In the KINECT-HD phase 3 randomized, double blind, placebo controlled trial in Huntington's disease chorea, valbenazine reduced the total maximal chorea score with a least squares mean difference of 3.2 units versus placebo (p less than 0.0001) and was well tolerated over the double blind period. Symptomatic only, on the same target as tetrabenazine and deutetrabenazine.",
+        "researcher": "A third approved VMAT2 inhibitor, confirming the robustness of the symptomatic chorea axis while underscoring that all three approvals share one downstream target and none addresses the causal mutant huntingtin. The clustering of approvals on a single symptomatic target is itself a marker of the unmet disease modifying need."
+      },
+      "citation": {
+        "label": "Furr Stimming et al., Lancet Neurol 2023 (KINECT-HD, valbenazine for chorea in Huntington's disease)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37210099/"
+      }
+    },
+    {
+      "drug": "Tominersen (investigational, failed or inconclusive)",
+      "target": "Mutant huntingtin lowering (nonselective HTT transcript)",
+      "tier": 3,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "Not approved; investigational, phase 3 (GENERATION HD1) halted in 2021",
+      "dev_stage": "Investigational; did NOT improve outcomes, phase 3 program halted 2021 (presented as a failure, not a recommendation)",
+      "rationale": {
+        "patient": "This is an experimental treatment, not an approved medicine, and it is shown here to be honest about what has been tried. It is an injection into the fluid around the spinal cord designed to lower the harmful huntingtin protein. Early studies showed it could lower the protein, which was encouraging. But in a large phase 3 trial it did not help patients, and there were signals that some patients did worse, so the trial was stopped in 2021. This is not a treatment you should seek, it is an example of a hopeful idea that did not work as tested.",
+        "clinician": "An intrathecally administered antisense oligonucleotide targeting HTT messenger RNA to lower total (nonselective) huntingtin. In the phase 1 to 2a study it produced dose dependent reduction of cerebrospinal fluid mutant huntingtin without serious adverse events (Tabrizi et al., N Engl J Med 2019). However, the phase 3 GENERATION HD1 program did not demonstrate clinical benefit and was halted in 2021, with concern that some dosing arms trended worse than placebo. It is presented here as a failed or inconclusive investigational approach, not a recommendation.",
+        "researcher": "Tominersen is the pivotal cautionary result for the huntingtin lowering hypothesis. Target engagement (cerebrospinal fluid mutant huntingtin reduction) was achieved, yet clinical outcomes did not improve and phase 3 was stopped, dissociating biomarker lowering from clinical benefit and raising questions about nonselective lowering (which also depletes wild type huntingtin), dose, timing, and patient selection. This failure is the direct motivation for the refined, allele selective and mechanism specific hypotheses in the discovery layer."
+      },
+      "citation": {
+        "label": "Saade and Mestre, Curr Neurol Neurosci Rep 2024 (review; tominersen negative results and halted phase 3; also Tabrizi et al., N Engl J Med 2019, PMID 31059641, for the phase 1 to 2a target engagement)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38861215/"
+      },
+      "trial": {
+        "nct": "NCT03761849",
+        "url": "https://clinicaltrials.gov/study/NCT03761849"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT07326709",
+      "title": "Votoplam in participants with Huntington's disease (phase 3)",
+      "phase": "Phase 3",
+      "intervention": "Votoplam (oral small molecule) vs placebo",
+      "eligibility": "Ambulatory adults 21 to 70 years with Huntington's disease",
+      "url": "https://clinicaltrials.gov/study/NCT07326709"
+    },
+    {
+      "nct": "NCT07378644",
+      "title": "SKY-0515 in participants with Huntington's disease (phase 2/3)",
+      "phase": "Phase 2/3",
+      "intervention": "SKY-0515 (oral small molecule, once daily) vs placebo",
+      "eligibility": "Adults 25 years and older with genetically confirmed Huntington's disease (HTT exon 1 CAG repeat 40 or more)",
+      "url": "https://clinicaltrials.gov/study/NCT07378644"
+    },
+    {
+      "nct": "NCT07246941",
+      "title": "RG6496 in Huntington's disease gene expansion carriers (phase 1)",
+      "phase": "Phase 1",
+      "intervention": "RG6496 (intrathecal, single ascending doses) vs placebo",
+      "eligibility": "Huntington's disease gene expansion carriers (CAG greater than 39) who carry the target single nucleotide polymorphism",
+      "url": "https://clinicaltrials.gov/study/NCT07246941"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "These are landmark approvals in other rare inherited diseases where lowering or correcting a gene product actually worked. They are included to be balanced, they show that gene directed treatment can succeed elsewhere, which is why researchers keep testing it in Huntington's disease, even though it has not yet worked here. They are the reason for continued hope, not evidence that any of them treats Huntington's disease.",
+    "clinician": "The approvals below establish that transcript lowering and gene directed modalities (RNA interference, antisense oligonucleotide, splice modulation) are real, regulator validated approaches in other monogenic diseases. They frame why huntingtin lowering is pursued, while the tominersen failure shows that success in one disease does not transfer automatically to another.",
+    "researcher": "Each landmark validates a modality on a defined molecular mechanism in a disease other than Huntington's disease. This modality catalog motivates the discovery hypotheses, but the report is explicit that transferability is unproven here, the tominersen result is the counterexample that disciplines any claim of borrowed success."
+  },
+  "precedents": [
+    {
+      "biomarker": "TTR gene expression in hereditary transthyretin amyloidosis (transcript lowering by RNA interference)",
+      "drug": "patisiran (RNA interference; validates transcript lowering as a modality in a different disease)",
+      "year": 2018,
+      "citation": {
+        "label": "Adams et al., N Engl J Med 2018 (patisiran RNA interference for hereditary transthyretin amyloidosis)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29972753/"
+      }
+    },
+    {
+      "biomarker": "SMN2 splicing dependency in spinal muscular atrophy (splice modulation; mechanistic analog for small molecule HTT splice lowering)",
+      "drug": "risdiplam (oral small molecule splicing modifier; validates the splice modulation modality in a different disease)",
+      "year": 2020,
+      "citation": {
+        "label": "Baranello et al., N Engl J Med 2021 (FIREFISH, oral risdiplam splicing modifier in spinal muscular atrophy)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33626251/"
+      }
+    },
+    {
+      "biomarker": "SMN2 splicing dependency in spinal muscular atrophy (intrathecal antisense oligonucleotide; modality precedent, contrast with the failed HTT antisense oligonucleotide)",
+      "drug": "nusinersen (antisense oligonucleotide; validates central nervous system antisense oligonucleotide delivery in a different disease)",
+      "year": "2016 to 2017",
+      "citation": {
+        "label": "Finkel et al., N Engl J Med 2017 (ENDEAR, nusinersen antisense oligonucleotide for spinal muscular atrophy)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091570/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatments and not recommendations. Because the older huntingtin lowering approach did not help patients, scientists are testing smarter versions of the idea. Each entry below explains one of those ideas and, honestly, notes that lowering huntingtin as a strategy has not yet been shown to work in people. These are starting points for laboratories, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that refines the huntingtin lowering strategy after the tominersen failure, allele selectivity to spare wild type huntingtin, transcriptional repression of the mutant allele, and small molecule splice modulation. Transferability is graded and each analogy carries a primary citation. Every entry states explicitly that huntingtin lowering remains clinically unproven. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes mechanism specific alternatives to nonselective huntingtin lowering, each motivated by a plausible reason the tominersen program failed (loss of neuroprotective wild type huntingtin, insufficient or nondurable lowering, or the wrong therapeutic window). Each carries a supporting citation and a falsifiable prediction, and each is framed as an unvalidated research direction, not a validated therapy."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): lower only the mutant HTT allele by targeting a heterozygous single nucleotide polymorphism linked to the expanded repeat, sparing wild type huntingtin, on the premise that nonselective lowering (as with tominersen) may have removed neuroprotective wild type huntingtin. Huntingtin lowering as a strategy remains unproven clinically.",
+      "shared": "A dominant, toxic mutant allele that can be distinguished from the wild type allele by a linked heterozygous single nucleotide polymorphism, allowing selective knockdown of the pathogenic transcript while preserving the healthy one.",
+      "source": "Huntington's disease itself (allele selective antisense oligonucleotide chemistry), refining the failed nonselective tominersen approach",
+      "modality": "antisense oligonucleotide",
+      "rationale": "Preclinical stereopure antisense oligonucleotides targeting a single nucleotide polymorphism on the mutant HTT allele achieved potent, durable, allele selective lowering of mutant huntingtin while sparing wild type huntingtin in mouse models, supporting an investigational allele selective compound. If loss of wild type huntingtin contributed to the tominersen failure, allele selectivity is the rational correction, but this has not been shown to improve clinical outcomes.",
+      "transferability": "medium, allele selective antisense oligonucleotide lowering is mechanistically demonstrated preclinically and in early clinical testing, but it applies only to patients heterozygous for the targeted single nucleotide polymorphism, and no allele selective agent has yet proven clinical benefit in Huntington's disease.",
+      "prediction": "In Huntington's disease patient derived neurons and in humanized mouse models carrying the targeted single nucleotide polymorphism, an allele selective antisense oligonucleotide durably lowers mutant huntingtin by a clinically meaningful margin while preserving wild type huntingtin, and, in a suitably designed trial, this selectivity translates into a clinical benefit that nonselective lowering did not achieve.",
+      "citation": {
+        "label": "Iwamoto et al., Mol Ther Nucleic Acids 2024 (stereopure allele selective antisense oligonucleotides sparing wild type huntingtin; WVE-003 precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39027419/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): repress transcription of the mutant HTT allele using an engineered zinc finger or CRISPR based repressor that discriminates the expanded repeat or a linked single nucleotide polymorphism, lowering mutant huntingtin at the DNA or transcriptional level while sparing the wild type allele. Huntingtin lowering as a strategy remains unproven clinically.",
+      "shared": "A dominant, toxic gain of function allele whose expression can be selectively shut down at the transcriptional level, either by a repeat length sensing repressor or by editing at a linked heterozygous single nucleotide polymorphism, without disrupting the wild type allele.",
+      "source": "Huntington's disease preclinical models (synthetic zinc finger repressors and allele selective CRISPR editing), refining the failed nonselective tominersen approach",
+      "modality": "gene therapy",
+      "rationale": "Synthetic zinc finger repressors designed to bind long CAG tracts preferentially reduced mutant huntingtin in R6/2 mouse brain with allele selectivity and phenotypic improvement, and allele selective CRISPR editing at coding region single nucleotide polymorphisms achieved selective knockdown of mutant huntingtin in a humanized mouse model. A durable, allele selective transcriptional or genomic silencing could in principle overcome limitations of transient, nonselective transcript lowering, but no such approach has demonstrated clinical benefit.",
+      "transferability": "speculative, transcriptional repression and gene editing are validated preclinically for allele selective mutant huntingtin lowering, but durability, delivery to the human striatum, off target and immunogenicity risk, and, above all, whether allele selective lowering yields clinical benefit all remain unestablished.",
+      "prediction": "A single delivery of an allele selective zinc finger repressor or CRISPR based repressor to the striatum durably lowers mutant huntingtin while sparing wild type huntingtin, reduces aggregate burden, and improves motor and survival endpoints in humanized Huntington's disease mouse models, providing the preclinical basis for a controlled clinical test.",
+      "citation": {
+        "label": "Garriga-Canut et al., PNAS 2012 (synthetic zinc finger repressors reduce mutant huntingtin in R6/2 mouse brain); allele selective CRISPR editing precedent Oikemus et al., Hum Gene Ther 2022, PMID 34376056",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23054839/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): lower huntingtin with an orally available, brain penetrant small molecule that modulates HTT splicing (for example by promoting inclusion of a pseudoexon that introduces a premature stop), offering a noninvasive route compared with intrathecal antisense oligonucleotide delivery. Huntingtin lowering as a strategy remains unproven clinically.",
+      "shared": "An HTT transcript whose splicing can be redirected by a small molecule to reduce production of full length huntingtin, mechanistically analogous to small molecule splicing modifiers that alter SMN2 splicing in spinal muscular atrophy.",
+      "source": "Huntington's disease preclinical models and small molecule splicing modifiers repurposed from spinal muscular atrophy, refining the failed nonselective tominersen approach",
+      "modality": "small molecule",
+      "rationale": "An orally available, brain penetrant small molecule lowered mutant huntingtin by enhancing pseudoexon inclusion in Huntington's disease patient cells and in a Huntington's disease mouse model, and reduced huntingtin in blood from patients dosed for another indication. Oral small molecule splice modulation could improve access and adherence relative to intrathecal dosing, but current HTT lowering small molecules are nonselective for the mutant allele and none has proven clinical benefit in Huntington's disease.",
+      "transferability": "medium, small molecule splice modulation to lower huntingtin is demonstrated preclinically and is being pursued clinically, but present agents lower both alleles, central nervous system exposure and long term safety must be established, and, as with all huntingtin lowering, clinical benefit remains unproven.",
+      "prediction": "In Huntington's disease patient neurons and mouse models, an oral, brain penetrant splice modulating small molecule lowers huntingtin in a dose dependent, tolerated manner and improves disease relevant readouts, and a controlled trial then tests whether this noninvasive lowering achieves the clinical benefit that intrathecal nonselective lowering did not.",
+      "citation": {
+        "label": "Keller et al., Nat Commun 2022 (orally available brain penetrant small molecule lowers huntingtin by enhancing pseudoexon inclusion; branaplam)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35241644/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory and trial records. It is not medical advice and must not be used to guide individual patient care. Huntington's disease is a rare inherited neurodegenerative disorder, and this report is included as a deliberate honesty case, a disease whose molecular cause is precisely understood yet which has, as of this writing, no approved disease modifying therapy. The approved therapies described here (tetrabenazine, deutetrabenazine, and valbenazine) are symptomatic treatments for chorea and do not slow the disease. The huntingtin lowering antisense oligonucleotide tominersen did not improve clinical outcomes and its phase 3 program was halted in 2021; it is presented as a failed or inconclusive investigational approach, not as a recommendation. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, and each states plainly that huntingtin lowering as a strategy remains unproven in the clinic. Care and any consideration of a clinical trial belong to a qualified neurologist experienced with Huntington's disease, ideally at a specialist center, together with genetic counseling.</p>"
+}

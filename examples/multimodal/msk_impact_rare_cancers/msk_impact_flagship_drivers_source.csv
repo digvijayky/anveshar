@@ -1,0 +1,5 @@
+rare_cancer,msk_n,top_genes
+Uveal Melanoma,44,GNAQ 54.5%; BAP1 43.2%; GNA11 40.9%; SF3B1 36.4%; EIF1AX 11.4%; KMT2C 4.5%; TGFBR1 2.3%; TP53 2.3%; BRAF 2.3%; DAXX 2.3%
+Adenoid Cystic Carcinoma,73,NOTCH1 23.3%; KDM6A 15.1%; ARID1A 13.7%; TERT 12.3%; BCOR 12.3%; TP53 12.3%; PIK3CA 9.6%; KMT2D 6.8%; RUNX1 6.8%; IGF1R 5.5%
+Merkel Cell Carcinoma,63,TP53 25.4%; RB1 19.0%; KMT2D 15.9%; NOTCH1 11.1%; NOTCH2 9.5%; ARID1A 9.5%; NOTCH3 9.5%; ROS1 9.5%; SMARCA4 9.5%; KMT2C 9.5%
+Gastrointestinal Stromal Tumor,137,KIT 65.0%; PDGFRA 10.9%; NF1 7.3%; TP53 6.6%; RB1 5.8%; KMT2D 3.6%; MAX 3.6%; ROS1 3.6%; PTEN 3.6%; SETD2 3.6%

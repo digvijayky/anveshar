@@ -1,0 +1,196 @@
+{
+  "cancer": {
+    "name": "Merkel Cell Carcinoma",
+    "sub": "A rare, aggressive cutaneous neuroendocrine carcinoma with two convergent origins, clonal integration of Merkel cell polyomavirus or a heavy ultraviolet mutational load. Both routes make the tumor immunogenic, which is why this report is built around immune checkpoint blockade rather than chemotherapy.",
+    "chips": ["Merkel cell polyomavirus positive vs UV mutation driven", "Both origins are immunogenic", "PD-1 / PD-L1 blockade is standard first-line therapy"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, viral status and immune biology stated.",
+    "researcher": "Mechanism and cross-condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Merkel cell carcinoma is a rare and fast-growing skin cancer. It usually starts in one of two ways. In many people, a common skin virus called Merkel cell polyomavirus becomes locked into the tumor's DNA and drives the cancer. In others, years of sun exposure pile up so many DNA changes that a tumor forms. Either way the tumor ends up looking foreign to the immune system, which is the key to how it is treated.</p><p>Because the immune system can recognize these tumors, treatments that release the brakes on immune cells (called immune checkpoint inhibitors) work far better here than older chemotherapy. This report maps the approved immune treatments and the research ideas that build on the same biology.</p>",
+    "clinician": "<p>Merkel cell carcinoma (MCC) is a rare, aggressive cutaneous neuroendocrine carcinoma with a high rate of recurrence and metastasis. It arises through two convergent tumorigenic routes. In roughly 80 percent of tumors, Merkel cell polyomavirus (MCPyV) DNA is clonally integrated into the tumor genome and truncated viral T antigens inactivate tumor suppressors including RB1 (Feng et al., Science 2008, PMID 18202256, DOI 10.1126/science.1152586). The remaining, virus-negative tumors carry a very high ultraviolet-signature mutational burden with recurrent TP53 and RB1 loss (Harms et al., Cancer Res 2015, PMID 26238782, DOI 10.1158/0008-5472.CAN-15-0702).</p><p>Both origins generate immunogenic tumors, viral oncoprotein T-antigen antigens in the virus-positive subset and abundant UV neoantigens in the virus-negative subset. This underlies the marked and durable activity of PD-1 / PD-L1 blockade relative to the transient responses seen with cytotoxic chemotherapy, and makes immune checkpoint inhibition the backbone of first-line systemic therapy.</p>",
+    "researcher": "<p>MCC is a textbook example of a rare cancer that is immunogenic by two distinct mechanisms. Virus-positive tumors depend on continuous expression of MCPyV large and small T antigens, foreign viral proteins that provide fixed, shared tumor antigens. Virus-negative tumors are among the most UV-mutated of all cancers, with a dominant C to T transition signature and mutational burden reported around 10 mutations per megabase, generating a large private neoantigen repertoire (Harms et al., Cancer Res 2015, PMID 26238782, DOI 10.1158/0008-5472.CAN-15-0702).</p><p>The therapeutic thesis is therefore antigen-driven, not lineage-driven. A shared molecular dependency, high immunogenicity from either viral antigens or UV neoantigens, licenses checkpoint blockade as the anchor and motivates the discovery layer, which borrows antigen-directed cell therapy, combination checkpoint strategies, and the tissue-agnostic TMB-high indication from adjacent contexts.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological features that make Merkel cell carcinoma treatable. Almost all of them come back to one thing, the tumor looks foreign to the immune system, so drugs that unleash immune cells can attack it.",
+    "clinician": "Actionable biology in MCC centers on immunogenicity. The PD-1 / PD-L1 axis is the validated target across both viral subsets. Merkel cell polyomavirus T antigens are shared viral neoantigens in the virus-positive subset, and a high UV-driven mutational burden supplies neoantigens and a tissue-agnostic TMB-high biomarker in the virus-negative subset.",
+    "researcher": "The dominant dependency is immune recognition, drugged today by PD-1 / PD-L1 blockade. Two subset-specific antigen sources, MCPyV T antigens and UV neoantigens, define the axes the discovery layer extends toward cell therapy, combination checkpoint blockade, and the TMB-high indication."
+  },
+  "targets": [
+    {
+      "name": "PD-1 / PD-L1 immune checkpoint axis",
+      "present_in": "Both viral subsets of MCC (validated target)",
+      "evidence": "PD-1 / PD-L1 blockade produces frequent durable responses across virus-positive and virus-negative MCC, the basis of every approved therapy in this report (Kaufman et al., Lancet Oncol 2016, PMID 27592805, DOI 10.1016/S1470-2045(16)30364-3; Nghiem et al., J Clin Oncol 2019, PMID 30726175, DOI 10.1200/JCO.18.01896)."
+    },
+    {
+      "name": "Merkel cell polyomavirus T antigens",
+      "present_in": "Virus-positive MCC (about 80 percent of tumors)",
+      "evidence": "Clonally integrated MCPyV expresses truncated large and small T antigens that inactivate tumor suppressors and act as fixed, shared viral antigens, providing targets for antigen-directed T-cell approaches (Feng et al., Science 2008, PMID 18202256, DOI 10.1126/science.1152586)."
+    },
+    {
+      "name": "High UV mutational burden (TMB-high)",
+      "present_in": "Virus-negative MCC (UV-driven subset)",
+      "evidence": "Virus-negative MCC carries a high UV-signature mutational burden (around 10 mutations per megabase), qualifying many such tumors for the tissue-agnostic TMB-high checkpoint indication (Harms et al., Cancer Res 2015, PMID 26238782, DOI 10.1158/0008-5472.CAN-15-0702; Marabelle et al., Lancet Oncol 2020, PMID 32919526, DOI 10.1016/S1470-2045(20)30445-9)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is an immune checkpoint inhibitor proven in Merkel cell carcinoma, colored by how strong the evidence is. Green means it is FDA approved for this disease. All of them work by taking the brakes off the immune system, and in this cancer they cause responses that last far longer than the temporary shrinkage seen with chemotherapy.",
+    "clinician": "The three cards are Tier 1 anti-PD-(L)1 agents approved in advanced MCC. They differ by target (PD-L1 vs PD-1), setting, and schedule, but share the mechanism. Response rates and durability substantially exceed those of cytotoxic chemotherapy, whose responses are typically transient.",
+    "researcher": "All three approvals map one dependency, tumor immunogenicity, onto one modality, checkpoint blockade. The concentration of benefit in a chemotherapy-refractory rare cancer is the signal the discovery layer extends toward antigen-directed and combination immunotherapy."
+  },
+  "therapies": [
+    {
+      "drug": "Avelumab",
+      "target": "PD-L1 / PD-1 axis",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Metastatic Merkel cell carcinoma (first drug ever approved for the disease, 2017)",
+      "dev_stage": "FDA approved (anti-PD-L1 antibody, intravenous)",
+      "rationale": {
+        "patient": "This was the first medicine ever approved specifically for advanced Merkel cell carcinoma. It blocks a shield the tumor uses to hide from immune cells. In a trial of patients whose cancer had grown despite chemotherapy, about a third responded, and most of those responses were still going at the time of analysis, which is unusual for this cancer.",
+        "clinician": "Anti-PD-L1 monoclonal antibody. In JAVELIN Merkel 200, a phase 2 trial in stage IV chemotherapy-refractory MCC, the objective response rate was 31.8 percent with 8 complete responses, and 23 of 28 responses were ongoing at analysis, a durability profile distinct from chemotherapy. This trial supported the first regulatory approval for MCC.",
+        "researcher": "Avelumab established that PD-L1 blockade drives durable regression in an immunogenic rare cancer, independent of MCPyV status. The abstract of the pivotal report explicitly links the rationale to MCPyV integration and UV-induced mutations, the two-etiology immunogenicity thesis anchoring this report."
+      },
+      "citation": {
+        "label": "Kaufman et al., Lancet Oncol 2016 (JAVELIN Merkel 200, avelumab in chemotherapy-refractory metastatic MCC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27592805/"
+      }
+    },
+    {
+      "drug": "Pembrolizumab",
+      "target": "PD-1 / PD-L1 axis",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Recurrent locally advanced or metastatic Merkel cell carcinoma (FDA approved 2018)",
+      "dev_stage": "FDA approved (anti-PD-1 antibody, intravenous, first-line)",
+      "rationale": {
+        "patient": "This immune treatment blocks a different brake on immune cells and is used as a first treatment for advanced disease. In a trial of patients who had not had prior treatment, more than half responded, and many responses lasted well beyond two years, far longer than what chemotherapy usually achieves.",
+        "clinician": "Anti-PD-1 monoclonal antibody given first-line. In the multicenter phase 2 CITN-09 / KEYNOTE-017 trial (NCT02267603), first-line pembrolizumab produced an objective response rate of 56 percent with responses in both virus-positive (59 percent) and virus-negative (53 percent) tumors and a not-reached median response duration, with durable progression-free and overall survival confirmed on 3-year follow-up.",
+        "researcher": "Pembrolizumab demonstrated first-line durable disease control across both viral subsets, decoupling benefit from MCPyV status and reinforcing that immunogenicity, from either viral antigens or UV neoantigens, is the operative dependency. It is the anchor for the tissue-agnostic TMB-high hypothesis in the discovery layer."
+      },
+      "citation": {
+        "label": "Nghiem et al., J Clin Oncol 2019 (CITN-09 / KEYNOTE-017, first-line pembrolizumab in advanced MCC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30726175/"
+      },
+      "trial": {
+        "nct": "NCT02267603",
+        "url": "https://clinicaltrials.gov/study/NCT02267603"
+      }
+    },
+    {
+      "drug": "Retifanlimab",
+      "target": "PD-1 / PD-L1 axis",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Metastatic or recurrent locally advanced Merkel cell carcinoma (FDA approved 2023)",
+      "dev_stage": "FDA approved (anti-PD-1 antibody, intravenous, chemotherapy-naive)",
+      "rationale": {
+        "patient": "A newer immune treatment for advanced Merkel cell carcinoma given to people who have not had chemotherapy. In its trial more than half of patients responded, some responses lasted more than two years, and most patients were still alive at three years.",
+        "clinician": "Humanized anti-PD-1 antibody. In the phase 2 POD1UM-201 study (NCT03599713) in chemotherapy-naive recurrent locally advanced or metastatic MCC, retifanlimab 500 mg every 4 weeks produced an objective response rate of 54.5 percent (17.8 percent complete responses), median duration of response not reached in complete responders, and 63 percent of patients alive at 3 years, with a class-typical safety profile.",
+        "researcher": "Retifanlimab is a third anti-PD-1 asset confirming the reproducibility of the checkpoint-blockade dependency in MCC and broadening the approved options within the same modality, consistent with the antigen-driven immunogenicity thesis."
+      },
+      "citation": {
+        "label": "Grignani et al., J Immunother Cancer 2025 (POD1UM-201, retifanlimab in advanced MCC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40796223/"
+      },
+      "trial": {
+        "nct": "NCT03599713",
+        "url": "https://clinicaltrials.gov/study/NCT03599713"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals showing that immune checkpoint treatment works across cancers, and that biomarkers like tumor mutation load or a virus can predict who benefits. They are why the research ideas in the next section are grounded rather than speculative.",
+    "clinician": "The approvals below establish PD-1 / PD-L1 blockade in MCC and the tissue-agnostic TMB-high indication for pembrolizumab. Each validates a biomarker-linked or antigen-linked route to checkpoint benefit that can, in principle, be extended within this disease.",
+    "researcher": "Each landmark validates one element of the immunogenicity thesis, PD-L1 blockade in a rare immunogenic cancer, first-line PD-1 blockade across both viral subsets, and a tissue-agnostic high-mutational-burden indication. This catalog of validated routes, not any single drug, is the transferable asset for the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "PD-L1 / PD-1 axis in metastatic MCC (first approval for the disease)",
+      "drug": "avelumab (anti-PD-L1 immune checkpoint inhibitor)",
+      "year": 2017,
+      "citation": {
+        "label": "Kaufman et al., Lancet Oncol 2016 (JAVELIN Merkel 200, basis of first MCC approval)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27592805/"
+      }
+    },
+    {
+      "biomarker": "PD-1 axis across virus-positive and virus-negative MCC (first-line)",
+      "drug": "pembrolizumab (anti-PD-1 immune checkpoint inhibitor)",
+      "year": 2018,
+      "citation": {
+        "label": "Nghiem et al., J Clin Oncol 2019 (CITN-09 / KEYNOTE-017, first-line pembrolizumab in MCC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30726175/"
+      }
+    },
+    {
+      "biomarker": "PD-1 axis in chemotherapy-naive advanced MCC",
+      "drug": "retifanlimab (anti-PD-1 immune checkpoint inhibitor)",
+      "year": 2023,
+      "citation": {
+        "label": "Grignani et al., J Immunother Cancer 2025 (POD1UM-201, retifanlimab in advanced MCC)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40796223/"
+      }
+    },
+    {
+      "biomarker": "Tissue TMB-high (10 or more mutations per megabase), tissue-agnostic",
+      "drug": "pembrolizumab (anti-PD-1 immune checkpoint inhibitor)",
+      "year": 2020,
+      "citation": {
+        "label": "Marabelle et al., Lancet Oncol 2020 (KEYNOTE-158, TMB-high tissue-agnostic pembrolizumab)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32919526/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because Merkel cell carcinoma is unusually visible to the immune system, scientists are testing ways to make immune treatment work even better or for more patients. These are starting points for research, not advice for care.",
+    "clinician": "Each entry is a research hypothesis that extends the validated immunogenicity dependency in MCC toward a new modality or setting, antigen-directed cell therapy against MCPyV T antigens, combination checkpoint blockade for primary resistance, and the tissue-agnostic TMB-high indication in the UV-driven subset. Transferability is graded and each analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel within-disease and cross-context hypotheses by analogy over the shared immunogenicity dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated endpoints in the target setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): direct a T cell or engineered TCR therapy against Merkel cell polyomavirus large and small T antigens in virus-positive MCC, exploiting the fixed, shared viral antigens as targets for adoptive cell therapy.",
+      "shared": "Continuous expression of clonally integrated MCPyV T antigens provides foreign, tumor-restricted, shared antigens, the antigenic prerequisite for antigen-directed T cell or TCR therapy.",
+      "source": "Virus-driven malignancies where adoptive T cell therapy against viral antigens is effective",
+      "modality": "cell therapy",
+      "rationale": "MCPyV T antigens are non-self viral oncoproteins required for tumor maintenance, an ideal target class for adoptive cell therapy. T cells specific for MCPyV T antigens can be expanded from donors under clinical-grade conditions, and their epitopes span the T-antigen splice variants found in tumors, supporting manufacture of an antigen-directed product.",
+      "transferability": "medium, viral T antigens are validated shared targets and MCPyV-specific T cells are manufacturable, but HLA restriction, on-target trafficking into tumor, antigen loss variants, and durability of engineered TCR responses must be established before clinical benefit can be claimed.",
+      "prediction": "MCPyV T-antigen-specific T cells or TCR-engineered T cells will selectively recognize and kill autologous virus-positive MCC cells presenting the cognate epitope, spare virus-negative and antigen-negative cells, and control tumor in preclinical models without off-target reactivity.",
+      "citation": {
+        "label": "Davies et al., Front Immunol 2020 (robust production of MCPyV oncogene-specific T cells for adoptive transfer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33362774/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): add CTLA-4 blockade to PD-1 / PD-L1 blockade as a combination checkpoint strategy for MCC with primary resistance to single-agent anti-PD-(L)1 therapy.",
+      "shared": "MCC remains an immunogenic tumor even when single-agent PD-1 / PD-L1 blockade fails, so a non-redundant second checkpoint pathway (CTLA-4) may restore antitumor T cell activity in the same immunogenic substrate.",
+      "source": "Combination checkpoint blockade in other immunogenic solid tumors and in checkpoint-refractory disease",
+      "modality": "immune checkpoint inhibitor",
+      "rationale": "About one third to one half of patients have primary resistance to first-line anti-PD-(L)1 therapy, an unsolved gap. A prospective multicenter registry analysis reported that combined ipilimumab plus nivolumab given after avelumab produced responses in 7 of 14 patients (50 percent) with avelumab-refractory MCC, providing a direct within-disease signal that dual blockade can recover benefit after single-agent failure.",
+      "transferability": "medium, the combination signal is prospective but comes from a small registry cohort, so a randomized comparison against continued single-agent therapy or salvage options is needed, and added CTLA-4 toxicity must be weighed against the incremental response benefit.",
+      "prediction": "In patients with primary resistance to single-agent anti-PD-(L)1 therapy, combined PD-1 plus CTLA-4 blockade will produce a higher objective response rate than continued single-agent blockade in a randomized comparison, with responses enriched in tumors retaining T cell infiltration.",
+      "citation": {
+        "label": "Glutsch et al., J Immunother Cancer 2022 (ipilimumab plus nivolumab in avelumab-refractory MCC, ADOREG registry)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36450381/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply the tissue-agnostic TMB-high pembrolizumab indication specifically to the UV-driven, virus-negative subset of MCC, which frequently carries a mutational burden above the 10 mutations per megabase threshold.",
+      "shared": "Virus-negative MCC is UV-mutated with a high tumor mutational burden, the same tissue-independent biomarker that predicts pembrolizumab response in the TMB-high tissue-agnostic indication.",
+      "source": "TMB-high tissue-agnostic pembrolizumab approval (KEYNOTE-158)",
+      "modality": "immune checkpoint inhibitor",
+      "rationale": "KEYNOTE-158 showed that a tissue TMB of at least 10 mutations per megabase predicts pembrolizumab response across diverse solid tumors, supporting a tissue-agnostic indication. Virus-negative MCC carries a UV mutational burden reported around 10 mutations per megabase, so the biomarker logic maps directly onto this subset and predicts a TMB-defined responder population within MCC.",
+      "transferability": "medium, both the biomarker and the drug are validated and MCC is already checkpoint-responsive, but the specific hypothesis that TMB status stratifies benefit within MCC needs prospective testing, since first-line trials showed responses in both viral subsets and TMB was not the enrolling criterion.",
+      "prediction": "Within virus-negative MCC, tumors scoring TMB-high (10 or more mutations per megabase) will show higher response rates and longer durable benefit on anti-PD-1 therapy than TMB-low tumors, formalizing TMB as a stratifying biomarker in this subset.",
+      "citation": {
+        "label": "Marabelle et al., Lancet Oncol 2020 (KEYNOTE-158, TMB-high tissue-agnostic pembrolizumab)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32919526/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Merkel cell carcinoma is a rare, aggressive cancer driven either by clonal Merkel cell polyomavirus integration or by ultraviolet mutational load, both of which make the tumor immunogenic and responsive to immune checkpoint blockade. The three approved therapies are described from their pivotal trials, and treatment selection depends on stage, prior therapy, performance status, and clinical judgment. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the shared immunogenicity dependency with graded transferability. Treatment decisions belong to a qualified oncology team, ideally at a center experienced with Merkel cell carcinoma and, where relevant, within a clinical trial.</p>"
+}

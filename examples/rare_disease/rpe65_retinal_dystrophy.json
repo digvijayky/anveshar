@@ -1,0 +1,166 @@
+{
+  "cancer": {
+    "name": "RPE65 mediated inherited retinal dystrophy (including Leber congenital amaurosis type 2)",
+    "sub": "A rare autosomal recessive inherited blindness caused by biallelic loss of function of RPE65, which disrupts the retinoid visual cycle in the retinal pigment epithelium. Included to show that Anveshar's cross condition, biology first matching works outside oncology, on a monogenic blinding disease where the landmark treatment is a subretinal gene replacement.",
+    "chips": ["RPE65 biallelic loss of function", "Visual cycle (retinoid) defect", "First FDA approved gene therapy for a genetic disease"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, gene and modality stated.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>RPE65 mediated inherited retinal dystrophy is a rare inherited eye disease that causes severe loss of vision, often from birth or early childhood (one severe form is called Leber congenital amaurosis type 2). It happens because both copies of a gene called RPE65 are broken. RPE65 makes a protein that a support layer at the back of the eye needs to recycle vitamin A into the light sensing molecule that lets the retina detect light. Without it, the light sensing cells cannot work properly and slowly die, so vision fades and night blindness is common.</p><p>The important news is that this disease became the setting for a medical first. A one time gene therapy places a working copy of RPE65 directly under the retina, and in a randomized trial it improved patients' ability to see and move around in dim light. Outside of that gene therapy, there is no pill or drug that changes the course of the disease.</p>",
+    "clinician": "<p>RPE65 mediated inherited retinal dystrophy is an autosomal recessive retinal degeneration caused by biallelic pathogenic variants in RPE65, the gene encoding retinoid isomerohydrolase in the retinal pigment epithelium (RPE). Loss of RPE65 function interrupts the visual (retinoid) cycle, so 11 cis retinal cannot be regenerated, chromophore is depleted, and rod and cone photoreceptors progressively degenerate. The phenotype spans severe early onset disease, including Leber congenital amaurosis type 2 (LCA2), and early onset severe retinal dystrophy or retinitis pigmentosa, typically with nyctalopia, nystagmus, and progressive visual field and acuity loss.</p><p>Diagnosis is molecular, requiring confirmation of biallelic RPE65 variants, and eligibility for the approved therapy additionally requires viable retinal cells. One gene replacement therapy is FDA and EMA approved and is delivered as a one time subretinal injection. There is otherwise no pharmacologic disease modifying therapy.</p>",
+    "researcher": "<p>RPE65 mediated retinal dystrophy is a canonical single gene, loss of function disease of the retinoid cycle. RPE65 encodes the RPE isomerohydrolase that converts all trans retinyl ester to 11 cis retinol, the rate limiting step in regenerating 11 cis retinal chromophore for opsin. Biallelic loss abolishes chromophore supply, producing a functional photoreceptor blindness before frank cell loss, which creates a therapeutic window: restore the missing enzyme in the RPE and the visual cycle can resume in surviving photoreceptors.</p><p>That window is addressed by a single advanced modality, a subretinal adeno associated virus (AAV2) vector delivering a functional RPE65 transgene to RPE cells, restoring the enzyme locally rather than modulating splicing or knocking down a transcript. This makes RPE65 dystrophy the anchor case for Anveshar's thesis that a validated molecular dependency, here a compact recessive loss of function amenable to AAV gene replacement, licenses borrowing an entire modality across conditions.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological handles that treatment for this disease uses. They all come back to one thing, restoring the missing RPE65 protein so the eye can recycle vitamin A and make the light sensing molecule again.",
+    "clinician": "Actionable biology reduces to restoring RPE65 isomerohydrolase activity in the retinal pigment epithelium, achieved by delivering a functional RPE65 transgene. Confirmed biallelic RPE65 variants and viable retinal cells gate eligibility.",
+    "researcher": "The single molecular dependency (RPE65 enzyme insufficiency in the RPE, breaking the retinoid cycle) supports one primary target axis, RPE65 gene replacement, and licenses adjacent editing and mutation independent axes explored in the discovery layer."
+  },
+  "targets": [
+    {
+      "name": "RPE65 enzyme restoration (RPE65 gene replacement)",
+      "present_in": "Universal in RPE65 mediated dystrophy (the defining deficiency)",
+      "evidence": "Biallelic RPE65 loss of function abolishes retinoid isomerohydrolase activity and depletes 11 cis retinal chromophore; subretinal delivery of a functional RPE65 transgene to RPE cells restores enzyme activity and improves functional vision (Russell et al., Lancet 2017, PMID 28712537, DOI 10.1016/S0140-6736(17)31868-8)."
+    },
+    {
+      "name": "Retinoid (visual) cycle defect in the RPE",
+      "present_in": "Universal in RPE65 mediated dystrophy",
+      "evidence": "Loss of RPE65 interrupts regeneration of 11 cis retinal, producing chromophore deficiency and photoreceptor dysfunction before frank cell loss; this creates the treatable window that gene replacement exploits in patients with viable retinal cells (Russell et al., Lancet 2017, PMID 28712537, DOI 10.1016/S0140-6736(17)31868-8)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "The card below is the approved treatment for this disease, colored by how strong the evidence is. Green means it is FDA approved for RPE65 disease. It works by placing a healthy copy of the RPE65 gene under the retina so the eye can make the missing protein. There is no approved pill or other drug that changes the disease.",
+    "clinician": "The single card is Tier 1 (FDA and EMA approved on randomized trial data). It is a one time subretinal AAV2 gene replacement, gated on confirmed biallelic RPE65 variants and viable retinal cells. No pharmacologic disease modifying alternative exists.",
+    "researcher": "The one approval maps the single dependency (RPE65 insufficiency) onto one advanced modality, subretinal AAV gene replacement. This is the operational template Anveshar generalizes, biology in, modality out, and the exact pattern the discovery layer extends to other monogenic inherited retinal dystrophies and to mutation independent vision restoration."
+  },
+  "therapies": [
+    {
+      "drug": "Voretigene neparvovec",
+      "target": "RPE65 gene replacement",
+      "tier": 1,
+      "modality": "gene therapy",
+      "approved_in": "Biallelic RPE65 mutation associated retinal dystrophy with viable retinal cells (FDA approved 2017, EMA approved 2018)",
+      "dev_stage": "FDA approved (one time subretinal AAV2 gene replacement) · biomarker gated on confirmed biallelic RPE65 mutations",
+      "rationale": {
+        "patient": "This is a one time treatment that delivers a working copy of the RPE65 gene into cells at the back of the eye using a harmless virus as a carrier, injected under the retina. In a randomized trial, treated patients improved on a test of moving through a dimly lit obstacle course and could see better in low light compared with untreated patients. It is given only when genetic testing confirms both RPE65 copies are affected and enough retinal cells remain.",
+        "clinician": "One time subretinal AAV2 vector (AAV2-hRPE65v2) delivering a functional RPE65 transgene to retinal pigment epithelial cells. In the randomized, controlled, open label phase 3 trial in patients with confirmed biallelic RPE65 mutations, treated patients showed a significant improvement in the multi luminance mobility test at one year versus controls, with gains also in full field light sensitivity. It is the first FDA approved gene therapy for a genetic disease and is biomarker gated, requiring confirmed biallelic RPE65 variants and sufficient viable retinal cells.",
+        "researcher": "Subretinal AAV2 mediated RPE65 gene replacement, a durable one time restoration of the missing enzyme in the RPE rather than ongoing pharmacology. It demonstrates that AAV gene replacement can rescue a recessive loss of function retinal disease and improve a functional vision endpoint in a randomized trial, the precedent the discovery layer extends to other AAV tractable inherited retinal dystrophies."
+      },
+      "citation": {
+        "label": "Russell et al., Lancet 2017 (voretigene neparvovec, phase 3 randomized trial in RPE65 mediated inherited retinal dystrophy; PMID 28712537, DOI 10.1016/S0140-6736(17)31868-8)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28712537/"
+      },
+      "trial": {
+        "nct": "NCT00999609",
+        "url": "https://clinicaltrials.gov/study/NCT00999609"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals and first in human results across different rare diseases that made treating disease by its molecular defect, using advanced treatments like gene therapy, a real and proven approach. They are why borrowing a treatment idea from one rare disease to another is legitimate rather than speculative.",
+    "clinician": "The approvals and first in human results below establish that subretinal AAV gene replacement, systemic AAV gene replacement, antisense oligonucleotide splice correction, and optogenetic restoration are all real, demonstrated modalities. Each validates a modality that can, in principle, be transferred to another disease with a matching molecular dependency.",
+    "researcher": "Each landmark validates one advanced modality on a defined molecular mechanism (ocular gene replacement, systemic gene replacement, splice correction, mutation independent optogenetic restoration). This modality catalog, not any single gene, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "Biallelic RPE65 loss of function (ocular gene replacement)",
+      "drug": "voretigene neparvovec (subretinal AAV2 gene replacement)",
+      "year": "2017, first FDA approved gene therapy for a genetic disease",
+      "citation": {
+        "label": "Russell et al., Lancet 2017 (voretigene neparvovec phase 3 trial; PMID 28712537, DOI 10.1016/S0140-6736(17)31868-8)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28712537/"
+      }
+    },
+    {
+      "biomarker": "SMN1 loss of function in spinal muscular atrophy (systemic gene replacement)",
+      "drug": "onasemnogene abeparvovec (AAV9 gene replacement)",
+      "year": 2019,
+      "citation": {
+        "label": "Mendell et al., N Engl J Med 2017 (AAV9 SMN1 gene replacement; PMID 29091557, DOI 10.1056/NEJMoa1706198)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091557/"
+      }
+    },
+    {
+      "biomarker": "SMN2 splicing dependency (exon 7 inclusion) in spinal muscular atrophy (splice correction)",
+      "drug": "nusinersen (antisense oligonucleotide)",
+      "year": "2016 to 2017",
+      "citation": {
+        "label": "Finkel et al., N Engl J Med 2017 (ENDEAR, first approved ASO for SMA; PMID 29091570, DOI 10.1056/NEJMoa1702752)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091570/"
+      }
+    },
+    {
+      "biomarker": "Photoreceptor loss with surviving retinal ganglion cells (mutation independent optogenetic restoration)",
+      "drug": "ChrimsonR optogenetic therapy (first in human partial vision recovery)",
+      "year": 2021,
+      "citation": {
+        "label": "Sahel et al., Nat Med 2021 (partial recovery of visual function after optogenetic therapy in a blind patient; PMID 34031601, DOI 10.1038/s41591-021-01351-4)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34031601/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because RPE65 gene therapy proved that placing a working gene under the retina can improve vision, the same kinds of treatment might be worth testing in other inherited blinding diseases that go wrong in a similar way. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality validated in RPE65 disease or an adjacent inherited retinal disease to a different monogenic retinal dystrophy sharing the mechanism. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel cross condition, advanced modality hypotheses by analogy over a shared molecular dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated as approved therapies in the target condition."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply the same subretinal AAV gene replacement principle to another monogenic inherited retinal dystrophy caused by a compact recessive loss of function gene expressed in an accessible retinal cell type, for example RPGR associated X linked retinitis pigmentosa, extending the RPE65 precedent to a photoreceptor expressed target.",
+      "shared": "A monogenic loss of function of a single retinal gene whose coding sequence fits an AAV cargo and whose product can be restored in a surviving, accessible retinal cell layer, mirroring RPE65 replacement in the retinal pigment epithelium.",
+      "source": "RPE65 mediated inherited retinal dystrophy (voretigene neparvovec subretinal AAV gene replacement)",
+      "modality": "gene therapy",
+      "rationale": "Voretigene proves subretinal AAV gene replacement can restore a missing retinal protein and improve functional vision. Other inherited retinal dystrophies with a compact coding sequence and a defined target cell type are conceptually amenable, contingent on vector tropism, transgene size, and durability. An RPGR subretinal AAV construct has already shown early functional signals in a first in human trial, supporting the transfer of the modality to a photoreceptor expressed target.",
+      "transferability": "medium, subretinal AAV gene replacement is a validated retinal modality, but each target needs an AAV compatible transgene size, tropism for the correct retinal cell type, surviving target cells, and demonstration that restored protein yields durable functional benefit.",
+      "prediction": "In patients or preclinical models carrying biallelic (or hemizygous, for X linked) loss of function of the candidate retinal gene, a single subretinal dose of an AAV vector carrying the functional transgene restores the missing protein in the target retinal cells and improves a functional vision endpoint durably, with a manageable ocular inflammatory response.",
+      "citation": {
+        "label": "Cehajic-Kapetanovic et al., Nat Med 2020 (first in human subretinal AAV8-coRPGR gene therapy for RPGR X linked retinitis pigmentosa, modality transfer precedent; PMID 32094925, DOI 10.1038/s41591-020-0763-1)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32094925/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): for an inherited retinal dystrophy whose disease gene exceeds AAV cargo limits, such as CEP290 associated Leber congenital amaurosis type 10, apply an intravitreal or intraocular antisense oligonucleotide that corrects the pathogenic splicing defect instead of adding the gene, transferring the splice correction logic to retinal disease.",
+      "shared": "A pathogenic splice altering variant in a large retinal gene that cannot be packaged in a single AAV, where a splice switching oligonucleotide can redirect splicing back toward a functional transcript, an approach reported for the deep intronic CEP290 variant in Leber congenital amaurosis type 10.",
+      "source": "CEP290 associated Leber congenital amaurosis type 10 (sepofarsen intraocular antisense oligonucleotide splice correction)",
+      "modality": "antisense oligonucleotide",
+      "rationale": "For genes too large for AAV gene addition, splice correction offers an orthogonal route. Intraocular sepofarsen, an antisense oligonucleotide targeting the deep intronic CEP290 c.2991+1655A>G variant, has produced durable vision improvements in treated eyes, showing that an oligonucleotide can correct splicing in the human retina and providing a modality that gene addition cannot easily reach.",
+      "transferability": "medium, antisense oligonucleotide splice correction is a demonstrated retinal approach but is variant specific, requires an accessible and correctable splice element, needs repeat intraocular dosing because the effect is not permanent, and must show that the corrected transcript yields durable functional protein.",
+      "prediction": "In patient derived retinal cells or organoids carrying the candidate splice altering retinal variant, a rationally designed splice switching oligonucleotide increases inclusion of the functional exon, restores functional protein, and improves a light response readout in a dose dependent manner, without off target splicing changes.",
+      "citation": {
+        "label": "Cideciyan, Jacobson et al., Am J Ophthalmol Case Rep 2023 (durable vision improvement after intraocular sepofarsen antisense oligonucleotide in CEP290 Leber congenital amaurosis type 10; PMID 37388818, DOI 10.1016/j.ajoc.2023.101873)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37388818/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): for RPE65 mutations not well suited to gene addition, for example when precise correction of the endogenous locus is preferred over transgene supplementation, apply in situ base or prime editing to correct the pathogenic RPE65 substitution directly in retinal pigment epithelial cells.",
+      "shared": "A defined pathogenic point mutation in RPE65 (such as a nonsense substitution) that a base editor or prime editor can correct at the endogenous locus, restoring native regulation of RPE65 expression rather than adding a separate transgene copy.",
+      "source": "RPE65 mediated inherited retinal dystrophy (correcting the same RPE65 dependency by editing rather than gene addition)",
+      "modality": "gene therapy",
+      "rationale": "Gene addition supplements the missing protein but does not correct the endogenous mutation or preserve native RPE65 regulation, and some variants are better addressed by precise correction. In an RPE65 nonsense mutation mouse model of Leber congenital amaurosis, subretinal delivery of a split adenine base editor corrected the pathogenic C to T variant, restored wild type RPE65 protein, and recovered light induced retinal electrical responses, providing proof of concept that in situ editing can correct the RPE65 lesion.",
+      "transferability": "speculative, retinal base and prime editing is validated preclinically in animal models but not approved in this disease, and each variant needs an editable target motif, an editor that fits AAV delivery to the RPE, high on target and low off target editing, and demonstration of durable functional rescue in patients.",
+      "prediction": "In an animal model or patient derived RPE cells carrying the candidate RPE65 point mutation, subretinal delivery of a base or prime editor corrects the endogenous mutation at high efficiency, restores wild type RPE65 protein under native regulation, and recovers light driven retinal responses, with minimal off target editing.",
+      "citation": {
+        "label": "Jo et al., Mol Ther Nucleic Acids 2022 (therapeutic base editing restores visual function in an RPE65 mouse model of Leber congenital amaurosis, modality precedent; PMID 36589710, DOI 10.1016/j.omtn.2022.11.021)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36589710/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): for advanced inherited retinal dystrophy where photoreceptors are lost but inner retinal neurons survive, and where gene specific correction is no longer possible, apply optogenetic therapy to confer light sensitivity on surviving retinal cells as a mutation independent route to partial vision restoration.",
+      "shared": "A retina in which the causative gene defect has already destroyed the photoreceptors but downstream retinal ganglion or bipolar cells survive, so restoring vision no longer depends on the specific mutation and instead requires conferring light sensitivity on the surviving cells, as reported in optogenetic therapy for retinitis pigmentosa.",
+      "source": "Retinitis pigmentosa with surviving inner retinal neurons (ChrimsonR optogenetic therapy)",
+      "modality": "gene therapy",
+      "rationale": "Gene replacement and editing both require surviving target cells and a specific correctable defect. When photoreceptors are already lost, a mutation independent approach is needed. Intraocular delivery of an AAV encoding the light sensitive protein ChrimsonR to retinal ganglion cells, combined with light stimulating goggles, produced partial functional vision recovery in a blind patient, showing that optogenetic restoration can bypass the original gene defect entirely.",
+      "transferability": "speculative, optogenetic restoration is mutation independent and has shown first in human partial recovery, but it provides only partial, engineered vision, depends on surviving inner retinal neurons and an external stimulation device, and its durability and generalization across late stage inherited retinal dystrophies remain to be established.",
+      "prediction": "In patients with end stage inherited retinal dystrophy retaining functional retinal ganglion or bipolar cells, intraocular delivery of an optogenetic actuator plus a compatible light stimulation device confers measurable, reproducible light evoked visual perception and cortical responses that are absent without the treatment, independent of the underlying mutation.",
+      "citation": {
+        "label": "Sahel et al., Nat Med 2021 (partial recovery of visual function in a blind patient after optogenetic therapy, mutation independent modality precedent; PMID 34031601, DOI 10.1038/s41591-021-01351-4)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34031601/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. RPE65 mediated inherited retinal dystrophy is a rare disease and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework generalizes beyond cancer to Mendelian disease and gene directed therapy. The one approved therapy is described from its randomized pivotal trial, and eligibility requires confirmation of biallelic RPE65 variants and sufficient viable retinal cells. There is otherwise no pharmacologic disease modifying therapy. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability, and several rest on preclinical or early clinical evidence in other genes rather than on approved therapy in this condition. Treatment decisions belong to a qualified ophthalmologist and inherited retinal disease specialist, ideally at a center experienced with retinal gene therapy and, where relevant, within a clinical trial.</p>"
+}

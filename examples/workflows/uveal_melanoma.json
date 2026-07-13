@@ -1,0 +1,128 @@
+{
+  "aim": "Build a uveal melanoma specific, computationally reproducible discovery workflow that connects the driver biology of the disease (mutually exclusive GNAQ or GNA11 Gq activating mutations, BAP1 loss, monosomy 3, and the class 1 versus class 2 gene expression prognostic signature) to actionable therapeutic hypotheses beyond the HLA-A*02:01 restricted tebentafusp population, and lays out a wet lab validation plan in uveal melanoma cell lines and PDX models. The workflow is executable end to end in Claude Science using public molecular and structural resources plus scRNA-seq and bulk RNA-seq compute, Evo 2, and AlphaFold.",
+  "hypothesis": "Because nearly all uveal melanomas are driven by a shared Gq oncogenic input (GNAQ or GNA11, or the phenocopying PLCB4 and CYSLTR2 mutations) that converges on PKC, MAPK, and YAP or TAZ signaling, and because BAP1 loss and monosomy 3 (the molecular basis of the class 2 high risk signature) define the metastatic, immune cold, gp100 heterogeneous subset, then (1) Gq pathway effector dependency (PKC or MEK or FAK or YAP or TAZ) is enriched in uveal melanoma relative to cutaneous melanoma and is largely independent of BAP1 or chromosome 3 status, (2) the class 2 or BAP1 loss transcriptional state predicts an antigen presentation low, T cell excluded microenvironment with heterogeneous PMEL and MLANA expression that limits both checkpoint blockade and gp100 directed therapy, and (3) an alternate surface antigen or non HLA-A*02:01 T cell engaging strategy can be nominated for the class 2, HLA-A*02:01 negative patients who cannot receive tebentafusp.",
+  "steps": [
+    {
+      "title": "Step 1. Assemble and harmonize primary (TCGA-UVM) and metastatic uveal melanoma cohorts",
+      "what": "Pull the TCGA Uveal Melanoma cohort (TCGA-UVM, 80 primary tumors) with somatic mutations, copy number, and RNA-seq from cBioPortal and the GDC, and add public metastatic and primary uveal melanoma bulk RNA-seq and mutation series from GEO (for example liver metastasis and enucleation series). Harmonize gene identifiers through Ensembl, unify sample level clinical annotation (metastasis status, survival, chromosome 3 ploidy where reported), and build a single analysis matrix. Confirm the near universal, mutually exclusive GNAQ or GNA11 pattern and catalog the phenocopy drivers PLCB4 and CYSLTR2, plus SF3B1, EIF1AX, and BAP1 secondary events. Explicitly separate uveal from cutaneous melanoma so that no BRAF or NRAS driven cutaneous samples contaminate the cohort.",
+      "tools": ["cBioPortal", "TCGA (TCGA-UVM via GDC)", "GEO", "Ensembl", "bulk RNA-seq compute"],
+      "outputs": ["harmonized_uvm_expression_matrix.tsv", "uvm_mutation_landscape.tsv (GNAQ/GNA11/PLCB4/CYSLTR2/SF3B1/EIF1AX/BAP1 mutual exclusivity and co-occurrence)", "uvm_sample_clinical_metadata.tsv", "cohort_qc_report.html"]
+    },
+    {
+      "title": "Step 2. Stratify by BAP1 status, monosomy 3, and reconstruct the class 1 versus class 2 signature",
+      "what": "Classify every tumor by BAP1 alteration (mutation, deletion, or inferred loss of expression), by chromosome 3 status (monosomy 3 versus disomy 3 from copy number), and by 8q gain. Reconstruct a class 1 versus class 2 style gene expression prognostic split using the published discriminating genes (for example the DecisionDx-UM 12 gene program including HTR2B, ECM1, RAB31, CDH1, and the housekeeping and PRAME context genes) via unsupervised clustering and a scored signature, then benchmark the transcriptional class against BAP1 and monosomy 3 and against metastasis free survival. Quantify concordance among BAP1 loss, monosomy 3, and the class 2 assignment to define the high risk axis that the rest of the workflow uses for stratification.",
+      "tools": ["bulk RNA-seq compute", "cBioPortal", "TCGA (TCGA-UVM)", "Reactome"],
+      "outputs": ["uvm_class1_class2_assignments.tsv", "bap1_monosomy3_class_concordance.tsv", "kaplan_meier_by_class_and_bap1.pdf", "high_risk_axis_signature_scores.tsv"]
+    },
+    {
+      "title": "Step 3. Map the GNAQ/GNA11 to PKC, MAPK, and YAP or TAZ signaling axis and its dependency structure",
+      "what": "Trace the Gq oncogenic cascade using Reactome and UniProt (GNAQ and GNA11 to PLCB4 to PKC isoforms delta and epsilon to RASGRP3 to MAPK, and the parallel TRIO to RhoA to actin to YAP1 and WWTR1 or TAZ axis), and score pathway activity per tumor from the harmonized expression matrix (YAP or TAZ target genes such as CTGF or CCN2, CYR61 or CCN1, ANKRD1; MAPK output genes; PKC output). Then interrogate DepMap (CRISPR and RNAi dependency plus expression) to test whether uveal melanoma cell lines (for example 92.1, MEL202, MP38, MP41, OMM1, OMM2.3, MEL270) show selective dependency on Gq effectors and downstream nodes (PRKCD, PRKCE, MAP2K1 or MAP2K2, PTK2 or FAK, YAP1, WWTR1, and the Gq node GNAQ itself), comparing against cutaneous melanoma lines. Cross reference candidate inhibitor chemistry in ChEMBL (PKC inhibitors such as sotrastaurin or darovasertib class, MEK inhibitors, FAK inhibitors, YAP or TEAD inhibitors) to connect each dependency to a tractable compound.",
+      "tools": ["Reactome", "UniProt", "DepMap", "ChEMBL", "bulk RNA-seq compute"],
+      "outputs": ["gq_pathway_activity_scores.tsv", "depmap_uvm_vs_cutaneous_dependency_ranking.tsv", "effector_node_to_chembl_compound_map.tsv", "gq_axis_pathway_diagram.pdf"]
+    },
+    {
+      "title": "Step 4. Single cell dissection of the immune cold microenvironment and gp100 or antigen presentation heterogeneity",
+      "what": "Analyze public uveal melanoma scRNA-seq (primary and liver metastasis atlases from GEO) to characterize the immune cold, T cell excluded microenvironment that underlies poor conventional checkpoint response. Annotate malignant cells, T and NK subsets, macrophage or LYVE1 tumor associated macrophage populations, and stroma; quantify exhaustion and dysfunction markers, and score the malignant compartment for MHC class I antigen presentation (HLA-A, HLA-B, HLA-C, B2M, TAP1, TAP2, NLRC5) and for the tebentafusp relevant antigen machinery, specifically PMEL (gp100) and MLANA expression and their cell to cell heterogeneity. Stratify all single cell readouts by the Step 2 class 1 versus class 2 or BAP1 loss axis (using matched or inferred labels) to test whether class 2 or BAP1 loss tumors are more antigen presentation low and more gp100 heterogeneous.",
+      "tools": ["scRNA-seq compute", "GEO", "Reactome", "Ensembl"],
+      "outputs": ["uvm_scrna_annotated.h5ad", "immune_cold_tme_composition_by_class.tsv", "malignant_antigen_presentation_scores.tsv", "pmel_mlana_gp100_heterogeneity_by_bap1.pdf"]
+    },
+    {
+      "title": "Step 5. Nominate surface and immune targets beyond the HLA-A*02:01 restricted population",
+      "what": "For the class 2 or BAP1 loss, HLA-A*02:01 negative patients who are ineligible for tebentafusp, nominate alternative immunotherapeutic targets. From the bulk and single cell malignant compartment, rank cell surface and cancer testis antigens over expressed in uveal melanoma relative to normal tissue (screen candidates such as GPR143 or OA1, TYRP1, MLANA or MART1, PRAME, CSPG4, HER3 or ERBB3, and IL2RA using GTEx as the normal tissue safety filter and UniProt to confirm surface localization and topology). Prioritize targets with tumor restricted expression, homogeneous coverage across malignant cells, and low expression in vital normal tissues. For the two or three strongest candidates, map available or predicted HLA presented peptides across common HLA alleles (not only HLA-A*02:01) to broaden T cell engager or vaccine eligibility, and combine with the Step 3 signaling dependencies to propose rational combinations (for example a Gq effector inhibitor to relieve immune exclusion plus a T cell engaging agent).",
+      "tools": ["GTEx", "UniProt", "ChEMBL", "bulk RNA-seq compute", "scRNA-seq compute"],
+      "outputs": ["surface_antigen_target_ranking.tsv", "gtex_normal_tissue_safety_filter.tsv", "non_hlaA0201_peptide_eligibility_table.tsv", "combination_strategy_shortlist.md"]
+    },
+    {
+      "title": "Step 6. Structural and variant modeling of the Gq driver and the top nominated target",
+      "what": "Model the constitutively active Gq oncoprotein and the leading nominated target at atomic resolution. Retrieve experimental structures from PDB for GNAQ and GNA11 (including the recurrent Q209 and R183 activating positions) and for effector interfaces where available; use AlphaFold predicted structures for the top surface antigen and any effector lacking an experimental structure. Assess the structural consequences of the recurrent activating mutations (impaired GTP hydrolysis at Q209, switch region positioning) and the druggability of effector and antigen surfaces (PKC, FAK, YAP or TEAD interface, and an antigen epitope pocket for antibody or T cell engager design). Use Evo 2 to score the functional impact and constraint of GNAQ, GNA11, and BAP1 variants observed in the cohort, distinguishing recurrent activating or loss of function drivers from passenger and variant of unknown significance calls, and to prioritize which patient specific alterations warrant experimental follow up.",
+      "tools": ["PDB", "AlphaFold", "Evo 2", "UniProt"],
+      "outputs": ["gnaq_gna11_activating_structure_analysis.pdf", "target_antigen_structure_models.pdb", "evo2_variant_effect_scores.tsv", "druggable_interface_report.md"]
+    },
+    {
+      "title": "Step 7. Integrate into a prioritized therapeutic hypothesis matrix",
+      "what": "Integrate signaling dependency (Step 3), microenvironment and antigen state (Step 4), target nomination (Step 5), and structural or variant evidence (Step 6) into a single ranked matrix of therapeutic hypotheses stratified by the class 1 versus class 2 or BAP1 axis and by HLA-A*02:01 status. Each hypothesis carries its mechanistic rationale, the uveal melanoma specific evidence supporting it, the eligible patient subset, and a proposed drug or modality from ChEMBL. Explicitly separate hypotheses that extend or combine with tebentafusp (HLA-A*02:01 positive) from those addressing the HLA-A*02:01 negative or tebentafusp refractory population, and flag the top candidates for wet lab testing.",
+      "tools": ["ChEMBL", "DepMap", "cBioPortal", "Reactome"],
+      "outputs": ["therapeutic_hypothesis_matrix.tsv", "prioritized_candidates_for_validation.md", "hypothesis_evidence_dossier.html"]
+    },
+    {
+      "title": "Step 8. Wet lab validation plan in uveal melanoma cell lines and PDX",
+      "what": "Specify a concrete validation plan for the top hypotheses in authenticated uveal melanoma models. In vitro: GNAQ or GNA11 mutant cell lines (for example 92.1, MEL202, OMM1, OMM2.3, MP38, MP41, MEL270, spanning class 1 and class 2 or BAP1 wild type and null) tested for viability, apoptosis, and pathway modulation (phospho readouts for PKC substrates, ERK, and YAP or TAZ target genes) under single agent and combination treatment with the nominated Gq effector inhibitors, with CRISPR knockout or knockdown of the nominated dependency nodes to confirm on target effect. For the immunotherapy arm: quantify surface protein expression of the nominated antigen by flow cytometry across the panel, confirm MHC class I and gp100 or PMEL heterogeneity, and run T cell engager or redirected T cell killing assays in HLA-A*02:01 negative lines to test the non HLA restricted strategy. In vivo: patient derived xenograft or orthotopic liver metastasis models stratified by BAP1 and chromosome 3 status to test the leading combination for tumor control, with RNA-seq and immune profiling of treated tumors to confirm the predicted reversal of the immune cold state. Define success criteria, controls, and the go or no go decision for each hypothesis.",
+      "tools": ["DepMap", "ChEMBL", "scRNA-seq compute", "bulk RNA-seq compute"],
+      "outputs": ["validation_plan_cell_lines_and_pdx.md", "model_panel_bap1_chr3_class_annotation.tsv", "assay_readouts_and_success_criteria.tsv", "go_no_go_decision_framework.pdf"]
+    }
+  ],
+  "datasets": [
+    {
+      "name": "TCGA-UVM (Uveal Melanoma) primary tumor cohort",
+      "source": "The Cancer Genome Atlas via NCI Genomic Data Commons and cBioPortal",
+      "url": "https://portal.gdc.cancer.gov/projects/TCGA-UVM"
+    },
+    {
+      "name": "TCGA Uveal Melanoma study (mutations, CNA, RNA-seq, clinical)",
+      "source": "cBioPortal for Cancer Genomics",
+      "url": "https://www.cbioportal.org/study/summary?id=uvm_tcga"
+    },
+    {
+      "name": "Uveal melanoma bulk RNA-seq and mutation series (primary and metastatic)",
+      "source": "NCBI Gene Expression Omnibus",
+      "url": "https://www.ncbi.nlm.nih.gov/gds/?term=uveal+melanoma"
+    },
+    {
+      "name": "Uveal melanoma single cell RNA-seq atlases (primary and liver metastasis)",
+      "source": "NCBI Gene Expression Omnibus",
+      "url": "https://www.ncbi.nlm.nih.gov/gds/?term=uveal+melanoma+single+cell"
+    },
+    {
+      "name": "DepMap cancer dependency and expression (uveal and cutaneous melanoma cell lines)",
+      "source": "Broad Institute Cancer Dependency Map (CRISPR, RNAi, expression)",
+      "url": "https://depmap.org/portal/"
+    },
+    {
+      "name": "GTEx normal tissue expression (surface antigen safety filter)",
+      "source": "Genotype-Tissue Expression project",
+      "url": "https://gtexportal.org/home/"
+    },
+    {
+      "name": "UniProt protein annotation (GNAQ, GNA11, BAP1, PMEL, PKC isoforms, candidate surface antigens)",
+      "source": "UniProt Knowledgebase",
+      "url": "https://www.uniprot.org/"
+    },
+    {
+      "name": "Protein Data Bank experimental structures (GNAQ, GNA11 activating states, effector complexes)",
+      "source": "RCSB Protein Data Bank",
+      "url": "https://www.rcsb.org/"
+    },
+    {
+      "name": "AlphaFold predicted structures (nominated antigens and effectors lacking experimental structures)",
+      "source": "AlphaFold Protein Structure Database",
+      "url": "https://alphafold.ebi.ac.uk/"
+    },
+    {
+      "name": "Reactome pathway knowledgebase (Gq signaling, PKC, MAPK, YAP or TAZ, antigen presentation)",
+      "source": "Reactome",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "ChEMBL bioactive compounds (PKC, MEK, FAK, YAP or TEAD inhibitors; antibody and T cell engager modalities)",
+      "source": "EMBL-EBI ChEMBL",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    {
+      "name": "Ensembl gene annotation and identifier harmonization",
+      "source": "Ensembl (EMBL-EBI)",
+      "url": "https://www.ensembl.org/"
+    }
+  ],
+  "validation": "The workflow is validated at three levels. Computational internal consistency: confirm the mutually exclusive GNAQ or GNA11 pattern and the phenocopy of PLCB4 and CYSLTR2 in the cohort, confirm that reconstructed class 2 assignment tracks with BAP1 loss and monosomy 3 and predicts worse metastasis free survival (agreement with the published DecisionDx-UM prognostic split and TCGA-UVM molecular subtypes), and confirm that Evo 2 scores the recurrent GNAQ or GNA11 Q209 and R183 changes as high impact activating and BAP1 truncations as loss of function relative to passengers. Cross resource concordance: require that a nominated dependency is supported by DepMap selectivity in uveal versus cutaneous lines AND a coherent Reactome or UniProt mechanistic path AND a tractable ChEMBL compound, and that a nominated surface antigen passes the GTEx normal tissue safety filter and UniProt surface topology check before it advances. Experimental validation (Step 8): the leading signaling and immunotherapy hypotheses are tested in authenticated GNAQ or GNA11 mutant uveal melanoma cell lines and BAP1 and chromosome 3 stratified PDX or orthotopic liver metastasis models, with predefined success criteria (on target viability or pathway suppression, CRISPR knockout rescue of specificity, T cell mediated killing in HLA-A*02:01 negative lines, and reversal of the immune cold transcriptional state in treated tumors) and explicit go or no go decisions. Throughout, uveal melanoma findings are kept strictly separate from cutaneous melanoma to avoid contamination by BRAF or NRAS driven biology.",
+  "figures": [
+    "Cohort overview: TCGA-UVM plus metastatic series oncoprint showing mutually exclusive GNAQ or GNA11 with PLCB4 and CYSLTR2 phenocopies, secondary BAP1, SF3B1, EIF1AX events, monosomy 3, and 8q gain.",
+    "Prognostic stratification: class 1 versus class 2 clustering heatmap with BAP1 status and chromosome 3 ploidy annotation, and Kaplan Meier metastasis free survival by class and by BAP1 loss.",
+    "Gq signaling map: annotated GNAQ or GNA11 to PKC to MAPK and to YAP or TAZ pathway diagram overlaid with per tumor pathway activity scores.",
+    "Dependency landscape: DepMap CRISPR dependency of Gq effector nodes in uveal versus cutaneous melanoma lines, linked to matched ChEMBL inhibitors.",
+    "Immune cold microenvironment: single cell UMAP with T cell exclusion and tumor associated macrophage enrichment, and malignant compartment MHC class I antigen presentation scores by class 1 versus class 2.",
+    "gp100 heterogeneity: PMEL or gp100 and MLANA expression distribution across malignant cells stratified by BAP1 loss, illustrating the antigen coverage gap relevant to tebentafusp.",
+    "Alternative target nomination: surface antigen ranking with GTEx normal tissue safety overlay and non HLA-A*02:01 peptide eligibility across common alleles.",
+    "Structure and variant panel: GNAQ or GNA11 activating site structure with Q209 and R183, AlphaFold model of the top nominated antigen with candidate epitope pocket, and Evo 2 variant effect scores.",
+    "Therapeutic hypothesis matrix and validation schema: ranked hypotheses by class and HLA-A*02:01 status with the paired cell line and PDX validation plan and go or no go criteria."
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "cancer": {
+    "name": "NUT Carcinoma (NUT midline carcinoma)",
+    "sub": "A rare, highly aggressive poorly differentiated carcinoma defined by a NUTM1 gene rearrangement, most commonly the BRD4-NUT fusion, that drives an oncogenic transcriptional program. There is no approved therapy and conventional chemotherapy is largely ineffective. Included to show that Anveshar's biology first, cross condition matching applies to a fusion driven cancer where the single mechanistic dependency is an epigenetic transcriptional axis.",
+    "chips": ["NUTM1 rearrangement (most often BRD4-NUT)", "No FDA approved therapy", "Median overall survival about 6.7 months"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, fusion status and target biology stated.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>NUT carcinoma is a rare and fast growing cancer. It is caused by two genes getting joined together in the wrong way, most often a gene called BRD4 fused to a gene called NUT (also called NUTM1). This joined gene makes an abnormal protein that switches on the wrong genetic programs and keeps the tumor cells locked in an immature, rapidly dividing state.</p><p>This cancer is hard to treat. There is no treatment approved specifically for it, and standard chemotherapy usually does not work well. The most hopeful direction so far is a class of targeted drugs, called BET inhibitors, that block the abnormal protein and were first tested in this exact disease. This report maps that targeted logic and the research ideas that build on it.</p>",
+    "clinician": "<p>NUT carcinoma (formerly NUT midline carcinoma) is a poorly differentiated squamous carcinoma defined by rearrangement of the NUTM1 gene on chromosome 15q14, most commonly fused to BRD4 (BRD4-NUT), and less often to BRD3 or NSD3. It arises at any age, frequently in midline structures such as the mediastinum, head and neck, and sinonasal tract, and is often initially misdiagnosed as another squamous or undifferentiated carcinoma. Diagnosis rests on NUT immunohistochemistry with confirmation by fluorescence in situ hybridization or sequencing.</p><p>Prognosis is poor. In the largest reported clinicopathologic series median overall survival was about 6.7 months, and no conventional chemotherapy regimen was associated with improved outcome, so aggressive local control and enrollment in trials of targeted agents are prioritized. The BRD4-NUT oncoprotein is the single defining dependency and the anchor for all targeted approaches.</p>",
+    "researcher": "<p>NUT carcinoma is a mechanistically unified fusion driven disease. BRD4-NUT tethers the histone acetyltransferase p300 to chromatin through the BRD4 tandem bromodomains, generating large hyperacetylated superenhancer like regions termed megadomains that activate progrowth genes such as MYC and block squamous differentiation. The tumor has a simple karyotype and a low mutational burden, so its biology reduces almost entirely to this one epigenetic transcriptional axis.</p><p>That single dependency is the therapeutic entry point. Bromodomain and extra terminal (BET) inhibitors displace BRD4-NUT from chromatin, collapse the megadomains, and induce terminal differentiation, and NUT carcinoma was the founding indication in which BET inhibitors showed clinical proof of concept. Anveshar treats this fusion transcriptional axis as the shared dependency that licenses borrowing the entire epigenetic and transcriptional targeting modality, and extends it to degrader, coactivator, elongation kinase, and fusion neoantigen strategies in the discovery layer.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological features of NUT carcinoma that treatments try to target. Almost all of them come back to one thing, the abnormal fusion protein and the wrong genetic programs it switches on.",
+    "clinician": "Actionable biology in NUT carcinoma centers on the BRD4-NUT fusion oncoprotein and the chromatin machinery it recruits, chiefly BET bromodomain binding and p300 mediated histone acetylation that maintain oncogenic megadomains and block differentiation.",
+    "researcher": "The single molecular dependency (the BRD4-NUT transcriptional axis) exposes several druggable nodes, BET bromodomain chromatin binding, p300 and CBP acetyltransferase activity, transcriptional elongation kinase activity, and the fusion junction itself as a tumor specific antigen."
+  },
+  "targets": [
+    {
+      "name": "BRD4-NUT fusion oncoprotein (NUTM1 rearrangement)",
+      "present_in": "Defining lesion of NUT carcinoma (BRD4-NUT most common, BRD3 or NSD3 variants rarer)",
+      "evidence": "NUTM1 rearrangement, usually BRD4-NUT, defines the disease and drives growth by blocking differentiation through a chromatin modifying mechanism (French, Annu Rev Pathol 2011, PMID 22017582, DOI 10.1146/annurev-pathol-011811-132438)."
+    },
+    {
+      "name": "BET bromodomain chromatin binding",
+      "present_in": "Universal (the BRD4 bromodomains tether the fusion to acetylated chromatin)",
+      "evidence": "BET inhibitors block binding of BRD-NUT proteins to chromatin and induce terminal differentiation of NUT carcinoma cells, giving a direct targeted rationale (French, Annu Rev Pathol 2011, PMID 22017582, DOI 10.1146/annurev-pathol-011811-132438)."
+    },
+    {
+      "name": "p300 and CBP histone acetyltransferase activity",
+      "present_in": "Universal (NUT recruits p300 to build hyperacetylated megadomains)",
+      "evidence": "BRD4-NUT recruits the p300 acetyltransferase to form massive hyperacetylated superenhancer like megadomains that activate oncogenes such as MYC and maintain the poorly differentiated state (Shiota et al., Mol Cancer Res 2021, PMID 34285087, DOI 10.1158/1541-7786.MCR-21-0259)."
+    },
+    {
+      "name": "BRD4-NUT fusion junction neoantigen",
+      "present_in": "Tumor specific (the fusion breakpoint sequence is absent from normal tissue)",
+      "evidence": "Chromosomal translocations that create fusion proteins are a recognized source of shared, tumor specific neoantigens absent from healthy tissue and at low risk of triggering autoimmunity (Goloudina et al., Mol Ther Oncol 2025, PMID 40256120, DOI 10.1016/j.omton.2025.200978)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment approach for NUT carcinoma, colored by how strong the evidence is. There is no green card here because no drug is approved specifically for this cancer. Amber means a drug with encouraging early results in NUT carcinoma. Gray means a standard treatment that is used but works poorly, so better options are needed.",
+    "clinician": "No agent is FDA approved for NUT carcinoma, so there is no Tier 1 option. BET bromodomain inhibitors are graded Tier 2 (mechanistically matched, with prospective early phase clinical responses in NUT carcinoma). Conventional chemotherapy and radiotherapy are Tier 2 by use but without a survival benefit signal. Diagnosis of the NUTM1 fusion governs eligibility for the targeted approaches.",
+    "researcher": "Translations are ranked by strength of clinical evidence in NUT carcinoma itself. The concentration is on the BET bromodomain axis, the one target class with human proof of concept in this fusion driven disease, and the discovery layer extends the same shared dependency to degrader, coactivator, elongation kinase, and antigen directed modalities."
+  },
+  "therapies": [
+    {
+      "drug": "Molibresib (GSK525762)",
+      "target": "BET bromodomain (BRD2/3/4) chromatin binding",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Not approved; investigational, tested in NUT carcinoma and other solid tumors",
+      "dev_stage": "Phase 1 completed, proof of concept in NUT carcinoma",
+      "rationale": {
+        "patient": "This is an oral targeted drug that blocks the abnormal fusion protein from sitting on the DNA. In an early trial that specifically enrolled people with NUT carcinoma, several tumors shrank or stopped growing, which was an important early signal that the targeted idea works.",
+        "clinician": "Oral pan BET inhibitor targeting BRD2, BRD3, and BRD4. In the first in human phase 1 study, among 19 patients with NUT carcinoma four achieved a confirmed or unconfirmed partial response, eight had stable disease, and four were progression free beyond 6 months, with thrombocytopenia and gastrointestinal events as the main toxicities. Recommended phase 2 dose 80 mg once daily.",
+        "researcher": "BET inhibition displaces the BRD4-NUT fusion from acetylated chromatin, collapses the oncogenic megadomains, and induces differentiation. Molibresib provided prospective proof of concept in the fusion defined disease and helped establish the BET bromodomain axis as the founding drug target class in NUT carcinoma."
+      },
+      "citation": {
+        "label": "Piha-Paul et al., JNCI Cancer Spectr 2019 (phase 1 molibresib in NUT carcinoma and solid tumors, PMID 32328561, DOI 10.1093/jncics/pkz093)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32328561/"
+      }
+    },
+    {
+      "drug": "Birabresib (OTX015 / MK-8628)",
+      "target": "BET bromodomain (BRD2/3/4) chromatin binding",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Not approved; investigational, evaluated in BRD4-NUT positive carcinoma",
+      "dev_stage": "Early clinical, compassionate use responses in NUT carcinoma",
+      "rationale": {
+        "patient": "Another oral drug that blocks the fusion protein. In a small group of patients with confirmed BRD4-NUT tumors, two of four responded quickly with the tumor shrinking and symptoms improving. This was among the first proofs that targeting the fusion directly can help.",
+        "clinician": "Oral BET inhibitor targeting BRD2/3/4/T. In four patients with advanced BRD4-NUT confirmed NUT carcinoma treated on a compassionate use basis, two responded rapidly with tumor regression and symptomatic relief and a third had meaningful disease stabilization, with reversible thrombocytopenia and mild to moderate gastrointestinal toxicity and fatigue.",
+        "researcher": "First clinical proof of concept that targeting BRD4-NUT with a BET inhibitor produces rapid antitumor activity. Birabresib, alongside molibresib, anchors the BET bromodomain modality that the discovery layer extends toward degraders and other transcriptional targets."
+      },
+      "citation": {
+        "label": "Stathis et al., Cancer Discov 2016 (clinical response of BRD4-NUT carcinoma to OTX015/MK-8628, PMID 26976114, DOI 10.1158/2159-8290.CD-15-1335)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26976114/"
+      }
+    },
+    {
+      "drug": "ZEN-3694 (plus abemaciclib or platinum chemotherapy)",
+      "target": "BET bromodomain chromatin binding",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Not approved; investigational, in active NUT carcinoma trials",
+      "dev_stage": "Phase 1 and phase 1/2 recruiting in NUT carcinoma",
+      "rationale": {
+        "patient": "A newer BET inhibitor being tested in NUT carcinoma right now, both with a targeted partner drug and with chemotherapy. These trials are open and enrolling patients with confirmed NUT carcinoma.",
+        "clinician": "Oral BET inhibitor in current NUT carcinoma trials, combined with the CDK4/6 inhibitor abemaciclib (NCT05372640, phase 1) and with cisplatin and etoposide chemotherapy (NCT05019716, phase 1/2). Both are recruiting and require NUTM1 fusion confirmation by immunohistochemistry, fluorescence in situ hybridization, or sequencing.",
+        "researcher": "Extends the validated BET bromodomain modality into rational combinations that pair transcriptional blockade with cell cycle inhibition or with cytotoxic backbones, testing whether combination pressure improves the depth and durability of the BET inhibitor response in the fusion driven disease."
+      },
+      "citation": {
+        "label": "ClinicalTrials.gov NCT05372640 (ZEN003694 plus abemaciclib in NUT carcinoma and other solid tumors, recruiting)",
+        "url": "https://clinicaltrials.gov/study/NCT05372640"
+      },
+      "trial": {
+        "nct": "NCT05372640",
+        "url": "https://clinicaltrials.gov/study/NCT05372640"
+      }
+    },
+    {
+      "drug": "Platinum based chemotherapy and radiotherapy",
+      "target": "Not fusion targeted (conventional cytotoxic and local therapy)",
+      "tier": 2,
+      "modality": "cytotoxic chemotherapy",
+      "approved_in": "Not specific to NUT carcinoma; used as standard cytotoxic and local control",
+      "dev_stage": "Standard of care by default, without a survival benefit signal",
+      "rationale": {
+        "patient": "This is the standard chemotherapy and radiation that doctors often use because there is no approved targeted drug yet. Unfortunately it usually does not control this cancer well, which is why targeted and experimental treatments are so important here.",
+        "clinician": "Conventional chemotherapy and radiotherapy are used for local control and cytoreduction, but in the largest series no chemotherapy regimen was associated with improved outcome, and extent of surgical resection and initial radiotherapy were the only independent predictors of survival. Median overall survival was about 6.7 months.",
+        "researcher": "Included to document the therapeutic gap. The failure of conventional cytotoxic therapy in a low mutation, fusion driven epigenetic disease is the negative result that motivates mechanistically matched transcriptional targeting and the discovery hypotheses below."
+      },
+      "citation": {
+        "label": "Bauer et al., Clin Cancer Res 2012 (clinicopathologic features and outcomes of NUT midline carcinoma, PMID 22896655, DOI 10.1158/1078-0432.CCR-12-1153)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22896655/"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT05372640",
+      "title": "ZEN003694 plus abemaciclib in metastatic or unresectable NUT carcinoma, breast cancer, and other solid tumors",
+      "phase": "Phase 1",
+      "intervention": "BET inhibitor ZEN-3694 plus abemaciclib",
+      "eligibility": "Metastatic or unresectable NUT carcinoma (NUTM1 fusion confirmed), breast cancer, and other solid tumors",
+      "url": "https://clinicaltrials.gov/study/NCT05372640"
+    },
+    {
+      "nct": "NCT05019716",
+      "title": "ZEN003694 added to chemotherapy for advanced NUT carcinoma",
+      "phase": "Phase 1/Phase 2",
+      "intervention": "BET inhibitor ZEN-3694 plus cisplatin and etoposide (or carboplatin and paclitaxel)",
+      "eligibility": "Advanced, metastatic, or unresectable NUT carcinoma confirmed by immunohistochemistry, fluorescence in situ hybridization, or sequencing",
+      "url": "https://clinicaltrials.gov/study/NCT05019716"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "These are landmark research findings that make the targeted and experimental ideas in this report legitimate rather than guesswork. They show that the abnormal fusion protein in NUT carcinoma can be blocked, broken down, or recognized by the immune system.",
+    "clinician": "The findings below establish the mechanistic and modality precedents behind every targeted approach here, that BET inhibition works in NUT carcinoma, that the fusion recruits p300 to build oncogenic megadomains, that BET proteins can be degraded rather than only inhibited, and that fusion junctions are tumor specific antigens.",
+    "researcher": "Each landmark validates a node on or a modality against the BRD4-NUT transcriptional axis. This catalog of validated mechanisms, not any single drug, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "BRD4-NUT fusion and BET bromodomain dependency in NUT carcinoma",
+      "drug": "BET inhibitors (clinical proof of concept)",
+      "year": "2016",
+      "citation": {
+        "label": "Stathis et al., Cancer Discov 2016 (first clinical proof of concept of BET inhibition in BRD4-NUT carcinoma, PMID 26976114, DOI 10.1158/2159-8290.CD-15-1335)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26976114/"
+      }
+    },
+    {
+      "biomarker": "p300 recruitment and megadomain acetylation by BRD4-NUT",
+      "drug": "acetylation axis targeting (HDAC and BET inhibition, preclinical)",
+      "year": "2021",
+      "citation": {
+        "label": "Shiota et al., Mol Cancer Res 2021 (BRD4-NUT recruits p300 to build megadomains; acetylation axis targeting, PMID 34285087, DOI 10.1158/1541-7786.MCR-21-0259)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34285087/"
+      }
+    },
+    {
+      "biomarker": "BRD4 as a degradable chromatin scaffold (targeted protein degradation)",
+      "drug": "dBET1 (BET degrader, preclinical modality precedent)",
+      "year": "2015",
+      "citation": {
+        "label": "Winter et al., Science 2015 (phthalimide conjugation degrades BRD4 in vitro and in vivo, PMID 25999370, DOI 10.1126/science.aab1433)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25999370/"
+      }
+    },
+    {
+      "biomarker": "Fusion junction as a shared, tumor specific neoantigen",
+      "drug": "fusion neoantigen directed immunotherapy (modality precedent)",
+      "year": "2025",
+      "citation": {
+        "label": "Goloudina et al., Mol Ther Oncol 2025 (translocation derived fusion proteins as shared neoantigens, PMID 40256120, DOI 10.1016/j.omton.2025.200978)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40256120/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because NUT carcinoma comes down to one abnormal fusion protein and the programs it switches on, scientists can propose new ways to attack that same machinery. These are starting points for laboratories, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality validated elsewhere to the BRD4-NUT axis of NUT carcinoma, or that attacks a different node on that same axis. Transferability is graded and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition, mechanistically matched hypotheses by analogy over the shared BRD4-NUT transcriptional dependency, each with a shared dependency statement, a source of validation, a proposed modality, graded transferability, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in NUT carcinoma."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): use a BET protein degrader (targeted protein degradation) rather than a BET bromodomain inhibitor to eliminate the BRD4-NUT oncoprotein, testing whether degrading the fusion overcomes resistance and incomplete responses seen with reversible BET inhibitors.",
+      "shared": "Dependency on chromatin bound BET protein function, where the BRD4 bromodomains that BET inhibitors block are the same domains that a heterobifunctional degrader can use to route the fusion to the proteasome.",
+      "source": "Preclinical BET degradation (dBET1 phthalimide conjugate) plus clinical BET inhibition in NUT carcinoma",
+      "modality": "small molecule",
+      "rationale": "BET inhibitors are reversible occupancy blockers and NUT carcinoma responses are often partial and not durable. Targeted protein degradation removes the BRD4-NUT scaffold entirely, which could give deeper and more sustained collapse of the oncogenic megadomains than competitive bromodomain blockade. dBET1 shows BRD4 can be selectively degraded in vitro and in vivo.",
+      "transferability": "medium, targeted BET degradation is a validated preclinical modality and NUT carcinoma is BET dependent, but degrading the fusion specifically, avoiding on target toxicity from wild type BRD4 loss, and demonstrating benefit over BET inhibition all require testing in NUT carcinoma models.",
+      "prediction": "In BRD4-NUT positive NUT carcinoma cells and xenografts, a BET degrader lowers BRD4-NUT protein, collapses megadomain acetylation, and suppresses growth more completely and durably than an equipotent reversible BET inhibitor, including in models selected for BET inhibitor resistance.",
+      "citation": {
+        "label": "Winter et al., Science 2015 (dBET1 targeted degradation of BRD4, modality precedent, PMID 25999370, DOI 10.1126/science.aab1433)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25999370/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): target the coactivator and elongation machinery of the BRD4-NUT axis, with a p300 or CBP acetyltransferase inhibitor or a CDK9 transcriptional elongation inhibitor, to shut down the fusion driven transcriptional program from a node other than the bromodomain.",
+      "shared": "Dependency on the same fusion driven transcriptional axis, where NUT recruited p300 acetylation builds the megadomains and elongation kinase activity sustains transcription of the resulting oncogenes, so blocking either node should disable the program that BET inhibition also targets.",
+      "source": "NUT carcinoma p300 megadomain biology plus CDK9 dependency of superenhancer driven oncogenes in other cancers",
+      "modality": "small molecule",
+      "rationale": "BRD4-NUT recruits p300 to create hyperacetylated megadomains that drive MYC and block differentiation, so inhibiting p300 or CBP acetyltransferase activity could dismantle the megadomains upstream of the bromodomain read step. In parallel, CDK9 inhibition preferentially silences superenhancer driven oncogenes such as MYC, offering a downstream elongation block on the same program. Either could complement or substitute for BET inhibition.",
+      "transferability": "medium, p300 and CDK9 inhibitors exist and the p300 megadomain mechanism is established in NUT carcinoma, but selectivity, therapeutic window against normal transcription, and single agent versus combination benefit with BET inhibition remain to be defined in NUT carcinoma.",
+      "prediction": "In NUT carcinoma models, a p300 or CBP acetyltransferase inhibitor reduces megadomain H3K27 acetylation and MYC expression and induces differentiation, and a CDK9 inhibitor suppresses fusion driven oncogene transcription, with additive or synergistic activity when combined with a BET inhibitor.",
+      "citation": {
+        "label": "Shiota et al., Mol Cancer Res 2021 (BRD4-NUT p300 megadomain mechanism, PMID 34285087, DOI 10.1158/1541-7786.MCR-21-0259); CDK9 superenhancer dependency reviewed in Boffo et al., J Exp Clin Cancer Res 2018 (PMID 29471852, DOI 10.1186/s13046-018-0704-8)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34285087/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): develop a cell therapy or T cell receptor directed approach against the BRD4-NUT fusion junction neoantigen, using the fusion breakpoint sequence as a tumor specific antigen shared across NUT carcinoma patients with the same fusion.",
+      "shared": "A tumor specific fusion junction absent from normal tissue, where the BRD4-NUT breakpoint produces a novel peptide sequence that, like other translocation derived fusion neoantigens, could be recognized by engineered T cells without the autoimmunity risk of self antigens.",
+      "source": "Fusion derived shared neoantigens in other translocation driven cancers",
+      "modality": "cell therapy",
+      "rationale": "Chromosomal translocations that create fusion proteins are a recognized source of shared, tumor specific neoantigens absent from healthy tissue and at low autoimmunity risk. Because NUT carcinoma is a low mutation disease defined by one recurrent fusion, the BRD4-NUT junction is a rational public antigen for T cell receptor engineered T cells or other antigen directed cell therapy, provided a junction spanning peptide is presented on the patient HLA.",
+      "transferability": "speculative, fusion neoantigen directed immunotherapy is an emerging modality and the concept is validated for other fusions, but for BRD4-NUT it requires demonstrating that a junction peptide is naturally processed and HLA presented, isolating a specific receptor, and confirming that the low mutation, potentially immune cold tumor can be engaged by adoptive cells.",
+      "prediction": "A junction spanning BRD4-NUT peptide is naturally processed and presented on a common HLA allele, and T cells engineered with a receptor against that peptide specifically kill BRD4-NUT positive NUT carcinoma cells while sparing cells lacking the fusion.",
+      "citation": {
+        "label": "Goloudina et al., Mol Ther Oncol 2025 (translocation derived fusion proteins as shared tumor specific neoantigens, PMID 40256120, DOI 10.1016/j.omton.2025.200978)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40256120/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public clinical trial records. It is not medical advice and must not be used to guide individual patient care. NUT carcinoma is a rare and aggressive fusion driven cancer with no therapy approved specifically for it and poor response to conventional chemotherapy, and it is included to show that Anveshar's biology first, cross condition matching framework applies to a cancer whose single dependency is an epigenetic transcriptional axis. The therapy cards describe investigational BET bromodomain inhibitors with early clinical proof of concept and the conventional treatments used in the absence of an approved targeted option, each graded by strength of evidence and linked to a primary source. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the shared BRD4-NUT dependency with graded transferability. Treatment decisions belong to a qualified oncology team, ideally at a center experienced with NUT carcinoma and, where possible, within a clinical trial.</p>"
+}

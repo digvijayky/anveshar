@@ -1,0 +1,217 @@
+{
+  "cancer": {
+    "name": "Fabry Disease (alpha-galactosidase A deficiency)",
+    "sub": "A rare X-linked lysosomal storage disease caused by pathogenic variants in GLA that produce deficient alpha-galactosidase A activity and progressive globotriaosylceramide accumulation. Included to show that Anveshar's cross condition, biology first matching works outside oncology, on a monogenic disease whose treatments span enzyme replacement, a mutation gated oral chaperone, and gene directed strategies.",
+    "chips": [
+      "GLA loss of function, deficient alpha-galactosidase A",
+      "Globotriaosylceramide (Gb3) and lyso-Gb3 accumulation",
+      "Enzyme replacement, oral chaperone for amenable variants, gene therapy in trials"
+    ]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, enzyme activity, variant amenability and modality stated.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Fabry disease is a rare inherited disease in which the body cannot break down a fatty substance called globotriaosylceramide. It happens because of changes in a gene called GLA that carries the instructions for an enzyme, alpha-galactosidase A. When that enzyme is missing or too weak, the fatty substance slowly builds up inside cells throughout the body, especially in the kidneys, heart, nerves, and blood vessels. Over years this can cause pain in the hands and feet, kidney problems, heart disease, and strokes.</p><p>The gene sits on the X chromosome, so the disease often affects males more severely, although females can be affected too. The encouraging news is that Fabry disease has gone from untreatable to a disease with several approved treatments that either replace the missing enzyme or, for some specific gene changes, help the person's own enzyme work better. New gene directed treatments are being tested.</p>",
+    "clinician": "<p>Fabry disease is an X-linked lysosomal storage disorder caused by pathogenic variants in GLA (Xq22) that reduce or abolish lysosomal alpha-galactosidase A activity, leading to progressive intralysosomal accumulation of globotriaosylceramide (Gb3, also GL-3) and its deacylated form globotriaosylsphingosine (lyso-Gb3) in endothelium, podocytes, cardiomyocytes, and dorsal root ganglia. Classically affected hemizygous males with negligible residual enzyme develop the full phenotype (acroparesthesias, angiokeratoma, proteinuria and progressive kidney disease, hypertrophic cardiomyopathy with arrhythmia, and cerebrovascular events); heterozygous females range from asymptomatic to severely affected owing to X inactivation (Germain, Orphanet J Rare Dis 2010, PMID 21092187, DOI 10.1186/1750-1172-5-30).</p><p>Diagnosis rests on demonstrating deficient alpha-galactosidase A activity in males and molecular GLA genotyping, which is mandatory in females because enzyme activity may be normal. Genotype matters therapeutically, the missense variant class that is amenable to pharmacologic chaperoning defines eligibility for oral migalastat. Approved disease modifying options now include two recombinant enzyme replacement therapies, a PEGylated enzyme, and an oral chaperone, with gene directed strategies in clinical and preclinical development.</p>",
+    "researcher": "<p>Fabry disease is a tractable monogenic model for modality borrowing. A single molecular dependency, insufficient alpha-galactosidase A activity with downstream Gb3 and lyso-Gb3 storage, can be addressed by three mechanistically distinct logics, supply the missing enzyme, stabilize a residual mutant enzyme so it traffics and functions, or reduce the upstream glycosphingolipid substrate. Each logic has already been reduced to practice in Fabry disease or its immediate research pipeline.</p><p>These logics are realized across several modalities, recombinant enzyme delivered intravenously, a small molecule pharmacologic chaperone gated by variant amenability, a PEGylated enzyme with altered immunogenicity and half life, and gene directed approaches (ex vivo lentiviral hematopoietic stem cell gene therapy, liver-directed AAV, and systemic mRNA enzyme delivery). That makes Fabry disease a natural companion to spinal muscular atrophy for Anveshar's thesis that a validated molecular dependency licenses borrowing an entire modality across conditions.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological handles that Fabry disease treatments use. They all come back to one problem, too little working alpha-galactosidase A enzyme, and too much of the fatty substance it normally clears.",
+    "clinician": "Actionable biology in Fabry disease reduces to restoring alpha-galactosidase A function or lowering its glycosphingolipid substrate. Whether a patient's GLA variant is a chaperone-amenable missense change gates eligibility for oral migalastat.",
+    "researcher": "The single dependency (alpha-galactosidase A insufficiency with Gb3 and lyso-Gb3 storage) supports three orthogonal target axes, enzyme supply, mutant enzyme stabilization, and substrate reduction, each drugged by a distinct modality."
+  },
+  "targets": [
+    {
+      "name": "Alpha-galactosidase A enzyme activity (replacement)",
+      "present_in": "Universal in Fabry disease (the defining deficiency)",
+      "evidence": "GLA loss of function produces the alpha-galactosidase A deficit that drives Gb3 and lyso-Gb3 accumulation; infusing recombinant human alpha-galactosidase A clears microvascular endothelial Gb3 and lowers plasma Gb3, the basis of enzyme replacement therapy (Eng et al., N Engl J Med 2001, PMID 11439963, DOI 10.1056/NEJM200107053450102)."
+    },
+    {
+      "name": "Residual mutant alpha-galactosidase A (chaperone stabilization)",
+      "present_in": "Fabry disease patients carrying a migalastat-amenable GLA missense variant",
+      "evidence": "Certain GLA missense variants yield an unstable but catalytically competent enzyme; an active site pharmacologic chaperone binds and stabilizes it, promoting trafficking to the lysosome and increasing endogenous activity, a variant gated precision strategy (Germain et al., N Engl J Med 2016, PMID 27509102, DOI 10.1056/NEJMoa1510198)."
+    },
+    {
+      "name": "Glycosphingolipid substrate synthesis (glucosylceramide synthase)",
+      "present_in": "Universal in Fabry disease (upstream of Gb3)",
+      "evidence": "Gb3 is synthesized downstream of glucosylceramide; inhibiting glucosylceramide synthase reduces the substrate available for Gb3 formation, lowering plasma Gb3 in trials, an alternative to enzyme supply (Nordbeck et al., Nat Commun 2026, PMID 41519901, DOI 10.1038/s41467-025-68256-5)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment for Fabry disease, colored by how strong the evidence is. Green means it is approved for Fabry disease. Most raise or replace the missing enzyme; one oral pill only helps people whose specific gene change makes it work. A newer PEGylated enzyme has also been approved.",
+    "clinician": "Cards are graded Tier 1 (approved for Fabry disease on pivotal trial data) versus lower tiers for investigational assets. Selection depends on GLA variant amenability (for migalastat), organ involvement, infusion tolerance, and antibody status. Two recombinant enzymes, a PEGylated enzyme, and an oral chaperone are established options.",
+    "researcher": "The approvals map one dependency (alpha-galactosidase A insufficiency) onto several modalities, recombinant enzyme (modality other), a variant gated small molecule chaperone, and a PEGylated enzyme. This is the biology in, modality out template the discovery layer extends to gene directed and substrate reduction strategies."
+  },
+  "therapies": [
+    {
+      "drug": "Agalsidase beta",
+      "target": "Alpha-galactosidase A enzyme replacement",
+      "tier": 1,
+      "modality": "other",
+      "approved_in": "Fabry disease (FDA approved 2003; EMA approved 2001)",
+      "dev_stage": "FDA approved (intravenous recombinant enzyme, biweekly infusion)",
+      "rationale": {
+        "patient": "This treatment is a manufactured copy of the missing enzyme, given by a drip into a vein every two weeks. It clears the fatty substance from the small blood vessels and lowers its level in the blood. In the first controlled trial, treated patients cleared the buildup from vessel lining cells far more often than patients given placebo.",
+        "clinician": "Recombinant human alpha-galactosidase A dosed at 1 mg/kg intravenously every 2 weeks. In the pivotal 20-week double-blind placebo-controlled phase 3 trial, 20 of 29 agalsidase beta recipients cleared microvascular endothelial Gb3 to normal versus 0 of 29 on placebo, and plasma Gb3 normalized. Long-term open-label extension showed sustained endothelial clearance and stable renal function over roughly 30 to 36 months. Infusion-associated reactions and anti-drug IgG antibodies are managed clinically.",
+        "researcher": "The archetypal enzyme replacement approach for a lysosomal storage disease, supplying exogenous recombinant enzyme that is taken up via mannose-6-phosphate receptors and trafficked to the lysosome. Classed here as modality other because it is a recombinant therapeutic enzyme rather than a small molecule, antibody, or nucleic acid. Establishes the enzyme supply logic that the discovery layer proposes to deliver instead by mRNA or gene transfer."
+      },
+      "citation": {
+        "label": "Eng et al., N Engl J Med 2001 (agalsidase beta pivotal randomized placebo-controlled trial)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11439963/"
+      }
+    },
+    {
+      "drug": "Agalsidase alfa",
+      "target": "Alpha-galactosidase A enzyme replacement",
+      "tier": 1,
+      "modality": "other",
+      "approved_in": "Fabry disease (EMA approved 2001; not FDA approved)",
+      "dev_stage": "Approved outside the United States (intravenous recombinant enzyme, biweekly infusion)",
+      "rationale": {
+        "patient": "This is a second manufactured copy of the missing enzyme, also given by a drip every two weeks. In an early controlled trial it reduced nerve pain and slowed damage in the kidney compared with placebo, and it lowered the level of the fatty substance in the blood.",
+        "clinician": "Recombinant human alpha-galactosidase A produced in a human cell line, dosed at 0.2 mg/kg intravenously every 2 weeks. In a 6-month double-blind placebo-controlled trial in 26 hemizygous males, agalsidase alfa significantly reduced neuropathic pain (Brief Pain Inventory), decreased mesangial widening in the kidney, improved creatinine clearance, and approximately halved plasma glycosphingolipid levels versus placebo. Approved in the European Union and many other regions; it is not FDA approved.",
+        "researcher": "A second recombinant alpha-galactosidase A enzyme replacement asset, differing from agalsidase beta in expression system and approved dose. Classed as modality other for the same reason (recombinant therapeutic enzyme). Its early controlled trial extended the enzyme supply logic to clinical endpoints including neuropathic pain and renal histology."
+      },
+      "citation": {
+        "label": "Schiffmann et al., JAMA 2001 (agalsidase alfa randomized controlled trial)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11386930/"
+      }
+    },
+    {
+      "drug": "Migalastat",
+      "target": "Chaperone stabilization of amenable mutant alpha-galactosidase A",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Fabry disease with a migalastat-amenable GLA variant (FDA approved 2018; EMA approved 2016)",
+      "dev_stage": "FDA approved (oral pharmacologic chaperone, mutation gated)",
+      "rationale": {
+        "patient": "This is a pill taken by mouth every other day. It only works for people whose specific gene change leaves some enzyme that is unstable but still able to do its job. The pill acts like a molecular splint, helping that unstable enzyme fold correctly and reach the right compartment in the cell. Because it only helps certain gene changes, a genetic test decides who is eligible.",
+        "clinician": "An oral iminosugar pharmacologic chaperone (1-deoxygalactonojirimycin) that binds the active site of amenable mutant alpha-galactosidase A, stabilizing it for trafficking to the lysosome. Eligibility is strictly gated by an in vitro amenability assay of the patient's GLA variant. In the phase 3 FACETS trial (NCT00925301) of patients with amenable variants, migalastat reduced renal peritubular capillary Gb3 inclusions and lowered plasma lyso-Gb3, and in an analysis by phenotype it provided clinical benefit including stabilization of eGFR and reductions in left ventricular mass index and plasma lyso-Gb3.",
+        "researcher": "A mutation gated precision therapy, one of the clearest genotype-to-drug matches outside oncology, where an in vitro amenability assay of the specific GLA missense variant determines drug eligibility. Mechanistically it is small molecule stabilization of a residual endogenous enzyme rather than enzyme supply, and it establishes the chaperone logic Anveshar can transfer to other misfolding-prone monogenic enzymopathies."
+      },
+      "citation": {
+        "label": "Germain et al., N Engl J Med 2016 (FACETS, migalastat in Fabry disease with amenable variants)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27509102/"
+      },
+      "trial": {
+        "nct": "NCT00925301",
+        "url": "https://clinicaltrials.gov/study/NCT00925301"
+      }
+    },
+    {
+      "drug": "Pegunigalsidase alfa",
+      "target": "Alpha-galactosidase A enzyme replacement (PEGylated)",
+      "tier": 1,
+      "modality": "other",
+      "approved_in": "Fabry disease (FDA approved 2023; EMA approved 2023)",
+      "dev_stage": "FDA approved (intravenous PEGylated recombinant enzyme, biweekly infusion)",
+      "rationale": {
+        "patient": "This is a newer manufactured enzyme that has been chemically coated to make it last longer in the body and to lower the chance of infusion reactions. It is given by a drip every two weeks. In a head to head trial against an existing enzyme, it kept kidney function declining no faster than the older drug, with fewer infusion reactions.",
+        "clinician": "A PEGylated, chemically cross-linked recombinant alpha-galactosidase A dosed at 1 mg/kg intravenously every 2 weeks. In the 2-year randomized phase 3 BALANCE study (NCT02795676) in adults with deteriorating renal function previously on agalsidase beta, pegunigalsidase alfa met the prespecified non-inferiority margin versus agalsidase beta on annualized eGFR slope, with lower exposure-adjusted rates of treatment-related adverse events and mild or moderate infusion-related reactions.",
+        "researcher": "A protein-engineering variation on the enzyme supply logic, PEGylation and cross-linking extend circulating half life and modify immunogenicity while preserving the same molecular target. Classed as modality other (recombinant therapeutic enzyme). Demonstrates that one dependency can be served by multiple engineered enzyme formats, a within disease multi asset precedent."
+      },
+      "citation": {
+        "label": "Wallace et al., J Med Genet 2024 (BALANCE, pegunigalsidase alfa versus agalsidase beta)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37940383/"
+      },
+      "trial": {
+        "nct": "NCT02795676",
+        "url": "https://clinicaltrials.gov/study/NCT02795676"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark treatments across rare inherited diseases that made treating disease by its molecular defect, using advanced approaches, real and proven. They are why borrowing a treatment idea from one rare disease to another is legitimate rather than speculative.",
+    "clinician": "The approvals below establish enzyme replacement, mutation gated pharmacologic chaperoning, PEGylated enzyme delivery, and gene directed strategies as real, in some cases regulator approved modalities for rare disease. Each validates a logic that can, in principle, be transferred to another disease with a matching molecular dependency.",
+    "researcher": "Each landmark validates one logic on a defined molecular mechanism (enzyme supply, mutant enzyme stabilization, ex vivo lentiviral gene transfer, systemic mRNA enzyme delivery). This modality catalog, not any single gene, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "Alpha-galactosidase A deficiency in Fabry disease (enzyme replacement)",
+      "drug": "agalsidase beta (recombinant enzyme)",
+      "year": "2001 to 2003",
+      "citation": {
+        "label": "Eng et al., N Engl J Med 2001 (agalsidase beta pivotal trial)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11439963/"
+      }
+    },
+    {
+      "biomarker": "Migalastat-amenable GLA missense variant in Fabry disease (chaperone stabilization)",
+      "drug": "migalastat (oral pharmacologic chaperone)",
+      "year": "2016 to 2018",
+      "citation": {
+        "label": "Germain et al., N Engl J Med 2016 (FACETS, mutation gated oral chaperone)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27509102/"
+      }
+    },
+    {
+      "biomarker": "Alpha-galactosidase A insufficiency in Fabry disease (ex vivo lentiviral gene transfer)",
+      "drug": "autologous CD34 hematopoietic stem cells transduced to express alpha-galactosidase A",
+      "year": 2021,
+      "citation": {
+        "label": "Khan et al., Nat Commun 2021 (lentivirus-mediated gene therapy for Fabry disease, first-in-human pilot)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33633114/"
+      }
+    },
+    {
+      "biomarker": "Alpha-galactosidase A insufficiency in Fabry disease (systemic mRNA enzyme delivery)",
+      "drug": "lipid nanoparticle mRNA encoding human alpha-galactosidase A (preclinical)",
+      "year": 2019,
+      "citation": {
+        "label": "Zhu et al., Am J Hum Genet 2019 (systemic mRNA therapy, preclinical proof of concept)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30879639/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because Fabry disease is a single, well understood gene problem, several newer kinds of treatment are being tested or proposed. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality validated in gene directed rare disease, or in Fabry disease research itself, to the alpha-galactosidase A dependency. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses by analogy over the alpha-galactosidase A dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are research directions, and where a specific clinical asset lacks a verified primary citation it is marked UNVERIFIED."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): deliver a functional GLA transgene by AAV or lentiviral gene therapy so the patient's own cells produce alpha-galactosidase A durably, replacing repeated enzyme infusions.",
+      "shared": "A recessive-behaving loss of alpha-galactosidase A activity whose small coding sequence (GLA) fits a viral cargo, where restoring endogenous enzyme production could clear Gb3, as one time SMN1 transfer does in spinal muscular atrophy.",
+      "source": "Fabry disease gene therapy research (ex vivo lentiviral hematopoietic stem cell transfer; liver-directed AAV)",
+      "modality": "gene therapy",
+      "rationale": "Two verified gene directed programs support this analogy for Fabry disease. Ex vivo lentiviral transduction of autologous CD34 hematopoietic stem cells to express alpha-galactosidase A was tested in a first-in-human pilot in five men with classic Fabry disease, achieving near-normal enzyme levels within a week with reductions in plasma and urine Gb3 and lyso-Gb3 (Khan et al., Nat Commun 2021). In parallel, the liver-directed AAV candidate FLT190 (AAVS3 capsid, codon-optimized GLA, liver-specific promoter) showed dose-dependent plasma alpha-galactosidase A and substrate clearance in Fabry mice and non-human primates (Jeyakumar et al., Gene Ther 2023), and is reported to be in early-phase clinical evaluation. The specific durability, dose, and long-term safety of any individual clinical gene therapy asset in Fabry disease remain UNVERIFIED pending controlled trial readouts.",
+      "transferability": "medium, gene transfer is validated as a modality (approved AAV9 gene replacement in spinal muscular atrophy) and two Fabry-specific programs show enzyme production and substrate clearance, but durability of expression, vector tropism to affected tissues, transgene regulation, and pre-existing anti-AAV immunity must be established per program.",
+      "prediction": "In a Fabry model or in treated patients, a single administration of a GLA-carrying viral vector produces sustained alpha-galactosidase A activity above the therapeutic threshold and durably lowers plasma and tissue Gb3 and lyso-Gb3, with a manageable immune response and no need for ongoing enzyme infusion.",
+      "citation": {
+        "label": "Khan et al., Nat Commun 2021 (lentivirus-mediated gene therapy for Fabry disease); see also Jeyakumar et al., Gene Ther 2023 (FLT190 liver-directed AAV, preclinical)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33633114/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): supply alpha-galactosidase A by repeat systemic administration of lipid nanoparticle mRNA encoding the enzyme, providing enzyme replacement without infusing a manufactured protein.",
+      "shared": "The same enzyme supply dependency served by recombinant enzyme replacement, but with the enzyme translated in the patient's own cells from delivered mRNA, so the coding message rather than the protein is the drug.",
+      "source": "Fabry disease mRNA therapy research (lipid nanoparticle mRNA encoding alpha-galactosidase A)",
+      "modality": "other",
+      "rationale": "Systemic mRNA encoding human alpha-galactosidase A, formulated in lipid nanoparticles, produced dose-dependent enzyme activity and durable substrate reduction in wild-type and alpha-galactosidase A-deficient mice and was safe and translatable in non-human primates in a verified preclinical study (Zhu et al., Am J Hum Genet 2019). This positions mRNA enzyme delivery as an intermediate between transient recombinant enzyme infusion and permanent gene transfer. Classed as modality other because delivered mRNA is not among the enumerated modality options and functions as enzyme supply rather than gene replacement. No clinical Fabry mRNA asset is claimed here; clinical translation remains UNVERIFIED.",
+      "transferability": "medium to speculative, the preclinical proof of concept across species is verified, but repeat dosing tolerability, tissue distribution to podocytes and cardiomyocytes, and durability of substrate control in patients are not yet established.",
+      "prediction": "Repeat systemic dosing of alpha-galactosidase A mRNA in a Fabry model sustains plasma and tissue enzyme activity above threshold and progressively lowers Gb3 and lyso-Gb3 in kidney and heart, matching or exceeding the substrate control achieved by recombinant enzyme replacement without anti-drug antibody-limited efficacy.",
+      "citation": {
+        "label": "Zhu et al., Am J Hum Genet 2019 (systemic mRNA therapy for Fabry disease, preclinical proof of concept)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30879639/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): reduce the upstream glycosphingolipid substrate by inhibiting glucosylceramide synthase, lowering Gb3 formation independent of enzyme supply and reaching tissues that infused enzyme penetrates poorly.",
+      "shared": "A disease in which a toxic storage substrate (Gb3 and lyso-Gb3) accumulates because of insufficient catabolism, where reducing its biosynthesis is therapeutic even without restoring the deficient enzyme, mirroring substrate reduction in other glycosphingolipidoses.",
+      "source": "Fabry disease substrate reduction research (oral glucosylceramide synthase inhibitors)",
+      "modality": "small molecule",
+      "rationale": "Substrate reduction with oral glucosylceramide synthase inhibitors has verified pharmacodynamic support in Fabry disease. Lucerastat 1000 mg twice daily lowered plasma Gb3 versus placebo in the phase 3 MODIFY trial, although it did not meet its neuropathic pain primary endpoint (Nordbeck et al., Nat Commun 2026). Venglustat, a brain-penetrant glucosylceramide synthase inhibitor, reduced glycosphingolipid markers and skin Gb3 inclusions over 3 years in an open-label phase 2 study in classic Fabry males (Deegan et al., Mol Genet Metab 2022), and preclinical work showed a glucosylceramide synthase inhibitor crossing the blood-brain barrier and adding to enzyme replacement in Fabry mice (Ashe et al., Mol Med 2015). No glucosylceramide synthase inhibitor is approved for Fabry disease and a clinical efficacy benefit remains UNVERIFIED.",
+      "transferability": "medium, substrate reduction is a proven small molecule logic in glycosphingolipid storage disease with confirmed target engagement and Gb3 lowering in Fabry disease, but translation of biomarker change into clinical benefit on pain, renal, and cardiac endpoints is not established, and brain penetration versus peripheral-only inhibitors distinguishes candidate assets.",
+      "prediction": "In Fabry patients or models, an oral glucosylceramide synthase inhibitor lowers plasma and tissue Gb3 and lyso-Gb3 in a dose-dependent manner, and, when combined with enzyme replacement, achieves additive substrate control including in tissues where infused enzyme distributes poorly, without depleting essential glycosphingolipids to a harmful degree.",
+      "citation": {
+        "label": "Nordbeck et al., Nat Commun 2026 (lucerastat MODIFY phase 3 substrate reduction trial); see also Ashe et al., Mol Med 2015 (glucosylceramide synthase inhibitor, preclinical enzyme plus substrate reduction)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41519901/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Fabry disease is a rare X-linked lysosomal storage disease, and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework generalizes beyond cancer to monogenic disease and enzyme, chaperone, and gene directed therapy. The approved therapies are described from their pivotal trials, and treatment selection depends on the specific GLA variant (including migalastat amenability), organ involvement, infusion tolerance, and antibody status. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the alpha-galactosidase A dependency with graded transferability, and any specific clinical asset lacking a verified primary source is marked UNVERIFIED. Treatment decisions belong to a qualified metabolic or genetics specialist, ideally at a center experienced with Fabry disease and, where relevant, within a clinical trial.</p>"
+}

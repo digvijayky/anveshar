@@ -1,0 +1,114 @@
+<title>Anveshar: multi-modal rare cancer analysis</title>
+<style>
+ :root{--ink:#14161c;--muted:#5b6472;--line:#e6e8ef;--surface:#fff;--bg:#f5f7fb;
+   --accent:#2f5fe0;--accent-wash:#eaf0ff;--disc:#7b3fe4;--disc-bg:#f2ecfe;
+   --geno:#2f5fe0;--trans:#127a3e;--img:#b8611a;--msk:#7b3fe4;--chip:#eef1f7}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+ .wrap{max-width:1000px;margin:0 auto;padding:40px 22px 64px}
+ .eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+ h1{font-size:30px;margin:8px 0 6px;text-wrap:balance;line-height:1.15}
+ .sub{color:var(--muted);font-size:15px;max-width:70ch}
+ h2{font-size:20px;margin:38px 0 4px;display:flex;align-items:center;gap:10px}
+ .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#fff;padding:3px 9px;border-radius:7px}
+ .t-geno{background:var(--geno)}.t-trans{background:var(--trans)}.t-img{background:var(--img)}.t-msk{background:var(--msk)}
+ .lede{color:var(--muted);font-size:14px;margin:6px 0 2px;max-width:74ch}
+ .stat{display:flex;flex-wrap:wrap;gap:22px;margin:16px 0;padding:16px 20px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+ .stat div b{font-size:23px;display:block;font-variant-numeric:tabular-nums}.stat div span{font-size:12px;color:var(--muted)}
+ .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-top:14px}
+ .card h3{margin:0 0 2px;font-size:15px}.card p{margin:2px 0 10px;font-size:13px;color:var(--muted)}
+ .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+ @media(max-width:720px){.grid2{grid-template-columns:1fr}}
+ .bars text{font:12px Arial;fill:var(--ink)}.bars .val{fill:var(--muted);font-size:11px}
+ .note{font-size:12.5px;color:var(--muted);margin-top:8px}
+ .src{font-size:12px;color:var(--muted);margin-top:6px}.src a{color:var(--accent);text-decoration:none}
+ .disc{margin-top:32px;padding:15px 17px;background:#fff7ed;border:1px solid #f3d8b0;border-radius:12px;font-size:12.5px;color:#7a4b12}
+ footer{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+ footer a{color:var(--accent);text-decoration:none}
+ .pill{display:inline-block;font-size:11px;background:var(--chip);color:#333;padding:3px 9px;border-radius:20px;margin:2px 4px 2px 0}
+</style>
+<div class="wrap">
+ <div class="eyebrow">Anveshar &middot; real public data, run on a cluster</div>
+ <h1>Multi-modal analysis of rare cancers</h1>
+ <p class="sub">Uveal melanoma and adrenocortical carcinoma analyzed across genomics, transcriptomics, and imaging, and the MSK-IMPACT clinical cohort mapped onto every rare cancer. Every number below is computed from a real public dataset. Nothing is simulated.</p>
+
+ <h2><span class="tag t-geno">Genomics</span> Uveal melanoma driver mutations</h2>
+ <p class="lede">TCGA uveal melanoma (PanCancer Atlas, n=80) via the cBioPortal API. GNAQ and GNA11 are the mutually exclusive Galpha initiating events.</p>
+ <div class="stat">
+   <div><b>92.5%</b><span>carry GNAQ or GNA11</span></div>
+   <div><b>2</b><span>tumors with both (mutual exclusivity)</span></div>
+   <div><b>80</b><span>tumors profiled</span></div>
+ </div>
+ <div class="card"><div class="bars" id="uvm_geno"></div></div>
+
+ <h2><span class="tag t-trans">Transcriptomics</span> Uveal melanoma, split by BAP1</h2>
+ <p class="lede">Driver mRNA z-scores over 80 TCGA tumors. BAP1-low tumors are the class 2, high-metastatic-risk molecular subtype.</p>
+ <div class="grid2">
+   <div class="card"><h3>BAP1 expression split</h3><p>40 BAP1-low vs 40 BAP1-high tumors</p><div class="bars" id="uvm_bap1"></div></div>
+   <div class="card"><h3><span class="tag t-img">Imaging</span> H&amp;E of a melanoma slide</h3><p>Color deconvolution and watershed nuclei segmentation, CC BY 4.0 image</p>
+     <div class="stat" style="margin:6px 0 0"><div><b>33</b><span>nuclei segmented</span></div><div><b>6.4%</b><span>pigment (melanin proxy)</span></div></div>
+     <p class="note">Hematoxylin isolates nuclei, eosin isolates cytoplasm and stroma. Pixels are not calibrated to microns; melanin can confound deconvolution.</p></div>
+ </div>
+
+ <h2><span class="tag t-geno">Genomics</span> Adrenocortical carcinoma</h2>
+ <p class="lede">TCGA adrenocortical carcinoma (n=92). TP53 and the Wnt driver CTNNB1 dominate, with recurrent ZNRF3 and MEN1.</p>
+ <div class="card"><div class="bars" id="acc_geno"></div></div>
+
+ <h2><span class="tag t-msk">Clinical cohort</span> MSK-IMPACT covers rare cancers at scale</h2>
+ <p class="lede">The MSK-IMPACT Clinical Sequencing Cohort (Zehir et al., Nat Med 2017) prospectively sequenced 10,945 tumors. Mapping its detailed cancer types onto Anveshar's catalog quantifies its rare cancer coverage.</p>
+ <div class="stat">
+   <div><b>10,945</b><span>tumors sequenced</span></div>
+   <div><b>140</b><span>rare cancer types represented</span></div>
+   <div><b>2,570</b><span>rare cancer tumors</span></div>
+ </div>
+ <p class="lede">Per-type driver frequencies reproduce the known biology in this independent clinical cohort:</p>
+ <div class="grid2">
+   <div class="card"><h3>Uveal melanoma (MSK, n=44)</h3><div class="bars" id="msk_uvm"></div><p class="note">BAP1 is enriched vs TCGA, consistent with MSK's metastatic bias.</p></div>
+   <div class="card"><h3>Adenoid cystic carcinoma (n=73)</h3><div class="bars" id="msk_acc"></div></div>
+   <div class="card"><h3>Merkel cell carcinoma (n=63)</h3><div class="bars" id="msk_mcc"></div></div>
+   <div class="card"><h3>Gastrointestinal stromal tumor (n=137)</h3><div class="bars" id="msk_gist"></div></div>
+ </div>
+
+ <h2>Reproducible</h2>
+ <p class="lede">Each analysis ships as a runnable Jupyter notebook and a SLURM script with source CSVs and methodology in the Anveshar repository.</p>
+ <div>
+   <span class="pill">01 pipeline harness</span><span class="pill">02 catalog analyses</span><span class="pill">03 genomics + transcriptomics</span>
+   <span class="pill">04 imaging</span><span class="pill">05 MSK-IMPACT</span><span class="pill">06 target validation</span>
+ </div>
+
+ <div class="src">Sources: MSK-IMPACT, Zehir et al., Nat Med 2017, <a href="https://doi.org/10.1038/nm.4333" target="_blank" rel="noopener">doi:10.1038/nm.4333</a>; TCGA uveal melanoma, Robertson et al., Cancer Cell 2017, <a href="https://doi.org/10.1016/j.ccell.2017.07.003" target="_blank" rel="noopener">doi</a>; histopathology image, Weiss et al., BMC Cancer 2015 (CC BY 4.0), <a href="https://doi.org/10.1186/s12885-015-1926-1" target="_blank" rel="noopener">doi</a>. Accessed via the cBioPortal REST API.</div>
+
+ <div class="disc">This is a research and educational analysis of public data, not medical advice. It summarizes tumor biology at the cohort level and does not describe any individual. Every diagnostic and treatment decision must be made by a qualified health care provider, ideally within a clinical trial.</div>
+ <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar multi-modal rare cancer analysis</span></footer>
+</div>
+<script>
+const DATA = {
+  uvm_geno: {c:"#2f5fe0", d:[["GNAQ",50],["GNA11",45],["SF3B1",22.5],["BAP1",16.2],["EIF1AX",12.5],["CYSLTR2",3.8],["PLCB4",2.5]]},
+  uvm_bap1: {c:"#127a3e", d:[["BAP1-low (class 2)",40],["BAP1-high (class 1)",40]]},
+  acc_geno: {c:"#2f5fe0", d:[["TP53",19.6],["CTNNB1",15.2],["MEN1",7.6],["ZNRF3",4.3],["RB1",2.2],["CDKN2A",1.1],["TERT",1.1]]},
+  msk_uvm: {c:"#7b3fe4", d:[["GNAQ",54.5],["BAP1",43.2],["GNA11",40.9],["SF3B1",36.4],["EIF1AX",11.4]]},
+  msk_acc: {c:"#7b3fe4", d:[["NOTCH1",23.3],["KDM6A",15.1],["ARID1A",13.7],["TERT",12.3],["BCOR",12.3]]},
+  msk_mcc: {c:"#7b3fe4", d:[["TP53",25.4],["RB1",19.0],["KMT2D",15.9],["NOTCH1",11.1],["NOTCH2",9.5]]},
+  msk_gist: {c:"#7b3fe4", d:[["KIT",65.0],["PDGFRA",10.9],["NF1",7.3],["TP53",6.6],["RB1",5.8]]},
+};
+function bars(id, spec){
+  const rows = spec.d, max = Math.max(...rows.map(r=>r[1]));
+  const W=440, labW=150, barW=W-labW-46, rh=26, H=rows.length*rh+8;
+  const ns="http://www.w3.org/2000/svg";
+  const svg=document.createElementNS(ns,"svg");
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`); svg.setAttribute("width","100%"); svg.setAttribute("role","img");
+  rows.forEach((r,i)=>{
+    const y=i*rh+6;
+    const lab=document.createElementNS(ns,"text"); lab.setAttribute("x",labW-8); lab.setAttribute("y",y+13);
+    lab.setAttribute("text-anchor","end"); lab.textContent=r[0]; svg.appendChild(lab);
+    const bg=document.createElementNS(ns,"rect"); bg.setAttribute("x",labW); bg.setAttribute("y",y);
+    bg.setAttribute("width",barW); bg.setAttribute("height",15); bg.setAttribute("rx",4); bg.setAttribute("fill","#eef1f7"); svg.appendChild(bg);
+    const bar=document.createElementNS(ns,"rect"); bar.setAttribute("x",labW); bar.setAttribute("y",y);
+    bar.setAttribute("width",Math.max(2,barW*r[1]/max)); bar.setAttribute("height",15); bar.setAttribute("rx",4); bar.setAttribute("fill",spec.c); svg.appendChild(bar);
+    const v=document.createElementNS(ns,"text"); v.setAttribute("class","val"); v.setAttribute("x",labW+barW+6); v.setAttribute("y",y+12);
+    v.textContent=r[1]+(id==="uvm_bap1"?"":"%"); svg.appendChild(v);
+  });
+  svg.setAttribute("class","bars"); document.getElementById(id).appendChild(svg);
+}
+for(const k in DATA) bars(k, DATA[k]);
+</script>

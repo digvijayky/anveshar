@@ -1,0 +1,77 @@
+{
+  "_comment": "Curated, cited list of FDA tissue-agnostic (tumor-agnostic) and landmark basket approvals. Each entry: biomarker, drug, year of the tissue-agnostic approval, a supporting PubMed PMID for the pivotal evidence, and a real https url. Compiled and verified against PubMed metadata July 2026. Every PMID here was confirmed to resolve to the stated pivotal study. Do not add an entry without a real PMID.",
+  "approvals": [
+    {
+      "biomarker": "MSI-H / dMMR",
+      "drug": "pembrolizumab",
+      "modality": "immune checkpoint inhibitor",
+      "year": "2017",
+      "pmid": "31682550",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31682550/",
+      "note": "First FDA tissue-agnostic approval (May 2017). KEYNOTE-158 noncolorectal MSI-H cohort (Marabelle et al., J Clin Oncol 2020) is the pivotal readout; PMID confirmed."
+    },
+    {
+      "biomarker": "TMB-high",
+      "drug": "pembrolizumab",
+      "modality": "immune checkpoint inhibitor",
+      "year": "2020",
+      "pmid": "32919526",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32919526/",
+      "note": "FDA tissue-agnostic approval (June 2020) for TMB-high (10 or more mutations per megabase). Marabelle et al., Lancet Oncol 2020, KEYNOTE-158 TMB analysis; PMID confirmed."
+    },
+    {
+      "biomarker": "dMMR",
+      "drug": "dostarlimab",
+      "modality": "immune checkpoint inhibitor",
+      "year": "2021",
+      "pmid": "37917058",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37917058/",
+      "note": "FDA tissue-agnostic approval (Aug 2021) for dMMR recurrent or advanced solid tumors. GARNET dMMR monotherapy readout (Andre et al., JAMA Netw Open 2023); PMID confirmed."
+    },
+    {
+      "biomarker": "NTRK fusion",
+      "drug": "larotrectinib",
+      "modality": "small molecule",
+      "year": "2018",
+      "pmid": "32105622",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32105622/",
+      "note": "FDA tissue-agnostic approval (Nov 2018) for NTRK fusion positive solid tumors. Hong et al., Lancet Oncol 2020 pooled analysis; PMID confirmed."
+    },
+    {
+      "biomarker": "NTRK fusion",
+      "drug": "entrectinib",
+      "modality": "small molecule",
+      "year": "2019",
+      "pmid": "31838007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31838007/",
+      "note": "FDA tissue-agnostic approval (Aug 2019) for NTRK fusion positive solid tumors. Doebele et al., Lancet Oncol 2020 integrated analysis of three phase 1 to 2 trials; PMID confirmed."
+    },
+    {
+      "biomarker": "BRAF V600E",
+      "drug": "dabrafenib plus trametinib",
+      "modality": "small molecule",
+      "year": "2022",
+      "pmid": "32818466",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32818466/",
+      "note": "FDA tissue-agnostic approval (June 2022) for BRAF V600E solid tumors (excluding colorectal). ROAR basket biliary tract cohort (Subbiah et al., Lancet Oncol 2020) is representative pivotal basket evidence; PMID confirmed."
+    },
+    {
+      "biomarker": "RET fusion",
+      "drug": "selpercatinib",
+      "modality": "small molecule",
+      "year": "2022",
+      "pmid": "36108661",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36108661/",
+      "note": "FDA tissue-agnostic approval (Sept 2022) for RET fusion positive solid tumors. Subbiah et al., Lancet Oncol 2022 tumor-agnostic LIBRETTO-001 analysis; PMID confirmed."
+    },
+    {
+      "biomarker": "HER2 IHC 3+",
+      "drug": "trastuzumab deruxtecan",
+      "modality": "antibody drug conjugate",
+      "year": "2024",
+      "pmid": "37870536",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37870536/",
+      "note": "FDA tissue-agnostic approval (April 2024) for HER2 IHC 3+ solid tumors. DESTINY-PanTumor02 (Meric-Bernstam et al., J Clin Oncol 2023); PMID confirmed."
+    }
+  ]
+}

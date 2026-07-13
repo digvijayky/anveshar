@@ -1,0 +1,76 @@
+<title>Anveshar — demo kit and teleprompter</title>
+<style>
+ :root{--bg:#0e1017;--panel:#161a24;--line:#242a38;--ink:#eef1f9;--muted:#9aa4b8;
+   --accent:#6f9bff;--cue:#f0b45c;--ok:#5fd39a}
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+ .wrap{max-width:900px;margin:0 auto;padding:34px 22px 70px}
+ .brand{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+ h1{font-size:30px;margin:8px 0 4px;letter-spacing:-.01em}
+ .meta{color:var(--muted);font-size:14px}
+ .bar{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+ .bar a{font-size:12px;color:var(--accent);text-decoration:none;border:1px solid var(--line);padding:5px 10px;border-radius:20px}
+ .bar a:hover{border-color:var(--accent)}
+ .scene{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-top:14px}
+ .top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+ .t{font-variant-numeric:tabular-nums;font-weight:800;color:var(--accent);font-size:14px;background:#1d2740;padding:3px 10px;border-radius:8px}
+ .cue{color:var(--cue);font-size:13px;font-weight:600}
+ .say{font-size:21px;line-height:1.42;letter-spacing:-.005em;margin-top:6px}
+ .say b{color:var(--accent);font-weight:700}
+ h2{font-size:15px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin:34px 0 6px}
+ .short{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--ok);border-radius:14px;padding:16px 18px;font-size:16px;line-height:1.5}
+ ol{margin:8px 0 0;padding-left:22px}li{margin:5px 0;font-size:14px;color:var(--muted)}li b{color:var(--ink)}
+ .disc{margin-top:26px;padding:13px 15px;background:#2a230f;border:1px solid #4a3c15;border-radius:12px;font-size:12.5px;color:#e6c98a}
+ footer{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+ footer a{color:var(--accent);text-decoration:none}
+</style>
+<div class="wrap">
+ <div class="brand">Demo kit &middot; built with Claude</div>
+ <h1>Anveshar demo teleprompter</h1>
+ <div class="meta">Target 2:45. Record the screen while you read the large lines. Open each linked view when its cue says so. Working name "Anveshar"; swap for your final name before recording.</div>
+ <div class="bar">
+  <a href="https://claude.ai/code/artifact/21dd72b9-0696-4402-a72a-9a365b3094d6" target="_blank" rel="noopener">1 Hub</a>
+  <a href="https://claude.ai/code/artifact/352952a9-3871-4d50-9675-7e12a15872d6" target="_blank" rel="noopener">2 Atlas</a>
+  <a href="https://claude.ai/code/artifact/bec29cdd-185d-4554-a0c2-9857cecae835" target="_blank" rel="noopener">3 Report</a>
+  <a href="https://claude.ai/code/artifact/b0d976b0-6971-4fcd-b7b4-af05872ddb3d" target="_blank" rel="noopener">4 Analyses</a>
+  <a href="https://claude.ai/code/artifact/2cf816b4-390a-4a7e-b6b9-22ba6291222f" target="_blank" rel="noopener">5 Harness run</a>
+  <a href="https://claude.ai/code/artifact/bdf14ffd-3f17-42be-bf1b-4e34fcda949c" target="_blank" rel="noopener">6 Multi-modal</a>
+ </div>
+
+ <div class="scene"><div class="top"><span class="t">0:00</span><span class="cue">Open the HUB, let the network move</span></div>
+  <div class="say">Every year, thousands of people are told they have a cancer so rare it has no trial and no standard treatment. But the answer often already exists, in a different cancer that shares the exact same molecular dependency. <b>Anveshar finds it.</b></div></div>
+
+ <div class="scene"><div class="top"><span class="t">0:18</span><span class="cue">Click ATLAS, search "renal medullary"</span></div>
+  <div class="say">Anveshar is a translational molecular board for rare cancers. It catalogs <b>five hundred and four</b> of them, searchable by name, gene, organ system, even by cause. Say a patient has renal medullary carcinoma, an ultra rare, aggressive kidney cancer.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">0:40</span><span class="cue">Open the REPORT; hover a confidence bar and a citation; scroll to "databases queried"; flash Patient view</span></div>
+  <div class="say">Anveshar returns a cited, confidence scored report, in three registers: researcher, clinician, patient. The driver is loss of SMARCB1. That loss makes the tumor depend on EZH2, drugged by tazemetostat, approved in a different sarcoma. <b>Every therapy has a confidence score and a real citation</b>, and you can see the exact databases Anveshar queried.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">1:10</span><span class="cue">Open ANALYSES; point at the actionability count, then the red unmet-need chips</span></div>
+  <div class="say">Across all rare cancers, <b>ninety nine already have a borrowable approved therapy</b>. And Anveshar flags the highest leverage gaps, dependencies like TP53 and EWSR1 that drive many rare cancers but have no drug yet. Every number is cited and scored.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">1:35</span><span class="cue">Open HARNESS RUN; scroll the 7 stages, the validation table, the provenance</span></div>
+  <div class="say">Underneath is a real, reproducible pipeline, not a chatbot. It validates each target with live functional genomics from Open Targets and DepMap. Watch: SMARCB1 is a common essential gene you cannot drug, so the harness <b>pivots to its synthetic lethal partner EZH2</b>, which scores as a validated, tractable target. Every step is auditable.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">2:05</span><span class="cue">Open MULTI-MODAL; let charts render; point at GNAQ/GNA11, then MSK numbers</span></div>
+  <div class="say">And it is grounded in real data. On a cluster, Anveshar analyzed TCGA uveal melanoma across genomics, transcriptomics, and imaging, and mapped <b>MSK-IMPACT's almost eleven thousand tumors</b> onto the rare cancer catalog. The driver frequencies it recovers reproduce the known biology exactly.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">2:30</span><span class="cue">Return to the HUB, end on the title</span></div>
+  <div class="say">Anveshar is <b>built with Claude</b>, its agents, skills, and connected databases. It extends to every rare disease and to gene therapies, and every claim is traceable. It is decision support for research, not medical advice; the final decision rests with a health care provider. Built by Dig Vijay Kumar Yarlagadda.</div></div>
+
+ <h2>60-second cut</h2>
+ <div class="short">Thousands of people get a cancer too rare to have its own trial. But the treatment often exists already, in another disease with the same molecular dependency. Anveshar finds it. It catalogs five hundred and four rare cancers and returns a cited, confidence scored report that borrows therapies proven elsewhere. It is a real comp-bio pipeline: it validates each target with live Open Targets and DepMap functional genomics, and even pivots an undruggable tumor suppressor to its synthetic lethal partner. Proven on real TCGA and MSK-IMPACT data, it extends to all rare diseases, and every claim is cited. Built with Claude. Decision support for research, not medical advice.</div>
+
+ <h2>Recording checklist</h2>
+ <ol>
+  <li><b>Tool:</b> Loom, QuickTime, or OBS. Loom gives an instant shareable link.</li>
+  <li><b>Rehearse twice.</b> The lines are timed for about 150 words per minute.</li>
+  <li><b>1920x1080</b>, show the cursor, slow your clicks so viewers can follow.</li>
+  <li><b>Let animations finish</b> (the hub network, the multi-modal charts) before talking over them.</li>
+  <li><b>Add captions.</b> Many judges watch muted.</li>
+  <li><b>Keep the disclaimer line.</b> Put the hub URL in the submission description.</li>
+ </ol>
+
+ <div class="disc">Anveshar is decision support for research and education, not medical advice. Every diagnostic and treatment decision must be made by a qualified health care provider, ideally within a clinical trial.</div>
+ <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar demo kit</span></footer>
+</div>

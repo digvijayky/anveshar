@@ -1,0 +1,35 @@
+{
+  "study": "uvm_tcga_pan_can_atlas_2018",
+  "n_samples": 80,
+  "mutation_profile": "uvm_tcga_pan_can_atlas_2018_mutations",
+  "rna_profile": "uvm_tcga_pan_can_atlas_2018_rna_seq_v2_mrna_median_Zscores",
+  "genomics": {
+    "freq": {
+      "GNAQ": 50.0,
+      "GNA11": 45.0,
+      "SF3B1": 22.5,
+      "BAP1": 16.2,
+      "EIF1AX": 12.5,
+      "CYSLTR2": 3.8,
+      "PLCB4": 2.5
+    },
+    "GNAQ_or_GNA11": 92.5,
+    "GNAQ_GNA11_overlap": 2
+  },
+  "transcriptomics": {
+    "n_genes": 7,
+    "n_samples": 80,
+    "bap1_low_n": 40,
+    "bap1_high_n": 40
+  },
+  "imaging": {
+    "width": 1183,
+    "height": 441,
+    "megapixels": 0.522,
+    "n_nuclei": 0,
+    "nuclei_per_mm2_note": "pixels not calibrated to microns",
+    "median_nucleus_area_px": 0,
+    "nuclear_density_per_megapixel": 0.0,
+    "pigment_dark_pixel_pct": 1.99
+  }
+}

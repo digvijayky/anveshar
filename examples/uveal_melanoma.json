@@ -1,0 +1,278 @@
+{
+  "cancer": {
+    "name": "Uveal Melanoma",
+    "sub": "A rare intraocular cancer arising from melanocytes of the uveal tract (choroid, ciliary body, and iris). It is biologically distinct from cutaneous melanoma, driven by activating GNAQ or GNA11 mutations, and it responds poorly to conventional checkpoint inhibitors, so this board maps the one approved survival prolonging therapy plus candidate therapies borrowed from conditions that share its biology.",
+    "chips": ["Driver: activating GNAQ or GNA11 (about 80 to 83 percent)", "Metastatic risk: BAP1 loss and monosomy 3", "First therapy to improve overall survival: tebentafusp (HLA-A*02:01 gated)"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, drivers and biomarkers stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Uveal melanoma is a rare cancer that starts in the pigment cells of the eye, in the layer called the uvea (which includes the choroid, the ciliary body, and the iris). It is not the same disease as the more common skin melanoma, even though both start in pigment cells. It behaves differently, and treatments that work for skin melanoma often do not work here. When it spreads, it most often goes to the liver, and until recently there was no treatment proven to help people live longer.</p><p>The important change is that one treatment, tebentafusp, has now been shown to help patients with advanced uveal melanoma live longer, and it is FDA approved. It only works for people with a particular immune tissue type (HLA-A*02:01), so a simple blood test decides who is eligible. For everyone else, and for further options, doctors and researchers look to treatments matched to this cancer's specific biology. <strong>That matching is what this report maps out for you.</strong></p>",
+    "clinician": "<p>Uveal melanoma is the most common primary intraocular malignancy in adults and is a distinct entity from cutaneous melanoma, with a low tumor mutational burden and a strong tropism for liver metastasis. It is initiated by mutually exclusive activating mutations in the Galpha q family members GNAQ and GNA11 (together roughly 80 to 83 percent of cases), which constitutively activate downstream protein kinase C (PKC) and mitogen activated protein kinase (MAPK) signaling. Metastatic risk is stratified by chromosome 3 status and BAP1: monosomy 3 with loss of function of the BAP1 tumor suppressor (on 3p21) marks the high risk, metastasis prone class, whereas disomy 3 and SF3B1 or EIF1AX mutation mark lower risk tumors.</p><p>The critical clinical fact is that metastatic uveal melanoma responds poorly to the checkpoint inhibitors that transformed cutaneous melanoma. Tebentafusp, a gp100 peptide-HLA directed CD3 T cell engager, is the first and only systemic therapy proven to prolong overall survival, but it is restricted to HLA-A*02:01 positive patients. Beyond it, options are investigational and biomarker matched, so this board grades therapies by strength of the shared biology evidence.</p>",
+    "researcher": "<p>Uveal melanoma is a genomically quiet, developmentally distinct melanoma whose founding oncogenic event is a G protein alpha subunit mutation rather than a BRAF or NRAS mutation. Activating hotspot mutations at Q209 (and less often R183) in GNAQ or GNA11 are early, mutually exclusive, and present in the large majority of tumors, driving PLCbeta, PKC, and downstream MAPK signaling; MAPK activation lies downstream of PKC, which nominates the PKC to MEK axis for combination targeting. Progression to the lethal metastatic phenotype is dominated by BAP1: inactivating BAP1 mutations, typically on a background of monosomy 3, are closely associated with loss of melanocytic differentiation and metastasis.</p><p>The therapeutic opportunity therefore concentrates in three places: the GNAQ and GNA11 driven PKC and MAPK signaling axis (rational combination targeting), the BAP1 deficient dedifferentiated state (an epigenetic, chromatin directed vulnerability), and the antigen directed T cell redirection strategy that tebentafusp validated but which is currently limited to one HLA allele. The discovery layer extends each of these into testable, biology first cross condition hypotheses.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological features found in uveal melanoma that treatments can target or that predict how the cancer will behave. Which ones apply to a given tumor depends on its own genetic testing, and on the patient's HLA immune tissue type.",
+    "clinician": "Actionable and prognostic biology in uveal melanoma centers on the GNAQ and GNA11 driven PKC and MAPK axis (targetable), BAP1 loss with monosomy 3 (prognostic and an epigenetic vulnerability), and the HLA-A*02:01 restricted gp100 antigen that gates tebentafusp eligibility. Low tumor mutational burden underlies the poor checkpoint inhibitor response.",
+    "researcher": "Targets are indexed to their supporting primary series and grouped by axis: the Galpha q signaling driver (Van Raamsdonk 2009 and 2010, Chen 2014), the BAP1 to differentiation and metastasis axis (Harbour 2010, Landreville 2011), and the antigen and HLA context that enables and constrains T cell redirection (Nathan 2021). Each anchors one or more translations in the therapies and discovery sections."
+  },
+  "targets": [
+    {
+      "name": "GNAQ / GNA11 (Galpha q) activation",
+      "present_in": "Mutually exclusive activating mutations in about 80 to 83 percent of uveal melanomas (hotspots Q209, less often R183)",
+      "evidence": "GNAQ and GNA11 hotspot mutations are early, mutually exclusive drivers that constitutively activate the MAPK pathway and are found in the large majority of uveal melanomas and blue nevi (Van Raamsdonk et al., Nature 2009, PMID 19078957, DOI 10.1038/nature08833; Van Raamsdonk et al., N Engl J Med 2010, PMID 21083380, DOI 10.1056/NEJMoa1000584)."
+    },
+    {
+      "name": "PKC to MAPK signaling axis",
+      "present_in": "Downstream of GNAQ or GNA11 mutation (the same about 80 percent of tumors)",
+      "evidence": "GNAQ and GNA11 mutations activate protein kinase C, and MAPK activation lies downstream of PKC; PKC inhibition alone is cytostatic, but combined PKC and MEK inhibition sustains pathway suppression and causes tumor regression in xenografts (Chen et al., Oncogene 2014, PMID 24141786, DOI 10.1038/onc.2013.418)."
+    },
+    {
+      "name": "BAP1 loss with monosomy 3",
+      "present_in": "The high risk, metastasis prone class; BAP1 inactivation typically on a monosomy 3 background",
+      "evidence": "Inactivating BAP1 mutations, usually with loss of one copy of chromosome 3, are strongly associated with metastasizing uveal melanoma and with loss of melanocytic differentiation (Harbour et al., Science 2010, PMID 21051595, DOI 10.1126/science.1194472; Landreville et al., Clin Cancer Res 2011, PMID 22038994, DOI 10.1158/1078-0432.CCR-11-0946)."
+    },
+    {
+      "name": "gp100 antigen in HLA-A*02:01 context",
+      "present_in": "gp100 (glycoprotein 100) expressing tumors in HLA-A*02:01 positive patients (roughly half of the population by allele frequency)",
+      "evidence": "Tebentafusp uses an affinity enhanced T cell receptor that recognizes a gp100 derived peptide presented by HLA-A*02:01, redirecting T cells to gp100 positive melanoma cells; benefit is restricted to HLA-A*02:01 positive patients (Nathan et al., N Engl J Med 2021, PMID 34551229, DOI 10.1056/NEJMoa2103485)."
+    },
+    {
+      "name": "Low tumor mutational burden",
+      "present_in": "Near universal in uveal melanoma (a genomically quiet melanoma)",
+      "evidence": "Uveal melanoma carries a low tumor mutational burden and, unlike cutaneous melanoma, responds poorly to immune checkpoint inhibitors, so mutation burden driven checkpoint strategies are largely ineffective (Nathan et al., N Engl J Med 2021, PMID 34551229, DOI 10.1056/NEJMoa2103485; Piulats et al., J Clin Oncol 2021, PMID 33417511, DOI 10.1200/JCO.20.00550)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment for uveal melanoma, colored by how strong the evidence is. Green means it is FDA approved for this disease. Amber means it was tested directly in uveal melanoma with some signal but did not become a standard, or is still in trials. Gray means the idea is promising but experimental. Only one treatment here, tebentafusp, is proven to help people live longer, and it applies only to patients with the HLA-A*02:01 tissue type.",
+    "clinician": "Candidates are graded Tier 1 (FDA approved in uveal melanoma with a proven overall survival benefit, biomarker gated), Tier 2 (tested prospectively in uveal melanoma with a signal, including honestly negative pivotal trials), or Tier 3 (mechanistic or early clinical rationale). Tebentafusp is the only Tier 1 option and requires HLA-A*02:01 positivity. Conventional checkpoint inhibitors have limited activity given the low tumor mutational burden.",
+    "researcher": "Translations are ranked by transferability and strength of evidence, not target novelty. Note the honest inclusion of a negative phase 3 (SUMIT selumetinib plus dacarbazine) alongside the positive phase 2 that motivated it, the antigen directed T cell engager that succeeded where checkpoint blockade failed, and the GNAQ and GNA11 axis targeting agents in active development."
+  },
+  "therapies": [
+    {
+      "drug": "Tebentafusp",
+      "target": "gp100 antigen in HLA-A*02:01 context",
+      "tier": 1,
+      "modality": "bispecific T cell engager",
+      "approved_in": "HLA-A*02:01 positive unresectable or metastatic uveal melanoma (FDA approved January 2022)",
+      "dev_stage": "FDA approved; the first systemic therapy to improve overall survival in this disease",
+      "rationale": {
+        "patient": "Tebentafusp is a designed protein that grabs a marker (gp100) on melanoma cells with one end and grabs immune T cells with the other end, bringing the T cells in to kill the cancer. It is the first treatment ever proven to help people with advanced uveal melanoma live longer, and it is FDA approved. It works only for patients with the HLA-A*02:01 tissue type, which is checked with a blood test. Common side effects, especially fever, rash, and itching, are strongest with the first few doses and then ease.",
+        "clinician": "Tebentafusp is a bispecific fusion of an affinity enhanced T cell receptor recognizing a gp100 peptide presented on HLA-A*02:01, fused to an anti CD3 effector that redirects polyclonal T cells to gp100 positive melanoma cells. In the open label phase 3 trial of previously untreated HLA-A*02:01 positive patients randomized 2:1 versus investigator's choice (pembrolizumab, ipilimumab, or dacarbazine), one year overall survival was 73 percent versus 59 percent, with a hazard ratio for death of 0.51 (95 percent CI 0.37 to 0.71, P less than 0.001). It is strictly biomarker gated to HLA-A*02:01, and cytokine mediated and skin related adverse events predominate early.",
+        "researcher": "Tebentafusp is the practical validation that antigen directed T cell redirection can succeed in a low mutational burden, checkpoint resistant melanoma where neoantigen dependent immunotherapy fails. It reframes the immunotherapeutic problem from mutation burden to targetable lineage antigen plus HLA context, and its central limitation, restriction to a single HLA allele, is exactly what the discovery layer proposes to extend."
+      },
+      "citation": {
+        "label": "Nathan et al., N Engl J Med 2021 (overall survival benefit with tebentafusp in metastatic uveal melanoma, PMID 34551229)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34551229/"
+      },
+      "trial": {
+        "nct": "NCT03070392",
+        "url": "https://clinicaltrials.gov/study/NCT03070392"
+      }
+    },
+    {
+      "drug": "Selumetinib plus dacarbazine",
+      "target": "PKC to MAPK signaling axis (MEK)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Not approved in uveal melanoma; selumetinib approved in NF1 associated plexiform neurofibroma",
+      "dev_stage": "Negative phase 3 (SUMIT); did not improve progression free survival",
+      "rationale": {
+        "patient": "Because uveal melanoma is driven by an overactive growth signal (the MAPK pathway), a pill that blocks a step in that pathway (a MEK inhibitor called selumetinib) was an obvious idea to test. An earlier smaller study looked encouraging, but the large, definitive trial that added selumetinib to chemotherapy did not work: it did not slow the cancer meaningfully. This card is included to be honest about a rational idea that failed as tested, which matters for choosing what to try next.",
+        "clinician": "Selumetinib is an oral MEK1/2 inhibitor. The randomized phase 2 SATURN study showed modestly improved progression free survival versus chemotherapy (median 15.9 versus 7 weeks, hazard ratio 0.46) but no overall survival benefit. The confirmatory phase 3 SUMIT trial randomized patients to selumetinib plus dacarbazine versus placebo plus dacarbazine and was negative: the hazard ratio for progression free survival was 0.78 (95 percent CI 0.48 to 1.27, P equal to 0.32), with a 3 percent response rate. Single node MEK inhibition is insufficient in this disease.",
+        "researcher": "SUMIT is the cautionary datapoint for the GNAQ and GNA11 axis: blocking MEK alone, even added to chemotherapy, does not durably suppress the pathway because MAPK reactivates. Its failure is precisely why the combined PKC plus MEK strategy (Chen 2014) and the PKC inhibitor darovasertib were pursued, and why the discovery layer emphasizes vertical, multi node blockade rather than a single kinase."
+      },
+      "citation": {
+        "label": "Carvajal et al., J Clin Oncol 2018 (SUMIT, negative phase 3 of selumetinib plus dacarbazine in metastatic uveal melanoma, PMID 29528792)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29528792/"
+      }
+    },
+    {
+      "drug": "Darovasertib",
+      "target": "PKC to MAPK signaling axis (PKC)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Not approved; FDA orphan drug designation in uveal melanoma (2022)",
+      "dev_stage": "Phase 1/2 and phase 3 (neoadjuvant) trials in progress",
+      "rationale": {
+        "patient": "Darovasertib is a pill that blocks protein kinase C (PKC), a signal switched on directly by the GNAQ or GNA11 mutations that cause this cancer, so it targets the disease closer to its root than a MEK pill does. It is being tested by itself and combined with other targeted drugs, and in a large trial to shrink tumors before eye surgery. It is not yet approved, but it has FDA orphan drug status and early results have been encouraging.",
+        "clinician": "Darovasertib is a first in class oral PKC inhibitor targeting the node immediately downstream of mutant GNAQ and GNA11. It received FDA orphan drug designation for uveal melanoma in 2022. It is under investigation as monotherapy and in combination with MEK inhibition (binimetinib) or with crizotinib (a recruiting phase 1/2 basket in GNAQ and GNA11 mutant or PRKC fusion tumors, NCT03947385), and in a recruiting phase 3 neoadjuvant trial in primary uveal melanoma (NCT07015190). Early signals of tolerability and activity have been reported; efficacy in metastatic disease is not yet established.",
+        "researcher": "Darovasertib operationalizes the Chen 2014 preclinical thesis by drugging PKC, the node between mutant Galpha q and MAPK, and by pairing it with MEK inhibition to achieve the sustained pathway suppression that single agent MEK inhibition could not. It is the clinical test of vertical GNAQ and GNA11 axis blockade and the anchor for the combination discovery hypothesis below."
+      },
+      "citation": {
+        "label": "Cao et al., Front Pharmacol 2023 (darovasertib, a first in class PKC inhibitor for metastatic uveal melanoma, PMID 37576814)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37576814/"
+      },
+      "trial": {
+        "nct": "NCT03947385",
+        "url": "https://clinicaltrials.gov/study/NCT03947385"
+      }
+    },
+    {
+      "drug": "Autologous tumor infiltrating lymphocytes",
+      "target": "Polyclonal tumor reactive T cells (HLA unrestricted)",
+      "tier": 2,
+      "modality": "cell therapy",
+      "approved_in": "Not approved in uveal melanoma; TIL therapy (lifileucel) approved in cutaneous melanoma",
+      "dev_stage": "Prospective phase 2 objective response signal in metastatic uveal melanoma",
+      "rationale": {
+        "patient": "This approach takes a patient's own immune cells (T cells) from a piece of the tumor, grows huge numbers of them in the lab, and gives them back after chemotherapy to lower the patient's other immune cells first. Unlike tebentafusp, it does not depend on one specific tissue type. In a trial, about a third of patients had their tumors shrink, including one whose liver tumors disappeared, and some who responded had already failed immunotherapy. It is intensive and still experimental in this cancer.",
+        "clinician": "Adoptive transfer of autologous, ex vivo expanded tumor infiltrating lymphocytes after lymphodepleting chemotherapy, with high dose interleukin 2. In the single center phase 2 study, 7 of 20 evaluable patients (35 percent) had objective tumor regression including one complete response, and three responders were refractory to prior checkpoint blockade. Toxicity is driven by the lymphodepletion and interleukin 2 regimen. Not HLA restricted, unlike tebentafusp, but logistically intensive and not yet a standard.",
+        "researcher": "This study directly challenged the dogma that uveal melanoma is immunotherapy resistant by showing that autologous polyclonal TILs can mediate regression, including in checkpoint refractory disease, without any HLA restriction. It is the cell therapy precedent that motivates the discovery hypothesis of extending T cell based approaches beyond the HLA-A*02:01 population that tebentafusp cannot serve."
+      },
+      "citation": {
+        "label": "Chandran et al., Lancet Oncol 2017 (adoptive transfer of tumor infiltrating lymphocytes in metastatic uveal melanoma, PMID 28395880)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28395880/"
+      },
+      "trial": {
+        "nct": "NCT01814046",
+        "url": "https://clinicaltrials.gov/study/NCT01814046"
+      }
+    },
+    {
+      "drug": "Nivolumab plus ipilimumab",
+      "target": "PD-1 and CTLA-4 (checkpoint blockade)",
+      "tier": 2,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Cutaneous melanoma, renal cell carcinoma, and others; not established in uveal melanoma",
+      "dev_stage": "Prospective phase 2 (GEM-1402); only modest benefit over historical chemotherapy",
+      "rationale": {
+        "patient": "The dual immunotherapy that works well in skin melanoma was tested directly in uveal melanoma. The result was only a small improvement over old chemotherapy, and most tumors did not respond. This card is here to be honest that the checkpoint drugs which revolutionized skin melanoma largely do not work in eye melanoma, which is why other strategies, like tebentafusp and cell therapy, matter so much here.",
+        "clinician": "Combined PD-1 and CTLA-4 blockade. In the first line phase 2 GEM-1402 trial (n equal to 52), the 12 month overall survival was 51.9 percent, median overall survival was 12.7 months, and median progression free survival was only 3.0 months, with stable disease the most common outcome. The authors concluded this was a modest improvement over historical chemotherapy benchmarks. Consistent with the low tumor mutational burden, checkpoint blockade has limited activity in uveal melanoma relative to cutaneous melanoma.",
+        "researcher": "GEM-1402 is the quantitative statement of checkpoint resistance in uveal melanoma: dual blockade, the most active checkpoint regimen in cutaneous disease, yields a short progression free survival and only marginal overall survival gain. This negative to modest result is the biological rationale for antigen directed (tebentafusp) and adoptive (TIL) immunotherapy over mutation burden dependent checkpoint blockade."
+      },
+      "citation": {
+        "label": "Piulats et al., J Clin Oncol 2021 (GEM-1402, nivolumab plus ipilimumab in treatment naive metastatic uveal melanoma, PMID 33417511)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33417511/"
+      }
+    },
+    {
+      "drug": "HDAC inhibitors (for example valproic acid, vorinostat, panobinostat)",
+      "target": "BAP1 loss with monosomy 3 (epigenetic differentiation)",
+      "tier": 3,
+      "modality": "small molecule",
+      "approved_in": "Approved in other cancers (for example vorinostat and panobinostat in T cell lymphoma and multiple myeloma); investigational in uveal melanoma",
+      "dev_stage": "Preclinical rationale in BAP1 deficient uveal melanoma",
+      "rationale": {
+        "patient": "The most dangerous uveal melanomas lose a gene called BAP1, which makes the tumor cells lose their mature identity and become more aggressive. In laboratory studies, a class of drugs called HDAC inhibitors pushed these cells back toward a more mature, less dividing state and slowed tumor growth. This is a promising idea to reverse the effect of BAP1 loss, but it has been shown in the lab, not yet proven in patients.",
+        "clinician": "Histone deacetylase inhibitors were identified in silico as agents predicted to reverse the dedifferentiated transcriptional program of BAP1 loss. In cultured uveal melanoma cells, HDAC inhibitors induced morphologic differentiation, cell cycle exit, and a shift to a differentiated melanocytic gene expression profile, and valproic acid slowed xenograft growth. The proposed clinical role is inducing differentiation and dormancy of micrometastatic disease. Evidence is preclinical, so this is graded Tier 3.",
+        "researcher": "This is the chromatin directed counterpart to the signaling targeted options: BAP1 is a deubiquitinase whose loss deregulates histone modification and drives dedifferentiation, and HDAC inhibition partially reverses that state in vitro and in vivo. It nominates the BAP1 deficient, monosomy 3 high risk class for an epigenetic therapy aimed at differentiation and metastatic dormancy rather than cytoreduction, the basis for the epigenetic discovery hypothesis below."
+      },
+      "citation": {
+        "label": "Landreville et al., Clin Cancer Res 2011 (HDAC inhibitors induce growth arrest and differentiation in uveal melanoma, PMID 22038994)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22038994/"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT07015190",
+      "title": "Neoadjuvant darovasertib in primary uveal melanoma",
+      "phase": "Phase 3",
+      "intervention": "Darovasertib followed by primary local therapy",
+      "eligibility": "Primary uveal melanoma planned for local therapy (enucleation or plaque radiotherapy)",
+      "url": "https://clinicaltrials.gov/study/NCT07015190"
+    },
+    {
+      "nct": "NCT03947385",
+      "title": "IDE196 (darovasertib) in solid tumors harboring GNAQ or GNA11 mutations or PRKC fusions",
+      "phase": "Phase 1/2",
+      "intervention": "Darovasertib alone or with binimetinib or crizotinib",
+      "eligibility": "Advanced solid tumors including metastatic uveal melanoma with GNAQ or GNA11 mutation or PRKC fusion",
+      "url": "https://clinicaltrials.gov/study/NCT03947385"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "These are the landmark discoveries and approvals that make treating uveal melanoma by its biology a legitimate strategy. They include the studies that found the genes that cause it, the gene whose loss makes it spread, and the first treatment ever proven to help patients live longer.",
+    "clinician": "The entries below establish the biological and regulatory precedents this board builds on: the GNAQ and GNA11 driver discovery, the BAP1 to metastasis link, the preclinical combined PKC and MEK strategy, and the first overall survival prolonging therapy in the disease.",
+    "researcher": "Each precedent validates a transferable principle rather than a single drug: a Galpha q mutation as the founding oncogenic dependency, BAP1 loss as the epigenetic driver of the metastatic state, vertical PKC to MEK blockade as the pharmacologic answer to single node MAPK reactivation, and antigen directed T cell redirection as an immunotherapy that succeeds where checkpoint blockade fails. These underwrite the therapies and discovery hypotheses."
+  },
+  "precedents": [
+    {
+      "biomarker": "GNAQ and GNA11 activating mutations in uveal melanoma",
+      "drug": "Driver discovery (Galpha q signaling, not a drug)",
+      "year": "2009 to 2010",
+      "citation": {
+        "label": "Van Raamsdonk et al., N Engl J Med 2010 (mutations in GNA11 in uveal melanoma; about 83 percent GNAQ or GNA11 mutant, PMID 21083380)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21083380/"
+      }
+    },
+    {
+      "biomarker": "BAP1 loss with monosomy 3 marking metastasis",
+      "drug": "Prognostic biomarker discovery (BAP1 tumor suppressor, not a drug)",
+      "year": "2010",
+      "citation": {
+        "label": "Harbour et al., Science 2010 (frequent mutation of BAP1 in metastasizing uveal melanomas, PMID 21051595)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21051595/"
+      }
+    },
+    {
+      "biomarker": "GNAQ and GNA11 driven PKC to MAPK signaling",
+      "drug": "Combined PKC and MEK inhibition (preclinical synergy and tumor regression)",
+      "year": "2014",
+      "citation": {
+        "label": "Chen et al., Oncogene 2014 (combined PKC and MEK inhibition in GNAQ and GNA11 mutant uveal melanoma, PMID 24141786)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24141786/"
+      }
+    },
+    {
+      "biomarker": "gp100 antigen in HLA-A*02:01 context",
+      "drug": "Tebentafusp (gp100 by CD3 bispecific T cell engager; first overall survival benefit)",
+      "year": "2021 to 2022",
+      "citation": {
+        "label": "Nathan et al., N Engl J Med 2021 (overall survival benefit with tebentafusp; FDA approved January 2022, PMID 34551229)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34551229/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because uveal melanoma is driven by specific genetic changes and because one antigen directed immune therapy already works, the same kinds of strategies, aimed at the root signal, at the gene whose loss drives spread, or at reaching more patients with immune therapy, might be worth testing. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a strategy validated in uveal melanoma preclinical work, in an adjacent condition, or in a subset of this disease to a broader uveal melanoma context sharing the mechanism. Transferability is graded and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition and cross axis hypotheses by analogy over a shared molecular dependency (Galpha q driven PKC to MAPK signaling, BAP1 driven epigenetic dedifferentiation, and antigen directed T cell redirection), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated as recommendations in the target setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): co target PKC and MAPK downstream of GNAQ or GNA11 by combining a PKC inhibitor with a MEK (or ERK) inhibitor, to achieve the sustained vertical pathway suppression that single node MEK inhibition failed to deliver in the SUMIT phase 3.",
+      "shared": "Uveal melanoma is driven by GNAQ or GNA11 activation, which signals through PKC to MAPK; MEK inhibition alone allows MAPK reactivation, whereas combined PKC and MEK blockade sustains suppression and causes regression preclinically.",
+      "source": "Uveal melanoma (combined PKC and MEK synergy established preclinically; single agent MEK inhibition negative in phase 3)",
+      "modality": "small molecule",
+      "rationale": "Chen et al. showed that PKC inhibition alone is cytostatic and MAPK reactivates, but combined PKC and MEK inhibition is synergistic and causes marked tumor regression in xenografts. The negative SUMIT trial of single agent MEK inhibition and the ongoing darovasertib plus binimetinib combinations make vertical, multi node blockade the rational clinical hypothesis, contingent on managing overlapping toxicity.",
+      "transferability": "medium, both nodes are drugged by clinically available agents and the preclinical synergy is strong, but a single agent MEK phase 3 already failed, on target toxicity of dual pathway blockade is a real constraint, and durable clinical benefit in metastatic disease remains to be demonstrated.",
+      "prediction": "In GNAQ or GNA11 mutant uveal melanoma models and in a biomarker selected patient cohort, combined PKC plus MEK (or ERK) inhibition produces deeper and more durable MAPK pathway suppression and greater tumor regression than either agent alone, with a tolerable therapeutic window.",
+      "citation": {
+        "label": "Chen et al., Oncogene 2014 (combined PKC and MEK inhibition in GNAQ and GNA11 mutant uveal melanoma, modality precedent, PMID 24141786)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24141786/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): treat the BAP1 deficient, monosomy 3 high risk class with an epigenetic (HDAC or related chromatin directed) therapy aimed at reversing dedifferentiation and enforcing metastatic dormancy, biomarker selecting on BAP1 loss.",
+      "shared": "BAP1 loss with monosomy 3 drives loss of melanocytic differentiation and the metastatic phenotype; HDAC inhibition partially reverses this dedifferentiated program in uveal melanoma cells, nominating an epigenetic vulnerability specific to the BAP1 deficient class.",
+      "source": "Uveal melanoma (HDAC induced differentiation of BAP1 deficient cells shown preclinically)",
+      "modality": "small molecule",
+      "rationale": "Landreville et al. showed HDAC inhibitors induce differentiation, cell cycle exit, and a melanocytic gene expression profile in uveal melanoma cells and slow xenograft growth, directly counteracting the effect of BAP1 loss. Restricting an epigenetic differentiation therapy to the BAP1 deficient, monosomy 3 class is a biomarker matched hypothesis for suppressing or delaying metastasis rather than cytoreducing bulk disease.",
+      "transferability": "medium to speculative, HDAC inhibitors are approved agents and the differentiation effect is reproducible in vitro and in xenografts, but the differentiation and dormancy hypothesis has not been tested clinically in uveal melanoma, class specificity to BAP1 loss must be confirmed, and single agent HDAC inhibitor toxicity may limit chronic dosing.",
+      "prediction": "BAP1 deficient uveal melanoma models are more sensitive to HDAC inhibitor induced differentiation and growth arrest than BAP1 intact models, and in a BAP1 loss selected adjuvant or micrometastatic setting an epigenetic differentiation therapy delays or reduces metastatic outgrowth.",
+      "citation": {
+        "label": "Landreville et al., Clin Cancer Res 2011 (HDAC inhibitors induce differentiation in BAP1 deficient uveal melanoma, modality precedent, PMID 22038994)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22038994/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): extend antigen directed T cell redirection and adoptive cell therapy beyond the HLA-A*02:01 restricted population that tebentafusp serves, by developing T cell engagers against additional HLA alleles or HLA independent tumor antigens and by scaling autologous TIL therapy.",
+      "shared": "Uveal melanoma is susceptible to T cell mediated killing when T cells are redirected to it (tebentafusp) or expanded from the tumor and readministered (TILs); tebentafusp is limited to HLA-A*02:01, whereas autologous TIL therapy mediates regression without HLA restriction, showing the disease is not intrinsically immunotherapy resistant.",
+      "source": "Uveal melanoma (tebentafusp T cell engager and autologous TIL therapy, both effective)",
+      "modality": "cell therapy",
+      "rationale": "Tebentafusp proved antigen directed T cell redirection prolongs survival but only in HLA-A*02:01 positive patients, and Chandran et al. showed autologous TILs mediate regression (including in checkpoint refractory patients) without any HLA restriction. Together they license expanding the T cell based strategy to the majority of patients who are HLA-A*02:01 negative, via engagers for other alleles or HLA independent targets and via broader access to adoptive cell therapy.",
+      "transferability": "speculative, the biological susceptibility to T cell attack is established, but each new T cell engager requires a validated peptide and HLA pairing (or an HLA independent target) with an acceptable safety margin, and autologous TIL therapy demands metastasectomy, lymphodepletion, and specialized manufacturing that limit generalizability.",
+      "prediction": "T cell engagers directed at gp100 or other uveal melanoma antigens presented by non A*02:01 HLA alleles, or HLA independent redirection, achieve antigen specific killing and tumor control in HLA-A*02:01 negative uveal melanoma models and patients, and scaled autologous TIL therapy reproduces objective responses across a broader population.",
+      "citation": {
+        "label": "Chandran et al., Lancet Oncol 2017 (autologous TIL therapy mediates regression of metastatic uveal melanoma without HLA restriction, modality precedent, PMID 28395880)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28395880/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Uveal melanoma is a rare intraocular cancer that is biologically distinct from cutaneous melanoma, driven by activating GNAQ or GNA11 mutations, with BAP1 loss and monosomy 3 marking metastatic risk, and it responds poorly to conventional checkpoint inhibitors. Tebentafusp is the only systemic therapy proven to improve overall survival and is restricted to HLA-A*02:01 positive patients; every other therapy described here is either investigational in uveal melanoma, borrowed from another condition, or, in the case of selumetinib, negative in its pivotal phase 3 trial and included for honesty about a rational strategy that failed as tested. Reported activities are drawn from the cited prospective trials or preclinical studies. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified oncology team at a center experienced with ocular melanoma, ideally within a clinical trial and a molecular tumor board.</p>"
+}

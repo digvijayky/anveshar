@@ -1,0 +1,30 @@
+{
+  "study": "msk_impact_2017",
+  "msk_total_samples": 10945,
+  "msk_name": "MSK-IMPACT Clinical Sequencing Cohort (MSK, Nat Med 2017)",
+  "n_detailed_types": 359,
+  "rare_types_matched": 140,
+  "rare_tumors_total": 2570,
+  "top_rare": {
+    "Cholangiocarcinoma": 172,
+    "Carcinoma of unknown primary": 146,
+    "Gastrointestinal stromal tumor": 137,
+    "Small cell lung cancer": 82,
+    "Neuroblastoma": 80,
+    "Seminoma": 76,
+    "Pancreatic neuroendocrine tumor": 75,
+    "Adenoid cystic carcinoma": 73,
+    "Merkel cell carcinoma": 63,
+    "Poorly differentiated thyroid carcinoma": 60,
+    "Uterine leiomyosarcoma": 57,
+    "Cutaneous squamous cell carcinoma": 55,
+    "Appendiceal mucinous adenocarcinoma": 48,
+    "Gallbladder carcinoma": 46,
+    "Dedifferentiated liposarcoma": 45,
+    "Uveal melanoma": 44,
+    "Oligodendroglioma, isocitrate dehydrogenase-mutant and 1p/19q-codeleted": 43,
+    "Leiomyosarcoma": 41,
+    "Malignant mesothelioma": 39,
+    "Colorectal mucinous adenocarcinoma": 39
+  }
+}

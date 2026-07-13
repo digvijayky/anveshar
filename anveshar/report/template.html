@@ -1,0 +1,556 @@
+<title>Anveshar: therapies for rare conditions</title>
+<style>
+  :root{
+    --paper:#F6F7F8; --surface:#FFFFFF; --ink:#131A1F; --slate:#46525C; --muted:#7A8891;
+    --line:#E3E8EA; --line-strong:#CFD7DB;
+    --accent:#0B6B73; --accent-bright:#12A0AB; --accent-wash:#E8F2F2;
+    --t1:#1C7A4D; --t1-bg:#E7F3EC; --t2:#A96C10; --t2-bg:#F9EFDA; --t3:#566672; --t3-bg:#ECF0F2;
+    --disc:#5A57A6; --disc-bg:#EEEEF7;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0}
+  .app{background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-underline-offset:2px;text-decoration-thickness:1px}
+  a:hover{color:var(--accent-bright)}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .eyebrow{font-size:12px;font-weight:650;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+  h1,h2,h3{text-wrap:balance;margin:0}
+
+  /* header */
+  header.top{background:linear-gradient(180deg,#0E2226 0%,#0B1A1D 100%);color:#EAF1F1;
+    border-bottom:3px solid var(--accent)}
+  .top .wrap{padding-top:26px;padding-bottom:26px}
+  .brandrow{display:flex;align-items:center;gap:10px;color:#89B7BB;font-size:12px;
+    font-weight:650;letter-spacing:.14em;text-transform:uppercase}
+  .brandrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent-bright);
+    box-shadow:0 0 0 4px rgba(18,160,171,.18)}
+  h1.dx{font-size:clamp(26px,4.4vw,40px);font-weight:720;letter-spacing:-.02em;line-height:1.08;margin-top:12px}
+  .dx-sub{color:#A9C4C6;font-size:15px;margin-top:8px;max-width:60ch}
+  .idline{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;
+    background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#CFE0E1}
+
+  /* audience toggle */
+  .toolbar{position:sticky;top:0;z-index:20;background:rgba(246,247,248,.92);
+    backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+  .toolbar .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+  .seg{display:inline-flex;background:#EAEEF0;border:1px solid var(--line-strong);border-radius:10px;padding:3px}
+  .seg button{appearance:none;border:0;background:transparent;font:inherit;font-weight:600;
+    font-size:13.5px;color:var(--slate);padding:7px 15px;border-radius:8px;cursor:pointer;
+    display:flex;align-items:center;gap:7px;transition:background .15s,color .15s,box-shadow .15s}
+  .seg button .g{font-size:11px;color:var(--muted);font-weight:600}
+  .seg button[aria-selected="true"]{background:var(--surface);color:var(--ink);
+    box-shadow:0 1px 2px rgba(19,26,31,.12)}
+  .seg button[aria-selected="true"] .g{color:var(--accent)}
+  .seg button:focus-visible{outline:2px solid var(--accent-bright);outline-offset:2px}
+  .voice-note{font-size:13px;color:var(--muted);max-width:42ch}
+
+  /* sections */
+  main{padding:34px 0 8px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:14px;
+    padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .sec-num{font-family:var(--mono);font-size:13px;color:var(--muted);font-weight:600}
+  h2{font-size:20px;font-weight:680;letter-spacing:-.01em}
+  .prose{max-width:68ch;color:var(--slate)}
+  .prose p{margin:0 0 12px}
+  .prose strong{color:var(--ink);font-weight:640}
+
+  /* target pills */
+  .targets{display:flex;flex-wrap:wrap;gap:10px}
+  .target{background:var(--surface);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;min-width:180px;flex:1 1 200px;max-width:280px}
+  .target .tname{font-weight:680;font-size:15px}
+  .target .tmeta{font-size:12.5px;color:var(--muted);margin-top:3px}
+
+  /* legend */
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin:2px 0 18px;font-size:12.5px;color:var(--slate)}
+  .legend .k{display:flex;align-items:center;gap:8px}
+  .legend .sw{width:12px;height:12px;border-radius:3px}
+
+  /* therapy cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{position:relative;background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:18px 18px 16px 20px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(19,26,31,.04)}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+  .card.t1::before{background:var(--t1)} .card.t2::before{background:var(--t2)} .card.t3::before{background:var(--t3)}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .drug{font-size:18px;font-weight:720;letter-spacing:-.01em}
+  .target-tag{font-size:12.5px;color:var(--accent);font-weight:640;margin-top:2px}
+  .tier{flex:none;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+    padding:5px 9px;border-radius:7px;white-space:nowrap}
+  .tier.t1{background:var(--t1-bg);color:var(--t1)} .tier.t2{background:var(--t2-bg);color:var(--t2)}
+  .tier.t3{background:var(--t3-bg);color:var(--t3)}
+  .kv{display:flex;gap:8px;font-size:13px;margin-top:12px;color:var(--slate)}
+  .kv .lbl{color:var(--muted);min-width:78px;font-weight:600}
+  .rationale{font-size:14px;color:var(--slate);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .card-foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .ref{font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;background:var(--accent-wash);
+    color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .ref.nct{background:#EEF1F3;color:var(--slate)}
+  .ref:hover{background:var(--accent);color:#fff}
+
+  /* trials table */
+  .tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+  table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:640px}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:650;background:#FAFBFB}
+  tr:last-child td{border-bottom:0}
+  .phase{font-weight:640;color:var(--ink)}
+
+  /* precedents */
+  .prec{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+  .prec .p{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
+    border-radius:10px;padding:12px 14px}
+  .prec .bm{font-weight:680;font-size:14px}
+  .prec .dr{font-size:13px;color:var(--slate);margin-top:2px}
+
+  /* disclaimer + footer */
+  .disclaimer{background:#FBF6EC;border:1px solid #EBDCC0;border-radius:12px;
+    padding:14px 16px;font-size:13px;color:#6B5A38;max-width:80ch}
+  .disclaimer b{color:#5A4A2C}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;color:var(--muted);font-size:12.5px}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+  /* your tumor / personalization */
+  .pbanner{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start;
+    background:linear-gradient(180deg,var(--accent-wash),#fff);border:1px solid #BFE0E1;
+    border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+  .pb-main{flex:1 1 320px;min-width:0}
+  .pb-title{font-size:17px;font-weight:700;letter-spacing:-.01em;margin-top:6px;color:var(--ink)}
+  .pb-sub{margin-top:8px;max-width:70ch}
+  .pb-source{font-size:12.5px;color:var(--muted);margin-top:10px}
+  .pb-stats{display:flex;gap:24px;flex:none}
+  .pstat{text-align:center}
+  .pnum{font-size:32px;font-weight:760;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+  .plbl{font-size:11.5px;color:var(--slate);margin-top:5px;max-width:96px}
+  #alt-body .gene{font-weight:700}
+  #alt-body .cls{display:inline-block;margin-left:8px;font-size:10.5px;font-weight:600;color:var(--accent);
+    background:var(--accent-wash);padding:2px 7px;border-radius:6px;vertical-align:middle;white-space:nowrap}
+  .card.matched{border-color:var(--accent);box-shadow:0 0 0 2px rgba(11,107,115,.18),0 1px 3px rgba(19,26,31,.08)}
+  .match-badge{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.02em;color:#fff;
+    background:var(--accent);padding:3px 9px;border-radius:7px;margin-bottom:9px}
+  .na-note{font-size:12.5px;color:var(--muted);margin-top:12px;padding-top:11px;border-top:1px dashed var(--line);font-style:italic}
+  /* discovery / novelty */
+  .disc-flag{font-size:11px;font-weight:600;color:var(--disc);background:var(--disc-bg);
+    padding:3px 9px;border-radius:7px;margin-left:auto}
+  .disc-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+  .disc-card{background:var(--surface);border:1px solid #D9D8EE;border-left:4px dashed var(--disc);
+    border-radius:14px;padding:18px 18px 16px}
+  .disc-top{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+  .modality{font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#fff;
+    background:var(--disc);padding:4px 9px;border-radius:7px}
+  .hyp-flag{font-size:11px;font-weight:600;color:var(--disc);border:1px solid var(--disc);
+    padding:3px 8px;border-radius:7px}
+  .disc-h{font-size:15.5px;font-weight:680;color:var(--ink);line-height:1.3}
+  .disc-kv{display:flex;gap:8px;font-size:13px;margin-top:10px;color:var(--slate)}
+  .disc-kv .dl{color:var(--muted);min-width:124px;font-weight:600}
+  .disc-pred{font-size:13.5px;color:var(--ink);margin-top:12px;padding:10px 12px;
+    background:var(--disc-bg);border-radius:9px}
+  .modality-tag{display:inline-block;font-size:10.5px;font-weight:600;color:var(--muted);
+    margin-top:4px;letter-spacing:.02em;text-transform:uppercase}
+  /* research workflow */
+  .wstep{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;padding:14px 16px;margin-bottom:10px}
+  .wstep-t{font-weight:680;font-size:15px}
+  .wstep-w{font-size:14px;color:var(--slate);margin-top:6px}
+  .wstep-m{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+  .wtag{font-size:11.5px;color:var(--accent);background:var(--accent-wash);padding:3px 8px;border-radius:6px}
+  .wdh{font-weight:680;font-size:14px;margin:16px 0 8px}
+  .wds{display:inline-block;font-size:12.5px;color:var(--slate);background:#EEF3F3;padding:4px 9px;border-radius:7px;margin:0 6px 6px 0;text-decoration:none}
+  /* databases queried */
+  .dbq{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+  .dbq-card{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:15px 16px 13px}
+  .dbq-top{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap}
+  .dbq-src{font-size:11px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#fff;background:var(--accent);padding:4px 9px;border-radius:7px}
+  .dbq-n{font-size:11.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:7px}
+  .dbq-q{font-size:12.5px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin-bottom:7px;word-break:break-word}
+  .dbq-f{font-size:13.5px;color:var(--ink);line-height:1.4}
+  a.wds:hover{background:var(--accent);color:#fff}
+  .wval{font-size:13.5px;color:var(--slate);margin-top:12px;padding:11px 13px;background:var(--accent-wash);border-radius:9px}
+  /* confidence */
+  .conf{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .conf-row{display:flex;align-items:center;gap:10px}
+  .conf-label{font-size:12px;font-weight:700;white-space:nowrap}
+  .conf-bar{flex:1;height:6px;background:#EAEEF0;border-radius:99px;overflow:hidden;min-width:60px}
+  .conf-fill{height:100%;border-radius:99px}
+  .conf-basis{font-size:12px;color:var(--muted);margin-top:6px}
+  .conf.c-high .conf-fill{background:var(--t1)} .conf.c-high .conf-label{color:var(--t1)}
+  .conf.c-mod .conf-fill{background:var(--t2)} .conf.c-mod .conf-label{color:var(--t2)}
+  .conf.c-low .conf-fill{background:var(--t3)} .conf.c-low .conf-label{color:var(--t3)}
+  .conf.c-spec .conf-fill{background:var(--disc)} .conf.c-spec .conf-label{color:var(--disc)}
+  .hide{display:none!important}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  @media (max-width:560px){ .wrap{padding:0 16px} .voice-note{display:none} }
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="wrap">
+      <div class="brandrow"><span class="dot"></span><span>Anveshar</span><span style="opacity:.5">/ therapies that translate across conditions</span></div>
+      <h1 class="dx" id="dx-name">Loading…</h1>
+      <p class="dx-sub" id="dx-sub"></p>
+      <div class="idline" id="dx-chips"></div>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="wrap">
+      <div class="seg" role="tablist" aria-label="Reading level">
+        <button role="tab" data-aud="researcher" aria-selected="true">Researcher <span class="g">mechanistic</span></button>
+        <button role="tab" data-aud="clinician" aria-selected="false">Clinician <span class="g">precise</span></button>
+        <button role="tab" data-aud="patient"   aria-selected="false">Patient <span class="g">plain language</span></button>
+      </div>
+      <span class="voice-note" id="voice-note"></span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="s-patient" class="hide">
+      <div class="sec-head"><span class="sec-num">◎</span><h2>Your tumor</h2></div>
+      <div class="pbanner">
+        <div class="pb-main">
+          <div class="eyebrow">Personalized to this patient</div>
+          <div id="pb-title" class="pb-title"></div>
+          <div id="pb-sub" class="pb-sub prose"></div>
+          <div id="pb-source" class="pb-source"></div>
+        </div>
+        <div id="pb-stats" class="pb-stats"></div>
+      </div>
+      <div class="tbl-scroll"><table><thead><tr>
+        <th>Alteration</th><th>Variant</th><th>Actionability</th><th>Pathogenicity</th><th>Interpretation</th></tr></thead>
+        <tbody id="alt-body"></tbody></table></div>
+    </section>
+
+    <section id="s-overview">
+      <div class="sec-head"><span class="sec-num">01</span><h2>What this cancer is</h2></div>
+      <div class="prose" id="overview"></div>
+    </section>
+
+    <section id="s-targets">
+      <div class="sec-head"><span class="sec-num">02</span><h2>Molecular targets found</h2></div>
+      <div class="prose" id="targets-intro" style="margin-bottom:16px"></div>
+      <div class="targets" id="targets"></div>
+    </section>
+
+    <section id="s-therapies">
+      <div class="sec-head"><span class="sec-num">03</span><h2>Therapies that could translate from other conditions</h2></div>
+      <div class="prose" id="therapies-intro" style="margin-bottom:14px"></div>
+      <div class="legend">
+        <span class="k"><span class="sw" style="background:var(--t1)"></span>Tier 1: FDA tissue-agnostic approval (if biomarker present)</span>
+        <span class="k"><span class="sw" style="background:var(--t2)"></span>Tier 2: approved in another tumor or basket-trial signal</span>
+        <span class="k"><span class="sw" style="background:var(--t3)"></span>Tier 3: mechanistic rationale only</span>
+      </div>
+      <div class="cards" id="cards"></div>
+    </section>
+
+    <section id="s-discovery" class="hide">
+      <div class="sec-head"><span class="sec-num">✦</span><h2>Novel hypotheses to test</h2>
+        <span class="disc-flag">Generated by Anveshar, research use, not clinical advice</span></div>
+      <div class="prose" id="discovery-intro" style="margin-bottom:14px"></div>
+      <div class="disc-cards" id="discovery"></div>
+    </section>
+
+    <section id="s-trials">
+      <div class="sec-head"><span class="sec-num">04</span><h2>Open clinical trials to match</h2></div>
+      <div class="tbl-scroll"><table id="trials"><thead><tr>
+        <th>Trial</th><th>Phase</th><th>Intervention</th><th>Who it is for</th></tr></thead>
+        <tbody></tbody></table></div>
+    </section>
+
+    <section id="s-precedent">
+      <div class="sec-head"><span class="sec-num">05</span><h2>Why borrowing across conditions works</h2></div>
+      <div class="prose" id="precedent-intro" style="margin-bottom:14px"></div>
+      <div class="prec" id="precedents"></div>
+    </section>
+
+    <section id="s-workflow" class="hide">
+      <div class="sec-head"><span class="sec-num">&#128300;</span><h2>Research workflow for scientists</h2>
+        <span class="disc-flag">Condition specific, runnable on Claude Science</span></div>
+      <div class="prose" id="workflow-aim" style="margin-bottom:14px"></div>
+      <div id="workflow-steps"></div>
+      <div id="workflow-data"></div>
+    </section>
+
+    <section id="s-databases" class="hide">
+      <div class="sec-head"><span class="sec-num">&#128218;</span><h2>Evidence databases queried</h2>
+        <span class="disc-flag">Live retrieval, every claim traces to a source</span></div>
+      <div class="prose" id="databases-intro" style="margin-bottom:14px"></div>
+      <div class="dbq" id="databases"></div>
+    </section>
+
+    <section id="s-disc">
+      <div class="disclaimer" id="disclaimer"></div>
+      <div class="disclaimer" id="disclaimer-fixed" style="margin-top:12px"><b>Health information, not medical advice.</b> Confidence scores are a transparent, rule based summary of evidence strength, from FDA tissue agnostic approval down to mechanistic rationale, and are not a probability of benefit for an individual. Anveshar is for research and educational use only, and it is not a medical device. The final decision about any test or treatment must be made by your qualified health care provider.</div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">
+    <span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">digvijayky.com</a></span>
+    <span>Anveshar, decision support for research use, not medical advice</span>
+  </div></footer>
+</div>
+
+<script>
+// ==== DATA CONTRACT (filled by the live evidence engine) ====
+// Placeholder content below is clearly marked and is replaced with cited findings.
+const PM=id=>"https://pubmed.ncbi.nlm.nih.gov/"+id+"/", NCT=id=>"https://clinicaltrials.gov/study/"+id;
+/*DATA_START*/
+const DATA = {
+  cancer:{ name:"Rectal neuroendocrine tumor",
+    sub:"A rare hindgut neuroendocrine neoplasm. Most are cured by local resection; advanced and high-grade disease has few dedicated trials, so this board maps therapies borrowed from cancers that share its biology.",
+    chips:["WHO: well-diff NET (G1-G3) vs NEC","Grade: Ki-67 / mitotic rate","Most common hindgut NET, still rare"] },
+  voiceNote:{ patient:"Plain language, no jargon.",
+    clinician:"Precise terms, grades and biomarkers stated.",
+    researcher:"Mechanism and repurposing rationale foregrounded." },
+  overview:{
+    patient:"<p>Rectal neuroendocrine tumors begin in hormone-sensing cells in the lining of the rectum. Most are found by chance during a colonoscopy, are small, and are cured by removing them locally. A minority grow, spread to lymph nodes, or are a faster type called neuroendocrine carcinoma that needs stronger treatment.</p><p>Because this cancer is uncommon, it rarely gets its own clinical trials. Doctors often borrow treatments proven in other cancers that share the same biology. <strong>That borrowing is what this report maps out for you.</strong></p>",
+    clinician:"<p>Rectal NETs are well-differentiated epithelial neoplasms of the hindgut neuroendocrine system, usually incidental, small, and cured by endoscopic or local resection when under 10 mm and low grade. Metastatic risk rises with size 10 mm or greater, lymphovascular invasion, and muscularis propria involvement.</p><p>The critical branch point is <strong>well-differentiated NET</strong> (graded G1-G3, SSTR2-retained) versus <strong>poorly-differentiated neuroendocrine carcinoma</strong> (NEC, TP53/RB1-driven), which is treated like small cell lung cancer. Incidence is rising and second-line options in advanced disease are limited, the gap this cross-cancer analysis targets.</p>",
+    researcher:"<p>Rectal neuroendocrine neoplasms split into two molecularly distinct diseases. Well-differentiated NET is defined by MEN1, DAXX/ATRX and mTOR-pathway alterations with retained SSTR2. Poorly-differentiated NEC is driven by TP53 plus RB1, and colorectal NEC additionally carries an adenocarcinoma-like KRAS/BRAF/APC genotype, an MSI-H/high-TMB subset, and frequent DLL3 surface expression.</p><p>The therapeutic opportunity lies almost entirely in the actionable alterations shared with commoner tumors, so the analysis indexes each driver to drugs validated elsewhere and grades the transferability.</p>" },
+  targetsIntro:{
+    patient:"These are the specific biological features found in rectal neuroendocrine tumors that existing drugs can target. Which apply to you depends on your own tumor's testing.",
+    clinician:"Actionable targets segregate by differentiation: well-differentiated NET is defined by retained SSTR2 and mTOR/VEGF biology; NEC adds BRAF V600E, an MSI-H/high-TMB subset, and DLL3 surface expression.",
+    researcher:"Targets are indexed to their supporting series (prevalence GEP-wide except where rectal-specific, Venizelos n=36). Each anchors one or more translations in the next section." },
+  targets:[
+    {name:"SSTR2",present_in:"Well-diff NET (retained); lost in NEC",evidence:"Basis of somatostatin analogs, PRRT, DOTATATE imaging"},
+    {name:"mTOR pathway",present_in:"Pancreatic NET (~14% mutated); active across NET",evidence:"Everolimus (RADIANT-4)"},
+    {name:"VEGF / angiogenesis",present_in:"Pancreatic NET label; NET broadly",evidence:"Sunitinib"},
+    {name:"DLL3",present_in:"High-grade NEC ~55%; NET G3 ~16%; 0% G1/G2",evidence:"Tarlatamab target"},
+    {name:"MSI-H / dMMR",present_in:"~5-12% of GI/colorectal NEC",evidence:"Checkpoint-inhibitor eligibility"},
+    {name:"High TMB (≥10/Mb)",present_in:"NEC MSI-H subset",evidence:"Checkpoint-inhibitor eligibility"},
+    {name:"BRAF V600E",present_in:"Rectal NEC ~25%; colonic ~49%",evidence:"Dabrafenib + trametinib"},
+    {name:"KRAS",present_in:"GEP-NEC ~22%",evidence:"Prognostic; not yet targetable in NEC"},
+    {name:"NTRK fusion",present_in:"Under 1% of NEN",evidence:"Larotrectinib / entrectinib if present"} ],
+  therapiesIntro:{
+    patient:"Each card is a treatment proven in another cancer that could apply here, colored by how strong the evidence is. Green means it is already FDA approved for any cancer with the right marker. Amber means it is approved elsewhere with encouraging signals in neuroendocrine tumors. Gray means the idea is promising but still experimental.",
+    clinician:"Candidates are graded Tier 1 (tissue-agnostic FDA approval, biomarker-gated), Tier 2 (approved elsewhere with a positive NET/NEC basket signal or shared validated target), or Tier 3 (mechanistic rationale only). Biomarker testing (MMR/MSI, TMB, BRAF, HER2, DLL3, fusion panel) governs eligibility.",
+    researcher:"Translations are ranked by transferability of evidence, not target novelty. Note the concentration in the poorly-differentiated NEC subset, where shared small-cell-like and adenocarcinoma-like biology licenses borrowing from SCLC, colorectal, and pan-tumor baskets." },
+  therapies:[
+    {drug:"Pembrolizumab",target:"MSI-H / dMMR",tier:1,approved_in:"Any MSI-H/dMMR solid tumor (tissue-agnostic, 2017)",dev_stage:"FDA approved",
+      rationale:{patient:"If your tumor has a DNA-repair defect called MSI-high, this immunotherapy is already FDA approved for any cancer carrying that marker. About 1 in 10 high-grade rectal neuroendocrine carcinomas have it.",clinician:"MSI-H/dMMR occurs in ~5-12% of GI/colorectal NEC (usually MLH1-methylation-driven). The 2017 tissue-agnostic label applies; KEYNOTE-158 noncolorectal cohort ORR 34% across 27 tumor types including neuroendocrine.",researcher:"Mismatch-repair deficiency raises neoantigen load and confers checkpoint sensitivity independent of tissue of origin, the founding tissue-agnostic paradigm; the MSI-H NEC subset largely overlaps the high-TMB subset."},
+      citation:{label:"KEYNOTE-158",url:PM(31682550)}},
+    {drug:"Pembrolizumab",target:"High TMB (≥10 mut/Mb)",tier:1,approved_in:"Any TMB-high solid tumor (tissue-agnostic, 2020)",dev_stage:"FDA approved",
+      rationale:{patient:"If your tumor carries many mutations (high tumor mutational burden), the same immunotherapy is FDA approved regardless of cancer type.",clinician:"tTMB-high (≥10 mut/Mb) tissue-agnostic approval; in NEC the high-TMB fraction largely coincides with the MSI-H subset. KEYNOTE-158 TMB-high ORR 29% vs 6%.",researcher:"TMB is a tissue-independent correlate of neoantigen burden; GEP-NEC median TMB is low (~5/Mb) but the MSI-H tail reaches ~69/Mb, so the biomarker mainly captures the dMMR subset."},
+      citation:{label:"KEYNOTE-158 (TMB)",url:PM(32919526)}},
+    {drug:"Dostarlimab",target:"dMMR",tier:1,approved_in:"dMMR recurrent/advanced solid tumors (tissue-agnostic, 2021)",dev_stage:"FDA approved",
+      rationale:{patient:"A second FDA-approved immunotherapy for tumors with the dMMR repair defect, whatever the cancer type.",clinician:"Anti-PD-1 with tissue-agnostic dMMR approval; GARNET dMMR ORR 44%. Alternative to pembrolizumab for the dMMR NEC subset.",researcher:"Same dMMR-driven checkpoint sensitivity; provides a second anti-PD-1 asset for the repair-deficient NEC subset."},
+      citation:{label:"GARNET",url:PM(37917058)}},
+    {drug:"Larotrectinib",target:"NTRK fusion",tier:1,approved_in:"Any NTRK-fusion solid tumor (tissue-agnostic)",dev_stage:"FDA approved",
+      rationale:{patient:"If a rare gene fusion called NTRK is found, this targeted pill works across cancer types. NTRK fusions are very rare in neuroendocrine tumors, so this helps only a small number of patients.",clinician:"Tissue-agnostic NTRK approval; pooled ORR 79%. NTRK fusions are under 1% in NEN, a rare but high-yield match when present.",researcher:"Constitutive TRK signaling from NTRK1/2/3 fusions is a lineage-independent driver; vanishingly rare in NEN but actionable if detected on a fusion panel."},
+      citation:{label:"Larotrectinib pooled",url:PM(32105622)}},
+    {drug:"Entrectinib",target:"NTRK fusion",tier:1,approved_in:"Any NTRK-fusion solid tumor (tissue-agnostic, 2019)",dev_stage:"FDA approved; basket includes NET",
+      rationale:{patient:"Another targeted pill for NTRK-fusion tumors; its basket trial specifically includes neuroendocrine tumors.",clinician:"Tissue-agnostic NTRK/ROS1 approval; integrated ORR 57%. The STARTRK-2 basket (NCT02568267) enrolls NET with NTRK/ROS1/ALK fusions.",researcher:"CNS-penetrant TRK/ROS1/ALK inhibitor; its basket design is the operational template for this whole tool, biomarker in, tumor-agnostic out."},
+      citation:{label:"Entrectinib integrated",url:PM(31838007)},trial:{nct:"NCT02568267",url:NCT("NCT02568267")}},
+    {drug:"Dabrafenib + trametinib",target:"BRAF V600E",tier:1,approved_in:"Any BRAF V600E solid tumor (tissue-agnostic, 2022)",dev_stage:"FDA approved",
+      rationale:{patient:"If your tumor carries a BRAF V600E mutation, this two-drug combination is FDA approved for any solid tumor. Around 1 in 4 high-grade rectal neuroendocrine carcinomas carry BRAF.",clinician:"Tissue-agnostic BRAF V600E approval; BRAF V600E is present in ~25% of rectal and ~49% of colonic NEC, tightly linked to MSI. ROAR basket biliary ORR ~51%.",researcher:"Combined BRAF/MEK blockade of MAPK signaling; colorectal NEC's adenocarcinoma-like BRAF/APC/KRAS genotype makes this a mechanistically strong borrow from colorectal and biliary tumors."},
+      citation:{label:"ROAR",url:PM(32818466)}},
+    {drug:"Selpercatinib",target:"RET fusion",tier:1,approved_in:"Any RET-fusion solid tumor (tissue-agnostic, 2022)",dev_stage:"FDA approved · biomarker-gated",
+      rationale:{patient:"For the rare tumors with a RET gene fusion, this targeted pill is FDA approved across cancer types. Whether RET fusions occur in rectal neuroendocrine tumors is not yet established, so it applies only if testing finds one.",clinician:"Tissue-agnostic RET-fusion approval; LIBRETTO-001 tumor-agnostic ORR 43.9%. RET-fusion prevalence in rectal NEN is unverified, so strictly biomarker-gated.",researcher:"Selective RET inhibition; included as a biomarker-gated option because RET-fusion prevalence in rectal NEN lacks a primary source, testing-dependent only."},
+      citation:{label:"LIBRETTO-001",url:PM(36108661)}},
+    {drug:"Trastuzumab deruxtecan",target:"HER2 IHC 3+",tier:1,approved_in:"Any HER2 IHC 3+ solid tumor (tissue-agnostic, 2024)",dev_stage:"FDA approved · biomarker-gated",
+      rationale:{patient:"If your tumor strongly expresses HER2, this antibody-drug conjugate is FDA approved for any solid tumor. HER2 testing is needed to know if it applies.",clinician:"Tissue-agnostic HER2 IHC 3+ approval; DESTINY-PanTumor02 IHC 3+ ORR 61.3%. HER2 IHC 3+ prevalence in rectal NEN is unverified, biomarker-gated.",researcher:"HER2-directed ADC delivering a topoisomerase-I payload with bystander effect; applicable only to IHC 3+ disease, prevalence in rectal NEN unestablished."},
+      citation:{label:"DESTINY-PanTumor02",url:PM(37870536)}},
+    {drug:"Tarlatamab",target:"DLL3",tier:2,approved_in:"Small cell lung cancer",dev_stage:"FDA approved 2024 (SCLC) · phase 2/3 in NEC",
+      rationale:{patient:"This newer immune therapy targets a protein called DLL3 found on many high-grade neuroendocrine carcinomas. It is FDA approved for small cell lung cancer and is now being tested directly in neuroendocrine carcinoma.",clinician:"DLL3×CD3 bispecific T-cell engager, FDA approved for SCLC (DeLLphi-301 ORR 40%). DLL3 is expressed in ~55% of GEP-NEC; dedicated extrapulmonary/GEP-NEC trials are open (phase 2 NCT06893783, phase 3 NCT06937905).",researcher:"DLL3 is an aberrant surface Notch ligand marking ASCL1-driven small-cell-like differentiation, shared between SCLC and GEP-NEC, making this BiTE a same-target borrow now in prospective NEC testing."},
+      citation:{label:"DeLLphi-301",url:PM(37861218)},trial:{nct:"NCT06937905",url:NCT("NCT06937905")}},
+    {drug:"Nivolumab + ipilimumab",target:"PD-1 + CTLA-4",tier:2,approved_in:"Melanoma, RCC and others",dev_stage:"Prospective basket signal in NEC",
+      rationale:{patient:"A two-drug immunotherapy combination that showed responses specifically in high-grade neuroendocrine carcinoma in a rare-tumor trial.",clinician:"Dual PD-1/CTLA-4 blockade; DART SWOG 1609 non-pancreatic NET cohort ORR 25% overall but 44% (8/18) in high-grade NEC versus 0% in low/intermediate NET.",researcher:"Prospective rare-tumor basket signal; grade-dependent benefit (NEC far above well-diff NET) consistent with higher mutational and neoantigen load in poorly-differentiated disease."},
+      citation:{label:"DART SWOG 1609",url:PM(31969335)}},
+    {drug:"Platinum + etoposide",target:"SCLC-type chemotherapy",tier:2,approved_in:"Small cell lung cancer",dev_stage:"Established standard of care for NEC",
+      rationale:{patient:"The standard first chemotherapy for high-grade neuroendocrine carcinoma was borrowed directly from small cell lung cancer, the original cross-cancer translation.",clinician:"SCLC-derived platinum-etoposide is first-line for NEC; NORDIC NEC median OS ~11 months, with a Ki-67 ~55% cutoff predicting platinum responsiveness.",researcher:"The archetypal histology-agnostic borrow: shared small-cell/poorly-differentiated biology, not shared organ, justified moving SCLC chemotherapy into GEP-NEC."},
+      citation:{label:"NORDIC NEC",url:PM(22967994)}},
+    {drug:"DLL3 ADCs / T-cell engagers",target:"DLL3 (emerging)",tier:3,approved_in:"Investigational (DLL3+ NEN)",dev_stage:"Phase 1/2",
+      rationale:{patient:"Several newer DLL3-targeting drugs are in early trials for neuroendocrine carcinoma. Promising, but not yet proven for rectal disease.",clinician:"Emerging DLL3-directed modalities beyond tarlatamab (peluntamig/PT217, obrixtamig/BI 764532) in phase 1/2 for DLL3+ NEN; rectal-NEC data are immature.",researcher:"Expands the DLL3 axis with ADC, CD47-bispecific and T-cell-engager formats; strong target rationale awaiting NEC-specific readouts."},
+      citation:{label:"SKYBRIDGE (PT217)",url:NCT("NCT05652686")},trial:{nct:"NCT05652686",url:NCT("NCT05652686")}} ],
+  trials:[
+    {nct:"NCT06937905",title:"Tarlatamab vs standard chemotherapy in pretreated pulmonary or GEP poorly-differentiated NEC",phase:"Phase 3",intervention:"Tarlatamab vs chemo",eligibility:"Pretreated advanced pulmonary/GEP NEC",url:NCT("NCT06937905")},
+    {nct:"NCT06893783",title:"Tarlatamab in advanced extrapulmonary NEC",phase:"Phase 2",intervention:"Tarlatamab",eligibility:"Advanced extrapulmonary NEC",url:NCT("NCT06893783")},
+    {nct:"NCT05652686",title:"Peluntamig (PT217), DLL3×CD47 (SKYBRIDGE)",phase:"Phase 1/2",intervention:"Peluntamig ± chemo/atezolizumab",eligibility:"DLL3-expressing NEC incl. GEP-NEC",url:NCT("NCT05652686")},
+    {nct:"NCT05963867",title:"Obrixtamig (BI 764532), DLL3×CD3 uptake study",phase:"Phase 1",intervention:"BI 764532",eligibility:"SCLC or neuroendocrine neoplasms",url:NCT("NCT05963867")},
+    {nct:"NCT04325425",title:"Chemotherapy for metastatic G3 poorly-differentiated GEP/CUP NEC",phase:"Phase 2",intervention:"FOLFOXIRI, cisplatin",eligibility:"Metastatic grade 3 poorly-differentiated NEC",url:NCT("NCT04325425")},
+    {nct:"NCT05746208",title:"Lenvatinib + pembrolizumab in well-differentiated G3 NET",phase:"Phase 2",intervention:"Lenvatinib + pembrolizumab",eligibility:"Well-differentiated G3 NET / high-grade NEC",url:NCT("NCT05746208")},
+    {nct:"NCT02568267",title:"Entrectinib basket (NTRK/ROS1/ALK)",phase:"Phase 2",intervention:"Entrectinib",eligibility:"Solid tumors incl. NET with NTRK/ROS1/ALK fusion",url:NCT("NCT02568267")} ],
+  precedentIntro:{
+    patient:"This tool works because oncology increasingly approves drugs by a tumor's molecular marker rather than where it started. These are the landmark approvals that made treating cancer by biology, not body part, standard practice.",
+    clinician:"The tissue-agnostic and basket approvals below are the regulatory precedent for biomarker-driven, site-independent therapy, the backbone of every Tier 1 recommendation above.",
+    researcher:"Each landmark validates a lineage-independent dependency (mismatch repair, TRK/RET fusion, BRAF V600E, HER2 amplification, TMB). Rare cancers benefit disproportionately, since these approvals convert an untrialed tumor into an eligible one on the strength of a shared marker." },
+  precedents:[
+    {biomarker:"MSI-H / dMMR",drug:"Pembrolizumab",year:"2017, first tissue-agnostic approval",citation:{label:"PMID 31682550",url:PM(31682550)}},
+    {biomarker:"NTRK fusion",drug:"Larotrectinib",year:"2018",citation:{label:"PMID 32105622",url:PM(32105622)}},
+    {biomarker:"NTRK fusion",drug:"Entrectinib",year:"2019",citation:{label:"PMID 31838007",url:PM(31838007)}},
+    {biomarker:"TMB-high ≥10/Mb",drug:"Pembrolizumab",year:"2020",citation:{label:"PMID 32919526",url:PM(32919526)}},
+    {biomarker:"dMMR",drug:"Dostarlimab",year:"2021",citation:{label:"PMID 37917058",url:PM(37917058)}},
+    {biomarker:"BRAF V600E",drug:"Dabrafenib + trametinib",year:"2022",citation:{label:"PMID 32818466",url:PM(32818466)}},
+    {biomarker:"RET fusion",drug:"Selpercatinib",year:"2022",citation:{label:"PMID 36108661",url:PM(36108661)}},
+    {biomarker:"HER2 IHC 3+",drug:"Trastuzumab deruxtecan",year:"2024",citation:{label:"PMID 37870536",url:PM(37870536)}} ],
+  disclaimer:"<b>This is decision support, not medical advice.</b> Every therapy shown is graded by strength of evidence and links to its primary source. Eligibility depends on your own tumor's molecular testing, and the well-differentiated NET versus high-grade neuroendocrine carcinoma distinction changes which options apply. Treatment decisions belong to a qualified oncology team and a molecular tumor board."
+};
+/*DATA_END*/
+
+let AUD="researcher";
+const $=s=>document.querySelector(s), el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+const pick=o=>o&&typeof o==="object"&&!Array.isArray(o)?(o[AUD]??o.clinician??""):o;
+
+function confEl(c){
+  if(!c)return null;
+  const cls={High:"c-high",Moderate:"c-mod","Low to moderate":"c-mod",Low:"c-low",Speculative:"c-spec"}[c.label]||"c-low";
+  const d=el("div","conf "+cls);
+  const row=el("div","conf-row");
+  row.append(el("span","conf-label","Confidence "+c.label+" "+c.pct+"%"));
+  const bar=el("div","conf-bar");const f=el("div","conf-fill");f.style.width=c.pct+"%";bar.append(f);row.append(bar);
+  d.append(row);
+  if(c.basis)d.append(el("div","conf-basis","Basis: "+c.basis));
+  return d;
+}
+function renderPatient(){
+  const P=DATA.patient, sec=$("#s-patient");
+  const on=!!(P&&P.present!==false&&((P.alterations&&P.alterations.length)||(P.excluded&&P.excluded.length)));
+  sec.classList.toggle("hide",!on);
+  if(!on)return;
+  $("#pb-title").textContent=(P.tumor&&P.tumor.summary)||P.title||"";
+  $("#pb-sub").innerHTML=pick(P.summary)||"";
+  const rz=(a,b)=>{a=(""+(a||"")).toLowerCase();b=(""+(b||"")).toLowerCase();return !!(a&&b&&(a.includes(b)||b.includes(a)));};
+  const alts=P.alterations||[];
+  const nMatch=(DATA.therapies||[]).filter(t=>alts.some(a=>rz(a.target,t.target))).length;
+  const stats=$("#pb-stats");stats.innerHTML="";
+  const mk=(n,l)=>{const d=el("div","pstat");d.append(el("div","pnum",""+n));d.append(el("div","plbl",l));return d;};
+  stats.append(mk(alts.length,alts.length===1?"alteration interpreted":"alterations interpreted"));
+  stats.append(mk(nMatch,nMatch===1?"therapy match":"therapy matches"));
+  const tb=$("#alt-body");tb.innerHTML="";
+  alts.forEach(a=>{const r=el("tr");
+    const g=el("td");g.append(el("span","gene",a.gene||""));if(a.cls)g.append(el("span","cls",a.cls));r.append(g);
+    r.append(el("td","mono",a.variant||""));
+    r.append(el("td",null,a.actionability||""));
+    const p=el("td");
+    if(a.pathoUrl){const x=el("a",null,a.pathogenicity||"link");x.href=a.pathoUrl;x.target="_blank";x.rel="noopener";p.append(x);}
+    else p.append(el("span",null,a.pathogenicity||""));
+    r.append(p);
+    r.append(el("td",null,a.note||""));tb.append(r);});
+  const src=$("#pb-source");src.innerHTML="";
+  if(P.source&&P.source.url){src.append(document.createTextNode("Profile from a real published case: "));
+    const a=el("a",null,P.source.label||"source");a.href=P.source.url;a.target="_blank";a.rel="noopener";src.append(a);}
+}
+function render(){
+  $("#dx-name").textContent=DATA.cancer.name;
+  $("#dx-sub").textContent=DATA.cancer.sub;
+  const chips=$("#dx-chips");chips.innerHTML="";(DATA.cancer.chips||[]).forEach(c=>chips.append(el("span","chip",c)));
+  $("#voice-note").textContent=DATA.voiceNote?.[AUD]||"";
+  $("#overview").innerHTML=pick(DATA.overview);
+  $("#targets-intro").innerHTML=pick(DATA.targetsIntro);
+  $("#therapies-intro").innerHTML=pick(DATA.therapiesIntro);
+  $("#precedent-intro").innerHTML=pick(DATA.precedentIntro);
+  $("#disclaimer").innerHTML=DATA.disclaimer;
+  renderPatient();
+
+  const tg=$("#targets");tg.innerHTML="";
+  DATA.targets.forEach(t=>{const d=el("div","target");d.append(el("div","tname",t.name));
+    d.append(el("div","tmeta",(t.present_in||"")+(t.evidence?" · "+t.evidence:"")));tg.append(d);});
+  $("#s-targets").classList.toggle("hide",!DATA.targets.length);
+
+  const P=DATA.patient, hasP=!!(P&&P.present!==false&&((P.alterations&&P.alterations.length)||(P.excluded&&P.excluded.length)));
+  const nz=s=>(""+(s||"")).toLowerCase().trim();
+  const rel=(a,b)=>{a=nz(a);b=nz(b);return !!(a&&b&&(a===b||a.includes(b)||b.includes(a)));};
+  const matchedT=hasP?(P.alterations||[]).map(a=>a.target).filter(Boolean):[];
+  const isMatch=t=>matchedT.some(m=>rel(m,t));
+  const exReason=t=>{const e=(hasP?(P.excluded||[]):[]).find(e=>rel(e.target,t));return e?e.reason:null;};
+  const cw=$("#cards");cw.innerHTML="";
+  const ordered=DATA.therapies.map((x,i)=>({x,i,m:hasP&&isMatch(x.target)})).sort((a,b)=>(b.m-a.m)||(a.i-b.i));
+  ordered.forEach(({x,m})=>{
+    const tier="t"+(x.tier||3), c=el("div","card "+tier+(m?" matched":""));
+    const top=el("div","card-top");
+    const L=el("div");
+    if(m)L.append(el("span","match-badge","✓ Matches your tumor"));
+    L.append(el("div","drug",x.drug));L.append(el("div","target-tag",x.target));
+    if(x.modality)L.append(el("div","modality-tag",x.modality));
+    const tl={1:"Tier 1 · tissue-agnostic",2:"Tier 2 · approved elsewhere",3:"Tier 3 · mechanistic"}[x.tier||3];
+    top.append(L);top.append(el("span","tier "+tier,tl));c.append(top);
+    if(x.approved_in){const k=el("div","kv");k.append(el("span","lbl","Approved in"));k.append(el("span",null,x.approved_in));c.append(k);}
+    if(x.dev_stage){const k=el("div","kv");k.append(el("span","lbl","Stage"));k.append(el("span",null,x.dev_stage));c.append(k);}
+    c.append(el("div","rationale",pick(x.rationale)));
+    if(hasP&&!m){const r=exReason(x.target);if(r)c.append(el("div","na-note","Not applicable to this patient: "+r));}
+    {const ce=confEl(x.confidence);if(ce)c.append(ce);}
+    const f=el("div","card-foot");
+    if(x.citation?.url){const a=el("a","ref",(x.citation.label||"Evidence")+" ↗");a.href=x.citation.url;a.target="_blank";a.rel="noopener";f.append(a);}
+    if(x.trial?.url){const a=el("a","ref nct",(x.trial.nct||"Trial")+" ↗");a.href=x.trial.url;a.target="_blank";a.rel="noopener";f.append(a);}
+    c.append(f);cw.append(c);
+  });
+
+  const tb=$("#trials").querySelector("tbody");tb.innerHTML="";
+  DATA.trials.forEach(t=>{const r=el("tr");
+    const c1=el("td");const a=el("a","mono",t.nct);if(t.url){a.href=t.url;a.target="_blank";a.rel="noopener";}
+    c1.append(a);c1.append(el("div",null,"<span style='color:var(--slate)'>"+(t.title||"")+"</span>"));
+    r.append(c1);r.append(el("td","phase",t.phase||""));r.append(el("td",null,t.intervention||""));
+    r.append(el("td",null,t.eligibility||""));tb.append(r);});
+  $("#s-trials").classList.toggle("hide",!DATA.trials.length);
+
+  const pc=$("#precedents");pc.innerHTML="";
+  DATA.precedents.forEach(p=>{const d=el("div","p");d.append(el("div","bm",p.biomarker));
+    let dr=p.drug+(p.year?" · "+p.year:"");d.append(el("div","dr",dr));
+    if(p.citation?.url){const a=el("a","ref",(p.citation.label||"Ref")+" ↗");a.href=p.citation.url;a.target="_blank";a.rel="noopener";a.style.marginTop="8px";d.append(a);}
+    pc.append(d);});
+  $("#s-precedent").classList.toggle("hide",!DATA.precedents.length);
+
+  const dc=$("#discovery");dc.innerHTML="";
+  (DATA.discovery||[]).forEach(h=>{
+    const c=el("div","disc-card");
+    const top=el("div","disc-top");
+    top.append(el("span","modality",h.modality||"hypothesis"));
+    top.append(el("span","hyp-flag","Research hypothesis"));
+    c.append(top);
+    c.append(el("div","disc-h",h.hypothesis||""));
+    const kv=(l,v)=>{if(!v)return;const k=el("div","disc-kv");k.append(el("span","dl",l));k.append(el("span",null,v));c.append(k);};
+    kv("Shared dependency",h.shared);kv("Borrowed from",h.source);kv("Transferability",h.transferability);
+    if(h.prediction)c.append(el("div","disc-pred","Testable prediction: "+h.prediction));
+    {const ce=confEl(h.confidence);if(ce)c.append(ce);}
+    if(h.citation&&h.citation.url){const f=el("div","card-foot");const a=el("a","ref",(h.citation.label||"Analogy source")+" ↗");a.href=h.citation.url;a.target="_blank";a.rel="noopener";f.append(a);c.append(f);}
+    dc.append(c);
+  });
+  $("#discovery-intro").innerHTML=pick(DATA.discoveryIntro);
+  $("#s-discovery").classList.toggle("hide",!(DATA.discovery&&DATA.discovery.length));
+
+  const wf=DATA.workflow;
+  $("#s-workflow").classList.toggle("hide",!wf);
+  if(wf){
+    $("#workflow-aim").innerHTML=(wf.aim?"<strong>Aim.</strong> "+wf.aim:"")+(wf.hypothesis?" <strong>Hypothesis.</strong> "+wf.hypothesis:"");
+    const ws=$("#workflow-steps");ws.innerHTML="";
+    (wf.steps||[]).forEach((st,i)=>{const d=el("div","wstep");
+      d.append(el("div","wstep-t",(i+1)+". "+(st.title||"")));
+      if(st.what)d.append(el("div","wstep-w",st.what));
+      const meta=el("div","wstep-m");
+      if(st.tools)meta.append(el("span","wtag","Tools: "+st.tools));
+      if(st.outputs)meta.append(el("span","wtag","Output: "+st.outputs));
+      if(meta.childNodes.length)d.append(meta);
+      ws.append(d);});
+    const wd=$("#workflow-data");wd.innerHTML="";
+    if(wf.datasets&&wf.datasets.length){wd.append(el("div","wdh","Key datasets"));
+      wf.datasets.forEach(ds=>{const a=el(ds.url?"a":"span","wds",(ds.name||"")+(ds.source?" ("+ds.source+")":""));if(ds.url){a.href=ds.url;a.target="_blank";a.rel="noopener";}wd.append(a);});}
+    if(wf.validation)wd.append(el("div","wval","Validation: "+wf.validation));
+    if(wf.figures)wd.append(el("div","wval","Expected key result: "+wf.figures));
+  }
+
+  const dbc=$("#databases");dbc.innerHTML="";
+  (DATA.databases_queried||[]).forEach(q=>{
+    const c=el("div","dbq-card");
+    const top=el("div","dbq-top");top.append(el("span","dbq-src",q.database||""));
+    if(q.n!=null&&q.n!=="")top.append(el("span","dbq-n",q.n+" hits"));
+    c.append(top);
+    if(q.query)c.append(el("div","dbq-q",q.query));
+    if(q.finding)c.append(el("div","dbq-f",q.finding));
+    if(q.citation&&q.citation.url){const f=el("div","card-foot");const a=el("a","ref",(q.citation.label||"Source")+" ↗");a.href=q.citation.url;a.target="_blank";a.rel="noopener";f.append(a);c.append(f);}
+    dbc.append(c);
+  });
+  $("#databases-intro").innerHTML=pick(DATA.databasesIntro);
+  $("#s-databases").classList.toggle("hide",!(DATA.databases_queried&&DATA.databases_queried.length));
+}
+
+document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.seg button').forEach(x=>x.setAttribute('aria-selected','false'));
+  b.setAttribute('aria-selected','true');AUD=b.dataset.aud;render();
+}));
+render();
+</script>

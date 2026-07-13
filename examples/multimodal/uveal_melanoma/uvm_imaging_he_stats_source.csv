@@ -1,0 +1,2 @@
+width,height,megapixels,n_nuclei,median_nucleus_area_px,nuclear_density_per_megapixel,pigment_dark_pixel_pct,note
+1183,441,0.522,33,49.0,63.3,6.39,pixels not calibrated to microns; melanin can confound H&E deconvolution

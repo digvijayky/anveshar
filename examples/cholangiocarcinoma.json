@@ -1,0 +1,433 @@
+{
+  "cancer": {
+    "name": "Cholangiocarcinoma (bile duct cancer)",
+    "sub": "A rare, aggressive cancer of the bile ducts. Intrahepatic cholangiocarcinoma is one of the most molecularly actionable rare cancers, with several biomarker matched drugs now approved, so this board maps each targetable alteration to the therapy that treats it.",
+    "chips": ["Intrahepatic vs extrahepatic vs perihilar", "IDH1 mutation and FGFR2 fusion enriched in intrahepatic disease", "Multiple biomarker gated FDA approvals"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, biomarkers and approval basis stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Cholangiocarcinoma is a rare cancer that starts in the bile ducts, the thin tubes that carry bile from the liver and gallbladder to the intestine. It is often found late, and for many years the only treatment was chemotherapy. Doctors now divide it by where it begins, inside the liver (intrahepatic) or outside the liver (extrahepatic and perihilar), because the type that begins inside the liver is far more likely to carry a genetic change that a targeted drug can attack.</p><p>The important news is that testing the tumor's DNA has changed this disease. Several drugs are now approved that match a specific genetic feature, and one immunotherapy plus chemotherapy combination is now a standard first treatment. <strong>Matching a treatment to your tumor's biology is what this report maps out for you.</strong></p>",
+    "clinician": "<p>Cholangiocarcinoma is a rare epithelial malignancy of the biliary tree, classified anatomically as intrahepatic (iCCA), perihilar, or distal extrahepatic (eCCA). Prognosis is poor because most patients present with unresectable or metastatic disease, and the historic standard of care was gemcitabine and cisplatin chemotherapy alone.</p><p>The critical branch point is <strong>intrahepatic disease</strong>, which is enriched for actionable drivers, versus <strong>extrahepatic disease</strong>, which is not. IDH1 mutations occur in up to roughly 20 percent and FGFR2 fusions or rearrangements in roughly 10 to 15 percent of intrahepatic tumors, with both rare in extrahepatic disease (Bekaii-Saab et al., Ann Oncol 2021, PMID 33932504, DOI 10.1016/j.annonc.2021.04.012). Comprehensive molecular profiling at diagnosis is now standard because it directly opens biomarker gated approvals.</p>",
+    "researcher": "<p>Cholangiocarcinoma is molecularly heterogeneous and anatomically stratified. Intrahepatic tumors carry the actionable long tail: IDH1 R132 hotspot mutations, a large diversity of FGFR2 fusions and rearrangements, plus BRAF V600E, HER2 (ERBB2) amplification or overexpression, NTRK fusions, and an MSI-high or mismatch repair deficient subset. TP53, KRAS, CDKN2A/B loss, and ARID1A are common but historically undruggable in this disease (Bekaii-Saab et al., Ann Oncol 2021, PMID 33932504, DOI 10.1016/j.annonc.2021.04.012).</p><p>The therapeutic opportunity concentrates almost entirely in the intrahepatic actionable alterations, several of which anchor cholangiocarcinoma specific approvals (IDH1, FGFR2) while others license borrowing from tissue agnostic baskets (BRAF V600E, HER2, NTRK, MSI-high). This report indexes each driver to the drug that treats it and grades the transferability of the evidence.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological features found in cholangiocarcinoma that existing drugs can target. Which apply to you depends on your own tumor's molecular testing, and the type that begins inside the liver is the most likely to carry one.",
+    "clinician": "Actionable targets are concentrated in intrahepatic disease. IDH1 and FGFR2 anchor cholangiocarcinoma specific approvals; BRAF V600E, HER2, NTRK, and MSI-high or dMMR license tissue agnostic options. Comprehensive next generation sequencing plus HER2 and mismatch repair testing governs eligibility.",
+    "researcher": "Targets are indexed to their supporting series (prevalence quoted for intrahepatic disease where the alteration is enriched). Each anchors one or more translations in the therapies section, and the discovery layer extends the FGFR2 and KRAS axes."
+  },
+  "targets": [
+    {
+      "name": "IDH1 R132 mutation",
+      "present_in": "Intrahepatic cholangiocarcinoma (up to roughly 20 percent); rare extrahepatic",
+      "evidence": "Basis of ivosidenib, the first mutant IDH1 inhibitor approved for a solid tumor (ClarIDHy, Abou-Alfa et al., Lancet Oncol 2020, PMID 32416072)"
+    },
+    {
+      "name": "FGFR2 fusion or rearrangement",
+      "present_in": "Intrahepatic cholangiocarcinoma (roughly 10 to 15 percent); rare extrahepatic",
+      "evidence": "Basis of pemigatinib and futibatinib (FIGHT-202, Abou-Alfa et al., Lancet Oncol 2020, PMID 32203698; FOENIX-CCA2, Goyal et al., N Engl J Med 2023, PMID 36652354)"
+    },
+    {
+      "name": "BRAF V600E mutation",
+      "present_in": "Roughly 5 percent of biliary tract cancers",
+      "evidence": "Dabrafenib plus trametinib, tissue agnostic (ROAR biliary cohort, Subbiah et al., Lancet Oncol 2020, PMID 32818466)"
+    },
+    {
+      "name": "HER2 (ERBB2) amplification or overexpression",
+      "present_in": "Roughly 5 to 20 percent of biliary tract cancers (higher in gallbladder and extrahepatic)",
+      "evidence": "Trastuzumab plus pertuzumab and trastuzumab deruxtecan (MyPathway, Javle et al., Lancet Oncol 2021, PMID 34339623; HERB, Ohba et al., J Clin Oncol 2024, PMID 39102634)"
+    },
+    {
+      "name": "NTRK fusion",
+      "present_in": "Under 1 percent of cholangiocarcinoma",
+      "evidence": "Larotrectinib or entrectinib, tissue agnostic, if present (Hong et al., Lancet Oncol 2020, PMID 32105622; Doebele et al., Lancet Oncol 2020, PMID 31838007)"
+    },
+    {
+      "name": "MSI-high or dMMR",
+      "present_in": "Roughly 1 to 3 percent of biliary tract cancers",
+      "evidence": "Pembrolizumab, tissue agnostic (KEYNOTE-158, Marabelle et al., J Clin Oncol 2020, PMID 31682550)"
+    },
+    {
+      "name": "High TMB (10 mutations per megabase or greater)",
+      "present_in": "Small subset of biliary tract cancers, overlapping the MSI-high subset",
+      "evidence": "Pembrolizumab, tissue agnostic (KEYNOTE-158 TMB analysis, Marabelle et al., Lancet Oncol 2020, PMID 32919526)"
+    },
+    {
+      "name": "Immune suppressed tumor microenvironment",
+      "present_in": "Most biliary tract cancers regardless of anatomic site",
+      "evidence": "Rationale for adding a checkpoint inhibitor to chemotherapy (TOPAZ-1, Oh et al., NEJM Evid 2022, PMID 38319896; KEYNOTE-966, Kelley et al., Lancet 2023, PMID 37075781)"
+    },
+    {
+      "name": "KRAS mutation (including G12D)",
+      "present_in": "Roughly 10 to 20 percent of cholangiocarcinoma",
+      "evidence": "Historically prognostic and undruggable in this disease; now an emerging target (discovery layer)"
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment matched to a biological feature of the tumor, colored by how strong the evidence is. Green means it is FDA approved, either specifically for cholangiocarcinoma or for any cancer carrying the right marker. Amber means it is approved elsewhere with encouraging signals in bile duct cancer. Gray means the idea is promising but still experimental.",
+    "clinician": "Candidates are graded Tier 1 (FDA approved for cholangiocarcinoma or tissue agnostic and biomarker gated), Tier 2 (approved in another tumor with a positive biliary basket signal or shared validated target), or Tier 3 (mechanistic rationale only). Biomarker testing (IDH1, FGFR2, BRAF, HER2, fusion panel, MMR or MSI, TMB) governs eligibility.",
+    "researcher": "Translations are ranked by transferability of evidence, not target novelty. Note that cholangiocarcinoma is unusual among rare cancers in holding two of its own disease specific approvals (IDH1 and FGFR2), with the remaining actionable alterations licensing borrowing from tissue agnostic baskets."
+  },
+  "therapies": [
+    {
+      "drug": "Ivosidenib",
+      "target": "IDH1 R132 mutation",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "IDH1 mutated cholangiocarcinoma (FDA approved 2021)",
+      "dev_stage": "FDA approved for this disease",
+      "rationale": {
+        "patient": "If your tumor carries an IDH1 mutation, this once daily pill is FDA approved specifically for cholangiocarcinoma. In a randomized trial it slowed the cancer and helped patients live longer than a placebo after chemotherapy stopped working.",
+        "clinician": "Oral mutant IDH1 inhibitor. In the phase 3 ClarIDHy trial in previously treated IDH1 mutated cholangiocarcinoma, ivosidenib significantly improved progression free survival versus placebo (median 2.7 versus 1.4 months, hazard ratio 0.37), and the final analysis showed an overall survival benefit after adjustment for placebo crossover. Approved for IDH1 mutated disease after prior therapy.",
+        "researcher": "Ivosidenib blocks mutant IDH1 production of the oncometabolite 2 hydroxyglutarate, reversing the epigenetic block on differentiation. ClarIDHy was the first randomized proof that targeting a metabolic mutation is efficacious in a solid tumor, and it established IDH1 as a cholangiocarcinoma specific dependency."
+      },
+      "citation": {
+        "label": "Abou-Alfa et al., Lancet Oncol 2020 (ClarIDHy, ivosidenib in IDH1 mutant cholangiocarcinoma); final OS Zhu et al., JAMA Oncol 2021, PMID 34554208",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32416072/"
+      }
+    },
+    {
+      "drug": "Pemigatinib",
+      "target": "FGFR2 fusion or rearrangement",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "FGFR2 fusion or rearrangement positive cholangiocarcinoma (FDA approved 2020)",
+      "dev_stage": "FDA approved for this disease",
+      "rationale": {
+        "patient": "If your tumor has an FGFR2 fusion, a genetic change that switches on a growth signal, this pill is FDA approved specifically for cholangiocarcinoma. In its trial about a third of patients had their tumors shrink after chemotherapy had failed.",
+        "clinician": "Oral selective FGFR1 to 3 inhibitor. In FIGHT-202, in previously treated cholangiocarcinoma with an FGFR2 fusion or rearrangement, pemigatinib produced an objective response rate of about 36 percent with a median duration of response near 9 months. It was the first FGFR targeted approval in this disease.",
+        "researcher": "Pemigatinib exploits the constitutive FGFR2 signaling created by fusion or rearrangement, an intrahepatic enriched oncogenic driver. FIGHT-202 validated FGFR2 rearrangement as a cholangiocarcinoma specific target and set the template for the FGFR inhibitor class in this disease."
+      },
+      "citation": {
+        "label": "Abou-Alfa et al., Lancet Oncol 2020 (FIGHT-202, pemigatinib in FGFR2 altered cholangiocarcinoma)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32203698/"
+      }
+    },
+    {
+      "drug": "Futibatinib",
+      "target": "FGFR2 fusion or rearrangement",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "FGFR2 fusion or rearrangement positive intrahepatic cholangiocarcinoma (FDA approved 2022)",
+      "dev_stage": "FDA approved for this disease",
+      "rationale": {
+        "patient": "This is a second FGFR targeted pill approved for cholangiocarcinoma. It attaches to its target in a way that can still work against some tumors that have become resistant to the earlier reversible FGFR drugs.",
+        "clinician": "Oral covalent, irreversible FGFR1 to 4 inhibitor. In the phase 2 FOENIX-CCA2 study in previously treated FGFR2 fusion or rearrangement positive intrahepatic cholangiocarcinoma, futibatinib produced an objective response rate of about 42 percent with a median duration of response near 9.7 months. Its covalent binding retains activity against several ATP competitive FGFR inhibitor resistance mutations.",
+        "researcher": "Futibatinib covalently engages the FGFR kinase domain, giving preclinical activity against gatekeeper and molecular brake resistance mutations that arise on reversible FGFR inhibitors. FOENIX-CCA2 confirmed clinical efficacy and positioned futibatinib as a next generation option, though acquired FGFR2 kinase domain mutations still emerge."
+      },
+      "citation": {
+        "label": "Goyal et al., N Engl J Med 2023 (FOENIX-CCA2, futibatinib in FGFR2 rearranged intrahepatic cholangiocarcinoma)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36652354/"
+      }
+    },
+    {
+      "drug": "Durvalumab plus gemcitabine and cisplatin",
+      "target": "Immune suppressed tumor microenvironment",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "First line advanced biliary tract cancer (FDA approved 2022)",
+      "dev_stage": "FDA approved for this disease",
+      "rationale": {
+        "patient": "This adds an immunotherapy called durvalumab to the standard two drug chemotherapy as a first treatment. In a large trial, adding it helped patients live longer than chemotherapy alone, and it applies broadly, not only to tumors with a specific mutation.",
+        "clinician": "Anti PD-L1 antibody added to the gemcitabine plus cisplatin backbone. In the phase 3 TOPAZ-1 trial in untreated advanced biliary tract cancer, durvalumab plus chemotherapy significantly improved overall survival versus chemotherapy alone (hazard ratio about 0.80), establishing chemoimmunotherapy as a first line standard regardless of biomarker status.",
+        "researcher": "Biliary tract cancers are typically immune excluded with low objective response to checkpoint monotherapy. TOPAZ-1 showed that combining PD-L1 blockade with cytotoxic chemotherapy converts a modest but durable survival benefit, the rationale for the checkpoint plus chemotherapy backbone now shared with KEYNOTE-966."
+      },
+      "citation": {
+        "label": "Oh et al., NEJM Evidence 2022 (TOPAZ-1, durvalumab plus gemcitabine and cisplatin in biliary tract cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38319896/"
+      }
+    },
+    {
+      "drug": "Pembrolizumab plus gemcitabine and cisplatin",
+      "target": "Immune suppressed tumor microenvironment",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "First line advanced biliary tract cancer (FDA approved 2023)",
+      "dev_stage": "FDA approved for this disease",
+      "rationale": {
+        "patient": "This is a second immunotherapy plus chemotherapy option approved as a first treatment for bile duct cancer, using pembrolizumab instead of durvalumab. It also helped patients live longer than chemotherapy alone.",
+        "clinician": "Anti PD-1 antibody added to gemcitabine plus cisplatin. In the phase 3 KEYNOTE-966 trial in untreated advanced biliary tract cancer, pembrolizumab plus chemotherapy significantly improved overall survival versus chemotherapy alone (hazard ratio about 0.83), providing a second chemoimmunotherapy backbone in the first line setting.",
+        "researcher": "KEYNOTE-966 independently confirmed the TOPAZ-1 result with a different checkpoint antibody, reinforcing that adding PD-1 or PD-L1 blockade to platinum based chemotherapy is a reproducible, biomarker unselected survival strategy in an immune cold disease."
+      },
+      "citation": {
+        "label": "Kelley et al., Lancet 2023 (KEYNOTE-966, pembrolizumab plus gemcitabine and cisplatin in biliary tract cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37075781/"
+      }
+    },
+    {
+      "drug": "Dabrafenib plus trametinib",
+      "target": "BRAF V600E mutation",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Any BRAF V600E solid tumor (tissue agnostic, FDA approved 2022)",
+      "dev_stage": "FDA approved, tissue agnostic",
+      "rationale": {
+        "patient": "If your tumor carries a BRAF V600E mutation, this two drug combination is FDA approved for any solid tumor, including bile duct cancer. In a basket trial of biliary tract cancer, about half of patients responded.",
+        "clinician": "Combined BRAF plus MEK inhibition. BRAF V600E occurs in roughly 5 percent of biliary tract cancers. In the ROAR basket trial biliary cohort, dabrafenib plus trametinib produced an objective response rate of about 47 to 51 percent, supporting the tissue agnostic BRAF V600E approval that covers this disease.",
+        "researcher": "Dual MAPK pathway blockade of the constitutively active BRAF V600E kinase. ROAR was the biliary evidence within the basket that helped establish the tissue agnostic label, making this a validated cross tumor borrow gated strictly on BRAF V600E."
+      },
+      "citation": {
+        "label": "Subbiah et al., Lancet Oncol 2020 (ROAR, dabrafenib plus trametinib in BRAF V600E biliary tract cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32818466/"
+      }
+    },
+    {
+      "drug": "Trastuzumab deruxtecan",
+      "target": "HER2 (ERBB2) overexpression, IHC 3+",
+      "tier": 1,
+      "modality": "antibody drug conjugate",
+      "approved_in": "Any HER2 IHC 3+ solid tumor (tissue agnostic, FDA approved 2024)",
+      "dev_stage": "FDA approved, tissue agnostic, plus a dedicated biliary phase 2 signal",
+      "rationale": {
+        "patient": "If your tumor strongly makes the HER2 protein, this antibody drug conjugate is FDA approved for any solid tumor and was tested directly in bile duct cancer, where many tumors responded.",
+        "clinician": "HER2 directed antibody drug conjugate delivering a topoisomerase I payload with a bystander effect. The tissue agnostic HER2 IHC 3+ approval (DESTINY-PanTumor02, Meric-Bernstam et al., J Clin Oncol 2024, PMID 37870536) covers biliary tract cancer, and the dedicated Japanese phase 2 HERB trial in HER2 expressing biliary tract cancer reported an objective response rate of about 36 percent in the HER2 positive group.",
+        "researcher": "The ADC format allows activity across a range of HER2 expression, including IHC 2+ in the HERB experience. Biliary tract cancer, particularly gallbladder and extrahepatic disease, is HER2 enriched, making this both a tissue agnostic borrow and a disease specific signal."
+      },
+      "citation": {
+        "label": "Ohba et al., J Clin Oncol 2024 (HERB trial, trastuzumab deruxtecan in HER2 expressing biliary tract cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39102634/"
+      }
+    },
+    {
+      "drug": "Trastuzumab plus pertuzumab",
+      "target": "HER2 (ERBB2) amplification or overexpression",
+      "tier": 2,
+      "modality": "antibody",
+      "approved_in": "HER2 positive breast and gastric cancer; biliary basket signal",
+      "dev_stage": "Positive biliary basket signal, not FDA approved for this disease",
+      "rationale": {
+        "patient": "This pair of HER2 targeting antibodies is approved for other HER2 driven cancers and was tested in bile duct cancer, where a meaningful share of HER2 positive tumors responded. It is a promising borrowed option rather than an approval specific to this disease.",
+        "clinician": "Dual HER2 antibody blockade. In the MyPathway basket study, in HER2 amplified or overexpressing biliary tract cancer, trastuzumab plus pertuzumab produced an objective response rate of about 23 percent. This is a prospective basket signal supporting HER2 as a target in this disease, not yet a biliary specific approval.",
+        "researcher": "Trastuzumab plus pertuzumab combines two non competing HER2 epitopes. The MyPathway biliary cohort was an early prospective demonstration that HER2 is actionable in biliary tract cancer, motivating the later ADC development that produced the tissue agnostic approval."
+      },
+      "citation": {
+        "label": "Javle et al., Lancet Oncol 2021 (MyPathway, trastuzumab plus pertuzumab in HER2 positive biliary tract cancer)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34339623/"
+      }
+    },
+    {
+      "drug": "Larotrectinib",
+      "target": "NTRK fusion",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Any NTRK fusion solid tumor (tissue agnostic, FDA approved 2018)",
+      "dev_stage": "FDA approved, tissue agnostic, biomarker gated",
+      "rationale": {
+        "patient": "If a rare gene fusion called NTRK is found, this targeted pill works across cancer types. NTRK fusions are very rare in cholangiocarcinoma, so this helps only a small number of patients, but the responses can be strong and lasting.",
+        "clinician": "Highly selective TRK inhibitor with a tissue agnostic NTRK fusion approval; the pooled analysis reported an objective response rate near 79 percent across tumor types. NTRK fusions are under 1 percent in cholangiocarcinoma, a rare but high yield match when detected on a fusion panel.",
+        "researcher": "Constitutive TRK signaling from NTRK1, 2, or 3 fusions is a lineage independent driver. Vanishingly rare in cholangiocarcinoma, it is actionable only if RNA based fusion testing identifies it, underscoring the value of comprehensive profiling."
+      },
+      "citation": {
+        "label": "Hong et al., Lancet Oncol 2020 (larotrectinib pooled analysis in TRK fusion cancers)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32105622/"
+      }
+    },
+    {
+      "drug": "Entrectinib",
+      "target": "NTRK fusion",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Any NTRK fusion solid tumor (tissue agnostic, FDA approved 2019)",
+      "dev_stage": "FDA approved, tissue agnostic, biomarker gated",
+      "rationale": {
+        "patient": "Another targeted pill for NTRK fusion tumors, with the added feature that it reaches the brain well. Like larotrectinib it applies only when testing finds an NTRK fusion.",
+        "clinician": "CNS penetrant TRK, ROS1, and ALK inhibitor with a tissue agnostic NTRK fusion approval; the integrated analysis of three phase 1 to 2 trials reported an objective response rate of about 57 percent. Applicable to the rare NTRK fusion positive cholangiocarcinoma.",
+        "researcher": "Entrectinib provides a second tissue agnostic TRK asset with intracranial activity. Its basket design (biomarker in, tumor agnostic out) is the operational template that cholangiocarcinoma's actionable long tail exploits."
+      },
+      "citation": {
+        "label": "Doebele et al., Lancet Oncol 2020 (entrectinib integrated analysis in NTRK fusion positive solid tumors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31838007/"
+      }
+    },
+    {
+      "drug": "Pembrolizumab (monotherapy)",
+      "target": "MSI-high or dMMR",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Any MSI-high or dMMR solid tumor (tissue agnostic, FDA approved 2017)",
+      "dev_stage": "FDA approved, tissue agnostic, biomarker gated",
+      "rationale": {
+        "patient": "If your tumor has a DNA repair defect called MSI-high, this immunotherapy is already FDA approved for any cancer carrying that marker. Only a small share of bile duct cancers have it, but for those patients the benefit can be durable.",
+        "clinician": "Anti PD-1 antibody with the founding tissue agnostic approval for MSI-high or dMMR solid tumors. In the KEYNOTE-158 noncolorectal cohort the objective response rate was about 34 percent across tumor types, including biliary cases. MSI-high or dMMR occurs in roughly 1 to 3 percent of biliary tract cancers.",
+        "researcher": "Mismatch repair deficiency raises neoantigen load and confers checkpoint sensitivity independent of tissue of origin. This is the original tissue agnostic paradigm, and the MSI-high biliary subset overlaps the high TMB subset."
+      },
+      "citation": {
+        "label": "Marabelle et al., J Clin Oncol 2020 (KEYNOTE-158, pembrolizumab in MSI-high noncolorectal cancers)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31682550/"
+      }
+    },
+    {
+      "drug": "Pembrolizumab (monotherapy)",
+      "target": "High TMB (10 mutations per megabase or greater)",
+      "tier": 1,
+      "modality": "immune checkpoint inhibitor",
+      "approved_in": "Any TMB-high solid tumor (tissue agnostic, FDA approved 2020)",
+      "dev_stage": "FDA approved, tissue agnostic, biomarker gated",
+      "rationale": {
+        "patient": "If your tumor carries many mutations (high tumor mutational burden), the same immunotherapy is FDA approved regardless of cancer type. This is uncommon in bile duct cancer but worth testing for.",
+        "clinician": "Tissue agnostic approval for tumor TMB of 10 mutations per megabase or greater. In the KEYNOTE-158 TMB high group the objective response rate was about 29 percent versus 6 percent in the non high group. In biliary tract cancer the TMB high fraction is small and largely coincides with the MSI-high subset.",
+        "researcher": "TMB is a tissue independent correlate of neoantigen burden. In biliary cancer it mainly captures the dMMR subset, so it is best interpreted alongside MSI and MMR testing rather than in isolation."
+      },
+      "citation": {
+        "label": "Marabelle et al., Lancet Oncol 2020 (KEYNOTE-158 TMB analysis, pembrolizumab in TMB high cancers)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32919526/"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT07221253",
+      "title": "Rilvegostomig or durvalumab plus chemotherapy as first line treatment for advanced biliary tract cancer (ARTEMIDE-Biliary02)",
+      "phase": "Phase 3",
+      "intervention": "Rilvegostomig (PD-1 and TIGIT bispecific) or durvalumab, each plus gemcitabine and cisplatin",
+      "eligibility": "Untreated unresectable locally advanced or metastatic biliary tract cancer (cholangiocarcinoma or gallbladder cancer), known PD-L1 status",
+      "url": "https://clinicaltrials.gov/study/NCT07221253"
+    },
+    {
+      "nct": "NCT06341764",
+      "title": "Neoadjuvant chemotherapy plus dual checkpoint immunotherapy in locally advanced cholangiocarcinoma",
+      "phase": "Phase 2",
+      "intervention": "Gemcitabine and cisplatin plus durvalumab and tremelimumab",
+      "eligibility": "Locally advanced cholangiocarcinoma, treatment naive, ECOG 0 to 1",
+      "url": "https://clinicaltrials.gov/study/NCT06341764"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "Cholangiocarcinoma benefits both from drugs approved specifically for it and from drugs approved by a tumor's molecular marker rather than where it started. These are the landmark approvals that made treating cancer by its biology, not its body part, standard practice.",
+    "clinician": "The approvals below combine cholangiocarcinoma specific first in class approvals (IDH1, FGFR2) with the tissue agnostic and basket precedents that extend biomarker driven therapy to this disease.",
+    "researcher": "Each landmark validates a lineage independent or driver specific dependency (IDH1, FGFR2, BRAF V600E, HER2, NTRK, mismatch repair). Rare cancers such as cholangiocarcinoma benefit disproportionately, since a shared marker converts an otherwise untrialed tumor into an eligible one."
+  },
+  "precedents": [
+    {
+      "biomarker": "MSI-high or dMMR",
+      "drug": "Pembrolizumab",
+      "year": "2017, first tissue agnostic approval",
+      "citation": {
+        "label": "PMID 31682550",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31682550/"
+      }
+    },
+    {
+      "biomarker": "NTRK fusion",
+      "drug": "Larotrectinib",
+      "year": "2018",
+      "citation": {
+        "label": "PMID 32105622",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32105622/"
+      }
+    },
+    {
+      "biomarker": "NTRK fusion",
+      "drug": "Entrectinib",
+      "year": "2019",
+      "citation": {
+        "label": "PMID 31838007",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31838007/"
+      }
+    },
+    {
+      "biomarker": "FGFR2 fusion or rearrangement in cholangiocarcinoma",
+      "drug": "Pemigatinib (first FGFR approval in this disease)",
+      "year": "2020",
+      "citation": {
+        "label": "PMID 32203698",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32203698/"
+      }
+    },
+    {
+      "biomarker": "TMB high, 10 mutations per megabase or greater",
+      "drug": "Pembrolizumab",
+      "year": "2020",
+      "citation": {
+        "label": "PMID 32919526",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32919526/"
+      }
+    },
+    {
+      "biomarker": "IDH1 R132 mutation in cholangiocarcinoma",
+      "drug": "Ivosidenib (first mutant IDH1 inhibitor approved for a solid tumor)",
+      "year": "2021",
+      "citation": {
+        "label": "PMID 32416072",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32416072/"
+      }
+    },
+    {
+      "biomarker": "BRAF V600E",
+      "drug": "Dabrafenib plus trametinib",
+      "year": "2022, tissue agnostic",
+      "citation": {
+        "label": "PMID 32818466",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32818466/"
+      }
+    },
+    {
+      "biomarker": "FGFR2 fusion or rearrangement in intrahepatic cholangiocarcinoma",
+      "drug": "Futibatinib (covalent next generation FGFR inhibitor)",
+      "year": "2022",
+      "citation": {
+        "label": "PMID 36652354",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36652354/"
+      }
+    },
+    {
+      "biomarker": "HER2 IHC 3+",
+      "drug": "Trastuzumab deruxtecan",
+      "year": "2024, tissue agnostic",
+      "citation": {
+        "label": "PMID 37870536",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37870536/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because cholangiocarcinoma has proven so responsive to matching drugs to biology, scientists are now testing the next wave of ideas, drugs for tumors that have grown resistant, and drugs against targets once thought untreatable. These are starting points for research, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that extends a dependency already validated in cholangiocarcinoma or an adjacent setting. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition hypotheses by analogy over a shared molecular dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated therapy in the target setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): deploy a next generation, highly FGFR2 selective inhibitor to overcome the secondary FGFR2 kinase domain resistance mutations that emerge after pemigatinib or futibatinib, and to reduce the off target FGFR1 and FGFR4 toxicity that forces dose reduction.",
+      "shared": "FGFR2 dependence persists at progression on approved FGFR inhibitors, but is subverted by acquired FGFR2 kinase domain mutations (most commonly the N550 molecular brake and V565 gatekeeper) that a resistance sparing, isoform selective inhibitor could still engage.",
+      "source": "Cholangiocarcinoma (FGFR2 targeted therapy, resistance mapped clinically)",
+      "modality": "small molecule",
+      "rationale": "Clinical resistance to FGFR inhibitors in FGFR2 altered cholangiocarcinoma is driven predominantly by secondary FGFR2 kinase domain mutations, so covering the full mutation spectrum with a more selective agent is a rational next step (Wu et al., Clin Cancer Res 2024, PMID 37843855, DOI 10.1158/1078-0432.CCR-23-1317). Lirafugratinib (RLY-4008), a covalent FGFR2 selective inhibitor, was designed for roughly 250 fold selectivity over FGFR1 and about 5000 fold over FGFR4, limiting the hyperphosphatemia and diarrhea that cap dosing of pan FGFR drugs (Schoenherr et al., Proc Natl Acad Sci USA 2024, PMID 38300868, DOI 10.1073/pnas.2317756121).",
+      "transferability": "medium, FGFR2 selective inhibition is clinically active, but durable control of the full resistance mutation spectrum, including compound mutations, remains to be proven and may still require rotation or combination.",
+      "prediction": "In cholangiocarcinoma models engineered with individual and compound FGFR2 kinase domain resistance mutations arising after pemigatinib or futibatinib, an FGFR2 selective inhibitor maintains growth suppression across a broader mutation panel than the reversible drugs, at exposures that spare FGFR1 and FGFR4 dependent toxicity.",
+      "citation": {
+        "label": "Wu et al., Clin Cancer Res 2024 (landscape of clinical resistance to FGFR inhibitors in FGFR2 altered cholangiocarcinoma; modality precedent lirafugratinib, Schoenherr et al., PNAS 2024, PMID 38300868)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37843855/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): test a mutant selective KRAS G12D inhibitor in the KRAS G12D subset of cholangiocarcinoma, transferring the direct RAS targeting strategy validated preclinically in pancreatic and other gastrointestinal cancers into a biliary context where KRAS has historically been undruggable.",
+      "shared": "A subset of cholangiocarcinoma carries activating KRAS mutations, including G12D, the same oncogenic dependency now addressable by mutant selective KRAS G12D inhibitors developed in other gastrointestinal tumors.",
+      "source": "Pancreatic and gastrointestinal cancers (KRAS G12D selective inhibitor MRTX1133 and clinical stage successors)",
+      "modality": "small molecule",
+      "rationale": "MRTX1133 is a potent, selective, non covalent KRAS G12D inhibitor that drives tumor regression in KRAS G12D mutant pancreatic and colorectal models, establishing that KRAS G12D is directly druggable (Hallin et al., Nat Med 2022, PMID 36216931, DOI 10.1038/s41591-022-02007-7). Because KRAS mutations, including G12D, recur in cholangiocarcinoma and have been prognostic but untargetable, the biliary KRAS G12D subset is a mechanistically matched candidate for the same class.",
+      "transferability": "speculative, KRAS G12D inhibitors are early in clinical development and have not been reported in biliary tract cancer; adaptive feedback reactivation of the RAS pathway and the biliary tumor microenvironment may blunt single agent activity.",
+      "prediction": "In patient derived KRAS G12D mutant cholangiocarcinoma models, a mutant selective KRAS G12D inhibitor suppresses ERK signaling and tumor growth, and combining it with an upstream receptor tyrosine kinase or SHP2 inhibitor delays adaptive resistance more than the KRAS G12D inhibitor alone.",
+      "citation": {
+        "label": "Hallin et al., Nat Med 2022 (MRTX1133, selective non covalent KRAS G12D inhibitor; modality precedent for the biliary KRAS G12D subset)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36216931/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): pair a driver directed targeted therapy (for example an FGFR2 or IDH1 inhibitor) with checkpoint blockade in the corresponding biomarker defined cholangiocarcinoma subset, building on the proven survival benefit of adding a checkpoint inhibitor to chemotherapy.",
+      "shared": "Cholangiocarcinoma has an immune suppressed microenvironment in which checkpoint blockade added to chemotherapy improves survival, and targeted therapies can remodel that microenvironment, suggesting a rational combination in biomarker defined subsets.",
+      "source": "Biliary tract cancer (chemoimmunotherapy) plus the disease's own targeted therapy approvals",
+      "modality": "immune checkpoint inhibitor",
+      "rationale": "The phase 3 TOPAZ-1 and KEYNOTE-966 trials showed that adding PD-L1 or PD-1 blockade to gemcitabine and cisplatin improves overall survival in an immune cold disease (Oh et al., NEJM Evid 2022, PMID 38319896, DOI 10.1056/EVIDoa2200015; Kelley et al., Lancet 2023, PMID 37075781, DOI 10.1016/S0140-6736(23)00727-4). Because FGFR2 and IDH1 directed agents can alter tumor immune signaling, combining a driver inhibitor with checkpoint blockade in the matched molecular subset is a logical next combination to raise the depth and durability of response.",
+      "transferability": "medium, checkpoint plus chemotherapy is validated broadly, but the specific driver inhibitor plus checkpoint combinations are unproven in cholangiocarcinoma and carry a real risk of overlapping toxicity that must be defined prospectively.",
+      "prediction": "In a biomarker defined cholangiocarcinoma cohort (for example FGFR2 fusion positive or IDH1 mutant), adding checkpoint blockade to the matched targeted agent increases the proportion of durable responses and lengthens progression free survival versus the targeted agent alone, without prohibitive added toxicity.",
+      "citation": {
+        "label": "Oh et al., NEJM Evidence 2022 (TOPAZ-1, chemoimmunotherapy backbone in biliary tract cancer); confirmed by Kelley et al., Lancet 2023 (KEYNOTE-966, PMID 37075781)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38319896/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Cholangiocarcinoma is a rare cancer, and this report is included to show that Anveshar's biology first matching applies powerfully to a disease that already holds several biomarker gated approvals of its own. Eligibility depends on the tumor's molecular testing, and the intrahepatic versus extrahepatic distinction strongly changes which options apply, since the actionable IDH1 and FGFR2 alterations are enriched in intrahepatic disease. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified oncology team and a molecular tumor board, ideally at a center experienced with cholangiocarcinoma and, where relevant, within a clinical trial.</p>"
+}

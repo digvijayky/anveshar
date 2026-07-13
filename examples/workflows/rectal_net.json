@@ -1,0 +1,125 @@
+{
+  "aim": "Build a publication-grade, disease-specific computational workflow for rectal neuroendocrine tumors (NET) and high grade gastroenteropancreatic neuroendocrine carcinoma (GEP-NEC) that resolves the well differentiated NET versus poorly differentiated NEC dichotomy at molecular resolution, maps the DLL3 and SSTR2 therapeutic landscape as a function of grade and differentiation, dissects the neuroendocrine transcriptional program at single cell resolution, integrates the TP53/RB1, MSI-H and BRAF genomic axes that separate colorectal NEC from NET, and nominates plus computationally validates actionable targets (DLL3, SSTR2, BRAF, immune checkpoint in MSI-H) for a target discovery manuscript.",
+  "hypothesis": "Rectal and colorectal GEP-NEN occupy a bifurcated molecular landscape in which well differentiated NET (G1-G3) retain a somatostatin-receptor high, SSTR2 positive, epithelial-neuroendocrine identity with an intact TP53/RB1 axis, whereas poorly differentiated NEC (small cell and large cell) lose SSTR2, acquire ASCL1-driven DLL3 high notch-repressed neuronal-lineage programs, and are defined by concurrent TP53 and RB1 inactivation with a subset carrying MSI-H or BRAF V600E; this bifurcation is continuous rather than binary (NET G3 is intermediate) and predicts a grade and differentiation dependent therapeutic hierarchy (SSTR2 radioligand and somatostatin analog sensitivity in NET, DLL3 T-cell engager or ADC susceptibility in NEC, and immune checkpoint or BRAF blockade in the MSI-H and BRAF mutant NEC subsets).",
+  "steps": [
+    {
+      "title": "Step 1: Assemble a graded rectal and GEP-NEN transcriptomic and genomic cohort and separate NET from NEC in silico",
+      "what": "Curate public bulk RNA-seq and matched clinical/genomic cases spanning well differentiated NET (G1, G2, G3) and poorly differentiated NEC (small cell and large cell) with emphasis on rectal and colorectal primaries, supplemented by pancreatic and small bowel GEP-NEN for breadth. Search GEO and ArrayExpress for GEP-NEN and colorectal/rectal NEN expression series, pull processed matrices and metadata, harmonize gene identifiers via Ensembl/BioMart, and normalize counts (variance stabilizing transformation). Annotate every sample with WHO grade, Ki-67 index where available, differentiation (well versus poor), and anatomic site. Query cBioPortal and the TCGA cohorts (COAD/READ and any NET/NEC studies) plus published GEP-NEC genomic series for TP53, RB1, APC, KRAS, BRAF mutation status and MSI/MMR calls so the transcriptomic axis can be anchored to genotype. Establish an unsupervised structure (PCA, hierarchical clustering, consensus clustering) and test whether NET and NEC separate, and whether NET G3 sits on a continuum between NET G2 and NEC.",
+      "tools": ["GEO", "ArrayExpress", "cBioPortal", "TCGA", "Ensembl", "bulk RNA-seq compute"],
+      "outputs": ["harmonized_gepnen_expression_matrix.tsv", "sample_metadata_grade_site_differentiation.csv", "genomic_annotation_TP53_RB1_BRAF_MSI.csv", "unsupervised_NET_vs_NEC_clustering.pdf", "NETG3_continuum_analysis.csv"]
+    },
+    {
+      "title": "Step 2: Define the DLL3 and SSTR2 expression landscape and its grade and differentiation dependence",
+      "what": "Quantify DLL3 and SSTR2 (SSTR2A/2B) transcript abundance across the graded cohort and test the disease-defining pattern reported in the literature: SSTR2 high in well differentiated NET and lost with dedifferentiation, DLL3 near-absent in NET G1/G2, low in NET G3, and high in NEC (especially small cell). Fit grade-ordered and differentiation-stratified models (SSTR2 versus DLL3 as mutually informative axes), regress against Ki-67 where available, and compute a per-sample SSTR2-high/DLL3-high classifier. Cross-check normal-tissue baseline expression of DLL3 and SSTR2 in GTEx (rectum, colon, brain, endocrine tissue) to establish therapeutic-window and tumor-specificity arguments for each target. Map DLL3 and SSTR2 onto the ASCL1/NEUROD1/POU2F3/YAP1 neuroendocrine lineage-factor framework to test whether DLL3-high NEC is ASCL1-driven. Correlate DLL3 and SSTR2 states with the TP53/RB1 and MSI/BRAF genotypes from Step 1.",
+      "tools": ["bulk RNA-seq compute", "GTEx", "Ensembl", "cBioPortal"],
+      "outputs": ["DLL3_SSTR2_by_grade_boxplots.pdf", "SSTR2high_DLL3high_classifier_per_sample.csv", "ASCL1_NEUROD1_lineage_correlation.pdf", "GTEx_DLL3_SSTR2_normal_baseline.csv", "target_state_vs_genotype_crosstab.csv"]
+    },
+    {
+      "title": "Step 3: Single cell dissection of the neuroendocrine program and the malignant-cell versus microenvironment split",
+      "what": "Retrieve single cell / single nucleus RNA-seq of GEP-NEN and colorectal/rectal NEN (and reference normal colon/rectum enteroendocrine cells) from GEO and other public single cell repositories. Run a standard scRNA-seq pipeline (QC with MAD-based filtering, normalization, integration/batch correction, Leiden clustering, cell-type annotation), isolate the malignant neuroendocrine compartment via marker expression and inferred copy number, and resolve NET-like versus NEC-like malignant states within and across tumors. Score each malignant cell for the ASCL1/NEUROD1/POU2F3/YAP1 lineage programs, for DLL3 and SSTR2, for proliferation (Ki-67/MKI67), and for a differentiation/dedifferentiation axis, testing intratumoral heterogeneity and whether DLL3-high dedifferentiated cells coexist with SSTR2-high cells. Characterize the tumor microenvironment (T cells, myeloid, fibroblasts) and compare immune infiltration between MSI-H/inflamed NEC and NET. Where spatial data exist, layer in neighborhood context.",
+      "tools": ["GEO", "scRNA-seq compute", "Ensembl"],
+      "outputs": ["gepnen_scRNA_integrated.h5ad", "malignant_NET_vs_NEC_states_umap.pdf", "per_cell_DLL3_SSTR2_lineage_scores.csv", "TME_immune_infiltration_by_subtype.pdf", "intratumoral_heterogeneity_report.csv"]
+    },
+    {
+      "title": "Step 4: Genomic and pathway architecture of the NET-to-NEC transition (TP53/RB1, MSI-H, BRAF)",
+      "what": "Formalize the genomic axis that separates colorectal NEC from NET. Using cBioPortal, TCGA and published GEP-NEC exome/genome series, tabulate co-occurrence and mutual exclusivity of TP53, RB1, APC, KRAS, BRAF, and the MSI/dMMR status, and test the hypothesis that combined TP53+RB1 loss marks NEC while an MSI-H or BRAF V600E subset defines an immunotherapy/BRAF-targetable colorectal NEC niche. Derive transcriptional signatures of RB1 loss (E2F target activation) and of MSI-H (immune/interferon signaling) and score them across the Step 1 bulk cohort. Map the differentially expressed genes between NET and NEC onto Reactome pathways (Notch/DLL3 signaling, cell cycle/E2F, neuronal differentiation, somatostatin signaling, DNA mismatch repair) to build a mechanistic model of the NET-to-NEC continuum. Retrieve variant-level interpretation for recurrent TP53, RB1 and BRAF alterations from ClinVar for clinical annotation.",
+      "tools": ["cBioPortal", "TCGA", "Reactome", "ClinVar", "bulk RNA-seq compute", "Ensembl"],
+      "outputs": ["mutation_cooccurrence_TP53_RB1_BRAF_MSI.pdf", "RB1loss_E2F_MSI_signature_scores.csv", "NET_vs_NEC_reactome_enrichment.csv", "clinvar_variant_annotations.csv", "NET_to_NEC_mechanistic_model.pdf"]
+    },
+    {
+      "title": "Step 5: Structural and functional annotation of the nominated targets (DLL3, SSTR2, BRAF)",
+      "what": "Assemble the target dossier needed for a druggability argument. Pull UniProt records and domain architecture for DLL3, SSTR2, BRAF and ASCL1, and retrieve or predict structures: experimental DLL3 and SSTR2 structures from PDB where available and AlphaFold models otherwise, focusing on the DLL3 extracellular epitope regions relevant to T-cell engager and ADC binding and the SSTR2 orthosteric pocket relevant to somatostatin-analog and radioligand binding. For BRAF, map the V600E-containing kinase domain against known inhibitor-bound PDB structures. Query ChEMBL for bioactive ligands and clinical/preclinical agents against SSTR2 (somatostatin analogs, radioligand backbones), BRAF (V600E inhibitors), and any DLL3-directed modalities, and for ASCL1-pathway tractability. Use Evo 2 to score the functional consequence and conservation of recurrent TP53, RB1 and BRAF variants and of DLL3 regulatory context, supporting variant prioritization and a sequence-level rationale for lineage dependence.",
+      "tools": ["UniProt", "PDB", "AlphaFold", "ChEMBL", "Evo 2", "Ensembl"],
+      "outputs": ["target_dossier_DLL3_SSTR2_BRAF_ASCL1.md", "DLL3_epitope_SSTR2_pocket_structures.pdb", "chembl_ligands_per_target.csv", "evo2_variant_functional_scores.csv", "druggability_summary.pdf"]
+    },
+    {
+      "title": "Step 6: Target and biomarker nomination with dependency evidence from DepMap",
+      "what": "Convert the transcriptomic, genomic and structural findings into a ranked, evidence-weighted target list. Query DepMap for CRISPR/RNAi dependency of DLL3, SSTR2, ASCL1, NEUROD1, BRAF, RB1-loss context genes, and neuroendocrine lineage regulators across neuroendocrine and colorectal cell lines, and test whether DLL3-high/ASCL1-high (NEC-like) models are selectively dependent on the neuroendocrine lineage program while SSTR2-high (NET-like) models are not. Cross-reference expression-defined subtypes (Step 2), single cell state (Step 3), and genotype (Step 4) to define a companion-biomarker scheme: SSTR2-high NET for somatostatin analog and radioligand therapy, DLL3-high/ASCL1-high NEC for DLL3-directed T-cell engagers/ADCs, MSI-H NEC for immune checkpoint blockade, and BRAF V600E colorectal NEC for BRAF/MEK inhibition. Produce a prioritized target table with the supporting axis (differential expression, dependency, structure, genotype, existing chemistry) for each nominated target.",
+      "tools": ["DepMap", "cBioPortal", "ChEMBL", "bulk RNA-seq compute"],
+      "outputs": ["depmap_dependency_by_subtype.pdf", "lineage_dependency_NEC_vs_NET.csv", "ranked_target_nomination_table.csv", "companion_biomarker_scheme.csv"]
+    },
+    {
+      "title": "Step 7: In silico validation plan in NET/NEC organoids and the DLL3 axis",
+      "what": "Specify the experimental and computational validation that a manuscript would carry, framed so each claim is falsifiable. Reanalyze any public NET/NEC organoid or patient-derived model transcriptomic data (GEO) to confirm that models retain the SSTR2-high NET versus DLL3-high/ASCL1-high NEC identity of their tumors of origin, and define which models are fit-for-purpose for each arm. Propose and design the wet-lab readouts as an analysis-ready plan: (1) SSTR2 axis, somatostatin analog and radioligand response in SSTR2-high NET organoids with SSTR2 knockdown as a specificity control; (2) DLL3 axis, ASCL1 or DLL3 perturbation in DLL3-high NEC organoids to test lineage dependence and DLL3-directed T-cell engager/ADC sensitivity, with DLL3-negative NET models as negative controls; (3) genotype arms, MSI-H NEC checkpoint sensitivity and BRAF V600E inhibitor response. For each proposed perturbation, precompute the expected transcriptional signature shift (e.g., loss of the ASCL1/DLL3 program, gain of differentiation markers) so the experiment can be scored against a defined prediction.",
+      "tools": ["GEO", "bulk RNA-seq compute", "scRNA-seq compute", "DepMap", "ChEMBL"],
+      "outputs": ["organoid_fidelity_to_tumor_of_origin.csv", "validation_plan_SSTR2_DLL3_genotype_arms.md", "predicted_perturbation_signatures.csv", "model_selection_per_arm.csv"]
+    },
+    {
+      "title": "Step 8: Synthesis, cross-cohort robustness, and manuscript-grade figure assembly",
+      "what": "Integrate all axes into the manuscript narrative and stress-test every central claim for reproducibility. Re-derive the NET-versus-NEC separation, the DLL3/SSTR2 grade dependence, and the TP53/RB1-MSI-BRAF genomic split in at least one held-out independent cohort to demonstrate the findings are not cohort-specific. Reconcile bulk, single cell, genomic, structural and dependency evidence into a unified model of the well-differentiated-to-poorly-differentiated axis and its therapeutic hierarchy, resolve discordant samples (e.g., SSTR2-low NET or DLL3-low NEC), and assemble publication figures: the NET/NEC transcriptomic map, the DLL3/SSTR2/ASCL1 landscape by grade, the single cell malignant-state atlas, the genomic co-occurrence and pathway model, the target dossier and druggability panel, and the prioritized biomarker-matched target and validation schematic. Draft the results narrative and figure legends with all quantitative claims traceable to their source analyses.",
+      "tools": ["bulk RNA-seq compute", "scRNA-seq compute", "cBioPortal", "Reactome"],
+      "outputs": ["independent_cohort_replication.csv", "unified_NET_NEC_model_figure.pdf", "main_figure_panels.pdf", "results_narrative_and_legends.md"]
+    }
+  ],
+  "datasets": [
+    {
+      "name": "GEO GEP-NEN and colorectal/rectal NEN bulk RNA-seq and microarray series",
+      "source": "NCBI Gene Expression Omnibus (query for gastroenteropancreatic neuroendocrine neoplasm, colorectal/rectal NET and NEC expression profiling; exact accessions to be confirmed at retrieval)",
+      "url": "https://www.ncbi.nlm.nih.gov/gds/?term=gastroenteropancreatic+neuroendocrine+neoplasm+RNA-seq"
+    },
+    {
+      "name": "GEO single cell / single nucleus RNA-seq of neuroendocrine neoplasms and normal colon/rectum enteroendocrine cells",
+      "source": "NCBI Gene Expression Omnibus (single cell GEP-NEN and colorectal reference atlases; accessions confirmed at retrieval)",
+      "url": "https://www.ncbi.nlm.nih.gov/gds/?term=neuroendocrine+single+cell+RNA-seq"
+    },
+    {
+      "name": "cBioPortal genomic studies (colorectal and NEN cohorts with TP53/RB1/APC/KRAS/BRAF and MSI/MMR calls)",
+      "source": "cBioPortal for Cancer Genomics",
+      "url": "https://www.cbioportal.org/"
+    },
+    {
+      "name": "TCGA colorectal (COAD, READ) and pan-cancer neuroendocrine-relevant cohorts",
+      "source": "The Cancer Genome Atlas via NCI Genomic Data Commons and cBioPortal",
+      "url": "https://portal.gdc.cancer.gov/"
+    },
+    {
+      "name": "GTEx normal tissue expression baseline (rectum, colon, brain, endocrine tissues) for DLL3/SSTR2 therapeutic window",
+      "source": "Genotype-Tissue Expression Project",
+      "url": "https://gtexportal.org/home/"
+    },
+    {
+      "name": "DepMap CRISPR/RNAi dependency and expression for neuroendocrine and colorectal cell lines",
+      "source": "Broad Institute Cancer Dependency Map",
+      "url": "https://depmap.org/portal/"
+    },
+    {
+      "name": "UniProt protein records for DLL3, SSTR2, BRAF, ASCL1, NEUROD1",
+      "source": "UniProt Knowledgebase",
+      "url": "https://www.uniprot.org/"
+    },
+    {
+      "name": "PDB and AlphaFold structures for DLL3 extracellular domain, SSTR2 receptor, BRAF kinase domain",
+      "source": "RCSB Protein Data Bank and AlphaFold Protein Structure Database",
+      "url": "https://www.rcsb.org/"
+    },
+    {
+      "name": "ChEMBL bioactivity for somatostatin analogs and SSTR2 ligands, BRAF V600E inhibitors, DLL3-directed and ASCL1-pathway agents",
+      "source": "EMBL-EBI ChEMBL",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    {
+      "name": "Reactome pathway definitions (Notch/DLL3, cell cycle/E2F, somatostatin signaling, DNA mismatch repair, neuronal differentiation)",
+      "source": "Reactome Pathway Database",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "Ensembl / BioMart gene and transcript annotation for identifier harmonization",
+      "source": "Ensembl",
+      "url": "https://www.ensembl.org/"
+    },
+    {
+      "name": "ClinVar clinical interpretation of recurrent TP53, RB1 and BRAF variants",
+      "source": "NCBI ClinVar",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/"
+    }
+  ],
+  "validation": "Every central claim is tested for robustness and falsifiability. (1) The NET-versus-NEC transcriptomic separation, the DLL3/SSTR2 grade dependence, and the TP53/RB1-MSI-BRAF genomic split are each replicated in at least one held-out independent cohort (Step 8), so findings are not cohort-specific. (2) The literature-anchored expectations serve as positive controls: DLL3 near-absent in NET G1/G2, low in NET G3, high in NEC (especially small cell); SSTR2 retained in well differentiated NET and prognostic; combined TP53+RB1 loss enriched in NEC; MSI-H and BRAF V600E defining colorectal NEC subsets. Deviations are flagged and investigated rather than discarded. (3) Cross-modality concordance is required: a claimed NEC-defining program must agree across bulk expression, single cell malignant state, and genotype before it is promoted. (4) Target nomination requires convergent evidence (differential expression plus DepMap dependency plus structural tractability plus existing chemistry); single-axis hits are held as hypotheses. (5) GTEx normal baselines gate every target for therapeutic window. (6) The validation plan (Step 7) specifies negative controls (DLL3-negative NET models for the DLL3 arm, SSTR2 knockdown specificity control for the SSTR2 arm) and precomputed predicted perturbation signatures so each proposed experiment is scored against a defined, falsifiable prediction rather than interpreted post hoc. (7) All quantitative statements in the manuscript are traceable to a named source analysis and output file.",
+  "figures": [
+    "Fig 1: Unsupervised transcriptomic map of the graded GEP-NEN cohort showing NET versus NEC separation and NET G3 as an intermediate on the well-to-poorly differentiated continuum, annotated by grade, site and genotype.",
+    "Fig 2: DLL3 and SSTR2 expression landscape by grade and differentiation, with the SSTR2-high NET versus DLL3-high NEC axis, ASCL1/NEUROD1 lineage-factor correlation, and GTEx normal-tissue baselines for therapeutic window.",
+    "Fig 3: Single cell atlas of malignant NET-like and NEC-like states with per-cell DLL3/SSTR2/lineage/proliferation scoring, intratumoral heterogeneity, and tumor microenvironment immune infiltration by subtype.",
+    "Fig 4: Genomic architecture of the NET-to-NEC transition, showing TP53/RB1/APC/KRAS/BRAF co-occurrence and MSI-H, RB1-loss E2F and MSI immune signature scores, and the Reactome pathway model of dedifferentiation.",
+    "Fig 5: Target dossier and druggability panel for DLL3, SSTR2 and BRAF, integrating structures (DLL3 epitope, SSTR2 pocket, BRAF kinase domain), ChEMBL chemistry, DepMap lineage dependency, and Evo 2 variant scores.",
+    "Fig 6: Prioritized biomarker-matched target nomination and validation schematic mapping SSTR2-high NET to somatostatin analog/radioligand therapy, DLL3-high NEC to DLL3-directed engagers/ADCs, MSI-H NEC to checkpoint blockade, and BRAF V600E NEC to BRAF/MEK inhibition, with the organoid validation arms and predicted perturbation signatures."
+  ]
+}

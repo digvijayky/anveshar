@@ -1,0 +1,195 @@
+{
+  "cancer": {
+    "name": "Cystic Fibrosis (CFTR related)",
+    "sub": "A rare autosomal recessive disease caused by mutations in CFTR, sorted into functional classes (for example gating mutations such as G551D and the common Phe508del processing mutation). Included to show Anveshar's biology first matching outside oncology, on a disease where the treatment is precision matched to the CFTR mutation class, the clearest published example of variant to therapy matching.",
+    "chips": ["CFTR loss of function", "Mutation class defines the drug (gating, processing, minimal function)", "Three approved CFTR modulator regimens"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, CFTR mutation class and modality stated.",
+    "researcher": "Mechanism and variant to modality matching foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Cystic fibrosis is a rare inherited disease. It happens when both copies of a gene called CFTR are faulty, so a protein that normally moves salt and water across cell surfaces does not work. This makes mucus thick and sticky, which harms the lungs, the pancreas, and other organs.</p><p>The most important idea in cystic fibrosis care today is that the right medicine depends on exactly how your CFTR gene is broken. Some faults leave a protein at the cell surface that is stuck shut, and a drug can open it. The most common fault stops the protein from folding and reaching the surface, and a different set of drugs helps it fold and get there. Matching the medicine to the type of CFTR fault has changed the disease for most patients.</p>",
+    "clinician": "<p>Cystic fibrosis is an autosomal recessive disease caused by biallelic pathogenic variants in CFTR (cystic fibrosis transmembrane conductance regulator) on chromosome 7q31.2, encoding a cyclic AMP regulated epithelial chloride and bicarbonate channel. Loss of CFTR function produces dehydrated airway surface liquid, impaired mucociliary clearance, chronic infection, pancreatic insufficiency, and elevated sweat chloride.</p><p>CFTR variants are grouped by functional class. Class III gating mutations (for example G551D) put a full length channel at the apical membrane that fails to open, and respond to a potentiator. Phe508del, the most common variant (present in roughly 90 percent of patients on at least one allele), is a class II processing or folding defect that is degraded before reaching the surface, and requires one or more correctors plus a potentiator. Genotype directed CFTR modulator therapy is now standard, and the mutation class determines the regimen.</p>",
+    "researcher": "<p>Cystic fibrosis is the canonical example of small molecule therapy matched to variant class. The CFTR defect is not one lesion but a spectrum, and the mechanism of each variant class dictates the pharmacology. Gating variants retain a surface channel with a closed conformation, so a potentiator that increases channel open probability is sufficient. Processing variants such as Phe508del misfold and are cleared by endoplasmic reticulum quality control, so a corrector that improves folding and trafficking is required, and pairing correctors that act on different folding defects with a potentiator gives the largest functional gain.</p><p>This makes cystic fibrosis the anchor case for Anveshar's thesis that a defined molecular lesion licenses a matched modality. The three approved regimens map three variant classes onto one small molecule platform, and the discovery layer extends the logic to the CFTR variant classes that modulators cannot correct, nonsense mutations, large deletions, and severe splicing defects, by borrowing modalities validated in adjacent rare diseases.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological handles that cystic fibrosis treatments use. Which one applies to you depends on the exact CFTR fault you carry, which a genetic test tells your care team.",
+    "clinician": "Actionable biology in cystic fibrosis is defined by the CFTR variant class. A surface channel that cannot open (gating) is drugged by a potentiator, and a misfolded channel that never reaches the surface (processing) is drugged by correctors plus a potentiator. Genotyping gates eligibility for each regimen.",
+    "researcher": "The single dependency (insufficient CFTR chloride and bicarbonate conductance) resolves into distinct target axes by variant class, channel gating for class III and protein folding and trafficking for class II, each addressed by a specific small molecule mechanism."
+  },
+  "targets": [
+    {
+      "name": "CFTR gating defect (class III, for example G551D)",
+      "present_in": "Roughly 4 to 5 percent of patients (G551D and other gating variants)",
+      "evidence": "Gating variants place a full length CFTR channel at the apical membrane that opens poorly; a potentiator increases channel open probability and restores chloride transport, the basis of ivacaftor (Ramsey et al., N Engl J Med 2011, PMID 22047557, DOI 10.1056/NEJMoa1105185)."
+    },
+    {
+      "name": "CFTR processing and folding defect (class II, Phe508del)",
+      "present_in": "About 90 percent of patients carry at least one Phe508del allele",
+      "evidence": "Phe508del CFTR misfolds and is degraded before reaching the cell surface; correctors improve folding and trafficking and a potentiator then gates the rescued channel, the basis of corrector plus potentiator regimens (Wainwright et al., N Engl J Med 2015, PMID 25981758, DOI 10.1056/NEJMoa1409547; Middleton et al., N Engl J Med 2019, PMID 31697873, DOI 10.1056/NEJMoa1908639)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is an approved cystic fibrosis treatment, colored by how strong the evidence is. Green means it is FDA approved for cystic fibrosis with the right CFTR mutation. All of them work by improving the faulty CFTR protein, but they are matched to different types of CFTR fault, so which one fits depends on your genetic test.",
+    "clinician": "All three cards are Tier 1 (FDA and EMA approved for cystic fibrosis on pivotal trial data). They are biomarker gated on CFTR variant class: a potentiator for gating mutations, a corrector plus potentiator for Phe508del homozygotes, and a two corrector plus potentiator triple regimen for patients with at least one Phe508del allele. Genotype determines eligibility.",
+    "researcher": "The three approvals map three CFTR variant classes onto one small molecule modality, potentiation for gating variants and correction plus potentiation for processing variants. This is the operational template Anveshar generalizes, variant class in, matched modality out, and the discovery layer extends it to the CFTR classes modulators cannot reach."
+  },
+  "therapies": [
+    {
+      "drug": "Ivacaftor",
+      "target": "CFTR gating defect (class III, G551D)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Cystic fibrosis with a CFTR gating mutation such as G551D (FDA approved 2012)",
+      "dev_stage": "FDA approved (oral CFTR potentiator, biomarker gated on gating mutations)",
+      "rationale": {
+        "patient": "This is a pill for people whose CFTR protein reaches the cell surface but stays shut, most often because of a fault called G551D. It acts like a key that helps the channel open so salt and water can move again. In a trial of patients with the G551D fault, it improved lung function, reduced flare ups, and improved weight and quality of life.",
+        "clinician": "Oral CFTR potentiator that increases the open probability of a surface CFTR channel. In the pivotal trial of patients 12 years and older with at least one G551D allele, ivacaftor improved percent predicted FEV1 by about 10.6 points versus placebo through 24 weeks, reduced pulmonary exacerbations by 55 percent, improved weight, and lowered sweat chloride by roughly 48 mmol per liter. Strictly biomarker gated on gating mutations, because a potentiator alone does not help a variant that never reaches the surface.",
+        "researcher": "First in class CFTR potentiator and the founding example of a cystic fibrosis drug matched to variant class. It restores function only where a channel is already at the membrane, which is why its label is defined by the gating mutation class rather than by cystic fibrosis broadly. This is the proof of concept that a variant mechanism, not the disease name, licenses the modality, and the template the correction regimens and the discovery layer build on."
+      },
+      "citation": {
+        "label": "Ramsey et al., N Engl J Med 2011 (ivacaftor in cystic fibrosis with the G551D mutation)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22047557/"
+      },
+      "trial": {
+        "nct": "NCT00909532",
+        "url": "https://clinicaltrials.gov/study/NCT00909532"
+      }
+    },
+    {
+      "drug": "Lumacaftor plus ivacaftor",
+      "target": "CFTR processing defect (class II, Phe508del homozygous)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Cystic fibrosis in patients homozygous for Phe508del (FDA approved 2015)",
+      "dev_stage": "FDA approved (oral corrector plus potentiator, biomarker gated on Phe508del homozygosity)",
+      "rationale": {
+        "patient": "This is a two drug pill for people who carry two copies of the most common CFTR fault, Phe508del. One drug helps the misfolded protein reach the cell surface, and the second helps it open once it gets there. In trials of patients with two Phe508del copies it produced a modest but real improvement in lung function and fewer flare ups.",
+        "clinician": "Combination of the corrector lumacaftor, which improves Phe508del folding and trafficking, with the potentiator ivacaftor, which gates the rescued channel. In the phase 3 TRAFFIC and TRANSPORT studies of patients homozygous for Phe508del, the combination improved percent predicted FEV1 by roughly 2.6 to 4.0 absolute points versus placebo and lowered the exacerbation rate by 30 to 39 percent. Biomarker gated on Phe508del homozygosity, and effect size is modest, motivating next generation regimens.",
+        "researcher": "First approved corrector plus potentiator regimen and the direct demonstration that a processing variant needs folding correction, not just potentiation. The modest gain of a single corrector plus potentiator quantified the residual folding defect of Phe508del and set the rationale for combining two correctors that act on different structural defects, realized in the triple regimen."
+      },
+      "citation": {
+        "label": "Wainwright et al., N Engl J Med 2015 (lumacaftor plus ivacaftor in Phe508del homozygous cystic fibrosis, TRAFFIC and TRANSPORT)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25981758/"
+      },
+      "trial": {
+        "nct": "NCT01807923",
+        "url": "https://clinicaltrials.gov/study/NCT01807923"
+      }
+    },
+    {
+      "drug": "Elexacaftor, tezacaftor, ivacaftor",
+      "target": "CFTR processing defect (class II, at least one Phe508del allele)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Cystic fibrosis in patients with at least one Phe508del allele (FDA approved 2019)",
+      "dev_stage": "FDA approved (oral two corrector plus potentiator triple regimen, biomarker gated on Phe508del)",
+      "rationale": {
+        "patient": "This is a three drug pill, sometimes called Trikafta, for people who carry at least one copy of the most common CFTR fault, Phe508del, including those whose other CFTR fault produces almost no working protein. Two of the drugs help the protein fold and reach the surface, and the third helps it open. In a large trial it produced a big improvement in lung function, far fewer flare ups, and much better quality of life, and it changed the outlook for most patients with cystic fibrosis.",
+        "clinician": "Triple combination of two correctors, elexacaftor and tezacaftor, which act on distinct Phe508del folding defects, plus the potentiator ivacaftor. In the phase 3 trial of patients 12 years and older with a Phe508del and minimal function genotype, the regimen improved percent predicted FEV1 by 14.3 points through 24 weeks versus placebo, cut pulmonary exacerbations by 63 percent, improved the respiratory quality of life score by about 20 points, and lowered sweat chloride by 41.8 mmol per liter. It extends effective modulator therapy to Phe508del and minimal function patients who did not respond to earlier regimens, and is biomarker gated on carrying at least one Phe508del allele.",
+        "researcher": "The pairing of two mechanistically distinct correctors with a potentiator is the clearest demonstration that stacking agents matched to different structural defects of one variant maximizes restored function. It moved most patients with cystic fibrosis, including the previously untreatable Phe508del and minimal function group, into effective therapy, and it defines the ceiling that the discovery layer aims to reach for the CFTR variant classes modulators cannot address."
+      },
+      "citation": {
+        "label": "Middleton et al., N Engl J Med 2019 (elexacaftor, tezacaftor, ivacaftor for cystic fibrosis with a single Phe508del allele)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31697873/"
+      },
+      "trial": {
+        "nct": "NCT03525444",
+        "url": "https://clinicaltrials.gov/study/NCT03525444"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals across cystic fibrosis and other rare diseases that made matching a treatment to a specific molecular defect a proven, everyday practice. They are why borrowing a treatment idea from one rare disease to another is legitimate rather than speculative.",
+    "clinician": "The approvals below establish that variant matched small molecule modulation, antisense oligonucleotide splice correction, RNA interference knockdown, and CRISPR gene editing are all real, regulator approved or clinically validated modalities. Each validates a modality that can, in principle, transfer to another disease with a matching molecular dependency.",
+    "researcher": "Each landmark validates one modality on a defined molecular mechanism (channel gating, protein folding, splicing, transcript knockdown, gene editing). This modality catalog, not any single gene, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "CFTR gating mutation (G551D) in cystic fibrosis",
+      "drug": "ivacaftor (CFTR potentiator, small molecule)",
+      "year": 2012,
+      "citation": {
+        "label": "Ramsey et al., N Engl J Med 2011 (first variant matched CFTR modulator)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22047557/"
+      }
+    },
+    {
+      "biomarker": "CFTR Phe508del processing defect in cystic fibrosis",
+      "drug": "elexacaftor, tezacaftor, ivacaftor (two corrector plus potentiator, small molecule)",
+      "year": 2019,
+      "citation": {
+        "label": "Middleton et al., N Engl J Med 2019 (triple CFTR modulator for Phe508del)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31697873/"
+      }
+    },
+    {
+      "biomarker": "TTR gene expression in hereditary transthyretin amyloidosis (RNAi knockdown)",
+      "drug": "patisiran (RNA interference)",
+      "year": 2018,
+      "citation": {
+        "label": "Adams et al., N Engl J Med 2018 (patisiran RNAi for hereditary transthyretin amyloidosis)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29972753/"
+      }
+    },
+    {
+      "biomarker": "BCL11A erythroid enhancer editing to reactivate fetal hemoglobin in sickle cell disease and beta thalassemia (gene editing)",
+      "drug": "exagamglogene autotemcel (CRISPR-Cas9 gene editing)",
+      "year": 2023,
+      "citation": {
+        "label": "Frangoul et al., N Engl J Med 2021 (CRISPR-Cas9 editing for sickle cell disease and beta thalassemia; approved 2023 as exagamglogene autotemcel)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33283989/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Some CFTR faults, such as those that produce almost no protein at all, are not fixed by the approved modulator pills. Because related rare diseases have shown that other kinds of treatment can repair genes and their messages, the same ideas might be worth testing for these harder CFTR faults. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality validated in cystic fibrosis or an adjacent rare disease to the CFTR variant classes that current modulators cannot correct, nonsense mutations, large deletions, and severe splicing defects. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses for the modulator ineligible CFTR variant classes by analogy over a shared molecular dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated clinical options."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply a splice switching antisense oligonucleotide to CFTR variants that create aberrant splicing, correcting the transcript for patients whose class of mutation modulators cannot address.",
+      "shared": "A pathogenic CFTR splicing defect that a splice switching oligonucleotide can redirect toward the correct, functional transcript, the same logic used to restore full length transcripts in other splice altering monogenic diseases.",
+      "source": "Cystic fibrosis splicing variants and antisense oligonucleotide splice correction",
+      "modality": "antisense oligonucleotide",
+      "rationale": "A lead antisense oligonucleotide already restored CFTR function to wild type levels in cells from a patient homozygous for the 3849 plus 10 kb C to T splicing mutation, and to about 43 percent of wild type in heterozygotes, showing splice correction is tractable in CFTR. The patient customized oligonucleotide milasen further shows an individualized splice modulating oligonucleotide can be designed and dosed for an ultra rare splicing lesion, supporting extension to other CFTR splicing variants not covered by modulators.",
+      "transferability": "medium, antisense splice correction is validated in CFTR cells and in other diseases, but each target needs an accessible splice element, efficient delivery to airway epithelium, durable dosing, and demonstration that the corrected transcript yields functional protein in vivo.",
+      "prediction": "In primary airway epithelial cells from patients carrying a candidate CFTR splicing variant, a rationally designed splice switching oligonucleotide increases the correctly spliced CFTR transcript and restores CFTR mediated chloride transport in a dose dependent manner, without off target splicing changes.",
+      "citation": {
+        "label": "Oren et al., J Cyst Fibros 2021 (antisense oligonucleotide splice correction of the CFTR 3849 plus 10 kb C to T mutation); see also Kim et al., N Engl J Med 2019 (milasen individualized splice modulating oligonucleotide, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34226157/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply CFTR gene addition or CFTR mRNA delivery to the airway for patients whose CFTR variant class (large deletions, severe nonsense or splicing alleles) yields no modulator responsive protein, supplying a functional CFTR message or gene rather than repairing the endogenous one.",
+      "shared": "A loss of function CFTR genotype where no correctable protein is made, so restoring CFTR requires delivering a functional CFTR coding sequence or transcript to airway epithelium rather than correcting the mutant allele.",
+      "source": "Cystic fibrosis non-viral CFTR gene therapy and mRNA delivery",
+      "modality": "gene therapy",
+      "rationale": "A phase 2b trial of repeated nebulized non-viral CFTR gene therapy produced a significant, though modest, stabilization of lung function versus placebo, establishing that airway delivery of a functional CFTR gene has a measurable clinical effect and that the limiting factor is potency of transfer, not the concept. This licenses next generation gene addition and CFTR mRNA delivery for patients whose variant class makes modulators ineffective, contingent on more efficient vectors or lipid nanoparticle delivery and durable expression.",
+      "transferability": "medium to speculative, CFTR gene and mRNA delivery is clinically proven at a modest effect size, but efficiency of airway transfection, durability of expression, repeat dosing tolerance, and mucus and immune barriers must be improved and established per delivery platform.",
+      "prediction": "In airway models and in patients with a modulator ineligible CFTR genotype, a next generation gene or mRNA delivery platform achieves sufficient functional CFTR expression to restore chloride transport toward a clinically meaningful threshold, with tolerable and repeatable dosing.",
+      "citation": {
+        "label": "Alton et al., Lancet Respir Med 2015 (repeated nebulized non-viral CFTR gene therapy, phase 2b, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26149841/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply translational readthrough or nonsense suppression to CFTR nonsense (premature stop codon) mutations, restoring full length CFTR for the roughly one in ten patients who carry a premature termination codon and are not helped by modulators.",
+      "shared": "A CFTR premature termination codon that a readthrough agent can suppress, promoting insertion of an amino acid at the stop codon and restoring expression of full length CFTR protein, the mechanistic counterpart to correction where the problem is premature translation termination rather than folding.",
+      "source": "Cystic fibrosis nonsense mutations and translational readthrough",
+      "modality": "small molecule",
+      "rationale": "The synthetic aminoglycoside ELX-02 induces readthrough of a CFTR nonsense mutation and restores full length CFTR protein, and the resulting channel can be further enhanced by CFTR modulators, showing readthrough and modulation can be combined. Because premature termination codons occur in about 10 percent of patients and are refractory to correctors and potentiators alone, nonsense suppression paired with a potentiator is a mechanistically matched strategy for this variant class.",
+      "transferability": "medium, translational readthrough is demonstrated in CFTR cells, but efficiency varies by the identity of the stop codon and surrounding context, the amino acid inserted affects processing and function, and adequate readthrough, tolerability, and combination with modulators must be established clinically.",
+      "prediction": "In airway epithelial cells carrying a CFTR nonsense mutation, a readthrough agent increases full length CFTR protein and, combined with a potentiator or corrector, restores CFTR mediated chloride transport toward a clinically meaningful level, with acceptable specificity.",
+      "citation": {
+        "label": "Chen et al., Am J Physiol Lung Cell Mol Physiol 2023 (ELX-02 readthrough of a nonsense CFTR mutation producing functional protein enhanced by CFTR modulators)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37014818/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Cystic fibrosis is a rare disease and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework generalizes beyond cancer to a monogenic disease where therapy is precision matched to the CFTR variant class. The three approved modulator regimens are described from their pivotal trials, and eligibility depends on the specific CFTR genotype, age, and other clinical factors. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability, aimed at the CFTR variant classes that current modulators cannot correct. Treatment decisions belong to a qualified cystic fibrosis specialist at an accredited care center and, where relevant, within a clinical trial.</p>"
+}

@@ -1,0 +1,17 @@
+{
+  "present": true,
+  "source": {"label": "Klempner et al., Cancer Discovery 2016, Case 1 (PMID 27048246)", "url": "https://pubmed.ncbi.nlm.nih.gov/27048246/"},
+  "tumor": {"summary": "70 year old woman, treatment refractory metastatic high grade (grade 3) rectal neuroendocrine carcinoma, Ki-67 over 60 percent, microsatellite stable."},
+  "summary": {
+    "patient": "<p>This tumor carries one strongly actionable change, <strong>BRAF V600E</strong>. It unlocks a therapy already FDA approved for any cancer with this mutation, and in this real case it produced a rapid, durable response. The tumor is microsatellite stable, so the immunotherapy options that depend on that marker do not apply here.</p>",
+    "clinician": "<p>Comprehensive genomic profiling found <strong>BRAF V600E</strong> (26 percent VAF) in an MSI-stable high grade rectal NEC. This maps to the tissue-agnostic dabrafenib plus trametinib approval; the MSI-H and TMB-high immunotherapy tiers are excluded on MSS status. The index patient had a rapid clinical and radiographic response to BRAF plus MEK inhibition.</p>",
+    "researcher": "<p>A single activating MAPK driver in an MSS, checkpoint cold background. The actionable dependency is lineage independent, so the therapeutic match derives from the alteration rather than the rectal site, while MSS status prospectively deprioritizes checkpoint blockade.</p>"
+  },
+  "alterations": [
+    {"gene": "BRAF", "cls": "SNV, hotspot", "variant": "V600E (p.Val600Glu, c.1799T>A)", "actionability": "OncoKB Level 1 equivalent; AMP/ASCO/CAP Tier I; ESCAT Tier I", "pathogenicity": "ClinVar VCV000013961: Oncogenic, Tier I (Strong)", "pathoUrl": "https://www.ncbi.nlm.nih.gov/clinvar/variation/13961/", "target": "BRAF V600E", "note": "Activating MAPK driver at 26 percent variant allele frequency (NGS on liver metastasis, confirmed in the primary, tracked by urinary ctDNA). Predicted and observed response to BRAF plus MEK inhibition."}
+  ],
+  "excluded": [
+    {"target": "MSI-H / dMMR", "reason": "tumor is microsatellite stable by immunohistochemistry"},
+    {"target": "High TMB", "reason": "not reported and the tumor is microsatellite stable"}
+  ]
+}

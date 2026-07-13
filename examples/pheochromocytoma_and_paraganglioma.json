@@ -1,0 +1,251 @@
+{
+  "cancer": {
+    "name": "Pheochromocytoma and Paraganglioma (PPGL)",
+    "sub": "Rare catecholamine producing neuroendocrine tumors of the adrenal medulla (pheochromocytoma) and extra adrenal autonomic ganglia (paraganglioma). Uniquely among solid tumors, up to 40 percent are driven by a germline mutation, so this board maps therapy to the molecular cluster that defines each tumor and borrows validated agents across the shared pseudohypoxia and kinase axes.",
+    "chips": ["Germline driver in up to 40 percent (SDHx, VHL, RET, NF1)", "Pseudohypoxia cluster 1 (HIF2A/EPAS1) vs kinase cluster 2", "SDHB variant marks highest metastatic risk"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, germline cluster and biomarker stated.",
+    "researcher": "Mechanism and cross condition repurposing rationale foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Pheochromocytomas and paragangliomas are rare tumors that grow from the hormone producing cells of the adrenal gland and the nerve clusters near it. They often release adrenaline like hormones (catecholamines) that cause high blood pressure, a racing heart, sweating, and headaches. Most are cured by surgery, but a minority spread and become hard to treat.</p><p>What makes these tumors unusual is that a large share of patients carry an inherited gene change that caused the tumor. Knowing which gene is involved changes which treatments are most likely to help. Because the disease is uncommon, doctors increasingly borrow treatments proven in other cancers that share the same biology. <strong>That borrowing is what this report maps out for you.</strong></p>",
+    "clinician": "<p>PPGLs are chromaffin cell tumors arising in the adrenal medulla (pheochromocytoma) or in sympathetic and parasympathetic paraganglia (paraganglioma). They typically secrete catecholamines, and preoperative alpha blockade is mandatory before any procedure. Around 10 to 15 percent behave in a metastatic manner, defined by tumor at sites where chromaffin tissue is normally absent.</p><p>These tumors have the highest heritability of any human neoplasm, with a germline driver in roughly a third to 40 percent of cases across more than a dozen susceptibility genes. Germline SDHB variants carry the highest metastatic risk and worst prognosis. The critical branch point for systemic therapy is the molecular cluster: a pseudohypoxia (cluster 1) group driven by SDHx, VHL, and EPAS1 (HIF2A) with stabilized HIF-2 alpha, versus a kinase signaling (cluster 2) group driven by RET, NF1, HRAS, and TMEM127. Cluster assignment predicts imaging avidity, metastatic behavior, and, increasingly, drug selection.</p>",
+    "researcher": "<p>The Cancer Genome Atlas integrated analysis resolved PPGL into four molecularly defined groups: a pseudohypoxia subtype (SDHx, VHL, EPAS1/HIF2A), a kinase signaling subtype (RET, NF1, HRAS, TMEM127), a Wnt altered subtype driven by MAML3 fusions and CSDE1, and a cortical admixture subtype, with the MAML3 fusion gene enriched among metastatic tumors (Fishbein et al., Cancer Cell 2017, PMID 28162975, DOI 10.1016/j.ccell.2017.01.001).</p><p>Pseudohypoxia is the therapeutically central axis. SDHx loss and VHL loss both stabilize HIF-2 alpha, and gain of function EPAS1 (HIF2A) variants stabilize it directly, converging on a common transcriptional program of angiogenesis and glycolysis. SDH loss additionally elevates succinate, an oncometabolite that suppresses homology dependent DNA repair and, by extension, may sensitize tumors to DNA damage directed agents (Sulkowski et al., Nature 2020, PMID 32494005, DOI 10.1038/s41586-020-2363-0). This report indexes each cluster to therapies validated here or in molecularly related tumors and grades the transferability of each borrow.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological features of pheochromocytoma and paraganglioma that existing treatments can target. Which apply to you depends on your own tumor's genetic testing and imaging scans.",
+    "clinician": "Actionable biology segregates by molecular cluster. Pseudohypoxia tumors (SDHx, VHL, EPAS1) center on stabilized HIF-2 alpha and angiogenesis; kinase cluster tumors add RET and NF1 driven signaling. Somatostatin receptor 2 and the norepinephrine transporter are surface and functional handles that carry the radioligand therapies. SDH deficiency additionally impairs DNA repair.",
+    "researcher": "Targets are indexed to the TCGA cluster framework (Fishbein 2017) and to functional imaging phenotype. Each anchors one or more translations in the therapy section, from radioligand delivery via SSTR2 and the norepinephrine transporter to HIF-2 alpha blockade and DNA damage exploitation of SDH loss."
+  },
+  "targets": [
+    {
+      "name": "HIF-2 alpha (pseudohypoxia cluster 1)",
+      "present_in": "SDHx, VHL, and EPAS1 (HIF2A) driven PPGL; EPAS1 gain of function in ~3 to 6 percent",
+      "evidence": "SDH loss, VHL loss, and gain of function EPAS1 variants converge on stabilized HIF-2 alpha, the basis for the HIF-2 alpha inhibitor belzutifan (Bechmann et al., Best Pract Res Clin Endocrinol Metab 2024, PMID 39426935, DOI 10.1016/j.beem.2024.101955)"
+    },
+    {
+      "name": "SSTR2 (somatostatin receptor 2)",
+      "present_in": "Widely expressed in PPGL; basis of DOTATATE PET avidity",
+      "evidence": "Retained SSTR2 enables somatostatin receptor imaging and peptide receptor radionuclide therapy (Satapathy et al., Clin Endocrinol 2019, PMID 31569282, DOI 10.1111/cen.14106)"
+    },
+    {
+      "name": "Norepinephrine transporter (MIBG avidity)",
+      "present_in": "Iobenguane (MIBG) avid PPGL on diagnostic scan",
+      "evidence": "The norepinephrine transporter concentrates iobenguane, enabling targeted radiotherapy of scan positive tumors (Pryma et al., J Nucl Med 2018, PMID 30291194, DOI 10.2967/jnumed.118.217463)"
+    },
+    {
+      "name": "VEGF / angiogenesis",
+      "present_in": "Pseudohypoxia cluster tumors, marked by high tumor vascularity",
+      "evidence": "HIF driven angiogenesis rationalizes antiangiogenic tyrosine kinase inhibition (Baudin et al., Lancet 2024, FIRSTMAPPP, PMID 38402886, DOI 10.1016/S0140-6736(23)02554-0)"
+    },
+    {
+      "name": "SDHB loss / impaired DNA repair",
+      "present_in": "Germline SDHB PPGL, the highest metastatic risk subset",
+      "evidence": "SDHB loss raises succinate, silences MGMT via promoter hypermethylation, and suppresses homology dependent repair, linked to temozolomide response (Hadoux et al., Int J Cancer 2014, PMID 24752622, DOI 10.1002/ijc.28913)"
+    },
+    {
+      "name": "RET (kinase cluster 2)",
+      "present_in": "Germline RET (MEN2) and somatic RET driven pheochromocytoma",
+      "evidence": "RET is a validated somatic driver in kinase cluster PPGL (Fishbein et al., Cancer Cell 2017, PMID 28162975, DOI 10.1016/j.ccell.2017.01.001)"
+    },
+    {
+      "name": "NF1 (kinase cluster 2)",
+      "present_in": "Neurofibromatosis type 1 associated and somatic NF1 mutant PPGL",
+      "evidence": "NF1 loss activates RAS/MAPK signaling in the kinase cluster (Fishbein et al., Cancer Cell 2017, PMID 28162975, DOI 10.1016/j.ccell.2017.01.001)"
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a treatment, colored by how strong the evidence is. Green means it is FDA approved. Amber means it is approved elsewhere or has strong trial evidence in these tumors. Gray means the idea is promising but still experimental. Which treatment fits depends on your tumor's genes and on imaging scans that show whether the tumor takes up the targeting molecules.",
+    "clinician": "Candidates are graded Tier 1 (FDA approved in PPGL or tissue agnostic with a matching biomarker), Tier 2 (approved elsewhere with a positive PPGL trial signal or a shared validated target), or Tier 3 (mechanistic or preclinical rationale). Imaging (DOTATATE PET, iobenguane scan) and germline testing (SDHB, EPAS1) govern eligibility. Note that peptide receptor radionuclide therapy and belzutifan are, at the time of writing, not PPGL labeled and are used off label or investigationally.",
+    "researcher": "Translations are ranked by transferability of evidence. Two are radioligand therapies gated by functional imaging, one is a positive randomized antiangiogenic signal (FIRSTMAPPP), one is genotype directed HIF-2 alpha blockade borrowed from VHL and RCC, and one is an alkylator whose activity tracks SDHB associated MGMT silencing."
+  },
+  "therapies": [
+    {
+      "drug": "Iobenguane I-131 (Azedra)",
+      "target": "Norepinephrine transporter (MIBG avidity)",
+      "tier": 1,
+      "modality": "radioligand therapy",
+      "approved_in": "Iobenguane scan positive, unresectable, locally advanced or metastatic PPGL (FDA approved 2018)",
+      "dev_stage": "FDA approved (high specific activity I-131 iobenguane)",
+      "rationale": {
+        "patient": "This is a radioactive form of a molecule that pheochromocytoma and paraganglioma cells take up through their catecholamine machinery, delivering radiation directly to the tumor. It is FDA approved for tumors that light up on a special iobenguane (MIBG) scan. In its main trial it controlled blood pressure and shrank or stabilized tumors in most patients.",
+        "clinician": "High specific activity I-131 iobenguane is concentrated by the norepinephrine transporter. In the pivotal multicenter phase 2 trial (n=68 treated), 25 percent had a durable 50 percent or greater reduction in antihypertensive medication lasting at least 6 months, 92 percent of evaluable patients had partial response or stable disease within 12 months, and median overall survival was 36.7 months. FDA approved 2018 for iobenguane scan positive advanced PPGL; myelosuppression is the main toxicity.",
+        "researcher": "The archetypal functional theranostic in PPGL: a diagnostic iobenguane scan selects tumors whose norepinephrine transporter density predicts therapeutic uptake, converting an imaging phenotype into targeted internal radiotherapy. Establishes radioligand delivery as a cluster independent modality in this disease."
+      },
+      "citation": {
+        "label": "Pryma et al., J Nucl Med 2018 (pivotal phase 2, high specific activity I-131 iobenguane in advanced PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30291194/"
+      }
+    },
+    {
+      "drug": "Lutetium-177 DOTATATE (PRRT)",
+      "target": "SSTR2 (somatostatin receptor 2)",
+      "tier": 2,
+      "modality": "radioligand therapy",
+      "approved_in": "FDA approved for SSTR positive gastroenteropancreatic NET; used off label in SSTR positive PPGL",
+      "dev_stage": "Approved in GEP-NET; off label with strong retrospective PPGL evidence",
+      "rationale": {
+        "patient": "This treatment attaches a radioactive atom to a molecule that binds somatostatin receptors on the tumor surface, delivering radiation to cells that carry that receptor. It is FDA approved for other neuroendocrine tumors and is used in pheochromocytoma and paraganglioma when a DOTATATE scan shows the tumor takes it up. In pooled studies about a quarter of patients had tumor shrinkage and most had disease control.",
+        "clinician": "Lu-177 DOTATATE binds SSTR2 and delivers beta radiation. A systematic review and meta-analysis of advanced PPGL (12 studies, 201 patients) reported an objective response rate of 25 percent and a disease control rate of 84 percent, with favorable tolerability. Lu-177 DOTATATE is FDA approved for GEP-NET; for PPGL it is used off label, gated by DOTATATE PET positivity, and is an alternative to iobenguane therapy.",
+        "researcher": "SSTR2 directed PRRT is a same target borrow from GEP-NET, licensed by shared neuroendocrine SSTR2 expression. It provides a second radioligand axis complementary to the norepinephrine transporter, with imaging (DOTATATE PET vs iobenguane scan) selecting the appropriate delivery vehicle per tumor."
+      },
+      "citation": {
+        "label": "Satapathy et al., Clin Endocrinol 2019 (systematic review and meta-analysis, PRRT in advanced PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31569282/"
+      }
+    },
+    {
+      "drug": "Sunitinib",
+      "target": "VEGF / angiogenesis",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "Approved in RCC, pancreatic NET, GIST; positive randomized phase 2 in PPGL (FIRSTMAPPP)",
+      "dev_stage": "Positive randomized phase 2 (FIRSTMAPPP); highest level anti tumor evidence in PPGL",
+      "rationale": {
+        "patient": "This is a daily pill that blocks the blood vessel signals tumors use to grow. It is FDA approved for kidney and other cancers. In the first ever randomized trial in pheochromocytoma and paraganglioma, it slowed tumor growth compared with placebo, making it the treatment with the strongest trial evidence in this disease.",
+        "clinician": "Sunitinib is an antiangiogenic multitarget tyrosine kinase inhibitor. In FIRSTMAPPP, the first randomized placebo controlled trial in metastatic progressive PPGL (n=78), the 12 month progression free survival rate was 36 percent with sunitinib versus 19 percent with placebo, meeting the primary endpoint, including patients with germline SDHx variants. It is approved in RCC, pancreatic NET, and GIST but not specifically labeled for PPGL.",
+        "researcher": "FIRSTMAPPP is the highest level anti tumor evidence in PPGL and validates the pseudohypoxia driven angiogenesis axis as a systemic target. Benefit across SDHB mutant and wild type strata is consistent with a HIF driven vascular dependency shared with clear cell RCC, the tumor where antiangiogenic TKIs are established."
+      },
+      "citation": {
+        "label": "Baudin et al., Lancet 2024 (FIRSTMAPPP, randomized phase 2 of sunitinib in metastatic PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38402886/"
+      }
+    },
+    {
+      "drug": "Belzutifan",
+      "target": "HIF-2 alpha (pseudohypoxia cluster 1)",
+      "tier": 2,
+      "modality": "small molecule",
+      "approved_in": "FDA approved for VHL associated tumors and advanced RCC; investigational in PPGL",
+      "dev_stage": "Approved in VHL and RCC; early clinical and real-world evidence in pseudohypoxia PPGL",
+      "rationale": {
+        "patient": "This is a pill that blocks HIF-2 alpha, the master switch that is stuck in the on position in many pheochromocytomas and paragangliomas caused by pseudohypoxia gene changes. It is FDA approved for tumors in von Hippel-Lindau disease and for kidney cancer. In small reports of patients whose tumors are driven by the HIF2A gene, most had tumor shrinkage.",
+        "clinician": "Belzutifan is an oral HIF-2 alpha inhibitor. It is FDA approved for VHL associated renal cell carcinoma and other VHL tumors (pivotal trial objective response 49 percent in RCC) and for advanced RCC. Because SDHx, VHL, and EPAS1 driven PPGL converge on stabilized HIF-2 alpha, belzutifan is mechanistically matched; in a real-world series of 5 EPAS1 (HIF2A) related PPGL patients, 4 of 5 achieved partial response and 1 had stable disease, with biochemical and erythrocytosis improvement. It is not yet PPGL labeled.",
+        "researcher": "A genotype directed borrow across the pseudohypoxia cluster: the same HIF-2 alpha dependency that belzutifan exploits in VHL RCC is present in SDHx, VHL, and gain of function EPAS1 PPGL. Note that a preclinical Sdhb allograft model showed HIF-2 alpha pharmacologic inhibition was less active than genetic HIF-2 alpha knockdown, flagging that transferability may be strongest in EPAS1 driven, directly HIF-2 alpha dependent tumors."
+      },
+      "citation": {
+        "label": "Alkaissi et al., Endocr Pract 2025 (real-world belzutifan in EPAS1/HIF2A related PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41043588/"
+      }
+    },
+    {
+      "drug": "Temozolomide",
+      "target": "SDHB loss / impaired DNA repair",
+      "tier": 2,
+      "modality": "cytotoxic chemotherapy",
+      "approved_in": "Approved in glioma; genotype selected activity in SDHB associated metastatic PPGL",
+      "dev_stage": "Established off label option; response enriched in SDHB mutant, MGMT silenced tumors",
+      "rationale": {
+        "patient": "This is an oral chemotherapy that damages tumor DNA. It works especially well in tumors carrying an SDHB gene change, because those tumors switch off a repair protein (MGMT) that would otherwise undo the damage. In studies, tumor shrinkage with this drug was seen mainly in SDHB mutated patients.",
+        "clinician": "Temozolomide is an oral alkylating agent and a practical alternative to dacarbazine based regimens. In a retrospective cohort of metastatic PPGL (n=15, 10 SDHB mutant), median progression free survival was 13.3 months and all partial responses occurred in SDHB mutant tumors; SDHB germline mutation was associated with MGMT promoter hypermethylation and low MGMT expression, the likely mechanistic basis. A multicenter ENSAT cohort corroborated disease control with temozolomide including in SDHB mutant patients.",
+        "researcher": "A biomarker enriched alkylator borrow: SDH deficiency drives MGMT silencing, mirroring the MGMT dependence of temozolomide benefit in glioma, and succinate mediated suppression of homology dependent repair provides a complementary rationale for DNA damage directed therapy in this subset."
+      },
+      "citation": {
+        "label": "Hadoux et al., Int J Cancer 2014 (SDHB mutation and temozolomide response in metastatic PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24752622/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are the landmark studies that make treating pheochromocytoma and paraganglioma by its biology, rather than by trial and error, a real approach. They show that matching a treatment to a tumor's molecular cluster or to what it takes up on a scan is proven, not speculative.",
+    "clinician": "The studies below anchor the biology first strategy in PPGL: the molecular cluster map, the first randomized systemic therapy result, the two functional radioligand precedents, and the genotype linked chemosensitivity signal. Each underpins one or more Tier 1 or Tier 2 recommendations above.",
+    "researcher": "Each landmark validates a transferable dependency: HIF-2 alpha stabilization across the pseudohypoxia cluster, SSTR2 and norepinephrine transporter as radioligand handles, VEGF driven angiogenesis, and SDH loss linked DNA repair impairment. These are the mechanisms the discovery layer extends."
+  },
+  "precedents": [
+    {
+      "biomarker": "Molecular cluster map of PPGL (pseudohypoxia, kinase, Wnt, cortical admixture)",
+      "drug": "Cluster directed therapy selection",
+      "year": "2017",
+      "citation": {
+        "label": "Fishbein et al., Cancer Cell 2017 (TCGA comprehensive molecular characterization of PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28162975/"
+      }
+    },
+    {
+      "biomarker": "Iobenguane (MIBG) scan avidity via norepinephrine transporter",
+      "drug": "Iobenguane I-131 (Azedra), FDA approved 2018",
+      "year": "2018",
+      "citation": {
+        "label": "Pryma et al., J Nucl Med 2018 (pivotal phase 2, high specific activity I-131 iobenguane)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30291194/"
+      }
+    },
+    {
+      "biomarker": "HIF-2 alpha stabilization (pseudohypoxia dependency)",
+      "drug": "Belzutifan (HIF-2 alpha inhibitor), approved in VHL 2021",
+      "year": "2021",
+      "citation": {
+        "label": "Jonasch et al., N Engl J Med 2021 (belzutifan in VHL disease associated tumors)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34818478/"
+      }
+    },
+    {
+      "biomarker": "VEGF driven angiogenesis in progressive metastatic PPGL",
+      "drug": "Sunitinib (antiangiogenic TKI), first randomized trial",
+      "year": "2024",
+      "citation": {
+        "label": "Baudin et al., Lancet 2024 (FIRSTMAPPP, first randomized systemic therapy trial in PPGL)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38402886/"
+      }
+    },
+    {
+      "biomarker": "SDHB loss with MGMT silencing (alkylator sensitivity)",
+      "drug": "Temozolomide",
+      "year": "2014",
+      "citation": {
+        "label": "Hadoux et al., Int J Cancer 2014 (SDHB and temozolomide response)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24752622/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because pheochromocytoma and paraganglioma share biology with other cancers, some treatments proven elsewhere might be worth testing here. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a target or modality validated in a molecularly related setting to PPGL, graded for transferability, with a primary citation for the analogy. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel cross condition hypotheses by analogy over a shared molecular dependency (HIF-2 alpha in pseudohypoxia, DNA repair impairment in SDH loss, and radioligand plus systemic synergy), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply HIF-2 alpha targeting with belzutifan systematically across the entire pseudohypoxia cluster of PPGL (SDHx, VHL, and EPAS1 driven tumors), not only EPAS1 driven cases, testing whether a shared HIF-2 alpha dependency licenses a cluster wide indication.",
+      "shared": "Convergent stabilization of HIF-2 alpha across the pseudohypoxia cluster: SDHx loss and VHL loss stabilize HIF-2 alpha indirectly, and gain of function EPAS1 (HIF2A) variants stabilize it directly, the same dependency belzutifan exploits in VHL renal cell carcinoma.",
+      "source": "Von Hippel-Lindau disease and clear cell renal cell carcinoma (belzutifan HIF-2 alpha inhibition)",
+      "modality": "small molecule",
+      "rationale": "Belzutifan is approved for VHL associated tumors and advanced RCC, and early real-world PPGL data show responses in EPAS1 driven tumors. Because SDHx and VHL driven PPGL converge on the same stabilized HIF-2 alpha node, a cluster wide test is warranted. A caution flag is that a preclinical Sdhb model found pharmacologic HIF-2 alpha inhibition less active than genetic HIF-2 alpha knockdown, so SDHx driven tumors may respond less than directly HIF-2 alpha dependent EPAS1 tumors.",
+      "transferability": "medium, HIF-2 alpha inhibition is an approved modality with matched biology, but response may vary by how directly each cluster 1 genotype depends on HIF-2 alpha, and SDHx driven tumors need prospective confirmation.",
+      "prediction": "In a prospective genotype stratified PPGL cohort, belzutifan produces objective responses and biochemical control across SDHx, VHL, and EPAS1 driven tumors, with response magnitude highest in EPAS1 driven, directly HIF-2 alpha dependent tumors and measurable but lower in SDHx driven tumors.",
+      "citation": {
+        "label": "Jonasch et al., N Engl J Med 2021 (belzutifan HIF-2 alpha inhibition in VHL, modality and dependency precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34818478/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): test PARP inhibition or DNA damage directed strategies in SDH deficient PPGL, exploiting succinate mediated suppression of homology dependent DNA repair as a synthetic vulnerability.",
+      "shared": "SDH loss elevates succinate, an oncometabolite that suppresses homology dependent DNA repair by disrupting local chromatin signaling, producing a functional repair defect analogous to BRCA deficiency, the setting where PARP inhibitors are validated.",
+      "source": "Homologous recombination deficient cancers and oncometabolite driven repair suppression (PARP inhibitor sensitivity)",
+      "modality": "small molecule",
+      "rationale": "Succinate, fumarate, and 2-hydroxyglutarate suppress homology dependent repair and confer PARP inhibitor sensitivity, with a defined chromatin based mechanism. A preclinical Sdhb mutant PPGL model showed the PARP inhibitor talazoparib, alone and with temozolomide, reduced tumor volume, and SDHB associated MGMT silencing already predicts temozolomide benefit clinically, converging support for exploiting DNA repair impairment in this subset.",
+      "transferability": "medium, the oncometabolite to repair defect link is mechanistically established and preclinically supported in SDHB PPGL, but no PPGL specific PARP inhibitor trial has read out, and single agent PARP activity versus combination with an alkylator remains to be defined clinically.",
+      "prediction": "In SDHB deficient PPGL models and patient derived cells, a PARP inhibitor impairs residual homology dependent repair and reduces clonogenic survival, with synergy when combined with temozolomide, and clinical benefit is enriched in tumors with confirmed succinate accumulation and MGMT silencing.",
+      "citation": {
+        "label": "Sulkowski et al., Nature 2020 (oncometabolites suppress DNA repair and confer PARP inhibitor sensitivity, mechanistic precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32494005/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): combine a radioligand therapy (SSTR2 directed Lu-177 DOTATATE or norepinephrine transporter directed I-131 iobenguane) with a systemic agent that targets the pseudohypoxia axis or DNA repair, testing whether radioligand plus systemic combinations improve durability over either alone.",
+      "shared": "PPGL uniquely offers two orthogonal internal radiotherapy handles (SSTR2 and the norepinephrine transporter) alongside a validated angiogenic and DNA repair biology; radiation induced DNA damage and antiangiogenic or repair directed systemic therapy act on complementary, non overlapping dependencies.",
+      "source": "Radioligand therapy in PPGL (Lu-177 DOTATATE and I-131 iobenguane) combined with antiangiogenic or DNA damage directed systemic therapy",
+      "modality": "radioligand therapy",
+      "rationale": "Both radioligand therapies are active but rarely curative as monotherapy (PRRT objective response about 25 percent; iobenguane durable antihypertensive response 25 percent), and sunitinib is the first randomized positive systemic agent. Pairing internal radiotherapy with an antiangiogenic TKI, or with a DNA repair directed agent in SDH deficient tumors where repair is already impaired, is a rational combination to deepen and prolong response.",
+      "transferability": "speculative, each component is individually validated in PPGL, but combination safety (myelosuppression from radioligand plus TKI, or radioligand plus alkylator) and the optimal sequence and biomarker selection are unestablished and require dedicated prospective testing.",
+      "prediction": "In a biomarker selected PPGL trial, adding a radioligand therapy to an antiangiogenic or DNA repair directed systemic agent prolongs progression free survival over the systemic agent alone, with the largest gain in SDH deficient tumors where impaired DNA repair amplifies radiation induced damage, and with manageable overlapping hematologic toxicity.",
+      "citation": {
+        "label": "Satapathy et al., Clin Endocrinol 2019 (PRRT efficacy in advanced PPGL, radioligand precedent for combination)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31569282/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Pheochromocytoma and paraganglioma are rare tumors, and eligibility for the therapies shown depends on your own tumor's germline and somatic testing, molecular cluster, and functional imaging (DOTATATE PET, iobenguane scan). Catecholamine secreting tumors require alpha blockade before any procedure. Some options listed, including peptide receptor radionuclide therapy and belzutifan, are not currently FDA labeled for PPGL and would be used off label or within a clinical trial. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified oncology and endocrinology team and a molecular tumor board, ideally at a center experienced with these rare tumors.</p>"
+}

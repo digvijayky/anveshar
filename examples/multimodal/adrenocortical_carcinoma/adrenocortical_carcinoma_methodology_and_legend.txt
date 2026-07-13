@@ -1,0 +1,6 @@
+Adrenocortical carcinoma (rare cancer) genomics and transcriptomics on real public data.
+Source: TCGA Adrenocortical carcinoma PanCancer Atlas (study acc_tcga_pan_can_atlas_2018), cBioPortal REST API, n=92 tumors,
+no simulation or subsampling. Genomics: driver mutation frequency across TP53, CTNNB1, ZNRF3, CDKN2A, MEN1, RB1, TERT.
+Transcriptomics: driver mRNA z-scores clustered across tumors and projected by PCA, split at the
+median of CTNNB1. This is a research and educational analysis of public data, not medical
+advice; clinical decisions must be made by a qualified health care provider.

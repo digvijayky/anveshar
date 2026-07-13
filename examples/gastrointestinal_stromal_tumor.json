@@ -1,0 +1,241 @@
+{
+  "cancer": {
+    "name": "Gastrointestinal Stromal Tumor (GIST)",
+    "sub": "A rare mesenchymal neoplasm of the digestive tract and the archetype of targeted cancer therapy. Most cases are driven by an activating mutation in a single receptor tyrosine kinase, KIT or PDGFRA, and are treated by a defined sequence of inhibitors of that kinase. This report maps the validated targeted sequence and the distinct wild type subsets, and generates research hypotheses for resistance.",
+    "chips": ["KIT or PDGFRA activating mutation in most cases", "Sequential kinase inhibitor therapy is standard", "SDH deficient and NF1 associated wild type subsets are distinct"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, mutation subset and line of therapy stated.",
+    "researcher": "Mechanism and resistance biology foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Gastrointestinal stromal tumor, or GIST, is a rare cancer that grows in the wall of the stomach or intestine. Most GISTs are caused by a single switched on gene, either KIT or PDGFRA, that tells the tumor cells to keep growing. Because the problem comes down to one overactive signal, doctors can block that signal with targeted pills.</p><p>GIST is the classic success story of treating cancer by fixing the specific molecular fault rather than using general chemotherapy. When surgery cannot cure the disease, a series of targeted drugs is given one after another, each one designed to keep working as the tumor tries to adapt. A small number of GISTs do not carry the usual KIT or PDGFRA fault and behave differently, so knowing your tumor's exact subtype matters.</p>",
+    "clinician": "<p>GIST is the most common mesenchymal neoplasm of the gastrointestinal tract, thought to arise from the interstitial cells of Cajal. Roughly 80 percent carry an activating KIT mutation and about 5 to 10 percent an activating PDGFRA mutation, and these are largely mutually exclusive oncogenic drivers. Diagnosis rests on morphology plus KIT (CD117) and DOG1 immunohistochemistry, with mutational genotyping to guide therapy.</p><p>GIST is the founding example of genotype directed solid tumor therapy. Localized disease is resected, with adjuvant imatinib for high risk tumors; advanced disease is managed with a validated sequence of kinase inhibitors. The critical branch points are the specific KIT or PDGFRA genotype, which predicts drug sensitivity, and the wild type subsets that lack KIT and PDGFRA mutations, chiefly succinate dehydrogenase (SDH) deficient GIST and neurofibromatosis type 1 (NF1) associated GIST, which are relatively insensitive to standard inhibitors.</p>",
+    "researcher": "<p>GIST established the paradigm that a solid tumor driven by a single activated receptor tyrosine kinase can be controlled by inhibiting that kinase. Gain of function KIT mutations were identified in 1998 and activating PDGFRA mutations in 2003, and the two are essentially mutually exclusive. Response and resistance are genotype specific: the KIT exon 11 genotype is highly imatinib sensitive, whereas the PDGFRA exon 18 D842V substitution is intrinsically resistant to imatinib and required a purpose built inhibitor.</p><p>Acquired resistance is dominated by polyclonal secondary KIT mutations, so that no single later line inhibitor covers the full spectrum of resistant clones, which motivates switch control chemistry, complementary combinations, and next generation inhibitors. The wild type subsets are mechanistically separate diseases: SDH deficient GIST is defined by loss of the SDH complex with consequent pseudohypoxia and global DNA hypermethylation, and NF1 associated GIST is driven by loss of neurofibromin and RAS pathway activation. These subsets anchor the discovery layer.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the biological faults that GIST treatments aim at. Which one applies to you depends on testing of your own tumor, and it changes which drugs are likely to work.",
+    "clinician": "Actionable biology in GIST segregates by genotype: activating KIT mutations, activating PDGFRA mutations including the imatinib resistant D842V, and the KIT and PDGFRA wild type subsets defined by SDH deficiency or NF1 loss. Mutational testing governs drug selection and sequencing.",
+    "researcher": "Targets are indexed to their defining primary reports. The KIT and PDGFRA axes anchor the validated inhibitor sequence; the SDH deficient and NF1 associated axes are separate dependencies that anchor the discovery hypotheses."
+  },
+  "targets": [
+    {
+      "name": "KIT activating mutation",
+      "present_in": "About 80 percent of GIST (commonly exon 11, also exon 9)",
+      "evidence": "Gain of function KIT mutations cause constitutive, ligand independent kinase activation and are the dominant driver; this is the target of imatinib and all approved later line inhibitors (Hirota et al., Science 1998, PMID 9438854, DOI 10.1126/science.279.5350.577)."
+    },
+    {
+      "name": "PDGFRA activating mutation",
+      "present_in": "About 5 to 10 percent of GIST; includes the imatinib resistant exon 18 D842V",
+      "evidence": "Activating PDGFRA mutations are an alternative and largely mutually exclusive driver to KIT; the exon 18 D842V substitution is intrinsically imatinib resistant and is the target of avapritinib (Heinrich et al., Science 2003, PMID 12522257, DOI 10.1126/science.1079666)."
+    },
+    {
+      "name": "Secondary KIT resistance mutations",
+      "present_in": "Acquired in most KIT mutant GIST progressing on imatinib",
+      "evidence": "Resistance is driven by polyclonal secondary KIT mutations in the ATP binding pocket and activation loop, each covered by only a subset of inhibitors, which motivates broad spectrum and switch control agents (Serrano et al., Br J Cancer 2019, PMID 30792533, DOI 10.1038/s41416-019-0389-6)."
+    },
+    {
+      "name": "SDH deficiency (wild type GIST)",
+      "present_in": "About 10 to 15 percent of GIST, mostly gastric, younger patients",
+      "evidence": "Loss of the succinate dehydrogenase complex defines a KIT and PDGFRA wild type subset with pseudohypoxia and DNA hypermethylation; these tumors respond poorly to imatinib and are a distinct disease (Ibrahim and Chopra, Arch Pathol Lab Med 2019, PMID 31169996, DOI 10.5858/arpa.2018-0370-RS)."
+    },
+    {
+      "name": "NF1 loss (wild type GIST)",
+      "present_in": "GIST arising in neurofibromatosis type 1",
+      "evidence": "NF1 associated GIST is a KIT and PDGFRA wild type subset driven by loss of neurofibromin and RAS pathway activation, generally insensitive to imatinib (Kays et al., Transl Gastroenterol Hepatol 2018, PMID 30603728, DOI 10.21037/tgh.2018.10.13)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is a drug proven in GIST, colored by how strong the evidence is. Green means it is FDA approved for GIST with the right molecular marker. These are given in a set order, and which ones apply depends on your tumor's exact KIT or PDGFRA change.",
+    "clinician": "All cards below are Tier 1 (FDA approved for GIST on pivotal trial data). The four inhibitor lines target KIT and PDGFRA in sequence, and avapritinib is genotype specific for PDGFRA exon 18 D842V. Mutational testing at diagnosis and at progression governs selection.",
+    "researcher": "The approved therapies map one validated dependency, oncogenic KIT or PDGFRA signaling, onto a graded sequence of inhibitors with progressively broader coverage of resistant clones. This validated sequence is the substrate the discovery layer extends to unmet resistance and to the wild type subsets."
+  },
+  "therapies": [
+    {
+      "drug": "Imatinib",
+      "target": "KIT or PDGFRA activating mutation",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Unresectable or metastatic KIT positive GIST (first line); adjuvant for high risk resected GIST",
+      "dev_stage": "FDA approved (oral, first line standard of care)",
+      "rationale": {
+        "patient": "Imatinib is the first targeted pill for GIST. It blocks the overactive KIT signal that drives most of these tumors. In the pivotal trial more than half of patients with advanced GIST had their tumors shrink, a result that transformed a cancer once resistant to chemotherapy into a treatable disease.",
+        "clinician": "Imatinib is a selective inhibitor of KIT and PDGFRA and the standard first line agent for advanced GIST. In the pivotal open label randomized trial (147 patients, 400 or 600 mg daily), 53.7 percent achieved a partial response and 27.9 percent had stable disease, with durable benefit; response and resistance are genotype dependent, with KIT exon 11 the most sensitive genotype.",
+        "researcher": "Imatinib is the proof of concept that inhibiting a single activated receptor tyrosine kinase can control a solid tumor, and it established genotype directed therapy in GIST. It anchors the entire treatment sequence; the imatinib resistant genotypes (PDGFRA D842V, secondary KIT mutations) define the downstream unmet needs."
+      },
+      "citation": {
+        "label": "Demetri et al., N Engl J Med 2002 (imatinib in advanced GIST, pivotal trial)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12181401/"
+      }
+    },
+    {
+      "drug": "Sunitinib",
+      "target": "KIT (imatinib resistant clones)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Advanced GIST after imatinib failure or intolerance (second line)",
+      "dev_stage": "FDA approved (oral, second line)",
+      "rationale": {
+        "patient": "When GIST stops responding to imatinib, sunitinib is the next targeted pill. In its main trial it delayed tumor growth far longer than placebo, giving patients a second effective option.",
+        "clinician": "Sunitinib is a multitargeted tyrosine kinase inhibitor of KIT and other kinases, approved for advanced GIST after imatinib failure or intolerance. In the randomized double blind placebo controlled trial (312 patients, 2:1), median time to tumor progression was 27.3 weeks with sunitinib versus 6.4 weeks with placebo (hazard ratio 0.33; p<0.0001); it is particularly active against ATP binding pocket secondary KIT mutations.",
+        "researcher": "Sunitinib is the validated second line agent and covers a distinct subset of secondary KIT mutations (primarily the ATP binding pocket) complementary to those covered by regorafenib, a complementarity that underlies alternating and combination resistance strategies."
+      },
+      "citation": {
+        "label": "Demetri et al., Lancet 2006 (sunitinib after imatinib failure, pivotal trial)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17046465/"
+      }
+    },
+    {
+      "drug": "Regorafenib",
+      "target": "KIT (imatinib resistant clones)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Advanced GIST after imatinib and sunitinib (third line)",
+      "dev_stage": "FDA approved (oral, third line)",
+      "rationale": {
+        "patient": "Regorafenib is the third targeted pill, used after imatinib and sunitinib. In the GRID trial it kept tumors from growing much longer than placebo, extending control of the disease.",
+        "clinician": "Regorafenib is an oral multikinase inhibitor approved for advanced GIST after failure of imatinib and sunitinib. In the phase 3 GRID trial (199 patients, 2:1), median progression free survival was 4.8 months with regorafenib versus 0.9 months with placebo (hazard ratio 0.27, 95 percent CI 0.19 to 0.39; p<0.0001); it preferentially inhibits activation loop secondary KIT mutations.",
+        "researcher": "Regorafenib is the validated third line agent and inhibits primarily activation loop secondary KIT mutations, complementary to sunitinib's ATP binding pocket coverage. GRID was the first trial to show kinase inhibitor benefit in this heavily pretreated population."
+      },
+      "citation": {
+        "label": "Demetri et al., Lancet 2013 (GRID, regorafenib third line, pivotal phase 3)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23177515/"
+      }
+    },
+    {
+      "drug": "Ripretinib",
+      "target": "KIT and PDGFRA (broad spectrum, switch control)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Advanced GIST after three or more prior kinase inhibitors (fourth line)",
+      "dev_stage": "FDA approved (oral, fourth line)",
+      "rationale": {
+        "patient": "Ripretinib is the fourth targeted pill, for GIST that has progressed on imatinib, sunitinib, and regorafenib. It works by a switch control mechanism that keeps the KIT signal locked off across many resistance changes. In the INVICTUS trial it controlled the disease far longer than placebo.",
+        "clinician": "Ripretinib is a switch control tyrosine kinase inhibitor active against a broad spectrum of KIT and PDGFRA mutations, approved for advanced GIST after at least three prior kinase inhibitors. In the phase 3 INVICTUS trial (129 patients, 2:1), median progression free survival was 6.3 months with ripretinib versus 1.0 month with placebo (hazard ratio 0.15, 95 percent CI 0.09 to 0.25; p<0.0001), with prolonged overall survival and an acceptable safety profile.",
+        "researcher": "Ripretinib is a switch control inhibitor that stabilizes the KIT and PDGFRA activation switch, giving it the broadest coverage of primary and secondary mutations among approved agents. It validates the switch control concept as a response to the polyclonal resistance problem and is the mechanistic anchor for next generation broad spectrum hypotheses."
+      },
+      "citation": {
+        "label": "Blay et al., Lancet Oncol 2020 (INVICTUS, ripretinib fourth line, pivotal phase 3)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32511981/"
+      }
+    },
+    {
+      "drug": "Avapritinib",
+      "target": "PDGFRA exon 18 D842V",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "Unresectable or metastatic PDGFRA exon 18 mutant GIST, including D842V",
+      "dev_stage": "FDA approved (oral, genotype specific)",
+      "rationale": {
+        "patient": "Avapritinib is a targeted pill made specifically for a rare GIST subtype driven by a PDGFRA change called D842V, which does not respond to imatinib. In its trial the great majority of these patients had their tumors shrink, filling a gap where no drug had worked before.",
+        "clinician": "Avapritinib is a KIT and PDGFRA inhibitor that potently blocks the imatinib resistant PDGFRA exon 18 D842V substitution. In the phase 1 NAVIGATOR trial, 49 of 56 patients with PDGFRA D842V mutant GIST had an objective response (88 percent, 95 percent CI 76 to 95), including complete responses, in a genotype historically refractory to all prior tyrosine kinase inhibitors. It is genotype specific and requires PDGFRA testing.",
+        "researcher": "Avapritinib is a purpose built inhibitor for an intrinsically resistant genotype, demonstrating that a defined resistance conferring substitution (PDGFRA D842V) can be drugged directly. It exemplifies structure guided design against a specific resistant conformation, the logic the discovery layer extends to secondary KIT resistance."
+      },
+      "citation": {
+        "label": "Heinrich et al., Lancet Oncol 2020 (NAVIGATOR, avapritinib in PDGFRA D842V GIST)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32615108/"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are the landmark GIST studies that made treating this cancer by its exact molecular fault, and giving targeted drugs one after another, the standard of care. They are why the sequence above is trusted and why the research ideas that follow are grounded.",
+    "clinician": "The reports below are the regulatory and biological precedent for genotype directed, sequential kinase inhibition in GIST, and for the recognition of distinct wild type subsets. Each anchors a Tier 1 recommendation or a target above.",
+    "researcher": "Each landmark validates a step in the GIST paradigm: identification of the KIT and PDGFRA drivers, the sequential inhibitor lines, the switch control mechanism, the genotype specific inhibitor for an intrinsically resistant substitution, and the polyclonal resistance biology. Together they define the transferable logic the discovery layer extends."
+  },
+  "precedents": [
+    {
+      "biomarker": "KIT activating mutation (GIST driver identified)",
+      "drug": "imatinib (KIT inhibition, first line)",
+      "year": "1998 driver; 2002 pivotal trial",
+      "citation": {
+        "label": "Hirota et al., Science 1998 (gain of function KIT mutations in GIST)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9438854/"
+      }
+    },
+    {
+      "biomarker": "PDGFRA activating mutation (alternative GIST driver)",
+      "drug": "avapritinib (PDGFRA D842V, genotype specific)",
+      "year": "2003 driver; 2020 pivotal trial",
+      "citation": {
+        "label": "Heinrich et al., Science 2003 (PDGFRA activating mutations in GIST)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12522257/"
+      }
+    },
+    {
+      "biomarker": "KIT positive advanced GIST",
+      "drug": "imatinib (first line kinase inhibition)",
+      "year": 2002,
+      "citation": {
+        "label": "Demetri et al., N Engl J Med 2002 (imatinib in advanced GIST)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12181401/"
+      }
+    },
+    {
+      "biomarker": "Advanced GIST refractory to standard inhibitors (switch control)",
+      "drug": "ripretinib (broad spectrum switch control inhibitor)",
+      "year": 2020,
+      "citation": {
+        "label": "Blay et al., Lancet Oncol 2020 (INVICTUS, switch control inhibition)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32511981/"
+      }
+    },
+    {
+      "biomarker": "Polyclonal secondary KIT resistance mutations",
+      "drug": "complementary kinase inhibitors (sunitinib and regorafenib)",
+      "year": 2019,
+      "citation": {
+        "label": "Serrano et al., Br J Cancer 2019 (complementary TKI activity against secondary KIT mutations)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30792533/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because GIST proved that blocking one overactive signal works and that giving drugs in sequence keeps the disease in check, scientists are asking how to do better when the tumor becomes resistant, and how to help the rare GISTs that do not carry the usual KIT or PDGFRA fault. These are starting points for research, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that extends a mechanism validated in GIST, next generation and broad spectrum KIT inhibition, complementary or switching combinations against polyclonal resistance, and mechanism matched therapy for the SDH deficient wild type subset. Transferability is graded and each analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes computationally generated hypotheses by analogy over the GIST resistance biology, with transferability grading, a supporting citation, and a falsifiable prediction. These are research directions, not validated interventions in the stated setting."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): develop and test next generation KIT inhibitors that cover the broad spectrum of secondary KIT resistance mutations not fully addressed by any single approved agent, extending the switch control precedent of ripretinib and the genotype specific design precedent of avapritinib.",
+      "shared": "Acquired resistance in KIT mutant GIST is driven by polyclonal secondary KIT mutations spanning the ATP binding pocket and the activation loop, so that each existing inhibitor covers only a subset of resistant clones.",
+      "source": "GIST (ripretinib switch control inhibition; avapritinib structure guided design against a resistant substitution)",
+      "modality": "small molecule",
+      "rationale": "Serrano and colleagues showed that individual inhibitors cover only part of the secondary KIT mutation spectrum, leaving resistant clones to drive progression. A next generation inhibitor engineered for broad coverage of both pocket and loop mutations, building on the switch control and structure guided logic already validated in GIST, could delay emergence of pan resistant disease.",
+      "transferability": "high, the target (secondary KIT mutations), the mechanism (broad spectrum or switch control inhibition), and the disease are identical to where ripretinib and avapritinib are validated; the open question is achieving wider mutational coverage and durability in a within GIST extension.",
+      "prediction": "A candidate next generation KIT inhibitor suppresses proliferation across an engineered panel of GIST models carrying diverse secondary KIT mutations more completely than imatinib, sunitinib, regorafenib, or ripretinib, and delays outgrowth of resistant clones in polyclonal models.",
+      "citation": {
+        "label": "Serrano et al., Br J Cancer 2019 (secondary KIT mutation heterogeneity and inhibitor coverage, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30792533/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): test combination or switching strategies that pair or alternate kinase inhibitors with complementary secondary mutation coverage, or resume a previously effective inhibitor at progression, to control polyclonal resistance more durably than single agent sequential therapy.",
+      "shared": "Resistant GIST harbors a mixture of subclones with different secondary KIT mutations, and inhibitors such as sunitinib and regorafenib have complementary coverage, so simultaneous or alternating suppression could contain more clones than any one agent.",
+      "source": "GIST (complementary sunitinib and regorafenib activity; imatinib rechallenge in the RIGHT trial)",
+      "modality": "small molecule",
+      "rationale": "Preclinical work showed that rapid alternation of sunitinib and regorafenib suppresses polyclonal imatinib resistant GIST better than either alone, and the RIGHT trial showed that resuming imatinib after progression on standard inhibitors still slows growth because sensitive clones persist. This licenses testing rationally designed combinations or switching schedules against the full subclonal mixture.",
+      "transferability": "medium, the complementary coverage and persistence of sensitive clones are demonstrated in GIST, but tolerability of combined or alternating multikinase inhibitors and the optimal schedule must be established before clinical benefit can be claimed.",
+      "prediction": "In polyclonal GIST models, a complementary combination or alternating schedule of inhibitors produces deeper and more durable suppression of tumor growth and delays resistant clone outgrowth compared with sequential single agent therapy, at a tolerated exposure.",
+      "citation": {
+        "label": "Kang et al., Lancet Oncol 2013 (RIGHT, imatinib rechallenge; persistence of inhibitor sensitive clones, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24140183/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): pursue mechanism matched systemic therapy for SDH deficient wild type GIST that exploits its defining epigenetic and metabolic biology, such as DNA damaging or demethylating approaches suggested by its global DNA hypermethylation, rather than relying on KIT and PDGFRA inhibitors that this subset resists.",
+      "shared": "SDH deficient GIST is a KIT and PDGFRA wild type disease defined by loss of the SDH complex, pseudohypoxia, and global DNA hypermethylation, a biology distinct from the kinase driven disease and unresponsive to imatinib.",
+      "source": "SDH deficient GIST epigenetic and metabolic biology (hypermethylation phenotype; emerging non kinase directed agents)",
+      "modality": "other",
+      "rationale": "Because SDH deficient GIST does not respond well to standard kinase inhibitors, its hallmark hypermethylation and altered DNA repair suggest exploiting that biology directly, for example with the alkylating agent temozolomide (whose activity depends on MGMT silencing) or other epigenetically informed approaches under evaluation in this subset. This reframes therapy around the actual dependency rather than a shared kinase.",
+      "transferability": "speculative, the mechanistic rationale is grounded in the defining hypermethylation and metabolic biology of SDH deficient GIST, but clinical activity of hypermethylation directed or DNA damaging approaches in this subset remains investigational and must be prospectively demonstrated.",
+      "prediction": "SDH deficient GIST models with confirmed MGMT promoter methylation or a hypermethylated genome show selective sensitivity to a DNA damaging or demethylating agent relative to KIT and PDGFRA inhibitors, and a biomarker such as MGMT status predicts response.",
+      "citation": {
+        "label": "Dedousis et al., Curr Treat Options Oncol 2025 (systemic therapies for SDH deficient GIST, including temozolomide and hypermethylation directed approaches, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40045030/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory information. It is not medical advice and must not be used to guide individual patient care. Gastrointestinal stromal tumor is a rare cancer and is included here as the archetype of genotype directed, sequential targeted therapy. The five approved therapies are described from their pivotal trials, and eligibility depends on the tumor's specific KIT or PDGFRA genotype and subtype, including the distinct SDH deficient and NF1 associated wild type subsets. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over the validated GIST resistance biology with graded transferability. Treatment decisions belong to a qualified oncology team and a molecular tumor board, ideally at a sarcoma specialized center and, where relevant, within a clinical trial.</p>"
+}

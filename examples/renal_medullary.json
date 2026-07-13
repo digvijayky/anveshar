@@ -1,0 +1,294 @@
+{
+  "cancer": {
+    "name": "Renal Medullary Carcinoma",
+    "sub": "SMARCB1 (INI1) deficient kidney cancer of the SWI/SNF rhabdoid family",
+    "chips": [
+      "SMARCB1/INI1 loss",
+      "Sickle cell trait",
+      "Young, African ancestry"
+    ]
+  },
+  "voiceNote": {
+    "patient": "A very rare, fast growing kidney cancer that almost always occurs in young people who carry the sickle cell trait. It is serious, but researchers have found specific weaknesses in these tumors that are guiding new treatments.",
+    "clinician": "Ultra rare, aggressive RCC defined by biallelic SMARCB1/INI1 loss, nearly always with sickle cell trait; MSS/low TMB, platinum based chemotherapy is the backbone, prognosis poor (median OS roughly 4 to 13 months in metastatic disease).",
+    "researcher": "SMARCB1 loss (a core SWI/SNF subunit) is the near sole driver, creating EZH2 dependence and MYC driven replication stress with cGAS STING activation; these are the repurposing anchors from the rhabdoid tumor family."
+  },
+  "overview": {
+    "patient": "<p>Renal medullary carcinoma (RMC) is a very rare and aggressive cancer of the kidney. It occurs almost only in young people, usually of African ancestry, who carry the sickle cell trait. Most people are diagnosed when the cancer has already spread, which makes it hard to treat.</p><p>The good news is that scientists have discovered exactly what goes wrong inside these tumor cells, a missing protein called SMARCB1. That discovery is now pointing doctors toward treatments already used in other cancers that share the same defect.</p>",
+    "clinician": "<p>RMC is an ultra rare, undifferentiated renal malignancy arising in the renal medulla, defined by complete biallelic loss of SMARCB1 (INI1/BAF47) and almost universally associated with sickle cell trait. It predominantly affects young patients (median age roughly 21 to 28) of African descent, with a male predominance, and most present with metastatic disease.</p><p>Prognosis is poor: median overall survival is roughly 4 months in metastatic patients and up to about 13 to 17 months overall, with brief responses to platinum based chemotherapy (median PFS on platinum near 2.5 months). VEGF and mTOR inhibitors used in clear cell RCC are ineffective. Diagnosis requires SMARCB1/INI1 loss by immunohistochemistry plus the clinical context of sickle cell hemoglobinopathy.</p>",
+    "researcher": "<p>Comprehensive profiling shows RMC is driven by biallelic SMARCB1 loss (mostly via translocation and deletion) on an otherwise quiet, microsatellite stable, low TMB coding genome. Loss of this SWI/SNF (BAF) subunit tips the chromatin balance toward the EZH2 containing PRC2 complex, generating an oncogenic EZH2 dependency shared across the rhabdoid tumor family.</p><p>RMC also exhibits MYC driven replication stress and abundant focal copy number alterations that activate the cGAS STING innate immune pathway. These hallmarks (EZH2 dependence, replication stress, proteotoxic vulnerability) are the mechanistic basis for repurposing tazemetostat, DNA damage directed agents, and bortezomib from other diseases.</p>"
+  },
+  "targetsIntro": {
+    "patient": "Scientists have mapped the specific weak points inside RMC tumor cells. Each one is a possible way to attack the cancer.",
+    "clinician": "Actionable biology in RMC centers on the SMARCB1 loss driven EZH2 dependency, MYC replication stress, and proteotoxic stress, rather than on a hypermutation phenotype or kinase fusion.",
+    "researcher": "The defining lesion (SMARCB1 loss) creates several downstream dependencies (EZH2, DDR, proteasome) that are directly druggable and are borrowed from the wider SWI/SNF deficient tumor family and from myeloma."
+  },
+  "targets": [
+    {
+      "name": "SMARCB1 (INI1) loss to EZH2 dependency",
+      "present_in": "Universal in RMC (the defining lesion)",
+      "evidence": "RMC cell lines overexpress EZH2 and PRC2 members and are sensitive to EZH2 inhibition; SWI/SNF loss to PRC2 imbalance is established across the rhabdoid family (Wei 2020, PMID 32259323; Chan-Penebre 2017, PMID 28292935)."
+    },
+    {
+      "name": "MYC driven replication stress and DNA damage repair",
+      "present_in": "RMC broadly (primary tumor profiling)",
+      "evidence": "High replication stress and focal copy number alterations confer sensitivity to DNA damage repair directed drugs (Msaouel 2020 Cancer Cell, PMID 32359397)."
+    },
+    {
+      "name": "Proteasome and proteotoxic/oxidative stress",
+      "present_in": "RMC cell lines and pediatric cases",
+      "evidence": "Bortezomib showed in vitro and in vivo activity (oxidative stress dependent) and synergy with cisplatin; platinum plus bortezomib produced durable complete responses in 2 children (Wei 2020, PMID 32259323; Carden 2017, PMID 28052556)."
+    },
+    {
+      "name": "cGAS STING innate immune activation",
+      "present_in": "RMC broadly (inflamed phenotype)",
+      "evidence": "Focal copy number alterations activate cGAS STING, giving an inflamed phenotype; however single agent PD-1 blockade was not effective (Msaouel 2020, PMID 32359397; Nze 2023, PMID 37568622)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Because RMC is so rare, doctors are testing drugs that already work in other cancers with the same molecular defect. Some are promising, and some have already been tried in RMC with mixed results.",
+    "clinician": "Cross cancer translations are graded by strength of RMC specific evidence. Note that RMC being MSS/low TMB means the tissue agnostic MSI-H and TMB-high checkpoint labels do not apply.",
+    "researcher": "The repurposing logic runs from the SMARCB1 loss to EZH2 axis (tazemetostat, proven in epithelioid sarcoma) and from proteotoxic vulnerability (bortezomib, from myeloma), tempered by honest reporting of a negative single agent tazemetostat and negative single agent PD-1 signal in RMC."
+  },
+  "therapies": [
+    {
+      "drug": "Tazemetostat",
+      "target": "EZH2 (SMARCB1 loss dependency)",
+      "tier": 3,
+      "approved_in": "INI1/SMARCB1 negative epithelioid sarcoma; EZH2 mutant follicular lymphoma",
+      "dev_stage": "FDA approved 2020 (epithelioid sarcoma); dedicated RMC cohort (NCT02601950) had 0 of 14 objective responses",
+      "rationale": {
+        "patient": "This pill blocks a protein (EZH2) that RMC tumors rely on when they lose SMARCB1. It works in a related cancer, but when tried alone in RMC it did not shrink tumors, so it is being studied in combinations.",
+        "clinician": "Strong mechanistic rationale via shared SWI/SNF loss to EZH2 dependency, and FDA approved in INI1 negative epithelioid sarcoma (ORR 15%), but the RMC basket cohort showed 0% ORR; graded Tier 3, combinations needed.",
+        "researcher": "SMARCB1 loss shifts chromatin control to PRC2/EZH2, the same dependency exploited in rhabdoid tumors and epithelioid sarcoma; single agent activity in RMC was absent, and one report noted epigenetic driven glial transdifferentiation on therapy."
+      },
+      "citation": {
+        "label": "Gounder et al., Nat Commun 2026 (tazemetostat SWI/SNF basket, RMC cohort 0/14)",
+        "url": "https://doi.org/10.1038/s41467-026-69708-2"
+      },
+      "trial": {
+        "nct": "NCT02601950",
+        "url": "https://clinicaltrials.gov/study/NCT02601950"
+      }
+    },
+    {
+      "drug": "Bortezomib (with platinum)",
+      "target": "Proteasome (proteotoxic/oxidative stress)",
+      "tier": 2,
+      "approved_in": "Multiple myeloma, mantle cell lymphoma",
+      "dev_stage": "Preclinical RMC activity plus 2 pediatric complete responses with a platinum backbone",
+      "rationale": {
+        "patient": "A myeloma drug that stresses tumor cells to death. Added to standard chemotherapy, it produced complete responses in two young RMC patients, one of whom lived 7 years.",
+        "clinician": "Emerged from an unbiased RMC drug screen with in vitro/in vivo activity and cisplatin synergy; platinum plus bortezomib gave durable complete responses in a small pediatric series; Tier 2 repurposing from myeloma.",
+        "researcher": "Bortezomib activity is partly oxidative stress dependent and synergizes with cisplatin, exploiting the proteotoxic vulnerability of SMARCB1 deficient RMC; supports combination with DNA damaging backbones."
+      },
+      "citation": {
+        "label": "Carden et al., Pediatr Blood Cancer 2017 (platinum plus bortezomib, 2 complete responses)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28052556/"
+      }
+    },
+    {
+      "drug": "Pembrolizumab (single agent)",
+      "target": "PD-1 (checkpoint)",
+      "tier": 3,
+      "approved_in": "Many indications (but not applicable to MSS/low TMB RMC via tissue agnostic label)",
+      "dev_stage": "Prospective RMC basket (NCT02721732) negative, 0 responses in 5 patients",
+      "rationale": {
+        "patient": "Immunotherapy was hoped to help because RMC looks inflamed under the microscope, but when tested on its own in RMC patients it did not work.",
+        "clinician": "Despite an inflamed cGAS STING phenotype, prospective single agent pembrolizumab showed rapid progression irrespective of PD-L1 or TIL levels; because RMC is MSS/low TMB, the tissue agnostic MSI-H and TMB-high labels do not apply. Tier 3.",
+        "researcher": "The cGAS STING driven inflamed phenotype did not translate to single agent PD-1 benefit; combination checkpoint strategies (for example with ADCs or bispecifics) are the active direction rather than monotherapy."
+      },
+      "citation": {
+        "label": "Nze et al., Cancers 2023 (phase II pembrolizumab in RMC, negative)",
+        "url": "https://doi.org/10.3390/cancers15153806"
+      },
+      "trial": {
+        "nct": "NCT02721732",
+        "url": "https://clinicaltrials.gov/study/NCT02721732"
+      }
+    },
+    {
+      "drug": "DNA damage repair directed agents (ATR/PARP class)",
+      "target": "MYC driven replication stress",
+      "tier": 3,
+      "approved_in": "Various biomarker specific settings (no approved RMC indication)",
+      "dev_stage": "Mechanistic vulnerability from primary RMC profiling; no positive RMC trial readout yet",
+      "rationale": {
+        "patient": "RMC cells grow under high internal stress when copying their DNA. Drugs that push that stress past the breaking point are a promising research direction.",
+        "clinician": "RMC exhibits high replication stress conferring sensitivity to DNA damage repair targeting; a rationale only Tier 3 direction that also underpins combining cytotoxic/DNA damaging backbones with agents like bortezomib.",
+        "researcher": "MYC induced replication stress is a targetable vulnerability identified in primary RMC profiling; ATR, PARP, and related DDR agents are logical candidates but lack a positive RMC specific clinical readout to date."
+      },
+      "citation": {
+        "label": "Msaouel et al., Cancer Cell 2020 (replication stress vulnerability in RMC)",
+        "url": "https://doi.org/10.1016/j.ccell.2020.04.002"
+      }
+    }
+  ],
+  "trials": [
+    {
+      "nct": "NCT06444880",
+      "title": "Ubamatamab Alone or in Combination With Cemiplimab in MUC16-Expressing SMARCB1-Deficient Malignancies",
+      "phase": "Phase 2",
+      "intervention": "Ubamatamab (MUC16 x CD3 bispecific) with or without cemiplimab (anti-PD-1)",
+      "eligibility": "SMARCB1 deficient malignancies including renal medullary carcinoma and epithelioid sarcoma; locally advanced or metastatic; age 12 and older; progressed on at least 1 prior therapy",
+      "url": "https://clinicaltrials.gov/study/NCT06444880"
+    },
+    {
+      "nct": "NCT06302569",
+      "title": "Pembrolizumab Plus Enfortumab Vedotin in Collecting Duct and Renal Medullary Carcinoma",
+      "phase": "Phase 2",
+      "intervention": "Pembrolizumab plus enfortumab vedotin (Nectin-4 antibody drug conjugate)",
+      "eligibility": "Metastatic or advanced collecting duct or renal medullary carcinoma; age 18 and older; ECOG 0 to 1; adequate organ function",
+      "url": "https://clinicaltrials.gov/study/NCT06302569"
+    },
+    {
+      "nct": "NCT06161532",
+      "title": "Sacituzumab Govitecan With or Without Atezolizumab in Rare Genitourinary Tumors (SMART)",
+      "phase": "Phase 2",
+      "intervention": "Sacituzumab govitecan (TROP-2 antibody drug conjugate) with or without atezolizumab",
+      "eligibility": "Locally advanced or metastatic rare non-prostate genitourinary tumors including renal medullary carcinoma; age 18 and older; ECOG 0 to 1; measurable disease",
+      "url": "https://clinicaltrials.gov/study/NCT06161532"
+    },
+    {
+      "nct": "NCT03866382",
+      "title": "Ipilimumab, Cabozantinib, and Nivolumab in Rare Genitourinary Cancers (ICONIC)",
+      "phase": "Phase 2",
+      "intervention": "Cabozantinib plus ipilimumab plus nivolumab",
+      "eligibility": "Metastatic rare genitourinary malignancies including renal medullary carcinoma; age 18 and older; Karnofsky 80 or higher; up to 2 prior systemic treatments",
+      "url": "https://clinicaltrials.gov/study/NCT03866382"
+    }
+  ],
+  "precedentIntro": {
+    "patient": "Some cancer drugs are now approved based on a tumor's molecular features rather than where it started in the body. Most of these do not fit RMC, but understanding them shows why RMC needs its own biomarker matched approach.",
+    "clinician": "Tissue agnostic approvals define the biomarker driven paradigm. For RMC, most (MSI-H, TMB-high, dMMR, BRAF, RET, HER2, NTRK) do not apply given its MSS/low TMB genome and absence of those alterations; the relevant precedent is SMARCB1 loss to EZH2 inhibition proven in epithelioid sarcoma.",
+    "researcher": "The paradigm shift is from histology to biomarker. RMC's actionable biomarker is SMARCB1 loss itself, making the epithelioid sarcoma tazemetostat approval the nearest conceptual precedent even though single agent activity in RMC was limited."
+  },
+  "precedents": [
+    {
+      "biomarker": "INI1/SMARCB1 loss (EZH2 dependency)",
+      "drug": "tazemetostat",
+      "year": 2020,
+      "citation": {
+        "label": "Gounder et al., Lancet Oncol 2020 (tazemetostat in INI1 negative epithelioid sarcoma; nearest RMC precedent)",
+        "url": "https://doi.org/10.1016/S1470-2045(20)30451-4"
+      }
+    },
+    {
+      "biomarker": "MSI-H / dMMR (does NOT apply to MSS RMC)",
+      "drug": "pembrolizumab",
+      "year": 2017,
+      "citation": {
+        "label": "Maio/Marabelle et al., Ann Oncol 2022 (KEYNOTE-158 MSI-H/dMMR update)",
+        "url": "https://doi.org/10.1016/j.annonc.2022.05.519"
+      }
+    },
+    {
+      "biomarker": "TMB-high 10 or more mut per Mb (does NOT apply to low TMB RMC)",
+      "drug": "pembrolizumab",
+      "year": 2020,
+      "citation": {
+        "label": "Msaouel et al., Cancer Cell 2020 (RMC MSS/low TMB biology)",
+        "url": "https://doi.org/10.1016/j.ccell.2020.04.002"
+      }
+    },
+    {
+      "biomarker": "NTRK fusion (only if documented, not reported in RMC)",
+      "drug": "larotrectinib",
+      "year": 2018,
+      "citation": {
+        "label": "Hong et al., Lancet Oncol 2020 (larotrectinib in TRK fusion cancers)",
+        "url": "https://doi.org/10.1016/S1470-2045(19)30856-3"
+      }
+    },
+    {
+      "biomarker": "HER2 IHC 3+ (only if documented, unverified in RMC)",
+      "drug": "trastuzumab deruxtecan",
+      "year": 2024,
+      "citation": {
+        "label": "FDA tissue agnostic approval 2024 (HER2 IHC 3+ solid tumors)",
+        "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-fam-trastuzumab-deruxtecan-nxki-unresectable-or-metastatic-her2"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed, ClinicalTrials.gov, and FDA announcements. It is not medical advice and must not be used to guide individual patient care. Renal medullary carcinoma is ultra rare with limited prospective data; many statements rest on small series or case reports, and cross cancer translations are graded by evidence strength (Tier 1 to 3). Single agent tazemetostat and single agent PD-1 blockade were not effective in RMC specific cohorts, and RMC being microsatellite stable with low tumor mutational burden means the tissue agnostic MSI-H and TMB-high approvals do not apply. Treatment decisions should be made by a qualified oncologist, ideally within a clinical trial or at a center experienced with SMARCB1 deficient malignancies.</p>",
+  "discoveryIntro": {
+    "patient": "These are new treatment ideas that Anveshar generated by connecting RMC's molecular defect to drugs proven in other diseases. They are research hypotheses, not recommendations, and each needs to be tested in a trial.",
+    "clinician": "Anveshar generated the following testable hypotheses by transferring dependencies from SMARCB1 deficient and proteotoxic stress biology into RMC. Each is graded for transferability and carries a falsifiable prediction.",
+    "researcher": "Hypotheses below are derived by mapping the SMARCB1 loss dependency network (PRC2/EZH2, ubiquitin proteasome, cGAS-STING) onto agents validated in donor diseases, with an explicit prediction to falsify."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): combine an EZH2 inhibitor (tazemetostat) with a proteasome inhibitor (bortezomib) so the SMARCB1 loss driven EZH2 dependency, which is inactive when EZH2 is blocked alone, becomes a lethal proteotoxic hit, while the combination is designed to pre empt the epigenetic escape seen on single agent EZH2 blockade.",
+      "shared": "SMARCB1 loss simultaneously creates a PRC2/EZH2 chromatin dependency and a heightened reliance on the ubiquitin proteasome system, so hitting only one axis leaves the other as an escape route.",
+      "source": "Epithelioid sarcoma (EZH2 inhibition, approved) and multiple myeloma (proteasome inhibition, approved)",
+      "modality": "small molecule combination",
+      "transferability": "High mechanistic, low clinical (needs a dedicated combination trial)",
+      "rationale": "Functional studies show RMC depends on SMARCB1 loss and is sensitive to proteasome inhibition, and a separate RMC cell line screen nominated bortezomib with cisplatin synergy, while single agent tazemetostat gave no RMC responses and one report documented EZH2 inhibitor driven glial transdifferentiation as an adaptive escape (Hong et al., eLife 2019, DOI 10.7554/eLife.44161; Wei et al., Genes Chromosomes Cancer 2020, PMID 32259323; Gubbiotti et al., Acta Neuropathol Commun 2025, DOI 10.1186/s40478-025-01929-w).",
+      "prediction": "In SMARCB1 deficient RMC models, tazemetostat plus bortezomib produces greater tumor regression than either agent alone and reduces the H3K27me3 loss driven transdifferentiation observed with tazemetostat monotherapy.",
+      "citation": {
+        "label": "Hong et al., eLife 2019 (RMC depends on SMARCB1 loss and is sensitive to proteasome inhibition)",
+        "url": "https://doi.org/10.7554/eLife.44161"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): pair a tumor surface directed antibody drug conjugate or T cell engager (against MUC16, TROP-2, or Nectin-4) with checkpoint blockade, so the inflamed but PD-1 refractory RMC microenvironment is redirected by a tumor targeting payload rather than relying on checkpoint release alone.",
+      "shared": "RMC carries an inflamed cGAS-STING phenotype yet does not respond to single agent PD-1 blockade, so an independent tumor directed killing mechanism is needed to exploit the immune context.",
+      "source": "Urothelial carcinoma (enfortumab vedotin, sacituzumab govitecan) and MUC16 directed bispecific programs",
+      "modality": "antibody drug conjugate or bispecific plus checkpoint",
+      "transferability": "Moderate clinical (matched to active RMC basket trials)",
+      "rationale": "RMC is microsatellite stable with low tumor mutational burden and an inflamed cGAS-STING phenotype that did not translate to single agent PD-1 benefit, motivating a tumor antigen directed payload plus checkpoint rather than checkpoint monotherapy; active RMC basket trials already test MUC16 by CD3 bispecific, TROP-2, and Nectin-4 directed conjugates (Msaouel et al., Cancer Cell 2020, DOI 10.1016/j.ccell.2020.04.002).",
+      "prediction": "In RMC, a TROP-2 or Nectin-4 antibody drug conjugate combined with a checkpoint inhibitor yields objective responses where single agent PD-1 blockade produced none, tracking with surface antigen expression rather than PD-L1.",
+      "citation": {
+        "label": "Msaouel et al., Cancer Cell 2020 (RMC inflamed but PD-1 refractory biology)",
+        "url": "https://doi.org/10.1016/j.ccell.2020.04.002"
+      }
+    }
+  ],
+  "databasesIntro": {
+    "patient": "Every treatment idea here was checked against major medical research databases. These are the actual searches Anveshar ran and the strongest evidence each one returned.",
+    "clinician": "Each therapy and hypothesis was cross checked against live biomedical databases. Listed below are the exact queries Anveshar issued and the top evidence returned by each source.",
+    "researcher": "Provenance for the claims in this dossier. Anveshar issued the following queries across peer reviewed literature, PubMed, full text, and trial registries, and the top evidence from each is shown with a resolvable citation."
+  },
+  "databases_queried": [
+    {
+      "database": "Consensus (peer reviewed literature)",
+      "query": "renal medullary carcinoma SMARCB1 loss targeted therapy EZH2 dependency",
+      "n": 20,
+      "finding": "Top ranked evidence is the NCI COG Pediatric MATCH APEC1621C basket, where the EZH2 inhibitor tazemetostat gave stable disease rather than an objective response in an RMC patient. EZH2 overexpression and proteasome inhibition with bortezomib recur as the leading translational leads across the returned papers.",
+      "citation": {
+        "label": "Chi et al., J Natl Cancer Inst 2023 (Pediatric MATCH APEC1621C)",
+        "url": "https://doi.org/10.1093/jnci/djad085"
+      }
+    },
+    {
+      "database": "PubMed (NCBI E utilities)",
+      "query": "renal medullary carcinoma SMARCB1 EZH2 tazemetostat",
+      "n": 2,
+      "finding": "Confirms the tazemetostat basket result and surfaces a 2025 report of glial transdifferentiation in an RMC brain metastasis after EZH2 inhibition, evidence that single agent epigenetic therapy can drive an adaptive escape and motivating the combination hypothesis below.",
+      "citation": {
+        "label": "Gubbiotti et al., Acta Neuropathol Commun 2025 (glial transdifferentiation after EZH2 inhibition)",
+        "url": "https://doi.org/10.1186/s40478-025-01929-w"
+      }
+    },
+    {
+      "database": "Paperclip (full text, PubMed Central)",
+      "query": "renal medullary carcinoma bortezomib proteasome EZH2",
+      "n": 5,
+      "finding": "Retrieves the landmark functional study showing RMC survival depends on SMARCB1 loss and is sensitive to proteasome inhibition, corroborated by an independent UOK353 and UOK360 cell line drug screen that also nominated bortezomib. This is the mechanistic basis for translating a myeloma proteasome inhibitor into RMC.",
+      "citation": {
+        "label": "Hong et al., eLife 2019 (RMC depends on SMARCB1 loss, sensitive to proteasome inhibition)",
+        "url": "https://doi.org/10.7554/eLife.44161"
+      }
+    },
+    {
+      "database": "Paperclip (clinical trial registries)",
+      "query": "renal medullary carcinoma",
+      "n": 6,
+      "finding": "Surfaces active SMARCB1 deficient basket and antibody drug conjugate programs relevant to RMC, including a MUC16 by CD3 bispecific and TROP-2 and Nectin-4 directed conjugates, supporting the surface antigen plus checkpoint hypothesis.",
+      "citation": {
+        "label": "ClinicalTrials.gov (SMARCB1 deficient and rare genitourinary tumor trials)",
+        "url": "https://clinicaltrials.gov/search?cond=Renal%20Medullary%20Carcinoma"
+      }
+    }
+  ]
+}

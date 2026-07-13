@@ -1,0 +1,112 @@
+{
+  "aim": "Build an end to end, publication grade computational workflow for renal medullary carcinoma (RMC), a near monogenic and highly aggressive kidney cancer of young patients with sickle cell trait, defined by biallelic loss of the SMARCB1 (INI1) SWI/SNF subunit. The workflow uses Claude Science curated databases (GEO, cBioPortal, TCGA, DepMap, GTEx, UniProt, PDB, Reactome, ChEMBL, Ensembl, ClinVar) plus Evo 2 and AlphaFold to move from RMC genomics and transcriptomics to a SMARCB1 loss dependency map, then to prioritized, structurally rationalized, and chemically tractable targets, culminating in a concrete wet lab validation plan in RMC cell lines and organoids. The goal is a defensible target nomination package that could seed a manuscript and preclinical program.",
+  "hypothesis": "Because RMC is driven almost entirely by biallelic SMARCB1 loss rather than by a diverse mutational landscape, the residual SWI/SNF activity and the downstream consequences of SMARCB1 loss (MYC driven transcriptional amplification, elevated replication and transcription stress, and a heightened dependence on protein homeostasis) create synthetic lethal collateral vulnerabilities. We hypothesize that SMARCB1 null RMC cells are selectively dependent on the ubiquitin proteasome system (for example proteasome subunits and UBE2C), on replication and transcription stress response nodes (for example RNA polymerase II CDK modules, ATR, and CHK1), and on residual SWI/SNF and repressive chromatin machinery (for example the BRD9 containing ncBAF complex, EZH2, and PRMT5). These dependencies should be reproducible across SMARCB1 deficient models, structurally druggable, and testable in isogenic SMARCB1 reexpression systems.",
+  "steps": [
+    {
+      "title": "Step 1. Assemble the RMC genomic and transcriptomic evidence base and confirm the near monogenic SMARCB1 loss landscape",
+      "what": "Collect and harmonize the available RMC molecular data to establish that SMARCB1 loss is the defining and essentially sole recurrent event, and to catalog the secondary features (structural loss versus mutation of SMARCB1, chromosome 22q alterations, MYC pathway activation, low tumor mutational burden). Pull RMC and SMARCB1 deficient tumor cohorts and case series from cBioPortal and query TCGA kidney cancer studies (KIRC, KIRP, KICH) as SMARCB1 intact renal comparators so RMC specific features stand out against conventional RCC. Retrieve public RMC transcriptomic series from GEO where available (RMC tumor and normal kidney profiling and any RMC single cell studies) and use GTEx normal kidney medulla and cortex as the non malignant expression baseline. Annotate SMARCB1 germline and somatic variants and the pathogenicity of any point alterations using ClinVar and Ensembl, and confirm that the dominant mechanism is deletion or fusion driven loss rather than recurrent activating drivers. Where a specific accession cannot be verified it is described generically (for example an RMC tumor RNA sequencing series in GEO) rather than invented.",
+      "tools": "cBioPortal, TCGA, GEO, GTEx, ClinVar, Ensembl, UniProt; bulk RNA-seq and scRNA-seq compute for cohort harmonization and differential expression",
+      "outputs": "Curated RMC evidence table (per case SMARCB1 status, mechanism of loss, 22q status, MYC signature score, TMB); harmonized RMC versus normal kidney and RMC versus clear cell and papillary RCC differential expression matrices; a confirmed statement of the near monogenic SMARCB1 loss landscape with per sample provenance"
+    },
+    {
+      "title": "Step 2. Build isogenic SMARCB1 loss and reexpression reference models in silico and define the SMARCB1 dependent transcriptional program",
+      "what": "Define the direct molecular consequences of SMARCB1 loss that any candidate dependency must plausibly connect to. Use published SMARCB1 reexpression experiments in RMC and rhabdoid backgrounds (SMARCB1 null parental versus SMARCB1 restored, retrievable from GEO expression and chromatin series) to derive the SMARCB1 dependent gene program, and generate the reciprocal signature that is turned on specifically when SMARCB1 is absent. Score RMC tumors and cell models from Step 1 for this signature to confirm the models recapitulate patient biology. Map the program onto Reactome pathways to identify the enriched processes (MYC targets, ribosome biogenesis and translation, cell cycle and DNA replication, proteasome and ubiquitin conjugation, RNA polymerase II transcription) that frame the vulnerability hypotheses. This creates a mechanistic anchor so that dependencies nominated in Step 3 are interpreted as consequences of SMARCB1 loss rather than generic essential genes.",
+      "tools": "GEO, Reactome, Ensembl, UniProt; bulk RNA-seq compute for signature scoring and pathway enrichment; scRNA-seq compute where RMC single cell data exist",
+      "outputs": "SMARCB1 loss up and down gene signatures; RMC model versus tumor concordance scores; ranked Reactome pathway enrichment defining the candidate vulnerability axes (proteasome, replication and transcription stress, residual SWI/SNF and repressive chromatin)"
+    },
+    {
+      "title": "Step 3. Define the SMARCB1 loss dependency map from DepMap and rank RMC selective vulnerabilities",
+      "what": "Quantify genetic dependencies that are selective for SMARCB1 deficiency using DepMap CRISPR (Chronos) and RNAi essentiality data. RMC lines are extremely rare, so use SMARCB1 deficient models as the dependency proxy group: any RMC cell lines present in DepMap plus the broader set of SMARCB1 mutant or deleted rhabdoid and ATRT and epithelioid sarcoma lines, contrasted against SMARCB1 intact lines. For every gene, compute the differential dependency between SMARCB1 loss and SMARCB1 intact groups and rank by effect size and selectivity, then intersect with the SMARCB1 loss program from Step 2 so nominated genes are both selectively essential and mechanistically coherent. Explicitly test the prior hypotheses: proteasome subunits and the ubiquitin conjugating enzyme UBE2C, replication and transcription stress nodes (ATR, CHK1, WEE1, CDK7, CDK9, POLR2 modules), and residual or antagonistic chromatin machinery (BRD9 and the ncBAF complex, EZH2, PRMT5). Cross reference DepMap expression and copy number to separate genotype selective dependencies from pan essential genes and from lineage effects.",
+      "tools": "DepMap (Cancer Dependency Map, CRISPR Chronos and RNAi), cBioPortal, Ensembl; compute for differential dependency statistics and multiple testing correction",
+      "outputs": "Ranked SMARCB1 selective dependency table (gene, differential dependency score, selectivity, expression and copy number context, mechanistic tag); volcano and rank plots of SMARCB1 loss versus intact essentiality; a shortlist of RMC candidate targets spanning the proteasome, stress response, and chromatin axes"
+    },
+    {
+      "title": "Step 4. Nominate and prioritize RMC targets by integrating dependency, expression selectivity, and normal tissue safety",
+      "what": "Convert the ranked dependency list into a prioritized target set suitable for a program decision. Score each candidate on selective essentiality in SMARCB1 loss (Step 3), overexpression or activation in RMC tumors versus normal kidney and versus other RCC (Step 1), coherence with the SMARCB1 loss program and Reactome axis (Step 2), and predicted therapeutic window using GTEx to flag broadly essential normal tissue expression. Use UniProt to capture protein family, functional domains, subcellular localization, and known post translational regulation, and use ChEMBL to determine whether tractable chemistry already exists (approved or clinical inhibitors, tool compounds, or a validated pocket). This yields tiered targets: near term repurposing candidates (for example proteasome inhibitors given the established RMC sensitivity to proteasome inhibition, and BRD9, EZH2, or PRMT5 inhibitors that already have clinical grade compounds) versus novel targets requiring de novo discovery (for example UBE2C or specific transcription stress kinases without approved drugs).",
+      "tools": "DepMap, cBioPortal, GTEx, UniProt, ChEMBL, Reactome; compute for multi criteria scoring and target ranking",
+      "outputs": "Prioritized RMC target dossier with a transparent scoring rubric; tiering into clinically actionable versus novel targets; per target one page summaries (biology, RMC selectivity, therapeutic window, existing chemistry) with the lead candidate justified"
+    },
+    {
+      "title": "Step 5. Structural and druggability analysis of the lead RMC targets",
+      "what": "For the top targets from Step 4, establish structural feasibility for inhibition. Retrieve experimental structures from PDB (for example the 20S and 19S proteasome, EZH2 within PRC2, PRMT5 with MEP50, and BRD9 bromodomain) and, where no suitable experimental structure of the relevant human protein or isoform exists, generate AlphaFold models to obtain full length or domain resolved structures. Identify and characterize the druggable pockets (catalytic sites, bromodomain acetyl lysine pockets, SAM binding sites for methyltransferases, and any allosteric surfaces relevant to SWI/SNF assembly), and assess conformational features that bear on selectivity. Where a target acts through a protein complex specific to RMC biology (for example the ncBAF complex assembled around BRD9 in the absence of SMARCB1), model the interaction interface to evaluate whether disrupting complex assembly is feasible. This step separates structurally tractable targets from those needing degrader or protein protein interaction strategies.",
+      "tools": "PDB, AlphaFold, UniProt; structure analysis and pocket detection compute",
+      "outputs": "Per target structural report with pocket definitions and druggability assessment; AlphaFold models for targets lacking suitable experimental structures; a recommendation per target of the tractable modality (competitive inhibitor, allosteric inhibitor, targeted degrader, or complex disruptor)"
+    },
+    {
+      "title": "Step 6. In silico screen and mechanistic interpretation for the lead target",
+      "what": "Run a structure informed in silico screen against the prioritized pocket from Step 5 for the lead RMC target. Assemble candidate chemistry from ChEMBL (known inhibitors of the target and its family, plus approved drugs for repurposing) and dock or profile them against the pocket, ranking by predicted binding, selectivity against close paralogs, and physicochemical suitability. For established RMC relevant classes (proteasome inhibitors, EZH2, PRMT5, BRD9), benchmark clinical compounds to anchor the screen in real chemistry rather than only virtual hits. Use Evo 2 to interpret the genomic and regulatory context of the target and of SMARCB1 itself: score the functional consequence of SMARCB1 loss of function and structural variants, evaluate variant effects at the target locus, and probe how SMARCB1 dependent regulatory elements shape target expression, strengthening the mechanistic link between the SMARCB1 null state and the nominated dependency. Cross check any prioritized variants against ClinVar.",
+      "tools": "ChEMBL, PDB, AlphaFold, Evo 2, ClinVar, Ensembl; docking and cheminformatics compute; sequence model inference",
+      "outputs": "Ranked compound shortlist per lead target (predicted binders, benchmarked clinical anchors, repurposing candidates); Evo 2 variant and regulatory effect scores connecting SMARCB1 loss to target dependency; a mechanistic model figure tying the SMARCB1 null state to the actionable vulnerability"
+    },
+    {
+      "title": "Step 7. Wet lab validation plan in RMC cell lines and organoids with isogenic SMARCB1 controls",
+      "what": "Design the experiments that would confirm the nominated dependency and its chemical actionability, framed for a manuscript. Specify RMC cellular models (for example established SMARCB1 deficient RMC cell lines and patient derived RMC organoids) and the isogenic control that anchors specificity: SMARCB1 null parental versus SMARCB1 reexpression, so that a genotype selective effect can be demonstrated rather than general toxicity. Lay out genetic validation (CRISPR knockout and inducible knockdown of the lead target, expecting selective loss of viability in SMARCB1 null but not SMARCB1 restored cells), pharmacologic validation (dose response for the prioritized inhibitors and repurposing candidates from Step 6, with the isogenic pair and non RMC controls), and mechanistic readouts matched to the vulnerability axis (proteotoxic and unfolded protein stress markers for proteasome or UBE2C targets, replication and transcription stress and DNA damage markers such as phospho RPA, gamma H2AX, and phospho CHK1 for stress response kinases, and chromatin and residual SWI/SNF readouts for BRD9, EZH2, or PRMT5). Include in vivo confirmation in RMC xenografts, rescue and combination logic (for example proteasome inhibition combined with a stress response inhibitor), and clear go or no go criteria for advancing a target.",
+      "tools": "DepMap and cBioPortal and GEO to select and characterize models and confirm SMARCB1 status; UniProt and Reactome for mechanistic readout selection; ChEMBL for compound sourcing; experimental design (no new database query)",
+      "outputs": "A staged validation protocol (genetic, pharmacologic, mechanistic, in vivo) with the isogenic SMARCB1 pair as the specificity control, defined readouts per vulnerability axis, combination hypotheses, and explicit go or no go decision criteria that would support a preclinical program and manuscript"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "DepMap CRISPR (Chronos) and RNAi gene dependency across SMARCB1 deficient and intact cancer cell lines",
+      "source": "Broad Institute Cancer Dependency Map (DepMap portal)",
+      "url": "https://depmap.org/portal/"
+    },
+    {
+      "name": "cBioPortal renal medullary carcinoma and SMARCB1 deficient tumor cohorts, plus TCGA kidney cancer (KIRC, KIRP, KICH) as SMARCB1 intact RCC comparators",
+      "source": "cBioPortal for Cancer Genomics and TCGA",
+      "url": "https://www.cbioportal.org/"
+    },
+    {
+      "name": "TCGA kidney cancer molecular data (clear cell, papillary, chromophobe) as conventional RCC reference against RMC",
+      "source": "The Cancer Genome Atlas via the Genomic Data Commons",
+      "url": "https://portal.gdc.cancer.gov/"
+    },
+    {
+      "name": "RMC tumor and SMARCB1 reexpression transcriptomic and chromatin series (RMC RNA sequencing, SMARCB1 restored versus null, and any RMC single cell studies); described generically where a specific accession is not verified",
+      "source": "NCBI Gene Expression Omnibus (GEO)",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/"
+    },
+    {
+      "name": "GTEx normal kidney (medulla and cortex) and broad normal tissue expression for therapeutic window and safety assessment",
+      "source": "Genotype-Tissue Expression (GTEx) Project",
+      "url": "https://gtexportal.org/"
+    },
+    {
+      "name": "SMARCB1 germline and somatic variant interpretation and clinical significance",
+      "source": "ClinVar (NCBI)",
+      "url": "https://www.ncbi.nlm.nih.gov/clinvar/"
+    },
+    {
+      "name": "Protein sequences, domains, families, and post translational regulation for SMARCB1 and nominated targets (proteasome subunits, UBE2C, BRD9, EZH2, PRMT5, stress response kinases)",
+      "source": "UniProt",
+      "url": "https://www.uniprot.org/"
+    },
+    {
+      "name": "Experimental structures of RMC target proteins and complexes (proteasome, PRC2 and EZH2, PRMT5 and MEP50, BRD9 bromodomain, SWI/SNF subunits)",
+      "source": "RCSB Protein Data Bank (PDB)",
+      "url": "https://www.rcsb.org/"
+    },
+    {
+      "name": "Predicted structures for targets or isoforms lacking suitable experimental structures",
+      "source": "AlphaFold Protein Structure Database",
+      "url": "https://alphafold.ebi.ac.uk/"
+    },
+    {
+      "name": "Pathway and process enrichment for the SMARCB1 loss program (MYC targets, translation, replication and cell cycle, proteasome, RNA polymerase II transcription)",
+      "source": "Reactome Pathway Database",
+      "url": "https://reactome.org/"
+    },
+    {
+      "name": "Bioactivity, approved and clinical inhibitors, and tool compounds for nominated targets (proteasome inhibitors, EZH2, PRMT5, BRD9, stress response kinase inhibitors) for the in silico screen and repurposing",
+      "source": "ChEMBL (EMBL-EBI)",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    {
+      "name": "Gene models, transcript and coordinate annotation for harmonizing expression and variant data and for Evo 2 sequence context",
+      "source": "Ensembl",
+      "url": "https://www.ensembl.org/"
+    }
+  ],
+  "validation": "Validation is layered from computation to bench. Computationally, the SMARCB1 loss dependency map (Step 3) must show that nominated targets are selectively essential in SMARCB1 deficient models and not in SMARCB1 intact lines, must survive multiple testing correction, and must be separable from pan essential and lineage effects using DepMap expression and copy number; targets should also be mechanistically coherent with the SMARCB1 loss program and Reactome axes from Step 2, and should recover the known RMC positive controls (proteasome sensitivity and UBE2C dependency) as internal benchmarks. The prior on proteasome inhibitor sensitivity in RMC (established in prior RMC literature) serves as a positive control the pipeline must recover; failure to recover it flags a pipeline problem. Structural and chemical feasibility (Steps 5 and 6) must yield defined druggable pockets and chemistry with predicted selectivity against paralogs, and Evo 2 scores must link SMARCB1 loss of function and target locus variation to the dependency. Experimentally, the decisive test is genotype selectivity in the isogenic SMARCB1 null versus reexpression pair: genetic (CRISPR knockout, inducible knockdown) and pharmacologic (prioritized inhibitors and repurposing candidates) perturbation of the lead target should selectively reduce viability in SMARCB1 null RMC cells and organoids while sparing SMARCB1 restored and non RMC controls, with axis matched mechanistic readouts (proteotoxic stress, replication and transcription stress with phospho RPA, gamma H2AX and phospho CHK1, or chromatin and residual SWI/SNF changes) confirming on mechanism activity, and in vivo confirmation in RMC xenografts. Explicit go or no go criteria (effect size, selectivity window versus normal and non RMC cells, and mechanistic concordance) gate advancement.",
+  "figures": "Figure 1: RMC is near monogenic, an oncoprint and landscape panel showing biallelic SMARCB1 loss dominating the RMC evidence base with low TMB, contrasted against the mutational diversity of conventional RCC (cBioPortal and TCGA). Figure 2: the SMARCB1 loss program, differential expression and Reactome enrichment defining the proteasome, replication and transcription stress, and residual chromatin axes, with RMC tumor versus normal kidney and versus other RCC, and model versus tumor concordance (GEO, GTEx, Reactome). Figure 3: the SMARCB1 loss dependency map, a volcano or rank plot of differential dependency between SMARCB1 deficient and intact lines highlighting proteasome subunits, UBE2C, stress response kinases, BRD9, EZH2, and PRMT5, with the known RMC positive controls annotated (DepMap). Figure 4: prioritized target dossier, a multi criteria heatmap scoring candidates on selective essentiality, RMC expression selectivity, therapeutic window, and existing chemistry, tiered into clinically actionable versus novel (DepMap, GTEx, ChEMBL, UniProt). Figure 5: structure and druggability, pocket resolved views of the lead targets from PDB or AlphaFold with the recommended modality and, for the ncBAF or SWI/SNF complex axis, the modeled interaction interface. Figure 6: in silico screen and mechanism, ranked compound and docking results with clinical anchors plus an Evo 2 variant and regulatory effect panel, and a mechanistic model tying the SMARCB1 null state to the actionable vulnerability. Figure 7: validation blueprint, a schematic of the isogenic SMARCB1 null versus reexpression experiments across genetic, pharmacologic, mechanistic, and in vivo readouts with go or no go criteria."
+}

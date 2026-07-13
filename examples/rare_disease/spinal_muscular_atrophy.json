@@ -1,0 +1,208 @@
+{
+  "cancer": {
+    "name": "Spinal Muscular Atrophy (5q SMA)",
+    "sub": "A rare autosomal recessive motor neuron disease caused by biallelic loss of function of SMN1, with severity modified by SMN2 copy number. Included to show that Anveshar's cross condition, biology first matching works outside oncology, on a canonical monogenic disease where the treatments are gene directed.",
+    "chips": ["SMN1 biallelic loss of function", "SMN2 copy number modifier", "Three approved disease modifying therapies"]
+  },
+  "voiceNote": {
+    "patient": "Plain language, no jargon.",
+    "clinician": "Precise terms, gene dosage and modality stated.",
+    "researcher": "Mechanism and cross condition modality borrowing foregrounded."
+  },
+  "overview": {
+    "patient": "<p>Spinal muscular atrophy (SMA) is a rare inherited disease that weakens the muscles used for moving, breathing, and swallowing. It happens because both copies of a gene called SMN1 are missing or broken, so nerve cells that control muscles (motor neurons) slowly die. A nearby backup gene, SMN2, makes a small amount of the same protein, and how many copies of SMN2 a person has helps decide how mild or severe the disease is.</p><p>The important news is that SMA has gone from untreatable to one of the best examples in medicine of fixing a disease at the level of the gene. Three approved treatments now raise the missing protein in different ways, and starting them early can change the course of the disease.</p>",
+    "clinician": "<p>SMA is an autosomal recessive motor neuron disorder caused by homozygous loss of function of SMN1 (survival of motor neuron 1) on chromosome 5q13, with a resulting deficiency of full length SMN protein and degeneration of anterior horn cells. Clinical severity is graded from Type 0 (prenatal) through Types 1 to 4, and correlates inversely with SMN2 copy number, the paralogous gene whose exon 7 is mostly excluded during splicing.</p><p>Type 1 (Werdnig-Hoffmann) presents before 6 months with the child never sitting unsupported; untreated, most reach death or permanent ventilation within roughly the first 2 years. Diagnosis is molecular (SMN1 exon 7 homozygous deletion or compound heterozygosity) with SMN2 copy number as the key prognostic and dosing modifier. Three disease modifying therapies are approved and act by restoring or supplementing SMN protein.</p>",
+    "researcher": "<p>SMA is the textbook single gene disease for gene directed therapy. SMN1 and SMN2 differ by a synonymous c.840C>T variant in exon 7 that disrupts an exonic splicing enhancer and creates an exonic splicing silencer, so SMN2 predominantly produces an unstable exon 7 excluded transcript (SMN delta 7) and only a minority of full length SMN. Two mechanistically distinct strategies restore SMN: shift SMN2 splicing back toward exon 7 inclusion, or deliver a functional SMN1 transgene.</p><p>These strategies are realized by three approved agents spanning three advanced modalities, an intrathecal antisense oligonucleotide, a one time systemic AAV9 gene replacement, and an oral small molecule splicing modifier. That makes SMA the anchor case for Anveshar's thesis that a validated molecular dependency licenses borrowing an entire modality across conditions.</p>"
+  },
+  "targetsIntro": {
+    "patient": "These are the specific biological handles that SMA treatments use. All of them come back to one thing, raising the amount of the missing SMN protein in motor neurons.",
+    "clinician": "Actionable biology in SMA reduces to restoring full length SMN protein, achieved either by correcting SMN2 exon 7 splicing or by delivering an SMN1 transgene. SMN2 copy number gates prognosis and eligibility.",
+    "researcher": "The single molecular dependency (SMN protein insufficiency) supports two orthogonal target axes, SMN2 pre mRNA splicing and SMN1 gene replacement, each drugged by a distinct advanced modality."
+  },
+  "targets": [
+    {
+      "name": "SMN protein restoration (SMN1 replacement)",
+      "present_in": "Universal in SMA (the defining deficiency)",
+      "evidence": "Biallelic SMN1 loss produces the SMN protein deficit that drives motor neuron death; delivering a functional SMN transgene restores protein and function, the basis of AAV9 gene replacement (Mendell et al., N Engl J Med 2017, PMID 29091557, DOI 10.1056/NEJMoa1706198)."
+    },
+    {
+      "name": "SMN2 splicing modulation (exon 7 inclusion)",
+      "present_in": "Universal in SMA (every patient retains at least one SMN2 copy)",
+      "evidence": "The SMN2 c.840C>T variant biases exon 7 exclusion; agents that promote exon 7 inclusion increase full length SMN, exploited by an antisense oligonucleotide and by an oral splicing modifier (Finkel et al., N Engl J Med 2017, PMID 29091570, DOI 10.1056/NEJMoa1702752; Baranello et al., N Engl J Med 2021, PMID 33626251, DOI 10.1056/NEJMoa2009965)."
+    }
+  ],
+  "therapiesIntro": {
+    "patient": "Each card is an approved SMA treatment, colored by how strong the evidence is. Green means it is FDA approved for SMA. All three raise the missing SMN protein, but they do it in different ways, and they can be used at different ages and disease stages.",
+    "clinician": "All three cards are Tier 1 (FDA and EMA approved for SMA on pivotal trial data). They differ by modality and route, an intrathecal antisense oligonucleotide, a one time intravenous AAV9 gene replacement, and a daily oral small molecule. SMN2 copy number and age or weight guide selection.",
+    "researcher": "The three approvals map one dependency (SMN insufficiency) onto three advanced modalities. This is the operational template Anveshar generalizes, biology in, modality out, and it is exactly the pattern the discovery layer extends to other monogenic diseases."
+  },
+  "therapies": [
+    {
+      "drug": "Nusinersen",
+      "target": "SMN2 splicing (exon 7 inclusion)",
+      "tier": 1,
+      "modality": "antisense oligonucleotide",
+      "approved_in": "5q SMA (FDA and EMA approved 2016 to 2017)",
+      "dev_stage": "FDA approved (intrathecal, chronic dosing)",
+      "rationale": {
+        "patient": "This treatment is a small piece of designed genetic material given by injection into the fluid around the spinal cord. It nudges the backup gene SMN2 to make more of the full, working protein. In a trial of infants it improved movement and survival compared with untreated infants.",
+        "clinician": "Antisense oligonucleotide that binds the ISS-N1 site in SMN2 intron 7 to promote exon 7 inclusion and raise full length SMN. In ENDEAR (infantile onset Type 1), a significantly higher percentage of nusinersen treated infants had a motor milestone response and event free survival versus sham control. Delivered intrathecally with maintenance dosing.",
+        "researcher": "Splice switching ASO acting on SMN2 intron 7 ISS-N1, the first approved SMA therapy and a proof of concept that an oligonucleotide can redirect splicing of an endogenous paralog in the human CNS. Establishes the ASO splice correction modality that the discovery layer proposes to transfer to other splice altering monogenic diseases."
+      },
+      "citation": {
+        "label": "Finkel et al., N Engl J Med 2017 (ENDEAR, nusinersen in infantile onset SMA)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091570/"
+      },
+      "trial": {
+        "nct": "NCT02193074",
+        "url": "https://clinicaltrials.gov/study/NCT02193074"
+      }
+    },
+    {
+      "drug": "Onasemnogene abeparvovec",
+      "target": "SMN1 gene replacement",
+      "tier": 1,
+      "modality": "gene therapy",
+      "approved_in": "5q SMA in patients under 2 years (FDA approved 2019)",
+      "dev_stage": "FDA approved (one time intravenous AAV9 gene replacement)",
+      "rationale": {
+        "patient": "This is a one time treatment that delivers a working copy of the missing SMN1 gene into cells using a harmless virus as a carrier. In a first trial of infants with the severe form, treated babies survived longer and reached movement milestones that untreated babies almost never reach.",
+        "clinician": "One time intravenous AAV9 vector delivering a functional SMN1 transgene. In the phase 1 study of Type 1 SMA, all treated infants were alive and free of permanent ventilation at 20 months (versus roughly 8 percent survival in historical controls), and high dose patients achieved motor milestones including sitting unassisted. Approved for SMA in children under 2 years.",
+        "researcher": "Systemic AAV9 mediated SMN1 gene replacement, a durable one time restoration of the missing gene product rather than ongoing splice modulation. Demonstrates that AAV gene replacement can rescue a recessive loss of function neurological disease, the precedent the discovery layer extends to other AAV tractable recessive disorders."
+      },
+      "citation": {
+        "label": "Mendell et al., N Engl J Med 2017 (AAV9 SMN1 gene replacement in Type 1 SMA)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091557/"
+      },
+      "trial": {
+        "nct": "NCT02122952",
+        "url": "https://clinicaltrials.gov/study/NCT02122952"
+      }
+    },
+    {
+      "drug": "Risdiplam",
+      "target": "SMN2 splicing (exon 7 inclusion)",
+      "tier": 1,
+      "modality": "small molecule",
+      "approved_in": "5q SMA in patients 2 months and older (FDA approved 2020)",
+      "dev_stage": "FDA approved (daily oral SMN2 splicing modifier)",
+      "rationale": {
+        "patient": "This is a liquid medicine taken by mouth once a day. Like nusinersen it makes the backup gene SMN2 produce more of the full protein, but because it is oral it reaches the whole body and is easy to take at home. In trials it raised the protein and improved movement in infants and in older children.",
+        "clinician": "Orally administered small molecule that modifies SMN2 pre mRNA splicing to increase full length SMN protein. In FIREFISH (Type 1 SMA infants), oral risdiplam increased blood SMN protein and enabled milestones such as sitting unsupported; in SUNFISH Part 2 (Type 2 and non ambulant Type 3, ages 2 to 25) it significantly improved the 32 item Motor Function Measure versus placebo. Approved for patients 2 months and older.",
+        "researcher": "Small molecule splicing modifier targeting the same SMN2 exon 7 inclusion axis as the ASO but via a distinct chemical modality with systemic, oral, blood brain barrier penetrant exposure. Shows that one splicing dependency can be drugged by two modalities (ASO and small molecule), a within disease multi modality precedent the discovery layer generalizes."
+      },
+      "citation": {
+        "label": "Baranello et al., N Engl J Med 2021 (FIREFISH, oral risdiplam in Type 1 SMA)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33626251/"
+      },
+      "trial": {
+        "nct": "NCT02913482",
+        "url": "https://clinicaltrials.gov/study/NCT02913482"
+      }
+    }
+  ],
+  "trials": [],
+  "precedentIntro": {
+    "patient": "These are landmark approvals across different rare diseases that made treating disease by its molecular defect, using advanced treatments like gene therapy, a real and proven approach. They are why borrowing a treatment idea from one rare disease to another is legitimate rather than speculative.",
+    "clinician": "The approvals below establish that antisense oligonucleotide, AAV gene replacement, RNA interference, and CRISPR gene editing are all real, regulator approved modalities. Each validates a modality that can, in principle, be transferred to another disease with a matching molecular dependency.",
+    "researcher": "Each landmark validates one advanced modality on a defined molecular mechanism (splice correction, gene replacement, RNAi knockdown, gene editing). This modality catalog, not any single gene, is the transferable asset that licenses the cross condition hypotheses in the discovery layer."
+  },
+  "precedents": [
+    {
+      "biomarker": "SMN2 splicing dependency (exon 7 inclusion) in SMA",
+      "drug": "nusinersen (antisense oligonucleotide)",
+      "year": "2016 to 2017",
+      "citation": {
+        "label": "Finkel et al., N Engl J Med 2017 (ENDEAR, first approved ASO for SMA)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091570/"
+      }
+    },
+    {
+      "biomarker": "SMN1 loss of function in SMA (gene replacement)",
+      "drug": "onasemnogene abeparvovec (AAV9 gene replacement)",
+      "year": 2019,
+      "citation": {
+        "label": "Mendell et al., N Engl J Med 2017 (AAV9 SMN1 gene replacement)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091557/"
+      }
+    },
+    {
+      "biomarker": "TTR gene expression in hereditary transthyretin amyloidosis (RNAi knockdown)",
+      "drug": "patisiran (RNA interference)",
+      "year": 2018,
+      "citation": {
+        "label": "Adams et al., N Engl J Med 2018 (patisiran RNAi for hereditary transthyretin amyloidosis)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29972753/"
+      }
+    },
+    {
+      "biomarker": "BCL11A erythroid enhancer editing to reactivate fetal hemoglobin in sickle cell disease and beta thalassemia (gene editing)",
+      "drug": "exagamglogene autotemcel (CRISPR-Cas9 gene editing)",
+      "year": 2023,
+      "citation": {
+        "label": "Frangoul et al., N Engl J Med 2021 (CRISPR-Cas9 editing for sickle cell disease and beta thalassemia; approved 2023 as exagamglogene autotemcel)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33283989/"
+      }
+    }
+  ],
+  "discoveryIntro": {
+    "patient": "This section lists research ideas, not treatment recommendations. Because SMA proved that gene directed treatments can work, the same kinds of treatment might be worth testing in other rare inherited diseases that go wrong in a similar way. These are starting points for scientists, not advice for patients.",
+    "clinician": "Each entry is a research hypothesis that transfers a modality validated in SMA or an adjacent rare disease to a different monogenic disease sharing the mechanism. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
+    "researcher": "The discovery layer proposes novel cross condition, advanced modality hypotheses by analogy over a shared molecular dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
+  },
+  "discovery": [
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply an ISS-N1 style splice switching antisense oligonucleotide to a different splice altering monogenic disease, testing whether ASO splice correction generalizes beyond SMN2.",
+      "shared": "A pathogenic splicing defect that a splice switching oligonucleotide can redirect toward inclusion of a functional exon, mirroring nusinersen at SMN2 exon 7.",
+      "source": "Spinal muscular atrophy (nusinersen ASO splice correction)",
+      "modality": "antisense oligonucleotide",
+      "rationale": "Nusinersen shows an intrathecal ASO can durably shift endogenous splicing in the human CNS. Diseases driven by amenable splice altering variants (for example the deep intronic splice variant treated by the individualized ASO milasen) are candidates for the same splice correction logic.",
+      "transferability": "medium, ASO splice correction is a proven modality but each target needs an accessible splice element, a tolerated route to the affected tissue, and demonstration that the corrected transcript yields functional protein.",
+      "prediction": "In patient derived cells carrying the candidate splice altering variant, a rationally designed splice switching ASO increases inclusion of the functional exon and restores functional protein in a dose dependent manner, without off target splicing changes.",
+      "citation": {
+        "label": "Kim et al., N Engl J Med 2019 (milasen, individualized ASO splice correction, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31597037/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply one time AAV gene replacement to another recessive loss of function disease with a small transgene and an accessible target tissue, extending the onasemnogene precedent.",
+      "shared": "A recessive loss of function of a single gene whose coding sequence fits an AAV cargo, where restoring the gene product could rescue cellular function, as SMN1 replacement does in SMA.",
+      "source": "Spinal muscular atrophy (onasemnogene abeparvovec AAV9 gene replacement)",
+      "modality": "gene therapy",
+      "rationale": "Onasemnogene proves systemic AAV gene replacement can rescue a recessive neurological disease. Other recessive disorders with a compact coding sequence and a defined target tissue are conceptually amenable, contingent on vector tropism, transgene size, and durability.",
+      "transferability": "medium to speculative, AAV gene replacement is validated, but transgene size limits, tissue tropism, preexisting anti AAV immunity, and durability of expression must be established per disease.",
+      "prediction": "In an animal model of the target recessive disease, a single systemic dose of an AAV vector carrying the functional transgene restores the missing protein and rescues the disease phenotype durably, with a manageable immune response.",
+      "citation": {
+        "label": "Mendell et al., N Engl J Med 2017 (AAV9 SMN1 gene replacement, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29091557/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply RNAi knockdown to a monogenic disease driven by a toxic gain of function or dominant negative transcript, transferring the patisiran logic from hereditary transthyretin amyloidosis.",
+      "shared": "A disease where the pathogenic mechanism is an over abundant or toxic transcript whose selective knockdown is therapeutic, as TTR silencing is in hereditary transthyretin amyloidosis.",
+      "source": "Hereditary transthyretin amyloidosis (patisiran RNA interference)",
+      "modality": "other",
+      "rationale": "Patisiran shows RNAi can safely and durably lower a disease driving transcript in patients. Monogenic diseases caused by a toxic or excess transcript (rather than by loss of function) are the mechanistic counterpart where knockdown, not replacement, is the correct direction.",
+      "transferability": "medium, RNAi is an approved modality for transcript lowering, but it fits gain of function or toxic transcript diseases and requires allele selectivity where the healthy allele must be preserved, plus delivery to the affected tissue.",
+      "prediction": "In a model of the candidate gain of function disease, an RNAi agent selectively lowers the pathogenic transcript, reduces the toxic protein, and improves the phenotype without suppressing an essential normal function.",
+      "citation": {
+        "label": "Adams et al., N Engl J Med 2018 (patisiran RNAi, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29972753/"
+      }
+    },
+    {
+      "hypothesis": "Research hypothesis (not a clinical recommendation): apply CRISPR based ex vivo editing to another blood or bone marrow monogenic disease that can be corrected in autologous hematopoietic stem cells, extending the exagamglogene precedent beyond sickle cell disease and beta thalassemia.",
+      "shared": "A monogenic hematologic disease correctable by editing a defined locus in autologous hematopoietic stem cells, as BCL11A enhancer editing reactivates fetal hemoglobin in sickle cell disease and beta thalassemia.",
+      "source": "Sickle cell disease and beta thalassemia (exagamglogene autotemcel CRISPR editing)",
+      "modality": "cell therapy",
+      "rationale": "Exagamglogene autotemcel shows CRISPR edited autologous hematopoietic stem cells can durably correct a hematologic phenotype after myeloablation. Other correctable hematopoietic monogenic diseases with a defined editable locus are conceptual candidates for the same ex vivo editing platform.",
+      "transferability": "speculative, ex vivo hematopoietic stem cell editing is validated for one mechanism, but each new disease needs a safe editable locus, high fidelity editing, retained stem cell function, and acceptance of a myeloablative conditioning regimen.",
+      "prediction": "Autologous hematopoietic stem cells from patients with the candidate disease can be edited at the target locus with high efficiency, retain engraftment and multilineage reconstitution, and produce a corrected phenotype in preclinical models.",
+      "citation": {
+        "label": "Frangoul et al., N Engl J Med 2021 (CRISPR-Cas9 editing of autologous hematopoietic stem cells, modality precedent)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33283989/"
+      }
+    }
+  ],
+  "disclaimer": "<p>This dossier is a research and educational evidence summary compiled from PubMed and public regulatory announcements. It is not medical advice and must not be used to guide individual patient care. Spinal muscular atrophy is a rare disease and this report is included as a demonstration that Anveshar's biology first, cross condition matching framework generalizes beyond cancer to Mendelian disease and gene directed therapy. The three approved therapies are described from their pivotal trials, and treatment selection depends on SMN2 copy number, age, weight, and disease stage. The discovery section lists computationally generated research hypotheses, explicitly not clinical recommendations, each an analogy over a shared molecular dependency with graded transferability. Treatment decisions belong to a qualified neuromuscular specialist, ideally at a center experienced with SMA and, where relevant, within a clinical trial.</p>"
+}

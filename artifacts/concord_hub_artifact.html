@@ -1,0 +1,125 @@
+<title>Anveshar — a translational molecular board for rare cancers</title>
+<style>
+ :root{
+  --ink:#111318;--muted:#59616f;--faint:#8b93a1;--line:#e7e9f0;--paper:#ffffff;--bg:#fbfbfd;
+  --accent:#2f5fe0;--accent-ink:#1b3aa0;--disc:#7b3fe4;
+  --geno:#2f5fe0;--trans:#127a3e;--img:#b8611a;--msk:#7b3fe4;--tool:#0f766e;
+ }
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{margin:0;background:var(--bg);color:var(--ink);
+   font-family:Arial,Helvetica,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+ a{color:inherit}
+ .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+ /* hero */
+ .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:var(--paper)}
+ #net{position:absolute;inset:0;width:100%;height:100%;display:block}
+ .hero-in{position:relative;max-width:1060px;margin:0 auto;padding:78px 22px 66px}
+ .brand{font-size:13px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+ h1{font-size:clamp(34px,6vw,58px);line-height:1.02;margin:14px 0 0;font-weight:800;letter-spacing:-.02em;text-wrap:balance;max-width:15ch}
+ .tagline{font-size:clamp(16px,2.4vw,21px);color:var(--muted);margin:18px 0 0;max-width:56ch}
+ .metrics{display:flex;flex-wrap:wrap;gap:30px;margin-top:34px}
+ .metrics div b{font-size:30px;display:block;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+ .metrics div span{font-size:12.5px;color:var(--muted)}
+ /* sections */
+ .lead{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:52px 0 14px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+ .card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px;
+   text-decoration:none;transition:transform .14s ease,box-shadow .14s ease,border-color .14s ease}
+ .card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(30,40,80,.10);border-color:#d3d8e6}
+ .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+ .kind{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;padding:3px 9px;border-radius:20px}
+ .k-atlas{background:var(--disc)}.k-analyses{background:var(--geno)}.k-mm{background:var(--img)}
+ .k-run{background:var(--tool)}.k-report{background:var(--msk)}
+ .card h3{margin:12px 0 6px;font-size:17px;letter-spacing:-.01em}
+ .card p{margin:0;font-size:13.5px;color:var(--muted)}
+ .card .go{margin-top:12px;font-size:12.5px;font-weight:700;color:var(--accent)}
+ /* host strip */
+ .host{margin-top:22px;background:#0f1320;color:#e8ebf4;border-radius:18px;padding:26px 26px}
+ .host h3{margin:0 0 6px;font-size:19px;color:#fff}
+ .host p{margin:0;font-size:14px;color:#aeb6cc;max-width:70ch}
+ .host code{display:block;margin-top:14px;background:#080a12;color:#cdd6f4;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+   font-size:12.5px;padding:12px 14px;border-radius:10px;overflow-x:auto}
+ .host a{color:#8db4ff}
+ .disc{margin:26px 0 0;padding:15px 17px;background:#fff7ed;border:1px solid #f3d8b0;border-radius:13px;font-size:12.5px;color:#7a4b12}
+ footer{margin:26px 0 60px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);
+   display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+ footer a{color:var(--accent);text-decoration:none}
+ @media (prefers-reduced-motion:reduce){#net{opacity:.5}}
+</style>
+
+<header class="hero">
+ <canvas id="net" aria-hidden="true"></canvas>
+ <div class="hero-in">
+  <div class="brand">Anveshar</div>
+  <h1>A translational molecular board for rare cancers</h1>
+  <p class="tagline">When a cancer is too rare to have its own trial, Anveshar finds the therapy proven against the same molecular dependency somewhere else, grades the evidence, and shows the work. Decision support for research, grounded in real data.</p>
+  <div class="metrics">
+   <div><b>504</b><span>rare cancers catalogued</span></div>
+   <div><b>743</b><span>rare conditions searchable</span></div>
+   <div><b>87</b><span>shared dependencies mapped</span></div>
+   <div><b>10,945</b><span>MSK-IMPACT tumors analyzed</span></div>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+ <div class="lead">Explore</div>
+ <div class="cards">
+  <a class="card" href="https://claude.ai/code/artifact/352952a9-3871-4d50-9675-7e12a15872d6" target="_blank" rel="noopener">
+   <span class="kind k-atlas">Atlas</span><h3>Rare cancer dependency atlas</h3>
+   <p>Every one of the 504 rare cancers, searchable by name, gene, organ system, and potential cause, with shared molecular dependencies as clickable clusters.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/b0d976b0-6971-4fcd-b7b4-af05872ddb3d" target="_blank" rel="noopener">
+   <span class="kind k-analyses">Analyses</span><h3>Actionability, causes, unmet need</h3>
+   <p>Which rare cancers have a borrowable approved therapy (with confidence and citations), the etiology landscape, hereditary syndromes, and the druggability gap.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/bdf14ffd-3f17-42be-bf1b-4e34fcda949c" target="_blank" rel="noopener">
+   <span class="kind k-mm">Multi-modal</span><h3>Real data: genomics, transcriptomics, imaging</h3>
+   <p>Uveal melanoma and adrenocortical carcinoma from TCGA, an H&amp;E slide, and the MSK-IMPACT clinical cohort, analyzed on a cluster. Nothing simulated.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/2cf816b4-390a-4a7e-b6b9-22ba6291222f" target="_blank" rel="noopener">
+   <span class="kind k-run">Harness run</span><h3>A live pipeline run, end to end</h3>
+   <p>Renal medullary carcinoma resolved to SMARCB1, functional-genomics validation that pivots to the EZH2 induced dependency, and full auditable provenance.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/bec29cdd-185d-4554-a0c2-9857cecae835" target="_blank" rel="noopener">
+   <span class="kind k-report">Report</span><h3>Renal medullary carcinoma</h3>
+   <p>A patient, clinician, and researcher view of one rare cancer: biology, cross-condition therapies with confidence, novel hypotheses, trials, and a runnable workflow.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/f6a95455-c11c-4586-8e62-93161e70fc4c" target="_blank" rel="noopener">
+   <span class="kind k-report">Report</span><h3>Uveal melanoma</h3>
+   <p>GNAQ, GNA11, and BAP1 biology; tebentafusp, the first therapy to improve survival in this disease; cross-condition options and a research workflow.</p><div class="go">Open &rarr;</div></a>
+ </div>
+
+ <div class="lead">Host the full site</div>
+ <div class="host">
+  <h3>The complete, cross-linked website</h3>
+  <p>The artifacts above are standalone views. The full experience, a home search over 743 conditions plus the atlas, analyses, multi-modal, network, and every report, is a static site that hosts on GitHub Pages. It uses only relative links, so it runs at any path.</p>
+  <code>cd rarecancers &amp;&amp; git remote add origin https://github.com/digvijayky/rare_cancer.git &amp;&amp; git push -u origin master</code>
+  <p style="margin-top:12px">Then enable Pages on the repo (branch <b>master</b>, root). Live at <a href="https://digvijayky.github.io/rare_cancer/" target="_blank" rel="noopener">digvijayky.github.io/rare_cancer</a>.</p>
+ </div>
+
+ <div class="disc">Anveshar is decision support for research and education, not medical advice. Confidence and validation scores summarize evidence strength, not the probability of benefit for any individual, and a driver-gene match is a translation hypothesis that variant context and tumor biology can overturn. Every diagnostic and treatment decision must be made by a qualified health care provider, ideally within a clinical trial.</div>
+ <footer>
+  <span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span>
+  <span>Anveshar &middot; a translational molecular board for rare cancers</span>
+ </footer>
+</main>
+
+<script>
+(function(){
+ const c=document.getElementById("net"), x=c.getContext("2d");
+ const reduce=window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+ let W,H,nodes,DPR=Math.min(2,window.devicePixelRatio||1);
+ function size(){const r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*DPR;c.height=H*DPR;x.setTransform(DPR,0,0,DPR,0,0);}
+ function init(){size();const n=Math.max(26,Math.min(60,Math.round(W/22)));nodes=[];for(let i=0;i<n;i++)nodes.push({
+   px:Math.random()*W,py:Math.random()*H,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:1.5+Math.random()*2.2,
+   hue:Math.random()<.5?"#2f5fe0":"#7b3fe4"});}
+ function frame(){
+   x.clearRect(0,0,W,H);
+   for(let i=0;i<nodes.length;i++){const a=nodes[i];
+     for(let j=i+1;j<nodes.length;j++){const b=nodes[j];const dx=a.px-b.px,dy=a.py-b.py,d=Math.hypot(dx,dy);
+       if(d<118){x.strokeStyle="rgba(47,95,224,"+(0.09*(1-d/118))+")";x.lineWidth=1;x.beginPath();x.moveTo(a.px,a.py);x.lineTo(b.px,b.py);x.stroke();}}}
+   for(const a of nodes){x.fillStyle=a.hue;x.globalAlpha=.5;x.beginPath();x.arc(a.px,a.py,a.r,0,6.2832);x.fill();x.globalAlpha=1;
+     if(!reduce){a.px+=a.vx;a.py+=a.vy;if(a.px<0||a.px>W)a.vx*=-1;if(a.py<0||a.py>H)a.vy*=-1;}}
+   if(!reduce)requestAnimationFrame(frame);
+ }
+ window.addEventListener("resize",()=>{init();if(reduce)frame();});
+ init();frame();
+})();
+</script>
