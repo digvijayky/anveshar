@@ -66,15 +66,15 @@
 <main class="wrap">
  <div class="lead">Explore</div>
  <div class="cards">
-  <a class="card" href="https://claude.ai/code/artifact/352952a9-3871-4d50-9675-7e12a15872d6" target="_blank" rel="noopener">
-   <span class="kind k-atlas">Atlas</span><h3>Rare cancer dependency atlas</h3>
-   <p>Every one of the 504 rare cancers, searchable by name, gene, organ system, and potential cause, with shared molecular dependencies as clickable clusters.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/750ce196-d256-48fc-b2ba-e5f5c4df0a03" target="_blank" rel="noopener">
+   <span class="kind k-atlas">Atlas explorer</span><h3>Rare cancers, driver genes, and the models that read them</h3>
+   <p>One immersive interactive graph: rare cancers, their shared driver genes, the analysis tasks, and the runnable sequence models (ESM-2, Nucleotide Transformer, Evo 2, and more), with search and slide-in detail panels. The dependency atlas, live.</p><div class="go">Open &rarr;</div></a>
   <a class="card" href="https://claude.ai/code/artifact/b0d976b0-6971-4fcd-b7b4-af05872ddb3d" target="_blank" rel="noopener">
    <span class="kind k-analyses">Analyses</span><h3>Actionability, causes, unmet need</h3>
    <p>Which rare cancers have a borrowable approved therapy (with confidence and citations), the etiology landscape, hereditary syndromes, and the druggability gap.</p><div class="go">Open &rarr;</div></a>
   <a class="card" href="https://claude.ai/code/artifact/bdf14ffd-3f17-42be-bf1b-4e34fcda949c" target="_blank" rel="noopener">
    <span class="kind k-mm">Multi-modal</span><h3>Real data: genomics, transcriptomics, imaging</h3>
-   <p>Uveal melanoma and adrenocortical carcinoma from TCGA, an H&amp;E slide, and the clinical sequencing cohort clinical cohort, analyzed on a cluster. Nothing simulated.</p><div class="go">Open &rarr;</div></a>
+   <p>Uveal melanoma and adrenocortical carcinoma from TCGA, an H&amp;E slide, and a large clinical sequencing cohort, analyzed on a cluster. Nothing simulated.</p><div class="go">Open &rarr;</div></a>
   <a class="card" href="https://claude.ai/code/artifact/2cf816b4-390a-4a7e-b6b9-22ba6291222f" target="_blank" rel="noopener">
    <span class="kind k-run">Harness run</span><h3>A live pipeline run, end to end</h3>
    <p>Renal medullary carcinoma resolved to SMARCB1, functional-genomics validation that pivots to the EZH2 induced dependency, and full auditable provenance.</p><div class="go">Open &rarr;</div></a>
@@ -92,8 +92,11 @@
    <span class="kind k-nb">Run it yourself</span><h3>The code, the datasets, the result</h3>
    <p>A hands-on page for computational biologists: the exact code that pulls each rare cancer dataset from cBioPortal, the reproducible result, and how to run the notebooks. Open a notebook, run all cells, get the figure.</p><div class="go">Open &rarr;</div></a>
   <a class="card" href="https://github.com/digvijayky/anveshar/tree/main/notebooks" target="_blank" rel="noopener">
-   <span class="kind k-nb">Notebooks</span><h3>Eight runnable Jupyter notebooks</h3>
-   <p>Every analysis ships as a Jupyter notebook a researcher can open and Run All: the pipeline harness, the catalog analyses, genomics and transcriptomics, imaging, clinical sequencing cohort, and functional-genomics target validation. Each runs on public data and re-renders its own tables and figures.</p><div class="go">Open on GitHub &rarr;</div></a>
+   <span class="kind k-nb">Notebooks</span><h3>Nine runnable Jupyter notebooks</h3>
+   <p>Every analysis ships as a Jupyter notebook a researcher can open and Run All: the pipeline harness, the catalog analyses, genomics and transcriptomics, imaging, clinical sequencing cohort, functional-genomics target validation, and sequence and protein language models run on rare tumor drivers. Each runs on public data and re-renders its own tables and figures.</p><div class="go">Open on GitHub &rarr;</div></a>
+  <a class="card" href="https://github.com/digvijayky/anveshar/blob/main/notebooks/09_sequence_models_rare_cancer.ipynb" target="_blank" rel="noopener">
+   <span class="kind k-nb">Sequence models</span><h3>Run foundation models on rare tumor drivers</h3>
+   <p>A runnable notebook that scores driver variants with ESM-2 zero-shot (VHL R167W reproduces as damaging; the SF3B1 K700E change-of-function hotspot correctly reads as tolerated), maps a per-residue constraint landscape, embeds the drivers, and gives loading recipes for DNA, expression, splice, structure, and single-cell models with the benchmark caveats.</p><div class="go">Open on GitHub &rarr;</div></a>
   <a class="card" href="https://github.com/digvijayky/anveshar/blob/main/docs/rectal_net_finding.md" target="_blank" rel="noopener">
    <span class="kind k-find">Finding</span><h3>A hypothesis, tested and reproduced</h3>
    <p>Anveshar's hypothesis that rectal neuroendocrine tumors are not colorectal cancer, tested during the event on real clinical sequencing data and TCGA data: the driver landscape tracks histology, not organ. One script, rerun in minutes by anyone.</p><div class="go">Read the finding &rarr;</div></a>
