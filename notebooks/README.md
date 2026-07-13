@@ -13,6 +13,8 @@ outputs and figures are already rendered.
 | `04_imaging_he_analysis.ipynb` | H&E color deconvolution and watershed nuclei segmentation | CC BY 4.0 histopathology; scikit-image |
 | `05_msk_impact_rare_cancers.ipynb` | Map MSK-IMPACT (10,945 tumors) onto the rare cancer catalog; per-type driver frequencies | MSK-IMPACT via cBioPortal |
 | `06_target_validation_functional_genomics.ipynb` | Score druggability tractability and DepMap essentiality; pivot a loss driver to its induced dependency | Open Targets, DepMap |
+| `07_rectal_net_hypothesis.ipynb` | Tested hypothesis: rectal NET is not colorectal cancer | MSK-IMPACT, TCGA via cBioPortal |
+| `08_uveal_melanoma_integrative.ipynb` | Tested hypothesis: integrated multi-omics beats mutation calls for uveal melanoma risk | TCGA-UVM via cBioPortal |
 
 ## Setup
 
