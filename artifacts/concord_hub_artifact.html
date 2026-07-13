@@ -86,7 +86,7 @@
    <p>GNAQ, GNA11, and BAP1 biology; tebentafusp, the first therapy to improve survival in this disease; cross-condition options and a research workflow.</p><div class="go">Open &rarr;</div></a>
  </div>
 
- <div class="lead">For researchers: reproducible, hypothesis-driven</div>
+ <div class="lead">For researchers: reproducible, and runnable inside Claude Science</div>
  <div class="cards">
   <a class="card" href="https://claude.ai/code/artifact/d0479d92-41ec-4cb5-85a9-6937d73dc8a0" target="_blank" rel="noopener">
    <span class="kind k-nb">Run it yourself</span><h3>The code, the datasets, the result</h3>
@@ -97,6 +97,12 @@
   <a class="card" href="https://github.com/digvijayky/anveshar/blob/main/notebooks/09_sequence_models_rare_cancer.ipynb" target="_blank" rel="noopener">
    <span class="kind k-nb">Sequence models</span><h3>Run foundation models on rare tumor drivers</h3>
    <p>A runnable notebook that scores driver variants with ESM-2 zero-shot (VHL R167W reproduces as damaging; the SF3B1 K700E change-of-function hotspot correctly reads as tolerated), maps a per-residue constraint landscape, embeds the drivers, and gives loading recipes for DNA, expression, splice, structure, and single-cell models with the benchmark caveats.</p><div class="go">Open on GitHub &rarr;</div></a>
+  <a class="card" href="https://claude.ai/code/artifact/06c2fbdd-adf8-48d8-a815-7292002f5277" target="_blank" rel="noopener">
+   <span class="kind k-nb">Training</span><h3>Train a model on your rare cancer</h3>
+   <p>A real training run: 587 ClinVar-labeled driver variants, ESM-2 features, and a trained head that lifts pathogenicity AUC from 0.91 zero-shot to 0.98, with LoRA and single-cell recipes. Every step is runnable from inside Claude Science.</p><div class="go">Open &rarr;</div></a>
+  <a class="card" href="https://github.com/digvijayky/anveshar/blob/main/docs/CLAUDE_SCIENCE.md" target="_blank" rel="noopener">
+   <span class="kind k-nb">Claude Science</span><h3>Runnable from inside Claude Science</h3>
+   <p>Every Anveshar capability maps to a Claude skill or connected database: deep-research for model choice, the cBioPortal, ClinVar, and Open Targets connectors for data, scvi-tools and nextflow for single-cell and pipelines, and PubMed, Consensus, and Paperclip for validation.</p><div class="go">Read the map &rarr;</div></a>
   <a class="card" href="https://github.com/digvijayky/anveshar/blob/main/docs/rectal_net_finding.md" target="_blank" rel="noopener">
    <span class="kind k-find">Finding</span><h3>A hypothesis, tested and reproduced</h3>
    <p>Anveshar's hypothesis that rectal neuroendocrine tumors are not colorectal cancer, tested during the event on real clinical sequencing data and TCGA data: the driver landscape tracks histology, not organ. One script, rerun in minutes by anyone.</p><div class="go">Read the finding &rarr;</div></a>

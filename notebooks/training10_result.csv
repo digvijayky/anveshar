@@ -1,0 +1,3 @@
+method,auc
+zero-shot ESM-2 LLR,0.912
+trained ESM-2 head (5-fold CV),0.983

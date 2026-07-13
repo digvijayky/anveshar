@@ -204,6 +204,7 @@ INDEX = """<!doctype html><html lang="en"><head><meta charset="utf-8">
     <div class="grid">__FEATURED__</div>
     <div class="nav">
       <a href="atlas_explorer.html">Atlas Explorer (interactive: cancers, genes, tasks, models)</a>
+      <a href="training.html">Train sequence models (real ESM-2 run, inside Claude Science)</a>
       <a href="atlas.html">Rare cancer dependency atlas (every rare cancer)</a>
       <a href="analyses.html">Actionability, causes, and syndrome analyses</a>
       <a href="multimodal.html">Multi-modal analysis on real data (TCGA and clinical sequencing cohorts)</a>

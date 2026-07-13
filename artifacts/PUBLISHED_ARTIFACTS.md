@@ -6,6 +6,7 @@ Shareable, self-contained web pages published to claude.ai. The hub links the re
 |---|---|
 | Hub (landing page) | https://claude.ai/code/artifact/21dd72b9-0696-4402-a72a-9a365b3094d6 |
 | Atlas Explorer (interactive graph: cancers, genes, tasks, models) | https://claude.ai/code/artifact/750ce196-d256-48fc-b2ba-e5f5c4df0a03 |
+| Training (train a model on your rare cancer, ESM-2 pathogenicity, AUC 0.91 to 0.98) | https://claude.ai/code/artifact/06c2fbdd-adf8-48d8-a815-7292002f5277 |
 | Rare cancer dependency atlas (static list) | https://claude.ai/code/artifact/352952a9-3871-4d50-9675-7e12a15872d6 |
 | Analyses (actionability, causes, syndromes, unmet need) | https://claude.ai/code/artifact/b0d976b0-6971-4fcd-b7b4-af05872ddb3d |
 | Multi-modal analysis (TCGA + clinical sequencing cohort) | https://claude.ai/code/artifact/bdf14ffd-3f17-42be-bf1b-4e34fcda949c |
