@@ -1,4 +1,4 @@
-# Anveshar: a translational molecular board for rare cancers
+# Anveshar: rare cancer and rare disease research
 
 Built with Claude, Life Sciences Hackathon 2026.
 
@@ -30,7 +30,7 @@ fabricates a variant, drug, or trial.
 
 ## What is novel
 
-Anveshar is a discovery engine, not a lookup table. Its discovery layer reasons over shared
+Anveshar is a hypothesis layer over retrieval. Its discovery layer reasons over shared
 molecular dependencies to generate hypotheses that no dedicated trial has yet tested in the
 target cancer, each with a mechanistic rationale, a transferability grade, and a falsifiable
 prediction, kept visually and semantically separate from approved options.
@@ -55,10 +55,10 @@ interactive shared-dependency network, and the codebase:
 
 - Rectal neuroendocrine tumor: the cross-cancer translation engine end to end.
 - Renal medullary carcinoma: a SMARCB1 cancer with no tissue-agnostic option, where
-  Anveshar shows disciplined restraint and proposes novel hypotheses to test instead.
+  Anveshar shows disciplined restraint and proposes hypotheses to test instead.
 - A real BRAF V600E rectal case: the mutation promotes the matched Tier 1 therapy while
   immunotherapy is correctly excluded on MSI-stable status.
-- A sophisticated four-class case: an MSI-high, BRAF mutant tumor read across an SNV, an
+- A four-class case: an MSI-high, BRAF mutant tumor read across an SNV, an
   epigenetic MLH1 silencing event, a composite biomarker, and a VUS reclassification workflow.
 
 ## The codebase

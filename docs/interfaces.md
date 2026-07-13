@@ -42,7 +42,7 @@ function has a docstring and a unit test under `tests/`.
 - `translate.match(report: DiseaseReport, profile: PatientProfile) -> dict` returns
   {matched: [drug], excluded: [{target, reason}]} by comparing profile targets to therapies.
 - `discovery.generate(report: DiseaseReport, profile: PatientProfile | None = None) -> list[DiscoveryHypothesis]`
-  THE NOVELTY LAYER: proposes novel cross-condition and advanced-modality hypotheses
+  THE NOVELTY LAYER: proposes cross-condition and advanced-modality hypotheses
   (gene therapy, ASO, cell therapy, synthetic lethality) with shared_dependency,
   transferability grade, a supporting citation for the analogy, and a testable_prediction.
 

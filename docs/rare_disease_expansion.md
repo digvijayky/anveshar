@@ -1,6 +1,6 @@
 # Beyond cancer: expanding Anveshar to all rare diseases
 
-Anveshar's core abstraction is not specific to cancer. It is: a molecular lesion, mapped through its mechanism, to a therapy validated in a mechanistically related condition, graded by evidence and, where the evidence runs out, converted into a novel testable hypothesis. That lesion to mechanism to cross condition therapy chain is exactly the reasoning that rare Mendelian and genetic disease also demands. This document explains why the same engine generalizes to the roughly 7,000 rare genetic diseases, gives concrete cited illustrations of cross condition borrowing and gene directed therapy, and describes the architectural changes required, which are mostly a swap of the knowledge bases rather than a rebuild of the engine.
+Anveshar's core abstraction is not specific to cancer. It is: a molecular lesion, mapped through its mechanism, to a therapy validated in a mechanistically related condition, graded by evidence and, where the evidence runs out, converted into a testable hypothesis. That lesion to mechanism to cross condition therapy chain is exactly the reasoning that rare Mendelian and genetic disease also demands. This document explains why the same engine generalizes to the roughly 7,000 rare genetic diseases, gives concrete cited illustrations of cross condition borrowing and gene directed therapy, and describes the architectural changes required, which are mostly a swap of the knowledge bases rather than a rebuild of the engine.
 
 ## Why the abstraction transfers
 

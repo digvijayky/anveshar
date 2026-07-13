@@ -223,7 +223,7 @@
   "discoveryIntro": {
     "patient": "This section lists research ideas, not treatment recommendations. Because sickle cell disease proved that gene directed treatments can work, related ideas may be worth testing to make those cures safer and more available, or to reach the mutation directly. These are starting points for scientists, not advice for patients.",
     "clinician": "Each entry is a research hypothesis that extends a modality validated in SCD or an adjacent setting, either to correct the causal mutation directly, to widen access to curative therapy, or to add fetal hemoglobin inducers. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
-    "researcher": "The discovery layer proposes novel cross condition, advanced modality hypotheses by analogy over the shared HbS polymerization dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated as approved therapy in patients."
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses by analogy over the shared HbS polymerization dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated as approved therapy in patients."
   },
   "discovery": [
     {

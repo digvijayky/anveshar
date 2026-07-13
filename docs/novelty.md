@@ -1,6 +1,6 @@
-# What is genuinely novel about Anveshar
+# What is candidate about Anveshar
 
-Anveshar is a discovery engine, not a lookup table. A lookup table answers "what is already approved for this alteration in this tumor type." Anveshar answers a harder question that no curated table contains: "given the molecular dependency this cancer runs on, what therapy validated somewhere else should work here, even though nobody has tried it in this disease, and what is the one experiment that would confirm or kill that idea?" The output is a ranked set of novel, falsifiable, cited hypotheses, held separate from the approved options and clearly labeled as research directions.
+Anveshar is a hypothesis layer over retrieval. A lookup table answers "what is already approved for this alteration in this tumor type." Anveshar answers a harder question that no curated table contains: "given the molecular dependency this cancer runs on, what therapy validated somewhere else should work here, even though nobody has tried it in this disease, and what is the one experiment that would confirm or kill that idea?" The output is a ranked set of novel, falsifiable, cited hypotheses, held separate from the approved options and clearly labeled as research directions.
 
 This matters because the patients who need cross-condition reasoning most are the ones the evidence base serves least. Rare cancers rarely get their own dedicated trials, so a per-disease lookup returns almost nothing. The engine exists to fill that vacuum with structured, testable leads rather than an empty result.
 
@@ -18,7 +18,7 @@ The discovery tier is assigned `Tier.DISCOVERY` ("0") and rendered in a section 
 
 The discovery layer is bounded by the same discipline as the rest of the engine. Every analogy carries a real citation for the biology that licenses it (a PMID or DOI). Where the analogy has been formally tested in the target cancer and failed, Anveshar says so and down grades the transferability rather than hiding the negative result. A hypothesis that cannot be anchored to a real dependency and a real source therapy is not emitted. This is what separates an engine that generates leads from one that hallucinates them.
 
-## Worked examples of novel hypotheses Anveshar surfaces
+## Worked examples of hypotheses Anveshar surfaces
 
 The following are the kinds of hypotheses the discovery layer generates. Each is a research hypothesis, not a clinical recommendation.
 

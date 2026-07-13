@@ -53,7 +53,7 @@ Interpretation rule in Anveshar: ESCAT tier I to II support treatment recommenda
 
 ---
 
-## PART A2. Interpreting sophisticated variant CLASSES for therapy matching
+## PART A2. Interpreting variant CLASSES for therapy matching
 
 Each class below lists what the alteration means biologically, a real actionable example with citation, and the therapy implication. Anveshar routes each detected alteration to the matching interpreter.
 

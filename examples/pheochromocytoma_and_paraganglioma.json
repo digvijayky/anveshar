@@ -204,7 +204,7 @@
   "discoveryIntro": {
     "patient": "This section lists research ideas, not treatment recommendations. Because pheochromocytoma and paraganglioma share biology with other cancers, some treatments proven elsewhere might be worth testing here. These are starting points for scientists, not advice for patients.",
     "clinician": "Each entry is a research hypothesis that transfers a target or modality validated in a molecularly related setting to PPGL, graded for transferability, with a primary citation for the analogy. None is a clinical recommendation.",
-    "researcher": "The discovery layer proposes novel cross condition hypotheses by analogy over a shared molecular dependency (HIF-2 alpha in pseudohypoxia, DNA repair impairment in SDH loss, and radioligand plus systemic synergy), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
+    "researcher": "The discovery layer proposes cross condition hypotheses by analogy over a shared molecular dependency (HIF-2 alpha in pseudohypoxia, DNA repair impairment in SDH loss, and radioligand plus systemic synergy), with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
   },
   "discovery": [
     {

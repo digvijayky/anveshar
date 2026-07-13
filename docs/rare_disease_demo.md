@@ -2,7 +2,7 @@
 
 ## What this demo shows
 
-Anveshar matches a condition, and optionally a patient's own molecular profile, to therapies validated in other conditions that share the same molecular dependency, grades the evidence, and generates novel cross condition hypotheses. The engine, the schema, and the renderer are condition agnostic. This demonstration proves that by pointing the same machinery at a canonical rare Mendelian disease, spinal muscular atrophy (SMA), where the story is gene directed therapy and cross condition modality borrowing rather than oncology.
+Anveshar matches a condition, and optionally a patient's own molecular profile, to therapies validated in other conditions that share the same molecular dependency, grades the evidence, and generates cross condition hypotheses. The engine, the schema, and the renderer are condition agnostic. This demonstration proves that by pointing the same machinery at a canonical rare Mendelian disease, spinal muscular atrophy (SMA), where the story is gene directed therapy and cross condition modality borrowing rather than oncology.
 
 The report at `examples/rare_disease/spinal_muscular_atrophy.json` was produced with the exact same Anveshar render schema (`anveshar/schema.py`, `DiseaseReport.to_render_dict()`) and the same HTML renderer as the cancer reports (`examples/renal_medullary.json`, `examples/rectal_net.json`). Only the knowledge base changed. Every key in the DATA dict is identical in name and shape. Note that the top level key is still literally `cancer`; it holds the condition name and the schema is intentionally condition agnostic, so no code change was needed to render a non cancer disease.
 
@@ -37,7 +37,7 @@ The precedent section lists landmark rare disease approvals that establish each 
 
 ## Discovery hypotheses (research directions, not clinical recommendations)
 
-The discovery layer proposes four novel cross condition hypotheses, each prefixed "Research hypothesis (not a clinical recommendation)", each transferring a validated modality over a shared molecular dependency with a graded transferability and a falsifiable prediction:
+The discovery layer proposes four cross condition hypotheses, each prefixed "Research hypothesis (not a clinical recommendation)", each transferring a validated modality over a shared molecular dependency with a graded transferability and a falsifiable prediction:
 
 1. ASO splice correction transferred to another splice altering monogenic disease, supported by the milasen individualized ASO precedent (Kim et al., N Engl J Med 2019, PMID 31597037, [DOI](https://doi.org/10.1056/NEJMoa1813279)).
 2. One time AAV gene replacement transferred to another recessive loss of function disease with a compact transgene, supported by the onasemnogene precedent (PMID 29091557).

@@ -1,7 +1,7 @@
 """Anveshar engine: the five stage pipeline that assembles a report.
 
 run() loads curated, cited knowledge for a condition, optionally personalizes it with
-a patient's molecular profile and single-cell expression, appends the novel discovery
+a patient's molecular profile and single-cell expression, appends the hypothesis
 hypotheses, validates that nothing contains a forbidden dash, and (optionally) renders
 the HTML report. It degrades honestly: an unknown condition raises rather than inventing.
 """
@@ -143,7 +143,7 @@ def run(cancer: str, profile=None, scrna: str | None = None, discovery: bool = T
 
     profile: a raw profile dict or a path to one (examples/profiles/*.json shape).
     scrna:   path to an .h5ad; expressed druggable targets are read out and added.
-    discovery: append the novel cross-condition hypotheses.
+    discovery: append the cross-condition hypotheses.
     out:     if given, write the HTML report there.
     Returns the DATA dict the template renders.
     """

@@ -161,7 +161,7 @@
   "discoveryIntro": {
     "patient": "This section lists research ideas, not treatment recommendations. Because hATTR proved that lowering a harmful protein and stabilizing it both work, related ideas may be worth testing, such as switching off the gene once with gene editing, combining a stabilizer with protein lowering, or using antibodies to help clear the deposits already formed. These are starting points for scientists, not advice for patients.",
     "clinician": "Each entry is a research hypothesis that transfers a modality validated in hATTR or an adjacent setting to a new strategy for hATTR or a related misfolding disease, over a shared molecular dependency. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
-    "researcher": "The discovery layer proposes novel cross condition, advanced modality hypotheses by analogy over the shared toxic transthyretin dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated clinical claims."
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses by analogy over the shared toxic transthyretin dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated clinical claims."
   },
   "discovery": [
     {

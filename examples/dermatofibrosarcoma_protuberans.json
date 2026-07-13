@@ -158,7 +158,7 @@
   "discoveryIntro": {
     "patient": "This section lists research ideas, not treatment recommendations. Because DFSP proved that blocking one growth signal can control the disease, related ideas are worth testing: newer drugs for when imatinib stops working, using imatinib before surgery to allow smaller operations, and a plan for the more aggressive fibrosarcomatous form. These are starting points for scientists, not advice for patients.",
     "clinician": "Each entry is a research hypothesis that transfers a modality or strategy validated in DFSP or an adjacent sarcoma to an unmet DFSP need, with graded transferability and a primary citation. None is a clinical recommendation. They target imatinib resistance, function sparing neoadjuvant therapy, and the fibrosarcomatous variant.",
-    "researcher": "The discovery layer proposes novel cross condition hypotheses by analogy over the shared PDGFB to PDGFRB dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated interventions in the target setting."
+    "researcher": "The discovery layer proposes cross condition hypotheses by analogy over the shared PDGFB to PDGFRB dependency, with transferability grading, a supporting citation, and a falsifiable prediction. These are computationally generated research directions, not validated interventions in the target setting."
   },
   "discovery": [
     {

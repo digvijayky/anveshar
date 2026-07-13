@@ -148,7 +148,7 @@
   "discoveryIntro": {
     "patient": "This section lists research ideas, not treatment recommendations. Because SMA proved that gene directed treatments can work, the same kinds of treatment might be worth testing in other rare inherited diseases that go wrong in a similar way. These are starting points for scientists, not advice for patients.",
     "clinician": "Each entry is a research hypothesis that transfers a modality validated in SMA or an adjacent rare disease to a different monogenic disease sharing the mechanism. Transferability is graded, and every analogy carries a primary citation. None is a clinical recommendation.",
-    "researcher": "The discovery layer proposes novel cross condition, advanced modality hypotheses by analogy over a shared molecular dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
+    "researcher": "The discovery layer proposes cross condition, advanced modality hypotheses by analogy over a shared molecular dependency, with transferability grading, a supporting citation for the analogy, and a falsifiable prediction. These are computationally generated research directions, not validated in the target condition."
   },
   "discovery": [
     {

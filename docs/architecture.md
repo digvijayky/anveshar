@@ -10,7 +10,7 @@ The engine (`anveshar.engine.run`) orchestrates five stages. Given a cancer name
 2. **Extract targets.** Read druggable dependencies out of the disease biology and, when a profile is supplied, out of the patient's own variants and expression. Sequence alterations flow through `anveshar.variants`; expressed surface and pathway targets flow through `anveshar.expression`.
 3. **Translate across conditions.** For each target, find therapies validated in other conditions that hit the same target or pathway, anchored on tissue agnostic precedent (MSI-H, NTRK, BRAF V600E, RET, HER2). This is `anveshar.translation`.
 4. **Match trials.** Retrieve trials, favoring basket and tissue agnostic designs, via the ClinicalTrials.gov connector.
-5. **Grade, personalize, and discover.** Tier every therapy against OncoKB, AMP/ASCO/CAP, and ESCAT; promote the options that apply to the patient's alterations and honestly exclude the ones that do not; and run the discovery layer to generate novel cross condition and advanced modality hypotheses. The report is validated (no fabricated entries, no em or en dashes) before it is returned.
+5. **Grade, personalize, and discover.** Tier every therapy against OncoKB, AMP/ASCO/CAP, and ESCAT; promote the options that apply to the patient's alterations and honestly exclude the ones that do not; and run the discovery layer to generate cross condition and advanced modality hypotheses. The report is validated (no fabricated entries, no em or en dashes) before it is returned.
 
 `run(live=False)` assembles the report from curated and example knowledge for reproducibility; `run(live=True)` calls the evidence connectors for fresh data. Either way the output type is identical.
 
