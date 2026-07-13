@@ -7,7 +7,7 @@ outputs and figures are already rendered.
 
 | Notebook | What it does | Data / tools |
 |---|---|---|
-| `01_concord_pipeline_harness.ipynb` | Run the five-stage harness on a rare cancer; inspect provenance, cited therapies with confidence, and the bespoke workflow | concord.pipeline; Open Targets, DepMap, PubMed (live cell optional) |
+| `01_pipeline_harness.ipynb` | Run the five-stage harness on a rare cancer; inspect provenance, cited therapies with confidence, and the bespoke workflow | concord.pipeline; Open Targets, DepMap, PubMed (live cell optional) |
 | `02_catalog_analyses.ipynb` | Actionability, shared dependencies, druggability gap, etiology landscape, hereditary syndrome map over all rare cancers | concord.analysis |
 | `03_genomics_transcriptomics_cbioportal.ipynb` | Driver mutation frequency and BAP1-split transcriptomes for uveal melanoma | TCGA via cBioPortal REST API |
 | `04_imaging_he_analysis.ipynb` | H&E color deconvolution and watershed nuclei segmentation | CC BY 4.0 histopathology; scikit-image |

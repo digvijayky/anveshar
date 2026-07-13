@@ -33,7 +33,7 @@ def md(t): return new_markdown_cell(t)
 def co(t): return new_code_cell(t)
 
 # ============ 01 harness ============
-write("01_concord_pipeline_harness.ipynb", [
+write("01_pipeline_harness.ipynb", [
  md("# 1. The Anveshar pipeline harness\n\n"
     "A reproducible, provenance-tracked pipeline that turns a rare cancer into a cited, confidence-scored "
     "cross-condition translation dossier. Five auditable stages: resolve, databases, target validation, "
