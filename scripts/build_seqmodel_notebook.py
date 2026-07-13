@@ -155,8 +155,8 @@ each of the 20 substitutions. Averaging over substitutions gives a per residue c
 track that highlights the functionally important core of the protein. We show VHL, whose
 alpha and beta domains contact elongin C and HIF1 alpha.""")
 
-co("""import matplotlib
-matplotlib.use("Agg"); import matplotlib.pyplot as plt
+co("""%matplotlib inline
+import matplotlib.pyplot as plt
 from matplotlib import font_manager
 for p in ["/home/yarlagad/.local/share/fonts/Arial.ttf"]:
     if os.path.exists(p): font_manager.fontManager.addfont(p); plt.rcParams["font.family"]="Arial"
