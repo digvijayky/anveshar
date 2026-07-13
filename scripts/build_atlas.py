@@ -119,7 +119,7 @@ PAGE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
  <tbody id="tb"></tbody></table></div>
 
  <div class="disc">Anveshar is decision support for research and education, not medical advice. Rare cancer definitions follow the WHO Classification of Tumours 5th edition, Orphanet, the NCI rare cancers list, and RARECAREnet. A blank dependency means no single defining driver is catalogued, not that none exists. Any treatment decision must be made by a qualified health care provider.</div>
- <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar rare cancer dependency atlas</span></footer>
+ <footer><span>Developer: <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky</a></span><span>Anveshar rare cancer dependency atlas</span></footer>
 </div>
 <script>
 const DATA=@@DATA@@;

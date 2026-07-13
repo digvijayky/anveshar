@@ -122,7 +122,7 @@ PAGE = """<!doctype html><html lang="en"><head><meta charset="utf-8">
  <div class="sgrid">@@SYN@@</div>
 
  <div class="disc">Anveshar is decision support for research and education, not medical advice. Confidence scores summarize evidence strength, not the probability of benefit for an individual patient. A driver gene match is a translation hypothesis; variant context, resistance, and tumor biology still govern whether a therapy works. Every treatment decision must be made by a qualified health care provider, ideally within a clinical trial.</div>
- <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar rare cancer analyses</span></footer>
+ <footer><span>Developer: <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky</a></span><span>Anveshar rare cancer analyses</span></footer>
 </div>
 <script>
 const ADATA=@@ADATA@@;

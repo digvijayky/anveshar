@@ -73,4 +73,4 @@ Biostatistician review and sample size validation, FDA Pre IND meeting, IRB appr
 
 This is a research and educational document produced by an automated protocol drafting tool from public registry and literature sources. It is not medical advice and must not be used to guide individual patient care. Treatment and trial decisions must be made by qualified clinical, regulatory, and biostatistical professionals.
 
-Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com
+Developer: [digvijayky](https://digvijayky.com)

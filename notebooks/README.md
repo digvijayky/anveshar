@@ -44,4 +44,4 @@ These notebooks produce research and educational analysis of public data, not me
 Confidence and validation scores summarize evidence strength, not the probability of benefit for
 any individual. Every clinical decision must be made by a qualified health care provider.
 
-Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com
+Developer: [digvijayky](https://digvijayky.com)

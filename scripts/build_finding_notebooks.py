@@ -4,7 +4,7 @@ from nbformat.v4 import new_notebook, new_markdown_cell as md, new_code_cell as 
 OUT="/data1/lesliec/vijay/github/anveshar/notebooks"; os.makedirs(OUT,exist_ok=True)
 DISC=("---\n*Research and educational analysis of public data, not medical advice. Group-level "
       "tumor biology, not any individual. Decisions rest with a qualified health care provider.*\n\n"
-      "*Anveshar. Developed by Dig Vijay Kumar Yarlagadda, [digvijayky.com](https://digvijayky.com).*")
+      "*Anveshar. Developer: [digvijayky](https://digvijayky.com).*")
 def write(name,cells):
     nb=new_notebook(cells=cells,metadata={"kernelspec":{"name":"python3","display_name":"Python 3","language":"python"},"language_info":{"name":"python"}})
     nbf.write(nb,os.path.join(OUT,name)); print("wrote",name)

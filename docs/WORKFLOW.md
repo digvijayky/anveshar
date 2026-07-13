@@ -81,4 +81,4 @@ sensitive. Confidence scores summarize evidence strength, not the probability of
 individual patient. Every diagnostic and treatment decision must be made by a qualified health
 care provider, ideally within a clinical trial.
 
-Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com
+Developer: [digvijayky](https://digvijayky.com)

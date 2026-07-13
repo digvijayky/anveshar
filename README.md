@@ -45,7 +45,7 @@ The analysis pipeline validates each candidate target with Open Targets tractabi
 CRISPR gene essentiality, and for a loss-of-function driver it considers the induced synthetic
 lethal dependency (for example SMARCB1 loss and EZH2). It has been run on public data: TCGA
 uveal melanoma and adrenocortical carcinoma across genomics, transcriptomics, and imaging, and the
-MSK-IMPACT cohort of 10,945 tumors mapped onto the rare cancer catalog. See `notebooks/` for six
+clinical sequencing cohort cohort of 10,945 tumors mapped onto the rare cancer catalog. See `notebooks/` for six
 runnable Jupyter notebooks and `examples/multimodal/` for the SLURM scripts, source data, and figures.
 
 ## Beyond cancer
@@ -104,4 +104,4 @@ treatment decision must be made by a qualified health care provider, ideally wit
 
 ## Author
 
-Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com.
+Developer: [digvijayky](https://digvijayky.com).

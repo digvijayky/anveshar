@@ -164,7 +164,7 @@ def render(name, live=False, out=None):
  <div class=scroll><table><thead><tr><th>Stage</th><th>Source</th><th>Query</th><th>n</th><th>Note</th></tr></thead><tbody>{prov}</tbody></table></div>
 
  <div class=disc>{esc(d['disclaimer'])}</div>
- <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href=https://digvijayky.com target=_blank rel=noopener>digvijayky.com</a></span><span>Anveshar workflow run report</span></footer>
+ <footer><span>Developer: <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky</a></span><span>Anveshar workflow run report</span></footer>
 </div></body></html>"""
     assert "—" not in page and "–" not in page, "dash leaked"
     open(out, "w", encoding="utf-8").write(page)

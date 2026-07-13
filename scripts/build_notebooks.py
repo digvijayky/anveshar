@@ -23,7 +23,7 @@ DISC = ("---\n*Disclaimer: this notebook produces research and educational analy
         "medical advice. Confidence and validation scores summarize evidence strength, not the probability "
         "of benefit for any individual. Every clinical decision must be made by a qualified health care "
         "provider, ideally within a clinical trial.*\n\n"
-        "*Developed by Dig Vijay Kumar Yarlagadda, [digvijayky.com](https://digvijayky.com).*")
+        "*Developer: [digvijayky](https://digvijayky.com).*")
 
 def write(name, cells):
     nb = new_notebook(cells=cells, metadata={"kernelspec": {"name": "python3", "display_name": "Python 3", "language": "python"},

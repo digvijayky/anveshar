@@ -205,14 +205,14 @@ INDEX = """<!doctype html><html lang="en"><head><meta charset="utf-8">
     <div class="nav">
       <a href="atlas.html">Rare cancer dependency atlas (every rare cancer)</a>
       <a href="analyses.html">Actionability, causes, and syndrome analyses</a>
-      <a href="multimodal.html">Multi-modal analysis on real data (TCGA, MSK-IMPACT)</a>
+      <a href="multimodal.html">Multi-modal analysis on real data (TCGA and clinical sequencing cohorts)</a>
       <a href="network.html">Explore the shared dependency network</a>
       <a href="analysis.html">Confidence ranked translation index</a>
     </div>
     <div class="disc"><b>Health information, not medical advice.</b> Anveshar is decision support for research and educational use, not a medical device. The final decision about any test or treatment must be made by your qualified health care provider.</div>
   </section>
 </main>
-<footer><div class="wrap">Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></div></footer>
+<footer><div class="wrap">Developer: <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky</a></div></footer>
 <script>
 const CATALOG=__DATA__;
 const q=document.getElementById("q"),res=document.getElementById("results"),feat=document.getElementById("featured");

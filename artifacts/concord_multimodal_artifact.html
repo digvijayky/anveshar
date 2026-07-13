@@ -30,7 +30,7 @@
 <div class="wrap">
  <div class="eyebrow">Anveshar &middot; real public data, run on a cluster</div>
  <h1>Multi-modal analysis of rare cancers</h1>
- <p class="sub">Uveal melanoma and adrenocortical carcinoma analyzed across genomics, transcriptomics, and imaging, and the MSK-IMPACT clinical cohort mapped onto every rare cancer. Every number below is computed from a real public dataset. Nothing is simulated.</p>
+ <p class="sub">Uveal melanoma and adrenocortical carcinoma analyzed across genomics, transcriptomics, and imaging, and the clinical sequencing cohort clinical cohort mapped onto every rare cancer. Every number below is computed from a real public dataset. Nothing is simulated.</p>
 
  <h2><span class="tag t-geno">Genomics</span> Uveal melanoma driver mutations</h2>
  <p class="lede">TCGA uveal melanoma (PanCancer Atlas, n=80) via the cBioPortal API. GNAQ and GNA11 are the mutually exclusive Galpha initiating events.</p>
@@ -54,8 +54,8 @@
  <p class="lede">TCGA adrenocortical carcinoma (n=92). TP53 and the Wnt driver CTNNB1 dominate, with recurrent ZNRF3 and MEN1.</p>
  <div class="card"><div class="bars" id="acc_geno"></div></div>
 
- <h2><span class="tag t-msk">Clinical cohort</span> MSK-IMPACT covers rare cancers at scale</h2>
- <p class="lede">The MSK-IMPACT Clinical Sequencing Cohort (Zehir et al., Nat Med 2017) prospectively sequenced 10,945 tumors. Mapping its detailed cancer types onto Anveshar's catalog quantifies its rare cancer coverage.</p>
+ <h2><span class="tag t-msk">Clinical cohort</span> clinical sequencing cohort covers rare cancers at scale</h2>
+ <p class="lede">The clinical sequencing cohort Clinical Sequencing Cohort (Zehir et al., Nat Med 2017) prospectively sequenced 10,945 tumors. Mapping its detailed cancer types onto Anveshar's catalog quantifies its rare cancer coverage.</p>
  <div class="stat">
    <div><b>10,945</b><span>tumors sequenced</span></div>
    <div><b>140</b><span>rare cancer types represented</span></div>
@@ -63,7 +63,7 @@
  </div>
  <p class="lede">Per-type driver frequencies reproduce the known biology in this independent clinical cohort:</p>
  <div class="grid2">
-   <div class="card"><h3>Uveal melanoma (MSK, n=44)</h3><div class="bars" id="msk_uvm"></div><p class="note">BAP1 is enriched vs TCGA, consistent with MSK's metastatic bias.</p></div>
+   <div class="card"><h3>Uveal melanoma (clinical cohort, n=44)</h3><div class="bars" id="msk_uvm"></div><p class="note">BAP1 is enriched vs TCGA, consistent with the cohort's metastatic enrichment.</p></div>
    <div class="card"><h3>Adenoid cystic carcinoma (n=73)</h3><div class="bars" id="msk_acc"></div></div>
    <div class="card"><h3>Merkel cell carcinoma (n=63)</h3><div class="bars" id="msk_mcc"></div></div>
    <div class="card"><h3>Gastrointestinal stromal tumor (n=137)</h3><div class="bars" id="msk_gist"></div></div>
@@ -73,13 +73,13 @@
  <p class="lede">Each analysis ships as a runnable Jupyter notebook and a SLURM script with source CSVs and methodology in the Anveshar repository.</p>
  <div>
    <span class="pill">01 pipeline harness</span><span class="pill">02 catalog analyses</span><span class="pill">03 genomics + transcriptomics</span>
-   <span class="pill">04 imaging</span><span class="pill">05 MSK-IMPACT</span><span class="pill">06 target validation</span>
+   <span class="pill">04 imaging</span><span class="pill">05 clinical sequencing cohort</span><span class="pill">06 target validation</span>
  </div>
 
- <div class="src">Sources: MSK-IMPACT, Zehir et al., Nat Med 2017, <a href="https://doi.org/10.1038/nm.4333" target="_blank" rel="noopener">doi:10.1038/nm.4333</a>; TCGA uveal melanoma, Robertson et al., Cancer Cell 2017, <a href="https://doi.org/10.1016/j.ccell.2017.07.003" target="_blank" rel="noopener">doi</a>; histopathology image, Weiss et al., BMC Cancer 2015 (CC BY 4.0), <a href="https://doi.org/10.1186/s12885-015-1926-1" target="_blank" rel="noopener">doi</a>. Accessed via the cBioPortal REST API.</div>
+ <div class="src">Sources: clinical sequencing cohort, Zehir et al., Nat Med 2017, <a href="https://doi.org/10.1038/nm.4333" target="_blank" rel="noopener">doi:10.1038/nm.4333</a>; TCGA uveal melanoma, Robertson et al., Cancer Cell 2017, <a href="https://doi.org/10.1016/j.ccell.2017.07.003" target="_blank" rel="noopener">doi</a>; histopathology image, Weiss et al., BMC Cancer 2015 (CC BY 4.0), <a href="https://doi.org/10.1186/s12885-015-1926-1" target="_blank" rel="noopener">doi</a>. Accessed via the cBioPortal REST API.</div>
 
  <div class="disc">This is a research and educational analysis of public data, not medical advice. It summarizes tumor biology at the cohort level and does not describe any individual. Every diagnostic and treatment decision must be made by a qualified health care provider, ideally within a clinical trial.</div>
- <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar multi-modal rare cancer analysis</span></footer>
+ <footer><span>Developer: <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky</a></span><span>Anveshar multi-modal rare cancer analysis</span></footer>
 </div>
 <script>
 const DATA = {

@@ -18,7 +18,7 @@ show the cursor, add captions. Links to open are listed in the run of show.
 | 0:40-1:10 | Open the **renal medullary carcinoma report**. It opens in Researcher view. Scroll to the therapies; hover the confidence bar; point at a citation link; scroll to "Evidence databases queried". Toggle to **Patient** view for one second. | "Anveshar returns a cited, confidence scored report, in three registers: researcher, clinician, and patient. Its driver is loss of SMARCB1. That same loss makes the tumor depend on EZH2, which is drugged by tazemetostat, approved in a different sarcoma. Every therapy carries a confidence score and a real citation, and you can see the exact databases Anveshar queried to build this." |
 | 1:10-1:35 | Open the **analyses** artifact. Point at the actionability count, then the "highest unmet need" red chips (TP53, EWSR1). | "Across all rare cancers, ninety nine already have a borrowable approved therapy. And Anveshar flags the highest leverage gaps: the dependencies like TP53 and EWSR1 that drive many rare cancers but have no drug yet. Every number is cited and scored." |
 | 1:35-2:05 | Open the **harness run** artifact. Scroll through the 7 workflow stages, then the target validation table (SMARCB1 42, EZH2 95), then the provenance table. | "The pipeline is reproducible and provenance tracked. It resolves the driver, then validates the target with live functional genomics from Open Targets and DepMap. SMARCB1 itself is a common essential gene you cannot drug, so the harness pivots to its synthetic lethal partner EZH2, which scores as a validated, tractable target. Every step is logged and auditable." |
-| 2:05-2:30 | Open the **multi-modal** artifact. Let the bar charts render. Point at the GNAQ/GNA11 chart, then the MSK-IMPACT numbers. | "And it is grounded in real data. On a cluster, Anveshar analyzed TCGA uveal melanoma across genomics, transcriptomics, and imaging, and mapped MSK-IMPACT's almost eleven thousand sequenced tumors onto the rare cancer catalog. The driver frequencies it recovers reproduce the known biology, exactly." |
+| 2:05-2:30 | Open the **multi-modal** artifact. Let the bar charts render. Point at the GNAQ/GNA11 chart, then the clinical sequencing cohort numbers. | "And it is grounded in real data. On a cluster, Anveshar analyzed TCGA uveal melanoma across genomics, transcriptomics, and imaging, and mapped a clinical sequencing cohort's almost eleven thousand sequenced tumors onto the rare cancer catalog. The driver frequencies it recovers reproduce the known biology, exactly." |
 | 2:30-2:45 | Return to the **hub**. End on the title. | "Anveshar is built with Claude, using its agents, skills, and connected databases. It extends to every rare disease and to gene therapies, and every claim is traceable to a source. It is decision support for research, not medical advice; the final decision always rests with a health care provider. Built by Dig Vijay Kumar Yarlagadda." |
 
 ---
@@ -43,7 +43,7 @@ already, in another disease with the same molecular dependency. Anveshar finds i
 five hundred and four rare cancers and, for each, returns a cited, confidence scored report that
 borrows therapies proven elsewhere. It is a reproducible pipeline: it validates each target with
 live Open Targets and DepMap functional genomics, and pivots an undruggable tumor suppressor
-to its synthetic lethal partner. It is proven on real TCGA and MSK-IMPACT data, extends to all
+to its synthetic lethal partner. It is proven on real TCGA and clinical sequencing data data, extends to all
 rare diseases, and every claim is cited. Built with Claude. Decision support for research, not
 medical advice."
 
@@ -61,4 +61,4 @@ medical advice."
 
 ---
 
-Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com
+Developer: [digvijayky](https://digvijayky.com)
