@@ -1,0 +1,63 @@
+{
+  "n": 80,
+  "driver_freq_pct": {
+    "GNAQ": 50.0,
+    "GNA11": 45.0,
+    "BAP1": 16.2,
+    "SF3B1": 22.5,
+    "EIF1AX": 12.5
+  },
+  "monosomy3_pct": 55.0,
+  "gain8q_pct": 76.2,
+  "class_counts": {
+    "Class 2": 43,
+    "Class 1": 37
+  },
+  "class_alignment": {
+    "BAP1 mut %": {
+      "Class 1": 0.0,
+      "Class 2": 30.2
+    },
+    "Monosomy 3 %": {
+      "Class 1": 8.1,
+      "Class 2": 95.3
+    },
+    "8q gain %": {
+      "Class 1": 56.8,
+      "Class 2": 93.0
+    },
+    "SF3B1 mut %": {
+      "Class 1": 40.5,
+      "Class 2": 7.0
+    },
+    "EIF1AX mut %": {
+      "Class 1": 24.3,
+      "Class 2": 2.3
+    }
+  },
+  "survival_logrank_class": {
+    "chi2": 21.89,
+    "p": 2.8887188006562104e-06
+  },
+  "survival_logrank_bap1": {
+    "chi2": 0.38,
+    "p": 0.5359600602404517
+  },
+  "multiomic_bap1_coordination": {
+    "BAP1 mRNA (z)": {
+      "class1_median": -0.26,
+      "class2_median": -2.48,
+      "p": 5.975868016322254e-12
+    },
+    "PRAME mRNA (z)": {
+      "class1_median": -0.63,
+      "class2_median": -0.53,
+      "p": 0.32490170985928124
+    },
+    "BAP1 protein RPPA (z)": {
+      "class1_median": 0.71,
+      "class2_median": -1.32,
+      "p": 0.0025252525252525255
+    }
+  }
+}

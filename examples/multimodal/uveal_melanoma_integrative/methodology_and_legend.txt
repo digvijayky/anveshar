@@ -1,0 +1,26 @@
+Uveal melanoma integrative multi-omics: methodology and figure legends
+
+DATA (public, cBioPortal, TCGA-UVM n=80, accessed during the hackathon; no simulation)
+  Mutations, copy number (GISTIC), RNA-seq z-scores, RPPA proteomics, overall survival.
+
+METHODS
+  Integrated multi-omic class: unsupervised Ward clustering of tumors on a published prognostic
+  transcriptional signature (DecisionDx-UM class genes) into two classes; class 2 assigned as the
+  cluster enriched for monosomy 3. Alignment: fraction of each class with BAP1 mutation, monosomy 3
+  (GISTIC loss at BAP1), 8q gain (GISTIC gain at MYC), SF3B1 and EIF1AX mutation. BAP1 dosage: mRNA
+  z and RPPA protein z compared between classes (Mann-Whitney). Survival: Kaplan-Meier with a
+  two-group log-rank test, for the integrated class and for BAP1 mutation alone.
+
+FIGURES
+  uvm_survival_class_vs_bap1.pdf. Kaplan-Meier overall survival. Left: by integrated multi-omic
+  class (log-rank p=2.9e-6). Right: by BAP1 mutation alone (log-rank p=0.54). The integrated class
+  separates survival; the mutation call does not.
+  uvm_signature_heatmap.pdf. The prognostic transcriptional signature across tumors, ordered by
+  class, recovering the class 1 and class 2 split.
+  uvm_multiomic_bap1_coordination.pdf. Median BAP1 mRNA z and BAP1 protein RPPA z by class; both are
+  strongly reduced in class 2, showing functional BAP1 loss beyond point mutation.
+
+REPRODUCE
+  python3 uvm_integrative.py
+
+Research and educational analysis of public data, not medical advice.
