@@ -1,0 +1,130 @@
+<title>Anveshar: run rare cancer analyses yourself</title>
+<style>
+ :root{--ink:#14161c;--muted:#5b6472;--line:#e5e7ee;--surface:#fff;--bg:#f6f7fb;--accent:#2f5fe0;
+   --code:#0f172a;--codei:#e2e8f0;--geno:#2f5fe0;--net:#127a3e;--warn:#c0392b;--ok:#127a3e;--chip:#eef1f7}
+ *{box-sizing:border-box}
+ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+ .wrap{max-width:1040px;margin:0 auto;padding:38px 22px 64px}
+ .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+ h1{font-size:30px;margin:8px 0 6px;text-wrap:balance}
+ .sub{color:var(--muted);font-size:15px;max-width:74ch}
+ h2{font-size:20px;margin:38px 0 6px}
+ .lede{color:var(--muted);font-size:14px;margin:4px 0 10px;max-width:78ch}
+ table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px}
+ th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line)}
+ th{background:#f0f2f8;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--muted)}
+ td.num{text-align:center;font-variant-numeric:tabular-nums;font-weight:600}
+ .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}
+ @media(max-width:820px){.grid{grid-template-columns:1fr}}
+ .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+ .cap{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:8px}
+ pre{margin:0;background:var(--code);color:var(--codei);border-radius:10px;padding:13px 14px;overflow-x:auto;font-size:12px;line-height:1.5}
+ pre .k{color:#93c5fd}pre .s{color:#a7f3d0}pre .c{color:#7c8aa5}
+ .go{display:inline-block;margin-top:10px;font-size:12.5px;font-weight:700;color:var(--accent);text-decoration:none}
+ .concl{font-size:13.5px;font-weight:600;color:var(--ink);margin-top:10px;padding:9px 11px;background:#eef7f0;border-left:3px solid var(--ok);border-radius:8px}
+ .callout{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}
+ .stat{flex:1;min-width:150px;border:1px solid var(--line);border-radius:11px;padding:12px 14px;background:var(--surface)}
+ .stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+ .stat.good b{color:var(--ok)} .stat.bad b{color:var(--warn)}
+ .stat span{font-size:12px;color:var(--muted)}
+ .steps pre{margin-top:8px}
+ .nb{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+ .nb a{font-size:12.5px;color:var(--accent);text-decoration:none;border:1px solid var(--line);padding:5px 10px;border-radius:20px}
+ .disc{margin-top:30px;padding:14px 16px;background:#fff7ed;border:1px solid #f3d8b0;border-radius:12px;font-size:12.5px;color:#7a4b12}
+ footer{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;justify-content:space-between}
+ footer a{color:var(--accent);text-decoration:none}
+</style>
+<div class="wrap">
+ <div class="eyebrow">For computational biologists</div>
+ <h1>Run rare cancer analyses yourself</h1>
+ <p class="sub">Every finding here is computed from a public dataset through the cBioPortal API, ships as a runnable Jupyter notebook, and reproduces in a few minutes. Open a notebook, run all cells, get the figure. Below are the two worked examples, with the exact code and the result.</p>
+
+ <h2>The datasets (all public)</h2>
+ <div style="overflow-x:auto"><table>
+  <thead><tr><th>Dataset</th><th>What</th><th>Access</th></tr></thead>
+  <tbody>
+   <tr><td>TCGA uveal melanoma (UVM), n=80</td><td>mutations, copy number, RNA-seq, RPPA protein, survival</td><td>cBioPortal REST API</td></tr>
+   <tr><td>MSK-IMPACT, 10,945 tumors</td><td>clinically sequenced rare cancers, incl. gastrointestinal NET</td><td>cBioPortal REST API</td></tr>
+   <tr><td>TCGA colorectal (COADREAD) and pancreatic (PAAD)</td><td>adenocarcinoma driver landscape and expression</td><td>cBioPortal REST API</td></tr>
+   <tr><td>Pancreatic NET (ARC-Net), n=98</td><td>well-powered neuroendocrine tumor reference</td><td>cBioPortal REST API</td></tr>
+  </tbody>
+ </table></div>
+
+ <h2>Finding 1. Rectal NET is not colorectal cancer</h2>
+ <p class="lede">Hypothesis (from Anveshar): rectal neuroendocrine tumors are a different disease from the colorectal adenocarcinoma of the same organ. Test it on real data.</p>
+ <div class="grid">
+  <div class="panel">
+   <div class="cap">notebook 07, the actual code</div>
+<pre><span class="c"># driver mutation frequency in NET vs adenocarcinoma</span>
+<span class="k">def</span> mut_freq(study, ids):
+    body = {<span class="s">"sampleIds"</span>: ids, <span class="s">"entrezGeneIds"</span>: list(PANEL)}
+    m = post(f<span class="s">"{API}/molecular-profiles/{study}_mutations/mutations/fetch"</span>, body)
+    s = defaultdict(set)
+    <span class="k">for</span> x <span class="k">in</span> m: s[PANEL[x[<span class="s">"entrezGeneId"</span>]]].add(x[<span class="s">"sampleId"</span>])
+    <span class="k">return</span> {g: 100*len(s[g])/len(ids) <span class="k">for</span> g <span class="k">in</span> PANEL.values()}</pre>
+   <a class="go" href="https://github.com/digvijayky/anveshar/blob/main/notebooks/07_rectal_net_hypothesis.ipynb" target="_blank" rel="noopener">Open notebook 07 &rarr;</a>
+  </div>
+  <div class="panel">
+   <div class="cap">result: driver frequency (%), colored by value</div>
+   <div style="overflow-x:auto"><table id="dich"></table></div>
+   <p class="lede" style="margin-top:8px">Transcriptomics: only <b>3.7%</b> of colorectal adenocarcinomas are neuroendocrine-high.</p>
+   <p class="concl">The driver landscape tracks histology, not organ. A rectal NET matches a pancreatic NET, not the colorectal cancer next to it, so it needs neuroendocrine therapy (SSTR2, Lu-177 DOTATATE), not the colorectal toolkit.</p>
+  </div>
+ </div>
+
+ <h2>Finding 2. Integrated multi-omics beats a mutation call (uveal melanoma)</h2>
+ <p class="lede">Hypothesis: an integrated multi-omic class (DNA + RNA + protein) predicts uveal melanoma survival better than a single BAP1 mutation call. Test it on TCGA-UVM.</p>
+ <div class="grid">
+  <div class="panel">
+   <div class="cap">notebook 08, the actual code</div>
+<pre><span class="c"># integrated class from a prognostic signature, then survival</span>
+cl = fcluster(linkage(Msig.values, <span class="s">"ward"</span>), <span class="s">2</span>, <span class="s">"maxclust"</span>)
+<span class="c"># log-rank: integrated class vs BAP1 mutation alone</span>
+p_class = logrank(surv(uvm_class))
+p_bap1  = logrank(surv(bap1_status))
+<span class="k">print</span>(p_class, p_bap1)   <span class="c"># 2.9e-6   vs   0.54</span></pre>
+   <a class="go" href="https://github.com/digvijayky/anveshar/blob/main/notebooks/08_uveal_melanoma_integrative.ipynb" target="_blank" rel="noopener">Open notebook 08 &rarr;</a>
+  </div>
+  <div class="panel">
+   <div class="cap">result: survival stratification</div>
+   <div class="callout">
+    <div class="stat good"><b>p = 2.9e-6</b><span>integrated multi-omic class predicts survival</span></div>
+    <div class="stat bad"><b>p = 0.54</b><span>BAP1 mutation alone does not</span></div>
+   </div>
+   <div style="overflow-x:auto"><table id="align"></table></div>
+   <p class="concl">95% of high-risk class 2 tumors have monosomy 3 with low BAP1 mRNA and protein, but only 30% carry a BAP1 mutation. Functional BAP1 loss is copy loss and silencing, which a mutation panel misses, so risk stratification should be multi-omic.</p>
+  </div>
+ </div>
+
+ <h2>Run it yourself</h2>
+ <div class="steps">
+  <p class="lede">Clone the repository and open any notebook, or run headless. Notebooks 3, 5, 7, and 8 pull public data live; 2 needs no network.</p>
+<pre>git clone https://github.com/digvijayky/anveshar
+cd anveshar &amp;&amp; pip install -e <span class="s">".[dev]"</span>
+jupyter lab                     <span class="c"># open a notebook, Run All</span>
+<span class="c"># or headless:</span> jupyter nbconvert --to notebook --execute notebooks/07_rectal_net_hypothesis.ipynb</pre>
+  <div class="nb">
+   <a href="https://github.com/digvijayky/anveshar/tree/main/notebooks" target="_blank" rel="noopener">All eight notebooks on GitHub &rarr;</a>
+  </div>
+ </div>
+
+ <div class="disc">This is a research and educational analysis of public cohort data, not medical advice. Every number is reproducible from the public API. Findings describe tumor biology at the group level and do not describe any individual. Diagnostic and treatment decisions must be made by a qualified health care provider.</div>
+ <footer><span>Developed by Dig Vijay Kumar Yarlagadda, <a href="https://digvijayky.com" target="_blank" rel="noopener">digvijayky.com</a></span><span>Anveshar, reproducible rare cancer analyses</span></footer>
+</div>
+<script>
+const DICH={cols:["GI NET (35)","Panc NET (98)","Colorectal (594)","Panc adeno (184)"],
+ rows:[["APC",2.9,1.0,65.2,2.2],["KRAS",2.9,0.0,36.7,63.6],["TP53",5.7,3.1,52.9,58.2],["SMAD4",2.9,1.0,11.4,20.1],
+       ["MEN1",5.7,36.7,1.3,1.6],["DAXX",2.9,22.4,1.9,1.1],["ATRX",2.9,10.2,6.1,1.6],["CDKN1B",20.0,0.0,0.8,0.0]]};
+function col(v){const a=Math.min(1,v/70); return `rgba(192,57,43,${0.08+a*0.85})`;}
+(function(){
+ let h="<thead><tr><th>gene</th>"+DICH.cols.map(c=>"<th>"+c+"</th>").join("")+"</tr></thead><tbody>";
+ for(const r of DICH.rows){h+="<tr><td><b>"+r[0]+"</b></td>";
+   for(let i=1;i<r.length;i++){const v=r[i];h+=`<td class=num style="background:${col(v)};color:${v>40?'#fff':'#222'}">${v}</td>`;}
+   h+="</tr>";}
+ document.getElementById("dich").innerHTML=h+"</tbody>";
+ const A=[["BAP1 mutation",0,30],["Monosomy 3",8,95],["SF3B1 mutation",41,7],["EIF1AX mutation",24,2]];
+ let a="<thead><tr><th>feature</th><th>Class 1</th><th>Class 2 (high risk)</th></tr></thead><tbody>";
+ for(const r of A) a+=`<tr><td>${r[0]}</td><td class=num>${r[1]}%</td><td class=num style="font-weight:700">${r[2]}%</td></tr>`;
+ document.getElementById("align").innerHTML=a+"</tbody>";
+})();
+</script>

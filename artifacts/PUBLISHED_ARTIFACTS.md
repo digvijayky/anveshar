@@ -19,3 +19,4 @@ pages under `rarecancers/`. The full cross-linked site hosts on GitHub Pages at
 digvijayky.github.io/rare_cancer.
 
 Developed by Dig Vijay Kumar Yarlagadda, digvijayky.com
+| For researchers (run it yourself) | https://claude.ai/code/artifact/d0479d92-41ec-4cb5-85a9-6937d73dc8a0 |
