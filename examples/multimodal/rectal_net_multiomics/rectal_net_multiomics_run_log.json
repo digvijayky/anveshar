@@ -1,0 +1,100 @@
+{
+  "gi_net_types_used": {
+    "Well-Differentiated Neuroendocrine Tumor of the Rectum": 4,
+    "Gastrointestinal Neuroendocrine Tumors": 9,
+    "Small Bowel Well-Differentiated Neuroendocrine Tumor": 16,
+    "Well-Differentiated Neuroendocrine Tumors of the Stomach": 2,
+    "Well-Differentiated Neuroendocrine Tumor of the Appendix": 4
+  },
+  "gi_net_n": 35,
+  "genomics": {
+    "GI NET (MSK, n=35)": {
+      "APC": 2.9,
+      "KRAS": 2.9,
+      "TP53": 5.7,
+      "SMAD4": 2.9,
+      "PIK3CA": 0.0,
+      "BRAF": 0.0,
+      "MLH1": 0.0,
+      "MEN1": 5.7,
+      "DAXX": 2.9,
+      "ATRX": 2.9,
+      "PTEN": 0.0,
+      "TSC2": 8.6,
+      "CDKN1B": 20.0,
+      "BCOR": 2.9,
+      "STK11": 0.0
+    },
+    "Pancreatic NET (n=98)": {
+      "APC": 1.0,
+      "KRAS": 0.0,
+      "TP53": 3.1,
+      "SMAD4": 1.0,
+      "PIK3CA": 0.0,
+      "BRAF": 0.0,
+      "MLH1": 0.0,
+      "MEN1": 36.7,
+      "DAXX": 22.4,
+      "ATRX": 10.2,
+      "PTEN": 7.1,
+      "TSC2": 2.0,
+      "CDKN1B": 0.0,
+      "BCOR": 2.0,
+      "STK11": 0.0
+    },
+    "Colorectal adenoca (TCGA, n=594)": {
+      "APC": 65.2,
+      "KRAS": 36.7,
+      "TP53": 52.9,
+      "SMAD4": 11.4,
+      "PIK3CA": 24.7,
+      "BRAF": 10.4,
+      "MLH1": 3.7,
+      "MEN1": 1.3,
+      "DAXX": 1.9,
+      "ATRX": 6.1,
+      "PTEN": 5.7,
+      "TSC2": 2.9,
+      "CDKN1B": 0.8,
+      "BCOR": 5.1,
+      "STK11": 1.0
+    },
+    "Pancreatic adenoca (TCGA, n=184)": {
+      "APC": 2.2,
+      "KRAS": 63.6,
+      "TP53": 58.2,
+      "SMAD4": 20.1,
+      "PIK3CA": 2.7,
+      "BRAF": 1.1,
+      "MLH1": 0.5,
+      "MEN1": 1.6,
+      "DAXX": 1.1,
+      "ATRX": 1.6,
+      "PTEN": 0.0,
+      "TSC2": 1.1,
+      "CDKN1B": 0.0,
+      "BCOR": 0.5,
+      "STK11": 2.2
+    }
+  },
+  "transcriptomics_mean_z": {
+    "Pancreatic adenoca": {
+      "CHGA": 0.05,
+      "SYP": 0.1,
+      "INSM1": 0.08,
+      "SSTR2": -0.0,
+      "ASCL1": 0.64,
+      "NEUROD1": 0.0,
+      "PCSK1": 0.47
+    },
+    "Colorectal adenoca": {
+      "CHGA": 0.12,
+      "SYP": 0.0,
+      "INSM1": -0.02,
+      "SSTR2": -0.01,
+      "ASCL1": 0.01,
+      "NEUROD1": -0.03,
+      "PCSK1": -0.02
+    }
+  }
+}

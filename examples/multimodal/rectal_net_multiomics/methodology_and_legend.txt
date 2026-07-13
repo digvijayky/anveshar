@@ -1,0 +1,26 @@
+Rectal NET multi-omics: methodology and figure legends
+
+DATA (public, cBioPortal REST API, accessed during the hackathon; no simulation)
+  MSK-IMPACT gastrointestinal well-differentiated NET (n=35): rectum, GI, small bowel, stomach, appendix.
+  Pancreatic NET, ARC-Net (Scarpa 2017), n=98. TCGA colorectal adenocarcinoma (COADREAD) n=594; TCGA
+  pancreatic adenocarcinoma (PAAD) n=184. Transcriptomics: TCGA COADREAD mRNA z-scores, n=592.
+
+METHODS
+  Genomics: for a panel of adenocarcinoma drivers (APC, KRAS, TP53, SMAD4, PIK3CA, BRAF, MLH1) and NET
+  drivers (MEN1, DAXX, ATRX, PTEN, TSC2, CDKN1B, BCOR, STK11), the fraction of tumors with a mutation was
+  computed per cohort from the mutation profile. Transcriptomics: a neuroendocrine score was defined as
+  the mean mRNA z-score of CHGA, SYP, INSM1, SSTR2, ASCL1, and NEUROD1 per tumor; the fraction with score
+  above 1 was reported. z-scores are within-study normalized.
+
+FIGURES
+  rectal_net_genomics_driver_dichotomy.pdf. Heatmap of driver mutation frequency (percent) across the four
+  cohorts. Adenocarcinoma drivers (top block) are high only in the adenocarcinomas; NET drivers (bottom
+  block) are high only in the NETs. The driver landscape tracks histology, not organ.
+  rectal_net_transcriptomics_ne_score.pdf. Distribution of the neuroendocrine score across TCGA colorectal
+  adenocarcinomas; only 3.7 percent are neuroendocrine-high, the rare colorectal NEC and mixed neoplasm tail.
+
+REPRODUCE
+  python3 rectal_net_multiomics.py        # genomics + driver dichotomy
+  python3 rectal_net_transcriptomics.py   # neuroendocrine score in colorectal adenocarcinoma
+
+Research and educational analysis of public data, not medical advice.
