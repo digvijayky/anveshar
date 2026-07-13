@@ -17,3 +17,4 @@ outputs/
 scratch/
 
 notebooks/seqmodel_vhl_landscape.npy
+tmp/
