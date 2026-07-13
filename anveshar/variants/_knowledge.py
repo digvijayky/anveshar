@@ -23,6 +23,7 @@ FDA tumor agnostic approval is Level 1 anywhere, whereas a tumor specific approv
 is Level 1 only in that tumor type and drops toward Level 3B elsewhere).
 """
 from __future__ import annotations
+import re
 from dataclasses import dataclass
 
 
@@ -112,11 +113,9 @@ RULES = (
          "non-small-cell lung cancer",
          "EGFR L858R sensitizing mutation for first line osimertinib.",
          "Soria 2018 NEJM PMID 29151359 (FLAURA)"),
-    Rule("EGFR", (), "Level 1", "Tier I", "I-A",
-         "osimertinib",
-         "non-small-cell lung cancer",
-         "EGFR alteration; sensitizing exon 19 deletion or L858R map to osimertinib. Non classical alterations may be lower level.",
-         "Soria 2018 NEJM PMID 29151359 (FLAURA)"),
+    # No empty pattern EGFR catch-all: an alteration with no specific sensitizing
+    # signature (for example the osimertinib resistance mutation EGFR C797S) must not
+    # inherit a Level 1 sensitizing grade. Unknown EGFR variants fall through to None.
 
     # NTRK1/2/3 fusions, tumor agnostic (larotrectinib, entrectinib).
     # Drilon et al 2018, NEJM, PMID 29466156 (larotrectinib pooled TRK fusion set).
@@ -278,9 +277,10 @@ def lookup(gene: str, variant: str = "", biomarker: str = "", condition: str = "
     for rule in RULES:
         rg = _norm(rule.gene)
         if rg:
-            # Gene keyed rule: the rule gene must appear as a token or prefix in the
-            # query gene (so "NTRK" matches "NTRK1", and "MET" matches "MET").
-            if not (g == rg or g.startswith(rg) or rg in g):
+            # Gene keyed rule: match the gene exactly, or a numbered family member of it
+            # (so "NTRK" matches "NTRK1/2/3" but never a coincidental substring such as
+            # "ALKBH5" for ALK, "METTL3" for MET, or the "KRASP1" pseudogene for KRAS).
+            if not (g == rg or re.fullmatch(re.escape(rg) + r"\d+", g)):
                 continue
         else:
             # Genome wide biomarker rule: gene must be empty or clearly genome wide.

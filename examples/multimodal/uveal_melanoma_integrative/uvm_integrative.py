@@ -9,6 +9,8 @@ import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 from matplotlib import font_manager
 from scipy.cluster.hierarchy import linkage, fcluster
 from scipy import stats
+import sys as _sys; _sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from uvm_lib import high_risk_class
 for p in ["/home/yarlagad/.local/share/fonts/Arial.ttf"]:
     if os.path.exists(p): font_manager.fontManager.addfont(p); plt.rcParams["font.family"]="Arial"
 plt.rcParams.update({"font.size":15,"figure.dpi":150})
@@ -63,8 +65,7 @@ Msig=M[siggenes].dropna()
 Z=linkage(Msig.values,method="ward"); cl=fcluster(Z,2,criterion="maxclust")
 cls=pd.Series(cl,index=Msig.index)
 # class 2 = the cluster enriched for monosomy 3 / BAP1 loss
-c2frac={c:np.mean([s in mono3 for s in cls.index[cls==c]]) for c in [1,2]}
-class2=max(c2frac,key=c2frac.get)
+class2=high_risk_class(cls,mono3)   # raises if monosomy-3 data is empty or ambiguous
 uvm_class=pd.Series(np.where(cls==class2,"Class 2","Class 1"),index=cls.index)
 log["class_counts"]=uvm_class.value_counts().to_dict()
 

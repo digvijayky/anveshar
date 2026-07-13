@@ -17,6 +17,10 @@ _TIER_BASIS = {
 def therapy_confidence(therapy: dict) -> dict:
     """Confidence for a cross-condition therapy match: {label, pct, basis}."""
     tier = therapy.get("tier", 3)
+    try:                                  # accept int or string tiers ("1"/"2"/"3")
+        tier = int(tier)
+    except (TypeError, ValueError):
+        tier = 3
     cited = bool((therapy.get("citation") or {}).get("url"))
     label, pct = _TIER_BASE.get(tier, ("Low", 42))
     if not cited:

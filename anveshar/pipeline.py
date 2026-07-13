@@ -35,6 +35,13 @@ def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
 
 
+def _contig(a, b):
+    """True if list A appears as a contiguous run of whole tokens inside list B."""
+    if not a or len(a) > len(b):
+        return False
+    return any(b[i:i + len(a)] == a for i in range(len(b) - len(a) + 1))
+
+
 def _find(name: str, rows):
     """Resolve a condition name to a catalog row by exact, alias, or normalized match."""
     key = _norm(name)
@@ -44,10 +51,12 @@ def _find(name: str, rows):
     for r in rows:
         if key in {_norm(a) for a in (r.get("aliases") or [])}:
             return r
-    for r in rows:                       # last resort: bidirectional containment
-        nr = _norm(r["name"])
-        if key and nr and (key in nr or nr in key):
-            return r
+    kt = key.split()                     # last resort: whole-token contiguous match,
+    if len(kt) >= 2:                     # multi-word queries only, either direction, so
+        for r in rows:                   # "NET" no longer resolves to "signet ring ..."
+            nt = _norm(r["name"]).split()
+            if _contig(kt, nt) or _contig(nt, kt):
+                return r
     return None
 
 

@@ -112,7 +112,7 @@ def classify(raw: dict) -> VariantClass:
     if any(k in text for k in ("msi h", "msi high", "dmmr", "microsatellite instab",
                                "mismatch repair defic", "tmb high", "high tmb",
                                "tumor mutational burden", "hrd", "homologous recombination defic",
-                               "loh", "composite")):
+                               "loh", "heterozygosity", "composite")):
         return VariantClass.COMPOSITE
 
     # 3. Mutational signature.
@@ -137,7 +137,9 @@ def classify(raw: dict) -> VariantClass:
     if any(k in text for k in ("deep deletion", "homozygous deletion", "biallelic loss",
                                "loss of", "loss ", "deletion", "deleted")):
         # Distinguish a coding indel deletion from a copy number deletion by wording.
-        if any(k in text for k in ("frameshift", "inframe", "c.", "p.", "indel")):
+        # An "exon N deletion/insertion" (for example EGFR exon 19 deletion) is a coding
+        # indel, not a copy number loss, so treat any explicit exon level event as INDEL.
+        if any(k in text for k in ("frameshift", "inframe", "c.", "p.", "indel", "exon ")):
             return VariantClass.INDEL
         return VariantClass.DELETION
     if "copy number" in text or "cnv" in text:
