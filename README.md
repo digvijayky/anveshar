@@ -102,6 +102,4 @@ probability of benefit for any individual. A driver-gene match is a translation 
 variant context and tumor biology can change whether a therapy applies. Every diagnostic and
 treatment decision must be made by a qualified health care provider, ideally within a clinical trial.
 
-## Author
-
-Developer: [digvijayky](https://digvijayky.com).
+Developer: [digvijayky](https://digvijayky.com)
