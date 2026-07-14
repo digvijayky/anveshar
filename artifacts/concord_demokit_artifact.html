@@ -1,4 +1,4 @@
-<title>Anveshar — demo kit and teleprompter</title>
+<title>Anveshar demo kit and teleprompter</title>
 <style>
  :root{--bg:#0e1017;--panel:#161a24;--line:#242a38;--ink:#eef1f9;--muted:#9aa4b8;
    --accent:#6f9bff;--cue:#f0b45c;--ok:#5fd39a}
@@ -27,46 +27,54 @@
 <div class="wrap">
  <div class="brand">Demo kit &middot; built with Claude</div>
  <h1>Anveshar demo teleprompter</h1>
- <div class="meta">Target 2:45. Record the screen while you read the large lines. Open each linked view when its cue says so. Working name "Anveshar"; swap for your final name before recording.</div>
+ <div class="meta">Target about 3:00. Record the screen while you read the large lines. Open each linked view when its cue says so. Let animations finish before talking over them.</div>
  <div class="bar">
   <a href="https://claude.ai/code/artifact/21dd72b9-0696-4402-a72a-9a365b3094d6" target="_blank" rel="noopener">1 Hub</a>
-  <a href="https://claude.ai/code/artifact/352952a9-3871-4d50-9675-7e12a15872d6" target="_blank" rel="noopener">2 Atlas</a>
+  <a href="https://claude.ai/code/artifact/750ce196-d256-48fc-b2ba-e5f5c4df0a03" target="_blank" rel="noopener">2 Atlas Explorer</a>
   <a href="https://claude.ai/code/artifact/bec29cdd-185d-4554-a0c2-9857cecae835" target="_blank" rel="noopener">3 Report</a>
-  <a href="https://claude.ai/code/artifact/b0d976b0-6971-4fcd-b7b4-af05872ddb3d" target="_blank" rel="noopener">4 Analyses</a>
-  <a href="https://claude.ai/code/artifact/2cf816b4-390a-4a7e-b6b9-22ba6291222f" target="_blank" rel="noopener">5 Harness run</a>
-  <a href="https://claude.ai/code/artifact/bdf14ffd-3f17-42be-bf1b-4e34fcda949c" target="_blank" rel="noopener">6 Multi-modal</a>
+  <a href="https://claude.ai/code/artifact/2cf816b4-390a-4a7e-b6b9-22ba6291222f" target="_blank" rel="noopener">4 Harness run</a>
+  <a href="https://github.com/digvijayky/anveshar/blob/main/notebooks/09_sequence_models_rare_cancer.ipynb" target="_blank" rel="noopener">5 Notebook 09</a>
+  <a href="https://claude.ai/code/artifact/06c2fbdd-adf8-48d8-a815-7292002f5277" target="_blank" rel="noopener">6 Training</a>
+  <a href="https://github.com/digvijayky/anveshar/blob/main/docs/rectal_net_finding.md" target="_blank" rel="noopener">7 Finding</a>
+  <a href="https://github.com/digvijayky/anveshar/blob/main/docs/CLAUDE_SCIENCE.md" target="_blank" rel="noopener">8 Claude Science</a>
  </div>
 
- <div class="scene"><div class="top"><span class="t">0:00</span><span class="cue">Open the HUB, let the network move</span></div>
-  <div class="say">A rare cancer often has no clinical trial of its own. A therapy may already have been studied against the same molecular dependency in another disease. <b>Anveshar retrieves it, with citations.</b></div></div>
+ <div class="scene"><div class="top"><span class="t">0:00</span><span class="cue">Open the HUB, let it settle</span></div>
+  <div class="say">A rare cancer often has no clinical trial of its own. But a therapy, or even a model, may already exist for another disease that shares its molecular dependency. <b>Anveshar finds it, with citations, and it runs inside Claude Science.</b></div></div>
 
- <div class="scene"><div class="top"><span class="t">0:18</span><span class="cue">Click ATLAS, search "renal medullary"</span></div>
-  <div class="say">Anveshar is a research tool for rare cancers. It catalogs <b>five hundred and four</b> of them, searchable by name, gene, organ system, even by cause. Say a patient has renal medullary carcinoma, an ultra rare, aggressive kidney cancer.</div></div>
+ <div class="scene"><div class="top"><span class="t">0:16</span><span class="cue">Open the ATLAS EXPLORER, search "renal medullary"</span></div>
+  <div class="say">Anveshar catalogs <b>five hundred and four</b> rare cancers. This is the Atlas Explorer: every cancer, its driver genes, the analyses you can run, and the foundation models that read them, in one interactive graph. Search renal medullary carcinoma.</div></div>
 
- <div class="scene"><div class="top"><span class="t">0:40</span><span class="cue">Open the REPORT; hover a confidence bar and a citation; scroll to "databases queried"; flash Patient view</span></div>
-  <div class="say">Anveshar returns a cited, confidence scored report, in three registers: researcher, clinician, patient. The driver is loss of SMARCB1. That loss makes the tumor depend on EZH2, drugged by tazemetostat, approved in a different sarcoma. <b>Every therapy has a confidence score and a real citation</b>, and you can see the exact databases Anveshar queried.</div></div>
+ <div class="scene"><div class="top"><span class="t">0:36</span><span class="cue">Click the SMARCB1 node, then open the REPORT</span></div>
+  <div class="say">Its driver is loss of <b>SMARCB1</b>. Click the gene and Anveshar shows the tasks and the models that apply to it. Open the report.</div></div>
 
- <div class="scene"><div class="top"><span class="t">1:10</span><span class="cue">Open ANALYSES; point at the actionability count, then the red unmet-need chips</span></div>
-  <div class="say">Across all rare cancers, <b>ninety nine already have a borrowable approved therapy</b>. And Anveshar flags the highest leverage gaps, dependencies like TP53 and EWSR1 that drive many rare cancers but have no drug yet. Every number is cited and scored.</div></div>
+ <div class="scene"><div class="top"><span class="t">0:50</span><span class="cue">In the REPORT, flash researcher, clinician, patient; hover a citation</span></div>
+  <div class="say">The report is cited and confidence scored, in three registers: researcher, clinician, patient. SMARCB1 loss makes the tumor depend on EZH2, drugged by tazemetostat, <b>approved in a different sarcoma</b>. Every therapy carries a real citation.</div></div>
 
- <div class="scene"><div class="top"><span class="t">1:35</span><span class="cue">Open HARNESS RUN; scroll the 7 stages, the validation table, the provenance</span></div>
-  <div class="say">The pipeline is reproducible and provenance tracked. It validates each target with live functional genomics from Open Targets and DepMap. SMARCB1 is a common essential gene you cannot drug, so the harness <b>pivots to its synthetic lethal partner EZH2</b>, which scores as a validated, tractable target. Every step is auditable.</div></div>
+ <div class="scene"><div class="top"><span class="t">1:14</span><span class="cue">Open HARNESS RUN; scroll the stages, the validation table, the provenance</span></div>
+  <div class="say">The pipeline is reproducible and provenance tracked. It validates each target with live Open Targets and DepMap functional genomics, and <b>pivots the undruggable tumor suppressor to its synthetic lethal partner EZH2</b>. Every step is auditable.</div></div>
 
- <div class="scene"><div class="top"><span class="t">2:05</span><span class="cue">Open the FINDING (driver dichotomy figure), then the notebooks on GitHub</span></div>
-  <div class="say">And Anveshar does not just retrieve. It generates a hypothesis, then we test it on public data. Is a rectal neuroendocrine tumor colorectal cancer? We ran our own code on <b>clinical sequencing data and TCGA</b>: the mutation landscape tracks histology, not organ, so it needs neuroendocrine therapy, not colorectal therapy. <b>Every analysis is a Jupyter notebook anyone can rerun.</b></div></div>
+ <div class="scene"><div class="top"><span class="t">1:36</span><span class="cue">Open NOTEBOOK 09 on GitHub; show the variant scores and the landscape figure</span></div>
+  <div class="say">Anveshar also runs sequence foundation models on rare cancers. This notebook scores driver variants with <b>ESM-2, zero shot</b>: the pathogenic VHL mutation reads as damaging, and the SF3B1 change of function hotspot correctly reads as tolerated. Real, and reproducible.</div></div>
 
- <div class="scene"><div class="top"><span class="t">2:30</span><span class="cue">Return to the HUB, end on the title</span></div>
-  <div class="say">Anveshar is <b>built with Claude</b>, its agents, skills, and connected databases. It extends to every rare disease and to gene therapies, and every claim is traceable. It is decision support for research, not medical advice; the final decision rests with a health care provider. Built by Dig Vijay Kumar Yarlagadda.</div></div>
+ <div class="scene"><div class="top"><span class="t">2:00</span><span class="cue">Open the TRAINING page; point at the AUC curve</span></div>
+  <div class="say">And you can train. On <b>five hundred and eighty-eight real ClinVar-labeled variants</b>, a trained ESM-2 head lifts pathogenicity from AUC nine one to nine eight, in minutes on one GPU. A real training run, not a mockup.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">2:22</span><span class="cue">Open the FINDING, then the notebooks on GitHub</span></div>
+  <div class="say">Anveshar also generates hypotheses and tests them. Is a rectal neuroendocrine tumor colorectal cancer? We ran our own code on public cohorts: <b>the mutation landscape tracks histology, not organ</b>. Every analysis is a notebook anyone can rerun.</div></div>
+
+ <div class="scene"><div class="top"><span class="t">2:42</span><span class="cue">Open CLAUDE SCIENCE map, then return to the HUB title</span></div>
+  <div class="say">All of it is <b>built with Claude and runnable from inside Claude Science</b>: the deep-research skill picks the models, the connected databases supply the data, scvi-tools and PubMed validate. Decision support for research, not medical advice. Built by Dig Vijay Kumar Yarlagadda.</div></div>
 
  <h2>60-second cut</h2>
- <div class="short">A rare cancer often has no trial of its own, but a therapy may already exist for another disease with the same molecular dependency. Anveshar retrieves it. It catalogs five hundred and four rare cancers and returns a cited, confidence scored report that borrows therapies proven elsewhere. It is a reproducible pipeline: it validates each target with live Open Targets and DepMap functional genomics, and pivots an undruggable tumor suppressor to its synthetic lethal partner. Proven on real TCGA and clinical sequencing data data, it extends to all rare diseases, and every claim is cited. Built with Claude. Decision support for research, not medical advice.</div>
+ <div class="short">A rare cancer often has no trial of its own, but a therapy, or a model, may already exist for another disease with the same molecular dependency. Anveshar finds it. It catalogs five hundred and four rare cancers in an interactive atlas, returns a cited, confidence scored report that borrows therapies proven elsewhere, and runs foundation models on the tumor: ESM-2 scores driver variants zero shot, and a trained head lifts pathogenicity from AUC nine one to nine eight on real ClinVar labels. The pipeline is reproducible and provenance tracked, and every step is runnable from inside Claude Science: deep-research picks the model, the connected databases supply the data, scvi-tools and PubMed validate. Built with Claude. Decision support for research, not medical advice.</div>
 
  <h2>Recording checklist</h2>
  <ol>
   <li><b>Tool:</b> Loom, QuickTime, or OBS. Loom gives an instant shareable link.</li>
   <li><b>Rehearse twice.</b> The lines are timed for about 150 words per minute.</li>
   <li><b>1920x1080</b>, show the cursor, slow your clicks so viewers can follow.</li>
-  <li><b>Let animations finish</b> (the hub network, the multi-modal charts) before talking over them.</li>
+  <li><b>Let animations finish</b> (the atlas graph settling, the training curve) before talking over them.</li>
   <li><b>Add captions.</b> Many judges watch muted.</li>
   <li><b>Keep the disclaimer line.</b> Put the hub URL in the submission description.</li>
  </ol>
